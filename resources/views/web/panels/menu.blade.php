@@ -8,9 +8,9 @@
                         new life into the downtrodden neighbourhood, East Village’s transformation has been nothing
                         short of remarkable. </p>
                     <div class="footer-info"><a href="#"><span class="footer-info-icon"><i
-                                    class="fa-solid fa-location-dot"></i></span> 45 New Eskaton Road, Austria </a><a
-                            href="mailto:infomail@example.com"><span class="footer-info-icon"><i
-                                    class="fa-solid fa-envelope"></i></span> infomail@example.com</a></div>
+                                    class="fa-solid fa-location-dot"></i></span> Manipur International University Imphal, Manipur India - 795001</a><a
+                            href="mailto:info@miu.edu.in"><span class="footer-info-icon"><i
+                                    class="fa-solid fa-envelope"></i></span> info@miu.edu.in</a></div>
                 </div>
             </div>
             <div class="widget footer-widget">
@@ -198,7 +198,7 @@
                             <div class="header-info-item">
                                 <div class="header-info-icon"><i class="fa-solid fa-location-dot"></i></div>
                                 <div class="header-info-content"><span class="header-info-text">Address</span>
-                                    <h3 class="header-info-title"><a href="#">45 New Eskaton Road, Austria</a>
+                                    <h3 class="header-info-title"><a href="#">Manipur International University Imphal, Manipur India - 795001</a>
                                     </h3>
                                 </div>
                             </div>
@@ -206,13 +206,13 @@
                                 <div class="header-info-icon"><i class="fa-solid fa-envelope"></i></div>
                                 <div class="header-info-content"><span class="header-info-text">Email</span>
                                     <h3 class="header-info-title"><a
-                                            href="tel:mailinfo@example.com">mailinfo@example.com</a></h3>
+                                            href="tel:mailinfo@miu.edu.in">info@miu.edu.in</a></h3>
                                 </div>
                             </div>
                             <div class="header-info-item">
                                 <div class="header-info-icon"><i class="fa-solid fa-phone"></i></div>
                                 <div class="header-info-content"><span class="header-info-text">Phone Number</span>
-                                    <h3 class="header-info-title"><a href="tel:+0112345678900">+01 123 456 789 00</a>
+                                    <h3 class="header-info-title"><a href="tel:+919036983337">+91 903 698 3337</a>, &emsp;<a href="tel:+918899788788">+91 889 978 8788</a>
                                     </h3>
                                 </div>
                             </div>
