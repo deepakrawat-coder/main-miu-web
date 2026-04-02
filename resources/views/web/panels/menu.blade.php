@@ -190,7 +190,7 @@
             <div class="container th-container2">
                 <div class="row justify-content-between align-items-center">
                     <div class="col-auto">
-                        <div class="header-logo"><a href="home-university.html"><img src="assets/img/logo.svg"
+                        <div class="header-logo"><a href="/"><img src="{{ asset('/new-miu/web-logo.png') }}" width="200" height="160"
                                     alt="Stadum"></a></div>
                     </div>
                     <div class="col-auto">
