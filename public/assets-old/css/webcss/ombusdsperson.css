@@ -1,0 +1,103 @@
+.ombudsperson-bro {
+    background: linear-gradient(145deg, #fafafa 0%, #ffffff 100%);
+    border-left: 6px solid var(--thm-base);
+    /* deep academic green */
+    border-radius: 1rem 0.5rem 0.5rem 1rem;
+    box-shadow: 0 12px 30px rgba(0, 20, 10, 0.05);
+    font-family:
+        "Segoe UI",
+        Roboto,
+        system-ui,
+        -apple-system,
+        sans-serif;
+    padding: 1.8rem 1.5rem;
+    margin: 1.5rem 0;
+    transition: box-shadow 0.2s;
+}
+
+.ombudsperson-bro:hover {
+    box-shadow: 0 20px 35px rgba(44, 95, 45, 0.08);
+}
+
+.badge-ugc {
+    background-color: #1e3c4f;
+    color: #f0f7fa;
+    font-size: 0.75rem;
+    font-weight: 500;
+    padding: 0.45rem 1rem;
+    border-radius: 30px;
+    letter-spacing: 0.5px;
+    display: inline-block;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.notif-meta {
+    border-bottom: 1px dashed #ccc;
+    padding-bottom: 0.75rem;
+    margin-bottom: 0.9rem;
+}
+
+.name-title {
+    color: #1a3b2e;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+
+.designation-dept {
+    background: #e1e7eb;
+    padding: 1rem 1.2rem;
+    border-radius: 18px;
+    border: 1px solid #f1ebcc;
+}
+
+.fa-social-icon {
+    color: var(--thm-base);
+    margin-right: 10px;
+    width: 1.6rem;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.contact-block {
+    background-color: #e1e7eb;
+    border-radius: 40px 12px 12px 40px;
+    padding: 0.9rem 1.5rem;
+    transition: background 0.2s;
+}
+
+.contact-block:hover {
+    background-color: #f2ede1;
+}
+
+.institution-name {
+    font-size: 1.04rem;
+    font-weight: 470;
+}
+
+hr.divider-light {
+    border-top: 2px solid rgba(44, 95, 45, 0.1);
+    margin: 1.5rem 0 1rem;
+}
+
+.tenure-badge {
+    background: #eaf2e5;
+    color: #1d4b1d;
+    padding: 0.35rem 1rem;
+    border-radius: 50px;
+    font-weight: 550;
+    font-size: 0.9rem;
+    white-space: nowrap;
+}
+
+/* small touch for mobile */
+@media (max-width: 575.98px) {
+    .ombudsperson-bro {
+        padding: 1.3rem 1rem;
+        border-left-width: 5px;
+    }
+
+    .contact-block {
+        border-radius: 20px;
+        padding: 0.75rem 1.2rem;
+    }
+}

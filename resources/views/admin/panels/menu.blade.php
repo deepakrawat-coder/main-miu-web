@@ -1,0 +1,117 @@
+<!-- START HEADER -->
+<header class="app-header">
+    <div class="container-fluid">
+        <div class="nav-header">
+
+            <div class="header-left hstack gap-3">
+                <!-- HORIZONTAL BRAND LOGO -->
+                <div class="app-sidebar-logo app-horizontal-logo justify-content-center align-items-center">
+                    <a href="index.html">
+                        <img height="35" class="app-sidebar-logo-default" alt="Logo" loading="lazy"
+                            src="admin/assets/images/light-logo.png">
+                        <img height="40" class="app-sidebar-logo-minimize" alt="Logo" loading="lazy"
+                            src="admin/assets/images/Favicon.png">
+                    </a>
+                </div>
+
+                <!-- Sidebar Toggle Btn -->
+                <button type="button" class="btn btn-light-light icon-btn sidebar-toggle d-none d-md-block"
+                    aria-expanded="false" aria-controls="main-menu">
+                    <span class="visually-hidden">Toggle sidebar</span>
+                    <i class="ri-menu-2-fill"></i>
+                </button>
+
+                <!-- Sidebar Toggle for Mobile -->
+                <button class="btn btn-light-light icon-btn d-md-none small-screen-toggle" id="smallScreenSidebarLabel"
+                    type="button" data-bs-toggle="offcanvas" data-bs-target="#smallScreenSidebar"
+                    aria-controls="smallScreenSidebar">
+                    <span class="visually-hidden">Sidebar toggle for mobile</span>
+                    <i class="ri-arrow-right-fill"></i>
+                </button>
+
+                <!-- Sidebar Toggle for Horizontal Menu -->
+                <button class="btn btn-light-light icon-btn d-lg-none small-screen-horizontal-toggle" type="button"
+                    ria-expanded="false" aria-controls="main-menu">
+                    <span class="visually-hidden">Sidebar toggle for horizontal</span>
+                    <i class="ri-arrow-right-fill"></i>
+                </button>
+
+                <!-- Search Dropdown -->
+
+            </div>
+
+            <div class="header-right hstack gap-3">
+
+
+                @if (auth()->check() && isset($sessionExpiry))
+                    <div id="session-countdown" style="font-weight:bold;color:red;font-size:14px;">
+                    </div>
+                @endif
+
+
+
+                @php
+                    $user = Auth::user();
+                    $name = $user->name;
+                    $image = $user->profile_photo_path ? trim($user->profile_photo_path) : '';
+
+                    // Generate initials (first 2 letters)
+                    $initials = collect(explode(' ', $name))->map(fn($word) => strtoupper($word[0]))->take(2)->join('');
+
+                    // Random color classes (Bootstrap labels)
+                    $colors = ['success', 'danger', 'warning', 'info', 'primary', 'secondary'];
+                    $color = $colors[array_rand($colors)];
+                @endphp
+
+
+                <!-- Profile Section -->
+                <div class="dropdown profile-dropdown features-dropdown">
+                    <button type="button" id="accountNavbarDropdown"
+                        class="btn profile-btn shadow-none px-0 hstack gap-0 gap-sm-3" data-bs-toggle="dropdown"
+                        aria-expanded="false" data-bs-auto-close="outside" data-bs-dropdown-animation="">
+                        <span class="position-relative">
+                      
+
+                            <span class="avatar-item avatar overflow-hidden">
+                                @if ($image)
+                                    <img class="img-fluid rounded-circle" src="{{ asset($image) }}" alt="User Avatar"
+                                        style="width:40px;height:40px;object-fit:cover;">
+                                @else
+                                    <span class="avatar-initial rounded-circle bg-label-{{ $color }}"
+                                        style="width:40px;height:40px;display:flex;align-items:center;justify-content:center;font-size:16px;color:#fff;">
+                                        {{ $initials }}
+                                    </span>
+                                @endif
+                            </span>
+
+                            <span
+                                class="position-absolute border-2 border border-white h-12px w-12px rounded-circle bg-success end-0 bottom-0"></span>
+                        </span>
+                        <span>
+                            <span
+                                class="h6 d-none d-xl-inline-block text-start fw-semibold mb-0">{{ Auth::user()->name }}
+                            </span>
+
+                        </span>
+                    </button>
+
+                    <div class="dropdown-menu dropdown-menu-end header-language-scrollable"
+                        aria-labelledby="accountNavbarDropdown">
+                        <div class="dropdown dropstart d-block">
+                            <a class="dropdown-item" href="javascript:void(0)"
+                            onclick="event.preventDefault();document.getElementById('logout_form').submit();">Sign
+                            out</a>
+                        </div>                       
+                    </div>
+                    <form method="POST" action="{{ route('logout') }}" id="logout_form">
+                        @csrf
+                    </form>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+</header>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<!-- END HEADER -->
