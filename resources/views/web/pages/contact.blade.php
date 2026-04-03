@@ -46,15 +46,18 @@
                         <div class="box-icon"><i class="fa-solid fa-phone-volume"></i></div>
                         <div class="media-body">
                             <h3 class="box-title">Phone Number</h3>
-                            <p class="box-text"><a href="tel:+91 9036983337">+91 9036983337</a> <a
-                                    href="tel:+91 8899788788">+91 8899788788</a></p>
+                            <p class="box-text"><a href="tel:+91 9319727766">+91 9319727766 (Admission Support)</a> <a
+                                    href="tel:+91 9319771500">+91 9319771500 (WhatsApp also)</a></p>
                         </div>
                     </div>
                     <div class="contact-feature">
                         <div class="box-icon"><i class="fa-light fa-envelope"></i></div>
                         <div class="media-body">
                             <h3 class="box-title">Email Address</h3>
-                            <p class="box-text"><a href="mailto:info@miu.edu.in">info@miu.edu.in</a> </p>
+                            <p class="box-text">
+                                <a href="mailto:enquiry@miu.edu.in">enquiry@miu.edu.in</a>
+                                <a href="mailto:support@miu.edu.in">support@miu.edu.in</a>
+                             </p>
                         </div>
                     </div>
                 </div>
@@ -72,7 +75,7 @@
                                         name="number" id="number2" placeholder="Phone*"></div>
                                 <div class="form-group style-border col-12"><input type="email" class="form-control"
                                         name="email" id="email2" placeholder="E-mail address*"></div>
-                                         <div class="form-group style-border col-md-12"><input type="text" class="form-control"
+                                <div class="form-group style-border col-md-12"><input type="text" class="form-control"
                                         name="first" id="first" placeholder="Subject*"></div>
                                 {{-- <div class="form-group style-border col-12"><select name="subject" id="subject"
                                         class="form-select">
@@ -105,7 +108,7 @@
             </div>
         </div>
     </div>
-    
+
 
 
 
