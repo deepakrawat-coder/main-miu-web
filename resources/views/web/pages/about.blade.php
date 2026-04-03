@@ -114,7 +114,7 @@
         </div>
     </div>
 
-    <div class="about1-area position-relative overflow-hidden space" id="about-sec">
+    <div class="about1-area position-relative overflow-hidden space pb-0" id="about-sec">
         <div class="about-shep-2 shape-mockup d-none d-xxl-block" data-bottom="0%" data-right="0%"><img
                 src="assets/img/shape/feature-shep-2-home-1.png" alt="shape"></div>
 
