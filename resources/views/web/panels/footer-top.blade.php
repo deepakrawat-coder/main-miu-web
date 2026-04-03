@@ -1,3 +1,97 @@
+   <!-- WhatsApp Floating Icon - Left Side Bottom -->
+<style>
+    /* WhatsApp Floating Icon Styles */
+    .whatsapp-float {
+        position: fixed;
+        left: 20px;
+        bottom: 30px;
+        width: 60px;
+        height: 60px;
+        background-color: #25D366;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+        text-decoration: none;
+        animation: pulse 2s infinite;
+    }
+
+    .whatsapp-float i {
+        font-size: 35px;
+        color: white;
+    }
+
+    .whatsapp-float:hover {
+        transform: scale(1.1);
+        background-color: #20b859;
+        box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
+    }
+
+    /* Pulse Animation */
+    @keyframes pulse {
+        0% {
+            box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5);
+        }
+        70% {
+            box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+        }
+        100% {
+            box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+        }
+    }
+
+    /* Tooltip */
+    .whatsapp-tooltip {
+        position: absolute;
+        left: 70px;
+        background: #1a1a1a;
+        color: white;
+        padding: 6px 12px;
+        border-radius: 20px;
+        font-size: 13px;
+        font-weight: 500;
+        white-space: nowrap;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        font-family: 'Inter', sans-serif;
+    }
+
+    .whatsapp-float:hover .whatsapp-tooltip {
+        opacity: 1;
+        visibility: visible;
+        left: 75px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+        .whatsapp-float {
+            width: 50px;
+            height: 50px;
+            left: 15px;
+            bottom: 20px;
+        }
+        .whatsapp-float i {
+            font-size: 28px;
+        }
+        .whatsapp-tooltip {
+            display: none;
+        }
+    }
+</style>
+
+<!-- WhatsApp Link -->
+<a href="https://wa.me/919319771500?text=Hello%20MIU%20Team%2C%20I%20need%20information%20about%20admissions." 
+   class="whatsapp-float" 
+   target="_blank"
+   rel="noopener noreferrer">
+    <i class="fab fa-whatsapp"></i>
+    <span class="whatsapp-tooltip">Chat on WhatsApp</span>
+</a>
    <footer class="footer-wrapper footer-default footer-overlay" data-bg-src="assets/img/bg/footer-bg-1.jpg"
        style="background-color: black;">
        {{-- <div class="footer-top">
@@ -55,16 +149,47 @@
                                <p class="about-text">MIU is an autonomous private university, committed to providing
                                    world-class education and fostering research excellence. UGC recognized and NEP 2020
                                    compliant institution dedicated to academic innovation.. </p>
-                               <div class="footer-info ">
+                               {{-- <div class="footer-info ">
                                    <a href="#"><span class="footer-info-icon"><i
                                                class="fa-solid fa-location-dot"></i></span> Manipur International
                                        University Imphal, Manipur India - 795001</a>
-                                   <a href="mailto:info@miu.edu.in"><span class="footer-info-icon"><i
+                                   <a href="mailto:support@miu.edu.in"><span class="footer-info-icon"><i
                                                class="fa-solid fa-envelope"></i></span>
-                                       info@miu.edu.in </a>
-                                   <a href="mailto:admissions@miu.edu.in"><span class="footer-info-icon"><i
+                                      support@miu.edu.in </a>
+                                   <a href="mailto:enquiry@miu.edu.in"><span class="footer-info-icon"><i
                                                class="fa-solid fa-envelope"></i></span>
-                                       admissions@miu.edu.in </a>
+                                       enquiry@miu.edu.in </a>
+                               </div> --}}
+                               <div class="footer-info">
+                                   <!-- Location -->
+                                   <a href="#">
+                                       <span class="footer-info-icon"><i class="fa-solid fa-location-dot"></i></span>
+                                       Manipur International University, Imphal, Manipur, India - 795001
+                                   </a>
+
+                                   <!-- Phone 1 -->
+                                   <a href="tel:+919319727766">
+                                       <span class="footer-info-icon"><i class="fa-solid fa-phone"></i></span>
+                                       +91-9319727766
+                                   </a>
+
+                                   <!-- Phone 2 -->
+                                   <a href="tel:+919319771500">
+                                       <span class="footer-info-icon"><i class="fa-solid fa-phone"></i></span>
+                                       +91-9319771500
+                                   </a>
+
+                                   <!-- Email 1 -->
+                                   <a href="mailto:support@miu.edu.in">
+                                       <span class="footer-info-icon"><i class="fa-solid fa-envelope"></i></span>
+                                       support@miu.edu.in
+                                   </a>
+
+                                   <!-- Email 2 -->
+                                   <a href="mailto:enquiry@miu.edu.in">
+                                       <span class="footer-info-icon"><i class="fa-solid fa-envelope"></i></span>
+                                       enquiry@miu.edu.in
+                                   </a>
                                </div>
                            </div>
                        </div>
@@ -106,19 +231,26 @@
                            <div class="instagram-feeds">
                                <div class="insta-thumb"><img src="assets/img/widget/insta-feed-1-1.jpg" alt="Image">
                                    <a href="assets/img/widget/insta-feed-1-1.jpg" class="insta-btn popup-image"><i
-                                           class="fab fa-instagram"></i></a></div>
+                                           class="fab fa-instagram"></i></a>
+                               </div>
                                <div class="insta-thumb"><img src="assets/img/widget/insta-feed-1-2.jpg" alt="Image">
                                    <a href="assets/img/widget/insta-feed-1-2.jpg" class="insta-btn popup-image"><i
-                                           class="fab fa-instagram"></i></a></div>
+                                           class="fab fa-instagram"></i></a>
+                               </div>
                                <div class="insta-thumb"><img src="assets/img/widget/insta-feed-1-3.jpg" alt="Image">
                                    <a href="assets/img/widget/insta-feed-1-3.jpg" class="insta-btn popup-image"><i
-                                           class="fab fa-instagram"></i></a></div>
-                               <div class="insta-thumb"><img src="assets/img/widget/insta-feed-1-4.jpg" alt="Image">
+                                           class="fab fa-instagram"></i></a>
+                               </div>
+                               <div class="insta-thumb"><img src="assets/img/widget/insta-feed-1-4.jpg"
+                                       alt="Image">
                                    <a href="assets/img/widget/insta-feed-1-4.jpg" class="insta-btn popup-image"><i
-                                           class="fab fa-instagram"></i></a></div>
-                               <div class="insta-thumb"><img src="assets/img/widget/insta-feed-1-5.jpg" alt="Image">
+                                           class="fab fa-instagram"></i></a>
+                               </div>
+                               <div class="insta-thumb"><img src="assets/img/widget/insta-feed-1-5.jpg"
+                                       alt="Image">
                                    <a href="assets/img/widget/insta-feed-1-5.jpg" class="insta-btn popup-image"><i
-                                           class="fab fa-instagram"></i></a></div>
+                                           class="fab fa-instagram"></i></a>
+                               </div>
                                <div class="insta-thumb"><img src="assets/img/widget/insta-feed-1-6.jpg"
                                        alt="Image"> <a href="assets/img/widget/insta-feed-1-6.jpg"
                                        class="insta-btn popup-image"><i class="fab fa-instagram"></i></a></div>

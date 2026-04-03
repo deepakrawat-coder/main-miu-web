@@ -186,15 +186,15 @@
                          <div class="header-info-item">
                              <div class="header-info-icon"><i class="fa-solid fa-envelope"></i></div>
                              <div class="header-info-content"><span class="header-info-text">Email</span>
-                                 <h3 class="header-info-title"><a href="tel:mailinfo@miu.edu.in">info@miu.edu.in</a>
+                                 <h3 class="header-info-title"><a href="mailto:mailenquiry@miu.edu.in">enquiry@miu.edu.in</a>&emsp;<a href="mailto:support@miu.edu.in">,support@miu.edu.in</a>
                                  </h3>
                              </div>
                          </div>
                          <div class="header-info-item">
                              <div class="header-info-icon"><i class="fa-solid fa-phone"></i></div>
                              <div class="header-info-content"><span class="header-info-text">Phone Number</span>
-                                 <h3 class="header-info-title"><a href="tel:+919036983337">+91 903 698 3337</a>,
-                                     &emsp;<a href="tel:+918899788788">+91 889 978 8788</a>
+                                 <h3 class="header-info-title"><a href="tel:+919319727766">+91 9319727766</a>,
+                                     &emsp;<a href="tel:+91 9319771500">+91  9319771500</a>
                                  </h3>
                              </div>
                          </div>
@@ -212,9 +212,9 @@
                              <div class="header-left d-flex align-items-center">
                                  <div class="header-logo d-block d-sm-none"><a href="home-university.html"><img
                                              src="{{ asset('/new-miu/web-logo.png') }}"  width="200" height="160" alt="Stadum"></a></div>
-                                 <div class="header-button d-none d-sm-block"><a href="contact.html"
+                                 {{-- <div class="header-button d-none d-sm-block"><a href="contact.html"
                                          class="th-btn">Get More Info <img src="assets/img/icon/right-icon.svg"
-                                             class="th-arrow" alt="icon"></a></div>
+                                             class="th-arrow" alt="icon"></a></div> --}}
                                  <nav class="main-menu d-none d-xl-block">
                                      <ul>
                                          {{-- <li class="menu-item-has-children"><a href="home-university.html">Home</a>

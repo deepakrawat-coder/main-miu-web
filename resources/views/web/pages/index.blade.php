@@ -18,15 +18,15 @@
         }
 
         /* ========================================
-                                                                       PERFECT STACKED CARDS SLIDER
-                                                                       Height: 800px | Bottom se start | Scroll controlled
-                                                                       STRICT SCROLL LOCK - Until all slides complete
-                                                                    ======================================== */
+                                                                           PERFECT STACKED CARDS SLIDER
+                                                                           Height: 800px | Bottom se start | Scroll controlled
+                                                                           STRICT SCROLL LOCK - Until all slides complete
+                                                                        ======================================== */
         .stack-slider-section {
             position: relative;
             /* background: linear-gradient(135deg, #f5f7fa 0%, #fff 100%); */
             background: black;
-            height: 800px;
+            height: 100dvh;
             overflow: hidden;
         }
 
@@ -200,7 +200,7 @@
             font-size: 0.8rem;
             font-weight: 600;
             /* color: #f37021;
-                                                                background: rgba(243, 112, 33, 0.1); */
+                                                                    background: rgba(243, 112, 33, 0.1); */
             color: #d3224d;
             background: #d3224d26;
             padding: 4px 12px;
@@ -374,11 +374,11 @@
 
         //end sliderstyle
         /* Placement Section Styles
-                                                    .placement-section {
-                                                        background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
-                                                    }
+                                                        .placement-section {
+                                                            background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+                                                        }
 
-                                                    /* Stats Cards */
+                                                        /* Stats Cards */
         .placement-stats-card {
             background: white;
             padding: 30px 20px;
@@ -906,6 +906,411 @@
                 width: 100%;
                 padding: 20px;
                 margin-top: -30px;
+            }
+        }
+
+        /* ========================================
+       HERO SECTION - ENHANCED RESPONSIVE FIXES
+       ======================================== */
+
+        /* Hero Slider Container Fix */
+        .th-hero-wrapper {
+            position: relative;
+            overflow: hidden;
+            min-height: 600px;
+        }
+
+        .swiper-slide .hero-inner {
+            min-height: 700px;
+            display: flex;
+            align-items: center;
+        }
+
+        .th-hero-bg {
+            position: absolute;
+            inset: 0;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .th-hero-bg::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(90deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.4) 100%);
+        }
+
+        /* Hero Content Responsive */
+        .hero-style1 .hero-title {
+            font-size: 3.5rem;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-style1 .hero-text {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            max-width: 600px;
+        }
+
+        .btn-wrap {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        /* Fixed Enquiry Form - Better Responsive */
+        .enquiry-fixed-form {
+            position: absolute;
+            right: 5%;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 99;
+            width: 420px;
+            max-width: 90%;
+        }
+
+        /* Hero Custom Position Row */
+        .custom_postion {
+            position: relative;
+            z-index: 2;
+        }
+
+        /* ========================================
+       STACK SLIDER SECTION - ENHANCED RESPONSIVE
+       ======================================== */
+
+        .stack-slider-section {
+            position: relative;
+            background: black;
+            height: 100dvh;
+            overflow: hidden;
+        }
+
+        /* Body scroll lock */
+        body.slider-active {
+            overflow: hidden;
+            position: fixed;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* ========== RESPONSIVE BREAKPOINTS ========== */
+
+        /* Tablet (992px and below) */
+        @media (max-width: 992px) {
+
+            /* Hero Section */
+            .th-hero-wrapper {
+                min-height: 500px;
+            }
+
+            .swiper-slide .hero-inner {
+                min-height: 550px;
+                padding: 60px 0;
+            }
+
+            .hero-style1 .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .hero-style1 .hero-text {
+                font-size: 1rem;
+            }
+
+            /* Enquiry Form - becomes inline below hero content */
+            .enquiry-fixed-form {
+                position: relative;
+                right: auto;
+                top: auto;
+                transform: none;
+                width: 100%;
+                max-width: 500px;
+                margin: -40px auto 0 auto;
+                padding: 0 20px;
+            }
+
+            .custom_postion {
+                text-align: center;
+            }
+
+            .hero-style1 .hero-text {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .btn-wrap {
+                justify-content: center;
+            }
+
+            /* Stack Slider */
+            .stack-slider-section {
+                height: 700px;
+            }
+
+            .card-title {
+                font-size: 1.4rem;
+            }
+
+            .card-left {
+                padding: 30px;
+            }
+
+            .card-right {
+                min-height: 280px;
+            }
+
+            .cards-stack {
+                height: 450px;
+            }
+        }
+
+        /* Mobile Landscape (768px and below) */
+        @media (max-width: 768px) {
+
+            /* Hero Section */
+            .th-hero-wrapper {
+                min-height: 450px;
+            }
+
+            .swiper-slide .hero-inner {
+                min-height: 480px;
+                padding: 50px 0;
+            }
+
+            .hero-style1 .hero-title {
+                font-size: 1.8rem;
+                margin-bottom: 1rem;
+            }
+
+            .hero-style1 .hero-text {
+                font-size: 0.9rem;
+                margin-bottom: 1.5rem;
+            }
+
+            .btn-wrap .th-btn {
+                padding: 10px 20px;
+                font-size: 0.85rem;
+            }
+
+            /* Enquiry Form */
+            .enquiry-fixed-form {
+                margin-top: -50px;
+            }
+
+            .enquiry-fixed-form .bg-white {
+                padding: 1.25rem !important;
+            }
+
+            .form-header h3 {
+                font-size: 1.3rem;
+            }
+
+            /* Stack Slider - Mobile: Disable scroll lock for better UX */
+            .stack-slider-section {
+                height: auto;
+                min-height: 550px;
+                overflow-y: visible;
+            }
+
+            /* Disable body lock on mobile */
+            body.slider-active {
+                overflow: auto !important;
+                position: relative !important;
+                top: auto !important;
+            }
+
+            .stack-sticky {
+                position: relative !important;
+                height: auto !important;
+                transform: none !important;
+                padding: 30px 0;
+            }
+
+            .cards-stack {
+                height: auto;
+                min-height: 480px;
+                display: flex;
+                flex-direction: column;
+            }
+
+            /* Stack cards become stacked vertically on mobile */
+            .stack-card {
+                position: relative !important;
+                margin-bottom: 20px;
+                opacity: 1 !important;
+                visibility: visible !important;
+                transform: translateY(0) scale(1) !important;
+                display: none;
+            }
+
+            .stack-card.active {
+                display: block;
+                position: relative !important;
+                top: auto !important;
+                bottom: auto !important;
+            }
+
+            .stack-card.prev,
+            .stack-card.next,
+            .stack-card.hidden {
+                display: none;
+            }
+
+            .card-inner {
+                flex-direction: column;
+            }
+
+            .card-left {
+                padding: 20px;
+                order: 1;
+            }
+
+            .card-right {
+                min-height: 180px;
+                order: 0;
+            }
+
+            .card-title {
+                font-size: 1.2rem;
+            }
+
+            .card-text {
+                font-size: 0.8rem;
+            }
+
+            /* Progress Indicator - reposition for mobile */
+            .progress-indicator {
+                position: relative;
+                bottom: auto;
+                left: auto;
+                transform: none;
+                margin: 20px auto 0;
+            }
+
+            /* Hide scroll hint on mobile */
+            .scroll-hint {
+                display: none;
+            }
+        }
+
+        /* Mobile Small (576px and below) */
+        @media (max-width: 576px) {
+
+            /* Hero */
+            .hero-style1 .hero-title {
+                font-size: 1.5rem;
+            }
+
+            .hero-style1 .hero-text {
+                font-size: 0.85rem;
+            }
+
+            .btn-wrap {
+                gap: 10px;
+            }
+
+            .btn-wrap .th-btn {
+                padding: 8px 16px;
+                font-size: 0.75rem;
+            }
+
+            /* Form */
+            .row-2col {
+                flex-direction: column;
+                gap: 0;
+            }
+
+            .form-group input {
+                padding: 0.7rem 0.8rem;
+                font-size: 0.85rem;
+            }
+
+            .btn-submit {
+                padding: 0.8rem;
+                font-size: 0.9rem;
+            }
+
+            /* Stack Slider */
+            .cards-stack {
+                min-height: 420px;
+            }
+
+            .card-left {
+                padding: 15px;
+            }
+
+            .card-title {
+                font-size: 1rem;
+            }
+
+            .card-text {
+                font-size: 0.75rem;
+            }
+
+            .card-badge {
+                font-size: 0.6rem;
+            }
+
+            .card-counter {
+                font-size: 0.7rem;
+            }
+        }
+
+        /* Large Desktop Fix (1200px+) */
+        @media (min-width: 1200px) {
+            .hero-style1 .hero-title {
+                font-size: 4rem;
+            }
+
+            .hero-style1 .hero-text {
+                font-size: 1.2rem;
+            }
+
+            .enquiry-fixed-form {
+                width: 480px;
+            }
+        }
+
+        /* ========================================
+       EXTRA: Navigation buttons for mobile slider
+       ======================================== */
+        .mobile-slider-nav {
+            display: none;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .mobile-slider-nav button {
+            background: var(--theme-color);
+            border: none;
+            color: white;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .mobile-slider-nav button:hover {
+            background: #ff8c42;
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 768px) {
+            .mobile-slider-nav {
+                display: flex;
+            }
+        }
+
+        @media(max-width: 995px) {
+            .feature-sec-1 {
+                margin-top: 74px !important;
             }
         }
     </style>
@@ -1554,7 +1959,7 @@
         </div>
     </section> --}}
     <section class="stack-slider-section" id="stackSlider">
-        <div class="container space pb-0 mb-0">
+        <div class="container pt-5 pb-0 mb-0">
             <div class="events-header">
                 <span class="events-subtitle text-white">UPCOMING EVENTS</span>
                 <h2 class="events-heading text-white">Campus Events & Activities</h2>
@@ -3555,10 +3960,352 @@
 @endsection --}}
 @section('scripts')
     <script>
-        (function() {
-            // PERFECT STACKED CARDS SLIDER - COMPLETELY FIXED
+        // (function() {
+        //     // PERFECT STACKED CARDS SLIDER - COMPLETELY FIXED
 
-            document.addEventListener('DOMContentLoaded', function() {
+        //     document.addEventListener('DOMContentLoaded', function() {
+
+        //         const cards = document.querySelectorAll('.stack-card');
+        //         const totalCards = cards.length;
+        //         const progressFill = document.querySelector('.progress-fill');
+        //         const currentNumSpan = document.getElementById('current-num');
+        //         const sliderSection = document.getElementById('stackSlider');
+        //         const completionMsg = document.getElementById('completionMessage');
+
+        //         if (totalCards === 0 || !sliderSection) return;
+
+        //         let currentIndex = 0;
+        //         let isAnimating = false;
+        //         let isSliderLocked = false;
+        //         let scrollPositionBeforeLock = 0;
+        //         let isUserExiting = false; // Flag to track if user is exiting slider
+
+        //         // Set total number
+        //         const totalNumSpan = document.getElementById('total-num');
+        //         if (totalNumSpan) {
+        //             totalNumSpan.textContent = totalCards.toString().padStart(2, '0');
+        //         }
+
+        //         // Lock body scroll
+        //         function lockBodyScroll() {
+        //             if (!isSliderLocked && !isUserExiting) {
+        //                 scrollPositionBeforeLock = window.scrollY;
+        //                 document.body.classList.add('slider-active');
+        //                 document.body.style.top = `-${scrollPositionBeforeLock}px`;
+        //                 isSliderLocked = true;
+        //                 console.log('Slider LOCKED');
+        //             }
+        //         }
+
+        //         // Unlock body scroll
+        //         function unlockBodyScroll() {
+        //             if (isSliderLocked) {
+        //                 document.body.classList.remove('slider-active');
+        //                 document.body.style.top = '';
+        //                 window.scrollTo(0, scrollPositionBeforeLock);
+        //                 isSliderLocked = false;
+        //                 console.log('Slider UNLOCKED');
+        //             }
+        //         }
+
+        //         // Force unlock (for exiting)
+        //         function forceUnlockAndExit() {
+        //             isUserExiting = true;
+        //             unlockBodyScroll();
+        //             setTimeout(() => {
+        //                 isUserExiting = false;
+        //             }, 100);
+        //         }
+
+        //         // Update progress and counter
+        //         function updateProgress() {
+        //             if (progressFill) {
+        //                 const progress = (currentIndex / (totalCards - 1)) * 100;
+        //                 progressFill.style.width = progress + '%';
+        //             }
+        //             if (currentNumSpan) {
+        //                 currentNumSpan.textContent = (currentIndex + 1).toString().padStart(2, '0');
+        //             }
+        //         }
+
+        //         // Update scroll hint text
+        //         function updateScrollHint() {
+        //             const scrollHintSpan = document.querySelector('.scroll-hint span');
+        //             if (scrollHintSpan) {
+        //                 if (currentIndex === 0) {
+        //                     scrollHintSpan.innerHTML = '⬆️ Scroll UP to exit slider ⬆️';
+        //                     scrollHintSpan.style.color = '#f37021';
+        //                 } else if (currentIndex === totalCards - 1) {
+        //                     scrollHintSpan.innerHTML = '⬇️ Scroll DOWN to exit slider ⬇️';
+        //                     scrollHintSpan.style.color = '#10b981';
+        //                 } else {
+        //                     scrollHintSpan.innerHTML = '↕️ Scroll to navigate slides ↕️';
+        //                     scrollHintSpan.style.color = '#94a3b8';
+        //                 }
+        //             }
+        //         }
+
+        //         // Update cards position
+        //         function updateCards() {
+        //             cards.forEach((card, idx) => {
+        //                 card.classList.remove('active', 'prev', 'next', 'hidden');
+
+        //                 if (idx === currentIndex) {
+        //                     card.classList.add('active');
+        //                 } else if (idx === currentIndex - 1) {
+        //                     card.classList.add('prev');
+        //                 } else if (idx === currentIndex + 1) {
+        //                     card.classList.add('next');
+        //                 } else {
+        //                     card.classList.add('hidden');
+        //                 }
+        //             });
+        //             updateProgress();
+        //             updateScrollHint();
+        //         }
+
+        //         // Go to specific card
+        //         function goToCard(index) {
+        //             if (isAnimating) return;
+        //             if (index < 0 || index >= totalCards) return;
+
+        //             isAnimating = true;
+        //             currentIndex = index;
+        //             updateCards();
+
+        //             // Show completion message on last slide
+        //             if (currentIndex === totalCards - 1 && completionMsg) {
+        //                 completionMsg.classList.add('show');
+        //                 setTimeout(() => {
+        //                     completionMsg.classList.remove('show');
+        //                 }, 3000);
+        //             }
+
+        //             setTimeout(() => {
+        //                 isAnimating = false;
+        //             }, 500);
+        //         }
+
+        //         // Next card
+        //         function nextCard() {
+        //             if (currentIndex < totalCards - 1) {
+        //                 goToCard(currentIndex + 1);
+        //                 return true;
+        //             }
+        //             return false;
+        //         }
+
+        //         // Previous card
+        //         function prevCard() {
+        //             if (currentIndex > 0) {
+        //                 goToCard(currentIndex - 1);
+        //                 return true;
+        //             }
+        //             return false;
+        //         }
+
+        //         // Check if slider is actively in view (not just partially)
+        //         function isSliderActiveInView() {
+        //             const rect = sliderSection.getBoundingClientRect();
+        //             const windowHeight = window.innerHeight;
+        //             const scrollY = window.scrollY;
+
+        //             // Get slider's absolute position
+        //             const sliderTop = rect.top + scrollY;
+        //             const sliderBottom = rect.bottom + scrollY;
+
+        //             // Check if viewport center is within slider bounds
+        //             const viewportCenter = scrollY + (windowHeight / 2);
+
+        //             return viewportCenter >= sliderTop && viewportCenter <= sliderBottom;
+        //         }
+
+        //         // Handle wheel events for navigation AND exit
+        //         let wheelTimeout = null;
+
+        //         function handleWheel(e) {
+        //             const isInView = isSliderActiveInView();
+
+        //             // If slider not in view, ensure it's unlocked
+        //             if (!isInView) {
+        //                 if (isSliderLocked) {
+        //                     forceUnlockAndExit();
+        //                 }
+        //                 return;
+        //             }
+
+        //             // If animating, block
+        //             if (isAnimating) {
+        //                 e.preventDefault();
+        //                 return;
+        //             }
+
+        //             // Throttle
+        //             if (wheelTimeout) {
+        //                 e.preventDefault();
+        //                 return;
+        //             }
+
+        //             const delta = e.deltaY;
+
+        //             // SCROLL DOWN
+        //             if (delta > 0) {
+        //                 if (currentIndex === totalCards - 1) {
+        //                     // On LAST slide - EXIT slider (go to next section)
+        //                     console.log('Exit slider - DOWN from last slide');
+        //                     forceUnlockAndExit();
+        //                     // Don't prevent default - let browser scroll
+        //                     return;
+        //                 } else {
+        //                     // Not on last slide - go to next card
+        //                     nextCard();
+        //                     e.preventDefault();
+        //                     // Maintain scroll position
+        //                     if (isSliderLocked) {
+        //                         window.scrollTo(0, scrollPositionBeforeLock);
+        //                     }
+        //                 }
+        //             }
+        //             // SCROLL UP
+        //             else if (delta < 0) {
+        //                 if (currentIndex === 0) {
+        //                     // On FIRST slide - EXIT slider (go to previous section)
+        //                     console.log('Exit slider - UP from first slide');
+        //                     forceUnlockAndExit();
+        //                     // Don't prevent default - let browser scroll
+        //                     return;
+        //                 } else {
+        //                     // Not on first slide - go to previous card
+        //                     prevCard();
+        //                     e.preventDefault();
+        //                     // Maintain scroll position
+        //                     if (isSliderLocked) {
+        //                         window.scrollTo(0, scrollPositionBeforeLock);
+        //                     }
+        //                 }
+        //             }
+
+        //             // Set throttle
+        //             wheelTimeout = setTimeout(() => {
+        //                 wheelTimeout = null;
+        //             }, 400);
+        //         }
+
+        //         // Handle scroll event for auto lock/unlock
+        //         let scrollTimer = null;
+        //         let lastScrollY = window.scrollY;
+
+        //         function handleScroll() {
+        //             if (scrollTimer) return;
+
+        //             scrollTimer = setTimeout(() => {
+        //                 const isInView = isSliderActiveInView();
+        //                 const currentScrollY = window.scrollY;
+        //                 const scrollDirection = currentScrollY > lastScrollY ? 'down' : 'up';
+
+        //                 if (isInView && !isSliderLocked && !isUserExiting) {
+        //                     // Slider came into view - lock it
+        //                     lockBodyScroll();
+        //                 } else if (!isInView && isSliderLocked) {
+        //                     // Slider left view - unlock it
+        //                     forceUnlockAndExit();
+        //                 }
+
+        //                 lastScrollY = currentScrollY;
+        //                 scrollTimer = null;
+        //             }, 50);
+        //         }
+
+        //         // Touch support for mobile
+        //         let touchStartY = 0;
+
+        //         function handleTouchStart(e) {
+        //             if (!isAnimating) {
+        //                 touchStartY = e.touches[0].clientY;
+        //             }
+        //         }
+
+        //         function handleTouchMove(e) {
+        //             const isInView = isSliderActiveInView();
+
+        //             if (!isInView || isAnimating) {
+        //                 return;
+        //             }
+
+        //             const touchEndY = e.touches[0].clientY;
+        //             const diff = touchStartY - touchEndY;
+
+        //             if (Math.abs(diff) > 30) {
+        //                 // Swipe UP (diff > 0)
+        //                 if (diff > 0) {
+        //                     if (currentIndex === totalCards - 1) {
+        //                         // On last slide - exit
+        //                         forceUnlockAndExit();
+        //                     } else {
+        //                         nextCard();
+        //                         e.preventDefault();
+        //                     }
+        //                 }
+        //                 // Swipe DOWN (diff < 0)
+        //                 else if (diff < 0) {
+        //                     if (currentIndex === 0) {
+        //                         // On first slide - exit
+        //                         forceUnlockAndExit();
+        //                     } else {
+        //                         prevCard();
+        //                         e.preventDefault();
+        //                     }
+        //                 }
+        //                 touchStartY = touchEndY;
+        //             }
+        //         }
+
+        //         // Add event listeners
+        //         window.addEventListener('wheel', handleWheel, {
+        //             passive: false
+        //         });
+        //         window.addEventListener('scroll', handleScroll);
+
+        //         // Touch events for mobile
+        //         sliderSection.addEventListener('touchstart', handleTouchStart, {
+        //             passive: false
+        //         });
+        //         sliderSection.addEventListener('touchmove', handleTouchMove, {
+        //             passive: false
+        //         });
+
+        //         // Initialize
+        //         function init() {
+        //             updateCards();
+        //             // Initially lock if slider is in view
+        //             if (isSliderActiveInView()) {
+        //                 lockBodyScroll();
+        //             }
+        //         }
+
+        //         init();
+
+        //         // Maintain scroll position when locked
+        //         let maintainInterval = setInterval(() => {
+        //             if (isSliderLocked && isSliderActiveInView() && !isUserExiting) {
+        //                 if (window.scrollY !== scrollPositionBeforeLock) {
+        //                     window.scrollTo(0, scrollPositionBeforeLock);
+        //                 }
+        //             }
+        //         }, 50);
+
+        //         // Cleanup
+        //         window.addEventListener('beforeunload', () => {
+        //             if (maintainInterval) {
+        //                 clearInterval(maintainInterval);
+        //             }
+        //             forceUnlockAndExit();
+        //         });
+
+        //     });
+        // })();
+        (function() {
+             document.addEventListener('DOMContentLoaded', function() {
 
                 const cards = document.querySelectorAll('.stack-card');
                 const totalCards = cards.length;
@@ -3573,7 +4320,6 @@
                 let isAnimating = false;
                 let isSliderLocked = false;
                 let scrollPositionBeforeLock = 0;
-                let isUserExiting = false; // Flag to track if user is exiting slider
 
                 // Set total number
                 const totalNumSpan = document.getElementById('total-num');
@@ -3581,35 +4327,35 @@
                     totalNumSpan.textContent = totalCards.toString().padStart(2, '0');
                 }
 
-                // Lock body scroll
+                // Lock body scroll with smooth transition
                 function lockBodyScroll() {
-                    if (!isSliderLocked && !isUserExiting) {
+                    if (!isSliderLocked) {
                         scrollPositionBeforeLock = window.scrollY;
                         document.body.classList.add('slider-active');
                         document.body.style.top = `-${scrollPositionBeforeLock}px`;
                         isSliderLocked = true;
-                        console.log('Slider LOCKED');
+                        console.log('🔒 Slider LOCKED at scroll:', scrollPositionBeforeLock);
                     }
                 }
 
-                // Unlock body scroll
+                // Unlock body scroll with smooth transition
                 function unlockBodyScroll() {
                     if (isSliderLocked) {
+                        const scrollPos = scrollPositionBeforeLock;
                         document.body.classList.remove('slider-active');
                         document.body.style.top = '';
-                        window.scrollTo(0, scrollPositionBeforeLock);
                         isSliderLocked = false;
-                        console.log('Slider UNLOCKED');
-                    }
-                }
 
-                // Force unlock (for exiting)
-                function forceUnlockAndExit() {
-                    isUserExiting = true;
-                    unlockBodyScroll();
-                    setTimeout(() => {
-                        isUserExiting = false;
-                    }, 100);
+                        // Smooth scroll restoration
+                        requestAnimationFrame(() => {
+                            window.scrollTo({
+                                top: scrollPos,
+                                behavior: 'instant'
+                            });
+                        });
+
+                        console.log('🔓 Slider UNLOCKED, restored scroll:', scrollPos);
+                    }
                 }
 
                 // Update progress and counter
@@ -3640,7 +4386,7 @@
                     }
                 }
 
-                // Update cards position
+                // Update cards position with smooth transitions
                 function updateCards() {
                     cards.forEach((card, idx) => {
                         card.classList.remove('active', 'prev', 'next', 'hidden');
@@ -3659,10 +4405,10 @@
                     updateScrollHint();
                 }
 
-                // Go to specific card
+                // Go to specific card with improved animation handling
                 function goToCard(index) {
-                    if (isAnimating) return;
-                    if (index < 0 || index >= totalCards) return;
+                    if (isAnimating) return false;
+                    if (index < 0 || index >= totalCards) return false;
 
                     isAnimating = true;
                     currentIndex = index;
@@ -3676,67 +4422,87 @@
                         }, 3000);
                     }
 
+                    // Shorter animation lock for smoother feel
                     setTimeout(() => {
                         isAnimating = false;
-                    }, 500);
+                    }, 350);
+
+                    return true;
                 }
 
                 // Next card
                 function nextCard() {
-                    if (currentIndex < totalCards - 1) {
-                        goToCard(currentIndex + 1);
-                        return true;
-                    }
-                    return false;
+                    return currentIndex < totalCards - 1 ? goToCard(currentIndex + 1) : false;
                 }
 
                 // Previous card
                 function prevCard() {
-                    if (currentIndex > 0) {
-                        goToCard(currentIndex - 1);
-                        return true;
-                    }
-                    return false;
+                    return currentIndex > 0 ? goToCard(currentIndex - 1) : false;
                 }
 
-                // Check if slider is actively in view (not just partially)
-                function isSliderActiveInView() {
+                // Improved viewport detection - uses intersection-based approach
+                function isSliderInViewport() {
                     const rect = sliderSection.getBoundingClientRect();
                     const windowHeight = window.innerHeight;
-                    const scrollY = window.scrollY;
 
-                    // Get slider's absolute position
-                    const sliderTop = rect.top + scrollY;
-                    const sliderBottom = rect.bottom + scrollY;
+                    // Slider is "active" when at least 40% is visible
+                    const visibleHeight = Math.min(rect.bottom, windowHeight) - Math.max(rect.top, 0);
+                    const sliderHeight = rect.height;
+                    const visibilityRatio = visibleHeight / sliderHeight;
 
-                    // Check if viewport center is within slider bounds
-                    const viewportCenter = scrollY + (windowHeight / 2);
-
-                    return viewportCenter >= sliderTop && viewportCenter <= sliderBottom;
+                    return visibilityRatio > 0.4 && rect.top < windowHeight * 0.6;
                 }
 
-                // Handle wheel events for navigation AND exit
-                let wheelTimeout = null;
+                // Debounced scroll handler for lock/unlock
+                let scrollTimeout = null;
+
+                function handleScroll() {
+                    if (scrollTimeout) {
+                        clearTimeout(scrollTimeout);
+                    }
+
+                    scrollTimeout = setTimeout(() => {
+                        const isInView = isSliderInViewport();
+
+                        if (isInView && !isSliderLocked) {
+                            // Slider entered view - lock it
+                            lockBodyScroll();
+                        } else if (!isInView && isSliderLocked) {
+                            // Slider left view - unlock it
+                            unlockBodyScroll();
+                        }
+                    }, 100); // Debounce for smoother detection
+                }
+
+                // Improved wheel handler with better throttling
+                let lastWheelTime = 0;
+                const WHEEL_THROTTLE = 250; // Reduced from 400ms for snappier feel
 
                 function handleWheel(e) {
-                    const isInView = isSliderActiveInView();
+                    const now = Date.now();
 
-                    // If slider not in view, ensure it's unlocked
-                    if (!isInView) {
+                    // Check if slider is in viewport
+                    if (!isSliderInViewport()) {
+                        // Not in view - allow normal scrolling
                         if (isSliderLocked) {
-                            forceUnlockAndExit();
+                            unlockBodyScroll();
                         }
                         return;
                     }
 
-                    // If animating, block
+                    // If not locked yet, lock now
+                    if (!isSliderLocked) {
+                        lockBodyScroll();
+                    }
+
+                    // Block if animating
                     if (isAnimating) {
                         e.preventDefault();
                         return;
                     }
 
-                    // Throttle
-                    if (wheelTimeout) {
+                    // Throttle wheel events
+                    if (now - lastWheelTime < WHEEL_THROTTLE) {
                         e.preventDefault();
                         return;
                     }
@@ -3746,112 +4512,85 @@
                     // SCROLL DOWN
                     if (delta > 0) {
                         if (currentIndex === totalCards - 1) {
-                            // On LAST slide - EXIT slider (go to next section)
-                            console.log('Exit slider - DOWN from last slide');
-                            forceUnlockAndExit();
-                            // Don't prevent default - let browser scroll
-                            return;
+                            // On LAST slide - exit slider smoothly
+                            console.log('⬇️ Exit slider - scrolling down from last slide');
+                            unlockBodyScroll();
+                            // Allow one natural scroll, then re-enable locking
+                            setTimeout(() => {
+                                // Natural scroll will happen
+                            }, 300);
+                            return; // Don't prevent - let browser scroll
                         } else {
-                            // Not on last slide - go to next card
-                            nextCard();
-                            e.preventDefault();
-                            // Maintain scroll position
-                            if (isSliderLocked) {
-                                window.scrollTo(0, scrollPositionBeforeLock);
+                            // Go to next card
+                            if (nextCard()) {
+                                e.preventDefault();
+                                lastWheelTime = now;
                             }
                         }
                     }
                     // SCROLL UP
                     else if (delta < 0) {
                         if (currentIndex === 0) {
-                            // On FIRST slide - EXIT slider (go to previous section)
-                            console.log('Exit slider - UP from first slide');
-                            forceUnlockAndExit();
-                            // Don't prevent default - let browser scroll
-                            return;
+                            // On FIRST slide - exit slider smoothly
+                            console.log('⬆️ Exit slider - scrolling up from first slide');
+                            unlockBodyScroll();
+                            setTimeout(() => {
+                                // Natural scroll will happen
+                            }, 300);
+                            return; // Don't prevent - let browser scroll
                         } else {
-                            // Not on first slide - go to previous card
-                            prevCard();
-                            e.preventDefault();
-                            // Maintain scroll position
-                            if (isSliderLocked) {
-                                window.scrollTo(0, scrollPositionBeforeLock);
+                            // Go to previous card
+                            if (prevCard()) {
+                                e.preventDefault();
+                                lastWheelTime = now;
                             }
                         }
                     }
-
-                    // Set throttle
-                    wheelTimeout = setTimeout(() => {
-                        wheelTimeout = null;
-                    }, 400);
                 }
 
-                // Handle scroll event for auto lock/unlock
-                let scrollTimer = null;
-                let lastScrollY = window.scrollY;
-
-                function handleScroll() {
-                    if (scrollTimer) return;
-
-                    scrollTimer = setTimeout(() => {
-                        const isInView = isSliderActiveInView();
-                        const currentScrollY = window.scrollY;
-                        const scrollDirection = currentScrollY > lastScrollY ? 'down' : 'up';
-
-                        if (isInView && !isSliderLocked && !isUserExiting) {
-                            // Slider came into view - lock it
-                            lockBodyScroll();
-                        } else if (!isInView && isSliderLocked) {
-                            // Slider left view - unlock it
-                            forceUnlockAndExit();
-                        }
-
-                        lastScrollY = currentScrollY;
-                        scrollTimer = null;
-                    }, 50);
-                }
-
-                // Touch support for mobile
+                // Touch support for mobile with improved handling
                 let touchStartY = 0;
+                let touchStartTime = 0;
 
                 function handleTouchStart(e) {
                     if (!isAnimating) {
                         touchStartY = e.touches[0].clientY;
+                        touchStartTime = Date.now();
                     }
                 }
 
                 function handleTouchMove(e) {
-                    const isInView = isSliderActiveInView();
-
-                    if (!isInView || isAnimating) {
+                    if (!isSliderInViewport() || isAnimating) {
                         return;
                     }
 
                     const touchEndY = e.touches[0].clientY;
                     const diff = touchStartY - touchEndY;
+                    const swipeTime = Date.now() - touchStartTime;
 
-                    if (Math.abs(diff) > 30) {
-                        // Swipe UP (diff > 0)
+                    // Require minimum swipe distance and limit swipe time for better UX
+                    if (Math.abs(diff) > 50 && swipeTime < 500) {
                         if (diff > 0) {
+                            // Swipe UP - next card or exit
                             if (currentIndex === totalCards - 1) {
-                                // On last slide - exit
-                                forceUnlockAndExit();
+                                unlockBodyScroll();
                             } else {
-                                nextCard();
-                                e.preventDefault();
+                                if (nextCard()) {
+                                    e.preventDefault();
+                                }
                             }
-                        }
-                        // Swipe DOWN (diff < 0)
-                        else if (diff < 0) {
+                        } else {
+                            // Swipe DOWN - previous card or exit
                             if (currentIndex === 0) {
-                                // On first slide - exit
-                                forceUnlockAndExit();
+                                unlockBodyScroll();
                             } else {
-                                prevCard();
-                                e.preventDefault();
+                                if (prevCard()) {
+                                    e.preventDefault();
+                                }
                             }
                         }
                         touchStartY = touchEndY;
+                        touchStartTime = Date.now();
                     }
                 }
 
@@ -3859,11 +4598,13 @@
                 window.addEventListener('wheel', handleWheel, {
                     passive: false
                 });
-                window.addEventListener('scroll', handleScroll);
+                window.addEventListener('scroll', handleScroll, {
+                    passive: true
+                });
 
                 // Touch events for mobile
                 sliderSection.addEventListener('touchstart', handleTouchStart, {
-                    passive: false
+                    passive: true
                 });
                 sliderSection.addEventListener('touchmove', handleTouchMove, {
                     passive: false
@@ -3872,29 +4613,26 @@
                 // Initialize
                 function init() {
                     updateCards();
-                    // Initially lock if slider is in view
-                    if (isSliderActiveInView()) {
+                    // Check initial position
+                    if (isSliderInViewport()) {
                         lockBodyScroll();
                     }
                 }
 
                 init();
 
-                // Maintain scroll position when locked
-                let maintainInterval = setInterval(() => {
-                    if (isSliderLocked && isSliderActiveInView() && !isUserExiting) {
-                        if (window.scrollY !== scrollPositionBeforeLock) {
-                            window.scrollTo(0, scrollPositionBeforeLock);
-                        }
-                    }
-                }, 50);
-
-                // Cleanup
+                // Cleanup on page unload
                 window.addEventListener('beforeunload', () => {
-                    if (maintainInterval) {
-                        clearInterval(maintainInterval);
+                    if (isSliderLocked) {
+                        unlockBodyScroll();
                     }
-                    forceUnlockAndExit();
+                });
+
+                // Handle visibility change (tab switching)
+                document.addEventListener('visibilitychange', () => {
+                    if (document.hidden && isSliderLocked) {
+                        unlockBodyScroll();
+                    }
                 });
 
             });
