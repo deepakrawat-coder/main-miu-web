@@ -24,6 +24,9 @@ Route::view('dashboard', 'dashboard')
     ->name('dashboard');
 
 Route::view('/', 'web.pages.index');
+Route::view('/about', 'web.pages.about');
+Route::view('/contact', 'web.pages.contact');
+
 // Route::get('/', [WebHomeController::class, 'index'])->name('home');
 // Route::view('/about-us', 'web.pages.about-us');
 // Route::view('/departments', 'web.pages.departments');
