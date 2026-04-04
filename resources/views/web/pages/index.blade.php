@@ -799,7 +799,7 @@
                                     </div>
                                 </div>
                                 <div class="card-right">
-                                    <img src="https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=800"
+                                    <img src="{{ asset('/new-miu/events/1jpg') }}"
                                         alt="Cultural Fest">
                                 </div>
                             </div>
@@ -820,7 +820,7 @@
                                     </div>
                                 </div>
                                 <div class="card-right">
-                                    <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=800"
+                                    <img src="{{ asset('/new-miu/events/2.jpg') }}"
                                         alt="Hackathon">
                                 </div>
                             </div>
@@ -840,8 +840,7 @@
                                     </div>
                                 </div>
                                 <div class="card-right">
-                                    <img src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=800"
-                                        alt="Sports Event">
+                                    <img src="{{ asset('/new-miu/events/3.jpg') }}" alt="Sports Event">
                                 </div>
                             </div>
                         </div>
@@ -861,8 +860,7 @@
                                     </div>
                                 </div>
                                 <div class="card-right">
-                                    <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800"
-                                        alt="Guest Lecture">
+                                    <img src="{{ asset('/new-miu/events/4.jpg') }}" alt="Guest Lecture">
                                 </div>
                             </div>
                         </div>
@@ -882,8 +880,7 @@
                                     </div>
                                 </div>
                                 <div class="card-right">
-                                    <img src="https://images.unsplash.com/photo-1528605248644-14dd04022da1?w=800"
-                                        alt="Career Fair">
+                                    <img src="{{ asset('/new-miu/events/5.jpg') }}" alt="Career Fair">
                                 </div>
                             </div>
                         </div>
