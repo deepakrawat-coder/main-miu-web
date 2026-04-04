@@ -345,7 +345,7 @@
                             <div class="col-xxl-3 col-lg-4 col-md-6 col-6">
                                 <div class="course-card shadow-none p-0 mb-0">
                                     <div class="course-img-thumb global-img mb-0" style="border-radius:10px;">
-                                        <img src="{{('/assets/img/popular-course/course-thumb-3-2.jpg') }}" alt="Course">
+                                        <img src="{{asset('/assets/img/popular-course/course-thumb-3-2.jpg')}}" alt="Course">
                                         <div class="course-overlay">
                                             <div class="overlay-content" style="border-radius:10px;">
                                                 <h4>Diploma in Mechanical Engineering</h4>
@@ -361,7 +361,7 @@
                             <div class="col-xxl-3 col-lg-4 col-md-6 col-6">
                                 <div class="course-card shadow-none p-0 mb-0">
                                     <div class="course-img-thumb global-img mb-0" style="border-radius:10px;">
-                                        <img src="{{('/assets/img/popular-course/course-thumb-3-3.jpg') }}"alt="Course">
+                                        <img src="{{asset('/assets/img/popular-course/course-thumb-3-3.jpg') }}"alt="Course">
                                         <div class="course-overlay">
                                             <div class="overlay-content" style="border-radius:10px;">
                                                 <h4>Diploma in Hotel Management</h4>
@@ -377,7 +377,7 @@
                             <div class="col-xxl-3 col-lg-4 col-md-6 col-6">
                                 <div class="course-card shadow-none p-0 mb-0">
                                     <div class="course-img-thumb global-img mb-0" style="border-radius:10px;">
-                                        <img src="{{('/assets/img/popular-course/course-thumb-3-4.jpg') }}" alt="Course">
+                                        <img src="{{asset('/assets/img/popular-course/course-thumb-3-4.jpg') }}" alt="Course">
                                         <div class="course-overlay">
                                             <div class="overlay-content" style="border-radius:10px;">
                                                 <h4>Diploma in Pharmacy</h4>
@@ -400,7 +400,7 @@
                             <div class="col-xxl-3 col-lg-4 col-md-6 col-6">
                                 <div class="course-card shadow-none p-0 mb-0">
                                     <div class="course-img-thumb global-img mb-0" style="border-radius:10px;">
-                                        <img src="{{('/assets/img/popular-course/course-thumb-3-5.jpg') }}" alt="Course">
+                                        <img src="{{asset('/assets/img/popular-course/course-thumb-3-5.jpg') }}" alt="Course">
                                         <div class="course-overlay">
                                             <div class="overlay-content" style="border-radius:10px;">
                                                 <h4>B.Tech Computer Science</h4>
@@ -416,7 +416,7 @@
                             <div class="col-xxl-3 col-lg-4 col-md-6 col-6">
                                 <div class="course-card shadow-none p-0 mb-0">
                                     <div class="course-img-thumb global-img mb-0" style="border-radius:10px;">
-                                        <img src="{{('/assets/img/popular-course/course-thumb-3-6.jpg') }}" alt="Course">
+                                        <img src="{{asset('/assets/img/popular-course/course-thumb-3-6.jpg') }}" alt="Course">
                                         <div class="course-overlay">
                                             <div class="overlay-content" style="border-radius:10px;">
                                                 <h4>B.Com Accounting & Finance</h4>
@@ -432,7 +432,7 @@
                             <div class="col-xxl-3 col-lg-4 col-md-6 col-6">
                                 <div class="course-card shadow-none p-0 mb-0">
                                     <div class="course-img-thumb global-img mb-0" style="border-radius:10px;">
-                                        <img src="{{('/assets/img/popular-course/course-thumb-3-1.jpg') }}" alt="Course">
+                                        <img src="{{asset('/assets/img/popular-course/course-thumb-3-1.jpg') }}" alt="Course">
                                         <div class="course-overlay">
                                             <div class="overlay-content" style="border-radius:10px;">
                                                 <h4>BA English Literature</h4>
@@ -448,7 +448,7 @@
                             <div class="col-xxl-3 col-lg-4 col-md-6 col-6">
                                 <div class="course-card shadow-none p-0 mb-0">
                                     <div class="course-img-thumb global-img mb-0" style="border-radius:10px;">
-                                        <img src="{{('/assets/img/popular-course/course-thumb-3-2.jpg') }}" alt="Course">
+                                        <img src="{{asset('/assets/img/popular-course/course-thumb-3-2.jpg') }}" alt="Course">
                                         <div class="course-overlay">
                                             <div class="overlay-content" style="border-radius:10px;">
                                                 <h4>BBA Business Administration</h4>
@@ -471,7 +471,7 @@
                             <div class="col-xxl-3 col-lg-4 col-md-6 col-6">
                                 <div class="course-card shadow-none p-0 mb-0">
                                     <div class="course-img-thumb global-img mb-0" style="border-radius:10px;">
-                                        <img src="{{('/assets/img/popular-course/course-thumb-3-3.jpg') }}" alt="Course">
+                                        <img src="{{asset('/assets/img/popular-course/course-thumb-3-3.jpg') }}" alt="Course">
                                         <div class="course-overlay">
                                             <div class="overlay-content" style="border-radius:10px;">
                                                 <h4>M.Tech AI & Machine Learning</h4>
@@ -487,7 +487,7 @@
                             <div class="col-xxl-3 col-lg-4 col-md-6 col-6">
                                 <div class="course-card shadow-none p-0 mb-0">
                                     <div class="course-img-thumb global-img mb-0" style="border-radius:10px;">
-                                        <img src="{{('/assets/img/popular-course/course-thumb-3-4.jpg') }}" alt="Course">
+                                        <img src="{{asset('/assets/img/popular-course/course-thumb-3-4.jpg') }}" alt="Course">
                                         <div class="course-overlay">
                                             <div class="overlay-content" style="border-radius:10px;">
                                                 <h4>MBA Marketing & Finance</h4>
@@ -504,7 +504,7 @@
                             <div class="col-xxl-3 col-lg-4 col-md-6 col-6">
                                 <div class="course-card shadow-none p-0 mb-0">
                                     <div class="course-img-thumb global-img mb-0" style="border-radius:10px;">
-                                        <img src="{{('/assets/img/popular-course/course-thumb-3-5.jpg') }}" alt="Course">
+                                        <img src="{{asset('/assets/img/popular-course/course-thumb-3-5.jpg') }}" alt="Course">
                                         <div class="course-overlay">
                                             <div class="overlay-content" style="border-radius:10px;">
                                                 <h4>MCA Data Science</h4>
@@ -520,7 +520,7 @@
                             <div class="col-xxl-3 col-lg-4 col-md-6 col-6">
                                 <div class="course-card shadow-none p-0 mb-0">
                                     <div class="course-img-thumb global-img mb-0" style="border-radius:10px;">
-                                        <img src="{{('/assets/img/popular-course/course-thumb-3-6.jpg') }}" alt="Course">
+                                        <img src="{{asset('/assets/img/popular-course/course-thumb-3-6.jpg') }}" alt="Course">
                                         <div class="course-overlay">
                                             <div class="overlay-content" style="border-radius:10px;">
                                                 <h4>M.Com International Business</h4>
@@ -543,7 +543,7 @@
                             <div class="col-xxl-3 col-lg-4 col-md-6 col-6">
                                 <div class="course-card shadow-none p-0 mb-0">
                                     <div class="course-img-thumb global-img mb-0" style="border-radius:10px;">
-                                        <img src="{{('/assets/img/popular-course/course-thumb-3-1.jpg') }}" alt="Course">
+                                        <img src="{{asset('/assets/img/popular-course/course-thumb-3-1.jpg') }}" alt="Course">
                                         <div class="course-overlay">
                                             <div class="overlay-content" style="border-radius:10px;">
                                                 <h4>PhD Computer Science</h4>
@@ -559,7 +559,7 @@
                             <div class="col-xxl-3 col-lg-4 col-md-6 col-6">
                                 <div class="course-card shadow-none p-0 mb-0">
                                     <div class="course-img-thumb global-img mb-0" style="border-radius:10px;">
-                                        <img src="{{('/assets/img/popular-course/course-thumb-3-2.jpg') }}" alt="Course">
+                                        <img src="{{asset('/assets/img/popular-course/course-thumb-3-2.jpg') }}" alt="Course">
                                         <div class="course-overlay">
                                             <div class="overlay-content" style="border-radius:10px;">
                                                 <h4>PhD Business Administration</h4>
@@ -575,7 +575,7 @@
                             <div class="col-xxl-3 col-lg-4 col-md-6 col-6">
                                 <div class="course-card shadow-none p-0 mb-0">
                                     <div class="course-img-thumb global-img mb-0" style="border-radius:10px;">
-                                        <img src="{{('/assets/img/popular-course/course-thumb-3-3.jpg') }}"alt="Course">
+                                        <img src="{{asset('/assets/img/popular-course/course-thumb-3-3.jpg') }}"alt="Course">
                                         <div class="course-overlay">
                                             <div class="overlay-content" style="border-radius:10px;">
                                                 <h4>PhD Commerce & Economics</h4>
@@ -591,7 +591,7 @@
                             <div class="col-xxl-3 col-lg-4 col-md-6 col-6">
                                 <div class="course-card shadow-none p-0 mb-0">
                                     <div class="course-img-thumb global-img mb-0" style="border-radius:10px;">
-                                        <img src="{{('/assets/img/popular-course/course-thumb-3-4.jpg') }}" alt="Course">
+                                        <img src="{{asset('/assets/img/popular-course/course-thumb-3-4.jpg') }}" alt="Course">
                                         <div class="course-overlay">
                                             <div class="overlay-content" style="border-radius:10px;">
                                                 <h4>PhD English Literature</h4>
@@ -616,7 +616,7 @@
         <div class="container th-container2">
             <div class="counter-wrap1">
                 <div class="counter-card wow fadeInUp" data-wow-delay=".2s">
-                    <div class="box-icon"><img src="{{('/assets/img/icon/counter-icon1-1.svg') }}" alt="icon"></div>
+                    <div class="box-icon"><img src="{{asset('/assets/img/icon/counter-icon1-1.svg') }}" alt="icon"></div>
                     <div class="media-body">
                         <h3 class="box-number"><span class="counter-number">2019</span></h3>
                         <p class="box-text">Year of Establishment</p>
@@ -624,7 +624,7 @@
                 </div>
                 <div class="divider"></div>
                 <div class="counter-card wow fadeInUp" data-wow-delay=".4s">
-                    <div class="box-icon"><img src="{{('/assets/img/icon/counter-icon1-2.svg') }}" alt="icon"></div>
+                    <div class="box-icon"><img src="{{asset('/assets/img/icon/counter-icon1-2.svg') }}" alt="icon"></div>
                     <div class="media-body">
                         <h3 class="box-number"><span class="counter-number">50</span>+</h3>
                         <p class="box-text">Academic Programs</p>
@@ -632,7 +632,7 @@
                 </div>
                 <div class="divider"></div>
                 <div class="counter-card wow fadeInUp" data-wow-delay=".6s">
-                    <div class="box-icon"><img src="{{('/assets/img/icon/counter-icon1-3.svg') }}" alt="icon"></div>
+                    <div class="box-icon"><img src="{{asset('/assets/img/icon/counter-icon1-3.svg') }}" alt="icon"></div>
                     <div class="media-body">
                         <h3 class="box-number"><span class="counter-number">1000</span>+</h3>
                         <p class="box-text">Students Enrolled</p>
@@ -640,7 +640,7 @@
                 </div>
                 <div class="divider"></div>
                 <div class="counter-card wow fadeInUp" data-wow-delay=".7s">
-                    <div class="box-icon"><img src="{{('/assets/img/icon/counter-icon1-4.svg') }}" alt="icon"></div>
+                    <div class="box-icon"><img src="{{asset('/assets/img/icon/counter-icon1-4.svg') }}" alt="icon"></div>
                     <div class="media-body">
                         <h3 class="box-number"><span class="counter-number">20</span>+</h3>
                         <p class="box-text">International Collaborations</p>
@@ -678,7 +678,7 @@
                             <div class="academic-card p-0"
                                 style="border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden; height: 100%;">
                                 <div class="academic-img mb-0">
-                                    <a href="program-details.html"><img src="{{('/assets/img/academic/academic1-1.jpg') }}"
+                                    <a href="program-details.html"><img src="{{asset('/assets/img/academic/academic1-1.jpg') }}"
                                             alt="School of Commerce"></a>
                                 </div>
                                 <div class="academic-content border-0 pb-0 mb-0 px-3 py-3">
@@ -702,7 +702,7 @@
                             <div class="academic-card p-0"
                                 style="border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden; height: 100%;">
                                 <div class="academic-img mb-0">
-                                    <a href="program-details.html"><img src="{{('/assets/img/academic/academic1-1.jpg') }}"
+                                    <a href="program-details.html"><img src="{{asset('/assets/img/academic/academic1-1.jpg') }}"
                                             alt="School of Computer Application"></a>
                                 </div>
                                 <div class="academic-content border-0 pb-0 mb-0 px-3 py-3">
@@ -725,7 +725,7 @@
                             <div class="academic-card p-0"
                                 style="border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden; height: 100%;">
                                 <div class="academic-img mb-0">
-                                    <a href="program-details.html"><img src="{{('/assets/img/academic/academic1-1.jpg') }}"
+                                    <a href="program-details.html"><img src="{{asset('/assets/img/academic/academic1-1.jpg') }}"
                                             alt="School of Engineering"></a>
                                 </div>
                                 <div class="academic-content border-0 pb-0 mb-0 px-3 py-3">
@@ -747,7 +747,7 @@
                             <div class="academic-card p-0"
                                 style="border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden; height: 100%;">
                                 <div class="academic-img mb-0">
-                                    <a href="program-details.html"><img src="{{('/assets/img/academic/academic1-1.jpg') }}"
+                                    <a href="program-details.html"><img src="{{asset('/assets/img/academic/academic1-1.jpg') }}"
                                             alt="School of Engineering"></a>
                                 </div>
                                 <div class="academic-content border-0 pb-0 mb-0 px-3 py-3">
@@ -1195,7 +1195,7 @@
                 </div>
                 <div class="col-xl-4">
                     <div class="why-video">
-                        <div class="why-video-bg overflow-hidden gsap-parallax"><img src="{{('/assets/img/why/why-video1-1.jpg') }}"
+                        <div class="why-video-bg overflow-hidden gsap-parallax"><img src="{{asset('/assets/img/why/why-video1-1.jpg') }}"
                                 alt="image">
                             {{-- <div class="why-video-btn"><a href="https://www.youtube.com/watch?v=_sI_Ps7JSEk"
                                     class="play-btn popup-video"><i class="fa-sharp fa-solid fa-play"></i></a></div> --}}
@@ -1229,12 +1229,12 @@
                         <!-- Slide 1 - Text changed to MIU Student -->
                         <div class="swiper-slide">
                             <div class="story-card">
-                                <div class="box-img"><img src="{{('/assets/img/story/story-1-1.jpg') }}" alt="img"></div>
+                                <div class="box-img"><img src="{{asset('/assets/img/story/story-1-1.jpg') }}" alt="img"></div>
                                 <div class="story-content">
                                     <h3 class="box-title"><a href="program.html">Aman Verma</a></h3>
                                 </div>
                                 <div class="story-content hover-style">
-                                    <div class="quote-icon"><img src="{{('/assets/img/icon/quote.svg') }}" alt=""></div>
+                                    <div class="quote-icon"><img src="{{asset('/assets/img/icon/quote.svg') }}" alt=""></div>
                                     <p class="box-text">"MIU University provided a strong academic foundation complemented
                                         by practical exposure. The structured training and faculty mentorship played a
                                         pivotal role in helping me secure a rewarding position in a leading organization."
@@ -1246,12 +1246,12 @@
                         <!-- Slide 2 - Text changed to MIU Student -->
                         <div class="swiper-slide">
                             <div class="story-card">
-                                <div class="box-img"><img src="{{('/assets/img/story/story-1-2.jpg') }}" alt="img"></div>
+                                <div class="box-img"><img src="{{asset('/assets/img/story/story-1-2.jpg') }}" alt="img"></div>
                                 <div class="story-content">
                                     <h3 class="box-title"><a href="program.html">Priya Sharma</a></h3>
                                 </div>
                                 <div class="story-content hover-style">
-                                    <div class="quote-icon"><img src="{{('/assets/img/icon/quote.svg') }}" alt=""></div>
+                                    <div class="quote-icon"><img src="{{asset('/assets/img/icon/quote.svg') }}" alt=""></div>
                                     <p class="box-text">"The learning environment at MIU fostered both confidence and
                                         competence. Industry-oriented curriculum and continuous skill development
                                         initiatives helped me transition seamlessly from academics to a professional career"
@@ -1263,12 +1263,12 @@
                         <!-- Slide 3 - Text changed to MIU Student -->
                         <div class="swiper-slide">
                             <div class="story-card">
-                                <div class="box-img"><img src="{{('/assets/img/story/story-1-3.jpg') }}" alt="img"></div>
+                                <div class="box-img"><img src="{{asset('/assets/img/story/story-1-3.jpg') }}" alt="img"></div>
                                 <div class="story-content">
                                     <h3 class="box-title"><a href="program.html">Rahul Singh</a></h3>
                                 </div>
                                 <div class="story-content hover-style">
-                                    <div class="quote-icon"><img src="{{('/assets/img/icon/quote.svg') }}" alt=""></div>
+                                    <div class="quote-icon"><img src="{{asset('/assets/img/icon/quote.svg') }}" alt=""></div>
                                     <p class="box-text">"MIU’s emphasis on experiential learning and placement preparation
                                         significantly enhanced my career readiness. The guidance from faculty and training
                                         sessions ensured I performed confidently during recruitment processes."</p>
@@ -1279,12 +1279,12 @@
                         <!-- Slide 4 - Text changed to MIU Student -->
                         <div class="swiper-slide">
                             <div class="story-card">
-                                <div class="box-img"><img src="{{('/assets/img/story/story-1-4.jpg') }}" alt="img"></div>
+                                <div class="box-img"><img src="{{asset('/assets/img/story/story-1-4.jpg') }}" alt="img"></div>
                                 <div class="story-content">
                                     <h3 class="box-title"><a href="program.html">Neha Gupta</a></h3>
                                 </div>
                                 <div class="story-content hover-style">
-                                    <div class="quote-icon"><img src="{{('/assets/img/icon/quote.svg') }}" alt=""></div>
+                                    <div class="quote-icon"><img src="{{asset('/assets/img/icon/quote.svg') }}" alt=""></div>
                                     <p class="box-text">"The university’s holistic approach towards education helped me
                                         develop both technical and interpersonal skills. The placement support system
                                         provided excellent opportunities to begin my professional journey successfully"</p>
@@ -1295,12 +1295,12 @@
                         <!-- Slide 5 - Text changed to MIU Student -->
                         <div class="swiper-slide">
                             <div class="story-card">
-                                <div class="box-img"><img src="{{('/assets/img/story/story-1-5.jpg') }}" alt="img"></div>
+                                <div class="box-img"><img src="{{asset('/assets/img/story/story-1-5.jpg') }}" alt="img"></div>
                                 <div class="story-content">
                                     <h3 class="box-title"><a href="program.html">Arjun Mehta</a></h3>
                                 </div>
                                 <div class="story-content hover-style">
-                                    <div class="quote-icon"><img src="{{('/assets/img/icon/quote.svg') }}" alt=""></div>
+                                    <div class="quote-icon"><img src="{{asset('/assets/img/icon/quote.svg') }}" alt=""></div>
                                     <p class="box-text">"With a focus on real-world applications and continuous learning,
                                         MIU prepared me for industry challenges. The exposure to practical training and
                                         mentorship proved invaluable for my career growth."</p>
@@ -1311,12 +1311,12 @@
                         <!-- Slide 6 - Text changed to MIU Student -->
                         <div class="swiper-slide">
                             <div class="story-card">
-                                <div class="box-img"><img src="{{('/assets/img/story/story-1-1.jpg') }}"  alt="img"></div>
+                                <div class="box-img"><img src="{{asset('/assets/img/story/story-1-1.jpg') }}"  alt="img"></div>
                                 <div class="story-content">
                                     <h3 class="box-title"><a href="program.html">Sneha Kapoor</a></h3>
                                 </div>
                                 <div class="story-content hover-style">
-                                    <div class="quote-icon"><img src="{{('/assets/img/icon/quote.svg') }}" alt=""></div>
+                                    <div class="quote-icon"><img src="{{asset('/assets/img/icon/quote.svg') }}" alt=""></div>
                                     <p class="box-text">"MIU University offered a perfect blend of academic excellence and
                                         skill development. The structured placement programs and faculty support helped me
                                         secure a position aligned with my career aspirations."
@@ -1328,12 +1328,12 @@
                         <!-- Slide 7 - Text changed to MIU Student -->
                         <div class="swiper-slide">
                             <div class="story-card">
-                                <div class="box-img"><img src="{{('/assets/img/story/story-1-2.jpg') }}"  alt="img"></div>
+                                <div class="box-img"><img src="{{asset('/assets/img/story/story-1-2.jpg') }}"  alt="img"></div>
                                 <div class="story-content">
                                     <h3 class="box-title"><a href="program.html">Vikas Yadav</a></h3>
                                 </div>
                                 <div class="story-content hover-style">
-                                    <div class="quote-icon"><img src="{{('/assets/img/icon/quote.svg') }}" alt=""></div>
+                                    <div class="quote-icon"><img src="{{asset('/assets/img/icon/quote.svg') }}" alt=""></div>
                                     <p class="box-text">"The emphasis on industry integration and practical learning gave
                                         me a competitive edge. MIU’s placement training and expert guidance were
                                         instrumental in shaping my professional success."
@@ -1345,12 +1345,12 @@
                         <!-- Slide 8 - Text changed to MIU Student -->
                         <div class="swiper-slide">
                             <div class="story-card">
-                                <div class="box-img"><img src="{{('/assets/img/story/story-1-3.jpg') }}" alt="img"></div>
+                                <div class="box-img"><img src="{{asset('/assets/img/story/story-1-3.jpg') }}" alt="img"></div>
                                 <div class="story-content">
                                     <h3 class="box-title"><a href="program.html">Pooja Singh</a></h3>
                                 </div>
                                 <div class="story-content hover-style">
-                                    <div class="quote-icon"><img src="{{('/assets/img/icon/quote.svg') }}" alt=""></div>
+                                    <div class="quote-icon"><img src="{{asset('/assets/img/icon/quote.svg') }}" alt=""></div>
                                     <p class="box-text">"From classroom learning to corporate readiness, MIU ensured a
                                         comprehensive development journey. The faculty mentorship and placement initiatives
                                         played a key role in my successful career transition"</p>
@@ -1361,12 +1361,12 @@
                         <!-- Slide 9 - Text changed to MIU Student -->
                         <div class="swiper-slide">
                             <div class="story-card">
-                                <div class="box-img"><img src="{{('/assets/img/story/story-1-4.jpg') }}" alt="img"></div>
+                                <div class="box-img"><img src="{{asset('/assets/img/story/story-1-4.jpg') }}" alt="img"></div>
                                 <div class="story-content">
                                     <h3 class="box-title"><a href="program.html">Rohit Kumar</a></h3>
                                 </div>
                                 <div class="story-content hover-style">
-                                    <div class="quote-icon"><img src="{{('/assets/img/icon/quote.svg') }}" alt=""></div>
+                                    <div class="quote-icon"><img src="{{asset('/assets/img/icon/quote.svg') }}" alt=""></div>
                                     <p class="box-text">"MIU’s focus on skill enhancement and industry exposure helped me
                                         build confidence and expertise. The structured training programs prepared me
                                         effectively for real-world job opportunities."</p>
@@ -1377,12 +1377,12 @@
                         <!-- Slide 10 - Text changed to MIU Student -->
                         <div class="swiper-slide">
                             <div class="story-card">
-                                <div class="box-img"><img src="{{('/assets/img/story/story-1-5.jpg') }}" alt="img"></div>
+                                <div class="box-img"><img src="{{asset('/assets/img/story/story-1-5.jpg') }}" alt="img"></div>
                                 <div class="story-content">
                                     <h3 class="box-title"><a href="program.html">Anjali Verma</a></h3>
                                 </div>
                                 <div class="story-content hover-style">
-                                    <div class="quote-icon"><img src="{{('/assets/img/icon/quote.svg') }}" alt=""></div>
+                                    <div class="quote-icon"><img src="{{asset('/assets/img/icon/quote.svg') }}" alt=""></div>
                                     <p class="box-text">"The academic environment at MIU encouraged continuous learning
                                         and growth. The practical exposure and career-focused training helped me secure a
                                         position in a reputed organization."</p>
@@ -1392,12 +1392,12 @@
                         </div>
                         <div class="swiper-slide">
                             <div class="story-card">
-                                <div class="box-img"><img src="{{('/assets/img/story/story-1-5.jpg') }}" alt="img"></div>
+                                <div class="box-img"><img src="{{asset('/assets/img/story/story-1-5.jpg') }}" alt="img"></div>
                                 <div class="story-content">
                                     <h3 class="box-title"><a href="program.html">Karan Malhotra</a></h3>
                                 </div>
                                 <div class="story-content hover-style">
-                                    <div class="quote-icon"><img src="{{('/assets/img/icon/quote.svg') }}" alt=""></div>
+                                    <div class="quote-icon"><img src="{{asset('/assets/img/icon/quote.svg') }}" alt=""></div>
                                     <p class="box-text">"MIU University provided me with the right platform to develop my
                                         skills and achieve my goals. The placement support and industry exposure were
                                         crucial in shaping my career path."</p>
@@ -1412,9 +1412,9 @@
     </section>
     <section class="event-area-1 position-relative overflow-hidden space" id="event-sec">
         <div class="event-shape shape-mockup d-none d-xxl-block" data-top="0%" data-left="0%"><img
-                src="{{('/assets/img/shape/shape-2.png') }}" alt=""></div>
+                src="{{asset('/assets/img/shape/shape-2.png') }}" alt=""></div>
         {{-- <div class="event-shape jump shape-mockup d-none d-xxl-block" data-bottom="0%" data-left="3%"><img
-                src="{{('/assets/img/shape/event-1-1.png') }}" alt=""></div> --}}
+                src="{{asset('/assets/img/shape/event-1-1.png') }}" alt=""></div> --}}
         <div class="container">
             <div class="row justify-content-lg-between justify-content-center align-items-center">
                 <div class="col-lg-8 col-12">
@@ -1439,8 +1439,8 @@
                             <div class="blog-img position-relative p-3 pb-0">
                                 <a href="blog-details.html">
                                     <div class="blog-img-box position-relative overflow-hidden">
-                                        <img src="{{('/assets/img/blog/blog_1_1.jpg') }}" alt="blog image">
-                                        <img src="{{('/assets/img/blog/blog_1_1.jpg') }}" alt="blog image">
+                                        <img src="{{asset('/assets/img/blog/blog_1_1.jpg') }}" alt="blog image">
+                                        <img src="{{asset('/assets/img/blog/blog_1_1.jpg') }}" alt="blog image">
                                     </div>
                                 </a>
                                 <div class="blog-date">
@@ -1464,8 +1464,8 @@
                             <div class="blog-img position-relative p-3 pb-0">
                                 <a href="blog-details.html">
                                     <div class="blog-img-box position-relative overflow-hidden">
-                                        <img src="{{('/assets/img/blog/blog_1_1.jpg') }}" alt="blog image">
-                                        <img src="{{('/assets/img/blog/blog_1_1.jpg') }}" alt="blog image">
+                                        <img src="{{asset('/assets/img/blog/blog_1_1.jpg') }}" alt="blog image">
+                                        <img src="{{asset('/assets/img/blog/blog_1_1.jpg') }}" alt="blog image">
                                     </div>
                                 </a>
                                 <div class="blog-date">
@@ -1489,8 +1489,8 @@
                             <div class="blog-img position-relative p-3 pb-0">
                                 <a href="blog-details.html">
                                     <div class="blog-img-box position-relative overflow-hidden">
-                                        <img src="{{('/assets/img/blog/blog_1_1.jpg') }}" alt="blog image">
-                                        <img src="{{('/assets/img/blog/blog_1_1.jpg') }}" alt="blog image">
+                                        <img src="{{asset('/assets/img/blog/blog_1_1.jpg') }}" alt="blog image">
+                                        <img src="{{asset('/assets/img/blog/blog_1_1.jpg') }}" alt="blog image">
                                     </div>
                                 </a>
                                 <div class="blog-date">
@@ -1520,7 +1520,7 @@
                     </div>
                 </div>
                 <div class="col-xl-6 order-0 order-xl-1">
-                    <div class="apply-stadum-thumb reveal"><img src="{{('/assets/img/apply-stadum/apply-stadum-home-1.jpg') }}"
+                    <div class="apply-stadum-thumb reveal"><img src="{{asset('/assets/img/apply-stadum/apply-stadum-home-1.jpg') }}"
                             alt="image" class="">
                     </div>
                 </div>
@@ -1533,9 +1533,9 @@
             <div class="row gy-30 gx-30 align-items-center justify-content-center">
                 <div class="col-xxl-4">
                     <div class="faq-imgbox wow fadeInLeft" data-wow-delay=".3s">
-                        <div class="img1"><img src="{{('/assets/img/faq/faq-1-2.jpg') }}" alt="image"> <img
-                                src="{{('/assets/img/faq/faq-1-1.jpg') }}" alt="image"></div>
-                        <div class="img2"><img src="{{('/assets/img/faq/faq-1-3.jpg') }}" alt="image"></div>
+                        <div class="img1"><img src="{{asset('/assets/img/faq/faq-1-2.jpg') }}" alt="image"> <img
+                                src="{{asset('/assets/img/faq/faq-1-1.jpg') }}" alt="image"></div>
+                        <div class="img2"><img src="{{asset('/assets/img/faq/faq-1-3.jpg') }}" alt="image"></div>
                     </div>
                 </div>
 
