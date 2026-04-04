@@ -663,7 +663,7 @@
                     </div>
                 </div>
                 <div class="col-auto align-self-center">
-                    <div class="sec-btn wow fadeInUp" data-wow-delay=".3s"><a href="program.html"
+                    <div class="sec-btn wow fadeInUp" data-wow-delay=".3s"><a href="/schools-and-departments"
                             class="th-btn style-border1 th-icon">Explore All</a></div>
                 </div>
             </div>
