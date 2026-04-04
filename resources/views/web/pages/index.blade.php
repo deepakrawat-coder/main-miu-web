@@ -178,7 +178,7 @@
 
                         <div class="about-content ms-xxl-4 ps-xxl-2 ms-xl-2">
                             <div class="title-area">
-                                <span class="sub-title text-anim mt-2">About the Institution</span>
+                                <span class="sub-title text-anim mt-2">About the University</span>
                                 <h2 class="sec-title text-anim2">Advancing Knowledge, Shaping Futures, Creating Global
                                     Impact</h2>
                                 <p class="sec-text mt-25 mb-0 wow fadeInUp" data-wow-delay=".2s">

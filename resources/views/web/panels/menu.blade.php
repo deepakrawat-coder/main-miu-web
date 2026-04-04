@@ -146,9 +146,9 @@
                  <div class="col-auto">
                      <div class="header-links">
                          <ul class="header-right-wrap">
-                             <li><i class="fa-solid fa-user"></i><a href="#login-form" class="popup-content">Staff
+                             <li><i class="fa-solid fa-user"></i><a href="https://vocational.miu.edu.in/ams/" target="_blank"class="popup-content">Staff
                                      Login</a></li>
-                             <li><i class="fas fa-comments"></i><a href="faq.html">Students Login</a></li>
+                             <li><i class="fas fa-comments"></i><a href="https://vocational.miu.edu.in/ams/" target="_blank">Students Login</a></li>
 
                          </ul>
                      </div>
