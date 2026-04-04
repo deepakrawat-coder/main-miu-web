@@ -1529,6 +1529,12 @@
             .img3 {
                 display: none !important;
             }
+            .box-text .style2{
+                font-size: 13px !important;
+            }
+            .feature-card .box-title{
+font-size:18px !important
+            }
         }
 
         .feature-card {
