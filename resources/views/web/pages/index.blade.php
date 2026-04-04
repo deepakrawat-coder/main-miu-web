@@ -18,15 +18,15 @@
         }
 
         /* ========================================
-                                                                       PERFECT STACKED CARDS SLIDER
-                                                                       Height: 800px | Bottom se start | Scroll controlled
-                                                                       STRICT SCROLL LOCK - Until all slides complete
-                                                                    ======================================== */
+                                                                                                                                                           PERFECT STACKED CARDS SLIDER
+                                                                                                                                                           Height: 800px | Bottom se start | Scroll controlled
+                                                                                                                                                           STRICT SCROLL LOCK - Until all slides complete
+                                                                                                                                                        ======================================== */
         .stack-slider-section {
             position: relative;
             /* background: linear-gradient(135deg, #f5f7fa 0%, #fff 100%); */
             background: black;
-            height: 800px;
+            height: 100dvh;
             overflow: hidden;
         }
 
@@ -61,7 +61,7 @@
 
         .stack-container {
             width: 100%;
-            max-width: 1200px;
+            max-width: 1500px;
             margin: 0 auto;
             padding: 0 20px;
             position: relative;
@@ -148,15 +148,15 @@
         }
 
         .card-right {
-            flex: 1;
+            /* flex: 1; */
             min-height: 320px;
             background: #eef2f6;
             overflow: hidden;
         }
 
         .card-right img {
-            width: 100%;
-            height: 100%;
+            width: 800px;
+            height: 400px;
             object-fit: cover;
             transition: transform 0.5s ease;
         }
@@ -200,7 +200,7 @@
             font-size: 0.8rem;
             font-weight: 600;
             /* color: #f37021;
-                                                                background: rgba(243, 112, 33, 0.1); */
+                                                                                                                                                    background: rgba(243, 112, 33, 0.1); */
             color: #d3224d;
             background: #d3224d26;
             padding: 4px 12px;
@@ -374,11 +374,11 @@
 
         //end sliderstyle
         /* Placement Section Styles
-                                                    .placement-section {
-                                                        background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
-                                                    }
+                                                                                                                                        .placement-section {
+                                                                                                                                            background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+                                                                                                                                        }
 
-                                                    /* Stats Cards */
+                                                                                                                                        /* Stats Cards */
         .placement-stats-card {
             background: white;
             padding: 30px 20px;
@@ -908,112 +908,642 @@
                 margin-top: -30px;
             }
         }
+
+        /* ========================================
+                                                                                       HERO SECTION - ENHANCED RESPONSIVE FIXES
+                                                                                       ======================================== */
+
+        /* Hero Slider Container Fix */
+        .th-hero-wrapper {
+            position: relative;
+            overflow: hidden;
+            min-height: 600px;
+        }
+
+        .swiper-slide .hero-inner {
+            min-height: 700px;
+            display: flex;
+            align-items: center;
+        }
+
+        .th-hero-bg {
+            position: absolute;
+            inset: 0;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .th-hero-bg::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(90deg, rgba(0, 0, 0, 0.514) 0%, rgba(0, 0, 0, 0.144)) 100%);
+        }
+
+        /* Hero Content Responsive */
+        .hero-style1 .hero-title {
+            font-size: 3.5rem;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-style1 .hero-text {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            max-width: 600px;
+        }
+
+        .btn-wrap {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        /* Fixed Enquiry Form - Better Responsive */
+        .enquiry-fixed-form {
+            position: absolute;
+            right: 5%;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 99;
+            width: 420px;
+            max-width: 90%;
+        }
+
+        /* Hero Custom Position Row */
+        .custom_postion {
+            position: relative;
+            z-index: 2;
+        }
+
+        /* ========================================
+                                                                                       STACK SLIDER SECTION - ENHANCED RESPONSIVE
+                                                                                       ======================================== */
+
+        .stack-slider-section {
+            position: relative;
+            background: black;
+            height: 100dvh;
+            overflow: hidden;
+        }
+
+        /* Body scroll lock */
+        body.slider-active {
+            overflow: hidden;
+            position: fixed;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* ========== RESPONSIVE BREAKPOINTS ========== */
+
+        /* Tablet (992px and below) */
+        @media (max-width: 992px) {
+
+            /* Hero Section */
+            .th-hero-wrapper {
+                min-height: 500px;
+            }
+
+            .swiper-slide .hero-inner {
+                min-height: 550px;
+                padding: 60px 0;
+            }
+
+            .hero-style1 .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .hero-style1 .hero-text {
+                font-size: 1rem;
+            }
+
+            /* Enquiry Form - becomes inline below hero content */
+            .enquiry-fixed-form {
+                position: relative;
+                right: auto;
+                top: auto;
+                transform: none;
+                width: 100%;
+                max-width: 500px;
+                margin: -40px auto 0 auto;
+                padding: 0 20px;
+            }
+
+            .custom_postion {
+                text-align: center;
+            }
+
+            .hero-style1 .hero-text {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .btn-wrap {
+                justify-content: center;
+            }
+
+            /* Stack Slider */
+            .stack-slider-section {
+                height: 700px;
+            }
+
+            .card-title {
+                font-size: 1.4rem;
+            }
+
+            .card-left {
+                padding: 30px;
+            }
+
+            .card-right {
+                min-height: 280px;
+            }
+
+            .cards-stack {
+                height: 450px;
+            }
+        }
+
+        /* Mobile Landscape (768px and below) */
+        @media (max-width: 768px) {
+
+            /* Hero Section */
+            .th-hero-wrapper {
+                min-height: 450px;
+            }
+
+            .swiper-slide .hero-inner {
+                min-height: 480px;
+                padding: 50px 0;
+            }
+
+            .hero-style1 .hero-title {
+                font-size: 1.8rem;
+                margin-bottom: 1rem;
+            }
+
+            .hero-style1 .hero-text {
+                font-size: 0.9rem;
+                margin-bottom: 1.5rem;
+            }
+
+            .btn-wrap .th-btn {
+                padding: 10px 20px;
+                font-size: 0.85rem;
+            }
+
+            /* Enquiry Form */
+            .enquiry-fixed-form {
+                margin-top: -50px;
+            }
+
+            .enquiry-fixed-form .bg-white {
+                padding: 1.25rem !important;
+            }
+
+            .form-header h3 {
+                font-size: 1.3rem;
+            }
+
+            /* Stack Slider - Mobile: Disable scroll lock for better UX */
+            .stack-slider-section {
+                height: auto;
+                min-height: 550px;
+                overflow-y: visible;
+            }
+
+            /* Disable body lock on mobile */
+            body.slider-active {
+                overflow: auto !important;
+                position: relative !important;
+                top: auto !important;
+            }
+
+            .stack-sticky {
+                position: relative !important;
+                height: auto !important;
+                transform: none !important;
+                padding: 30px 0;
+            }
+
+            .cards-stack {
+                height: auto;
+                min-height: 480px;
+                display: flex;
+                flex-direction: column;
+            }
+
+            /* Stack cards become stacked vertically on mobile */
+            .stack-card {
+                position: relative !important;
+                margin-bottom: 20px;
+                opacity: 1 !important;
+                visibility: visible !important;
+                transform: translateY(0) scale(1) !important;
+                display: none;
+            }
+
+            .stack-card.active {
+                display: block;
+                position: relative !important;
+                top: auto !important;
+                bottom: auto !important;
+            }
+
+            .stack-card.prev,
+            .stack-card.next,
+            .stack-card.hidden {
+                display: none;
+            }
+
+            .card-inner {
+                flex-direction: column;
+            }
+
+            .card-left {
+                padding: 20px;
+                order: 1;
+            }
+
+            .card-right {
+                min-height: 180px;
+                order: 0;
+            }
+
+            .card-title {
+                font-size: 1.2rem;
+            }
+
+            .card-text {
+                font-size: 0.8rem;
+            }
+
+            /* Progress Indicator - reposition for mobile */
+            .progress-indicator {
+                position: relative;
+                bottom: auto;
+                left: auto;
+                transform: none;
+                margin: 20px auto 0;
+            }
+
+            /* Hide scroll hint on mobile */
+            .scroll-hint {
+                display: none;
+            }
+        }
+
+        /* Mobile Small (576px and below) */
+        @media (max-width: 576px) {
+
+            /* Hero */
+            .hero-style1 .hero-title {
+                font-size: 1.5rem;
+            }
+
+            .hero-style1 .hero-text {
+                font-size: 0.85rem;
+            }
+
+            .btn-wrap {
+                gap: 10px;
+            }
+
+            .btn-wrap .th-btn {
+                padding: 8px 16px;
+                font-size: 0.75rem;
+            }
+
+            /* Form */
+            .row-2col {
+                flex-direction: column;
+                gap: 0;
+            }
+
+            .form-group input {
+                padding: 0.7rem 0.8rem;
+                font-size: 0.85rem;
+            }
+
+            .btn-submit {
+                padding: 0.8rem;
+                font-size: 0.9rem;
+            }
+
+            /* Stack Slider */
+            .cards-stack {
+                min-height: 420px;
+            }
+
+            .card-left {
+                padding: 15px;
+            }
+
+            .card-title {
+                font-size: 1rem;
+            }
+
+            .card-text {
+                font-size: 0.75rem;
+            }
+
+            .card-badge {
+                font-size: 0.6rem;
+            }
+
+            .card-counter {
+                font-size: 0.7rem;
+            }
+        }
+
+        /* Large Desktop Fix (1200px+) */
+        @media (min-width: 1200px) {
+            .hero-style1 .hero-title {
+                font-size: 4rem;
+            }
+
+            .hero-style1 .hero-text {
+                font-size: 1.2rem;
+            }
+
+            .enquiry-fixed-form {
+                width: 480px;
+            }
+        }
+
+        /* ========================================
+                                                                                       EXTRA: Navigation buttons for mobile slider
+                                                                                       ======================================== */
+        .mobile-slider-nav {
+            display: none;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .mobile-slider-nav button {
+            background: var(--theme-color);
+            border: none;
+            color: white;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .mobile-slider-nav button:hover {
+            background: #ff8c42;
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 768px) {
+            .mobile-slider-nav {
+                display: flex;
+            }
+        }
+
+        @media(max-width: 995px) {
+            .feature-sec-1 {
+                margin-top: 74px !important;
+            }
+        }
+
+        //programs css
+        /* Course Card Image Container */
+        .course-img-thumb {
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Overlay Styles */
+        .course-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, var(--black-color), var(--theme-color));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            z-index: 10;
+        }
+
+        .course-card:hover .course-overlay {
+            opacity: 1;
+        }
+
+        .overlay-content {
+            text-align: center;
+            padding: 20px;
+            transform: translateY(20px);
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .course-card:hover .overlay-content {
+            transform: translateY(0);
+        }
+
+        .overlay-content h4 {
+            color: white;
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .overlay-content p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 0.85rem;
+            margin-bottom: 15px;
+        }
+
+        .overlay-btn {
+            display: inline-block;
+            background: white;
+            color: #d3224d;
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .overlay-btn:hover {
+            background: #f37021;
+            color: white;
+            transform: translateX(5px);
+        }
+
+        /* Wishlist Icon Position Fix */
+        .wishlist-icon {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            z-index: 15;
+            background: white;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #d3224d;
+            transition: all 0.3s ease;
+        }
+
+        .wishlist-icon:hover {
+            background: #d3224d;
+            color: white;
+        }
+
+        /* Tab Buttons Styling */
+        .course-tabs {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .course-tabs .nav-link {
+            padding: 10px 24px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            border-radius: 40px;
+            background: transparent;
+            border: 2px solid var(--theme-color);
+            color: var(--theme-color);
+            transition: all 0.3s ease;
+        }
+
+        .course-tabs .nav-link.active,
+        .course-tabs .nav-link:hover {
+            background: var(--theme-color);
+            color: white;
+            border-color: var(--theme-color);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .course-tabs {
+                justify-content: center;
+                margin-top: 20px;
+            }
+
+            .course-tabs .nav-link {
+                padding: 6px 16px;
+                font-size: 0.8rem;
+            }
+
+            .overlay-content h4 {
+                font-size: 1rem;
+            }
+
+            .overlay-content p {
+                font-size: 0.75rem;
+            }
+
+            .overlay-btn {
+                padding: 6px 16px;
+                font-size: 0.7rem;
+            }
+        }
+
+        .course-card {
+            border-radius: 10px;
+        }
+
+        .affliation_img {
+            max-height: 200px !important;
+            height: 200px !important;
+        }
+
+        .th-hero-bg {
+            position: absolute;
+            inset: 0;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .box-title {
+            font-weight: 400 !important;
+        }
+
+        @media (max-width: 500px) {
+            .card-right img {
+                height:301px !important;
+            }
+            .feature-card {
+                padding: 8px 5px;
+                height: 274px;
+            }
+
+            .box-text {
+                margin-bottom: 0px !important;
+                padding-bottom: 0px !important;
+            }
+
+            .img-box1 img {
+                display: none !important;
+            }
+
+            .about-wrapp {
+                display: none !important;
+            }
+
+            .affliation_img {
+                max-height: 100px !important;
+                height: 100px !important;
+            }
+
+            .program-none {
+                display: none !important;
+            }
+
+            .overlay-content h4 {
+                line-height: normal !important;
+            }
+
+            .counter-wrap1 {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+
+            .stats-number {
+                font-size: 16px;
+            }
+
+            .process-icon {
+                margin-bottom: 0px !important;
+            }
+
+            .process-card h4 {
+                line-height: normal !important;
+                margin-bottom: 0px !important;
+            }
+
+            .img1,
+            .img2,
+            .img3 {
+                display: none !important;
+            }
+        }
+
+        .feature-card {
+            height: 300px !important;
+        }
     </style>
 @endsection
 @section('content')
-    {{-- <div class="th-hero-wrapper hero-1" id="hero">
-        <div class="swiper th-slider" id="heroSlide" data-slider-options='{"effect":"fade"}'>
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <div class="hero-inner">
-                        <div class="th-hero-bg" data-bg-src="{{ asset('/new-miu/banner/banner2.jpeg') }}"></div>
-                        <div class="container th-container2">
-                            <div class="row gy-60 align-items-center">
-                                <div class="col-xxl-6 col-xl-8 col-lg-9">
-                                    <div class="hero-style1">
-                                        <div class="hero-text-wrap">
-                                            <h2 class="hero-title text-white" data-ani="slideinup" data-ani-delay="0.3s">
-                                                Shape Your Future at MIU</h2>
-                                            <p class="hero-text text-white" data-ani="slideinup" data-ani-delay="0.5s">We
-                                               Join a globally recognized university with 50+ innovative programs designed for tomorrow's leaders</p>
-                                            <div class="btn-wrap justify-content-center justify-content-lg-start"
-                                                data-ani="slideinup" data-ani-delay="0.8s"><a href="contact.html"
-                                                    class="th-btn white-hover th-icon">Admission Now</a> <a
-                                                    href="program.html"
-                                                    class="th-btn style-border1 th-icon white-hover">View Program</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xxl-6 col-xl-4 col-lg-3 d-flex justify-content-end">
-
-                                    <div class="bg-white p-4 rounded-3 shadow-lg w-50">
-
-                                        @include('web.parts.enquery-form')
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="hero-inner">
-                        <div class="th-hero-bg" data-bg-src="{{ asset('/new-miu/banner/banner3.png') }}"></div>
-                        <div class="container th-container2">
-                            <div class="row gy-60 align-items-center">
-                                <div class="col-xxl-6 col-xl-8 col-lg-9">
-                                    <div class="hero-style1">
-                                        <div class="hero-text-wrap">
-                                            <h2 class="hero-title text-white" data-ani="slideinup" data-ani-delay="0.3s">
-                                               World-Class Education, Global Opportunities</h2>
-                                            <p class="hero-text text-white" data-ani="slideinup" data-ani-delay="0.5s">We
-                                               200+ international partnerships, 92% placement rate, and scholarships up to 100% for deserving students</p>
-                                            <div class="btn-wrap justify-content-center justify-content-lg-start"
-                                                data-ani="slideinup" data-ani-delay="0.8s"><a href="contact.html"
-                                                    class="th-btn white-hover th-icon">Admission Now</a> <a
-                                                    href="program.html"
-                                                    class="th-btn style-border1 th-icon white-hover">View Program</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xxl-6 col-xl-4 col-lg-3 d-flex justify-content-end">
-
-                                    <div class="bg-white p-4 rounded-3 shadow-lg w-50">
-
-                                        @include('web.parts.enquery-form')
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="hero-inner">
-                        <div class="th-hero-bg" data-bg-src="{{ asset('/new-miu/banner/banner1.png') }}"></div>
-                        <div class="container th-container2">
-                            <div class="row gy-60 align-items-center">
-                                <div class="col-xxl-6 col-xl-8 col-lg-9">
-                                    <div class="hero-style1">
-                                        <div class="hero-text-wrap">
-                                            <h2 class="hero-title text-white" data-ani="slideinup" data-ani-delay="0.3s">
-                                                Your Journey to Excellence Begins Here</h2>
-                                            <p class="hero-text text-white" data-ani="slideinup" data-ani-delay="0.5s">State-of-the-art campus, expert faculty, and vibrant student community — apply now for the upcoming semester.</p>
-                                            <div class="btn-wrap justify-content-center justify-content-lg-start"
-                                                data-ani="slideinup" data-ani-delay="0.8s"><a href="contact.html"
-                                                    class="th-btn white-hover th-icon">Admission Now</a> <a
-                                                    href="program.html"
-                                                    class="th-btn style-border1 th-icon white-hover">View Program</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xxl-6 col-xl-4 col-lg-3 d-flex justify-content-end">
-
-                                    <div class="bg-white p-4 rounded-3 shadow-lg w-50">
-
-                                        @include('web.parts.enquery-form')
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            <div class="slider-pagination"></div>
-        </div>
-    </div> --}}
     <div class="th-hero-wrapper hero-1" id="hero" style="position: relative;">
         <div class="swiper th-slider" id="heroSlide" data-slider-options='{"effect":"fade"}' style="height:800px;">
             <div class="swiper-wrapper">
@@ -1026,10 +1556,10 @@
                                     <div class="hero-style1">
                                         <div class="hero-text-wrap">
                                             <h2 class="hero-title text-white" data-ani="slideinup" data-ani-delay="0.3s">
-                                                Shape Your Future at MIU</h2>
+                                                Shaping the Leaders of Tomorrow</h2>
                                             <p class="hero-text text-white" data-ani="slideinup" data-ani-delay="0.5s">Join
-                                                a globally recognized university with 50+ innovative programs designed for
-                                                tomorrow's leaders</p>
+                                                An institution committed to intellectual rigor, industry integration, and
+                                                transformative learning experiences that shape global professionals.</p>
                                             <div class="btn-wrap" data-ani="slideinup" data-ani-delay="0.8s">
                                                 <a href="contact.html" class="th-btn white-hover th-icon">Admission Now</a>
                                                 <a href="program.html" class="th-btn style-border1 th-icon white-hover">View
@@ -1044,42 +1574,42 @@
                 </div>
                 <div class="swiper-slide">
                     <div class="hero-inner">
-                        <div class="th-hero-bg" data-bg-src="{{ asset('/new-miu/banner/banner3.png') }}"></div>
+                        <div class="th-hero-bg" data-bg-src="{{ asset('/new-miu/banner/1banner.jpg') }}"></div>
                         <div class="container th-container2">
                             <div class="row gy-60 align-items-center custom_postion">
                                 <div class="col-xxl-6 col-xl-8 col-lg-9">
                                     <div class="hero-style1">
                                         <div class="hero-text-wrap">
                                             <h2 class="hero-title text-white" data-ani="slideinup" data-ani-delay="0.3s">
-                                                World-Class Education, Global Opportunities</h2>
-                                            <p class="hero-text text-white" data-ani="slideinup" data-ani-delay="0.5s">200+
-                                                international partnerships, 92% placement rate, and scholarships up to 100%
-                                                for deserving students</p>
-                                            <div class="btn-wrap" data-ani="slideinup" data-ani-delay="0.8s">
-                                                <a href="contact.html" class="th-btn white-hover th-icon">Admission Now</a>
-                                                <a href="program.html" class="th-btn style-border1 th-icon white-hover">View
-                                                    Program</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="hero-inner">
-                        <div class="th-hero-bg" data-bg-src="{{ asset('/new-miu/banner/banner1.png') }}"></div>
-                        <div class="container th-container2">
-                            <div class="row gy-60 align-items-center custom_postion">
-                                <div class="col-xxl-6 col-xl-8 col-lg-9">
-                                    <div class="hero-style1">
-                                        <div class="hero-text-wrap">
-                                            <h2 class="hero-title text-white" data-ani="slideinup" data-ani-delay="0.3s">
-                                                Your Journey to Excellence Begins Here</h2>
+                                                Education Engineered for Excellence</h2>
                                             <p class="hero-text text-white" data-ani="slideinup" data-ani-delay="0.5s">
-                                                State-of-the-art campus, expert faculty, and vibrant student community —
-                                                apply now for the upcoming semester.</p>
+                                                Blending academic depth with experiential learning to cultivate innovation,
+                                                leadership, and career-ready competencies.</p>
+                                            <div class="btn-wrap" data-ani="slideinup" data-ani-delay="0.8s">
+                                                <a href="contact.html" class="th-btn white-hover th-icon">Admission Now</a>
+                                                <a href="program.html" class="th-btn style-border1 th-icon white-hover">View
+                                                    Program</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="hero-inner">
+                        <div class="th-hero-bg" data-bg-src="{{ asset('/new-miu/banner/2banner.jpg') }}"></div>
+                        <div class="container th-container2">
+                            <div class="row gy-60 align-items-center custom_postion">
+                                <div class="col-xxl-6 col-xl-8 col-lg-9">
+                                    <div class="hero-style1">
+                                        <div class="hero-text-wrap">
+                                            <h2 class="hero-title text-white" data-ani="slideinup" data-ani-delay="0.3s">
+                                                A Legacy of Learning and Leadership</h2>
+                                            <p class="hero-text text-white" data-ani="slideinup" data-ani-delay="0.5s">
+                                                Empowering ambitious minds through a progressive curriculum, distinguished
+                                                faculty, and a culture of continuous advancement.</p>
                                             <div class="btn-wrap" data-ani="slideinup" data-ani-delay="0.8s">
                                                 <a href="contact.html" class="th-btn white-hover th-icon">Admission Now</a>
                                                 <a href="program.html" class="th-btn style-border1 th-icon white-hover">View
@@ -1097,59 +1627,56 @@
         </div>
 
         <!-- 🔥 SIRF EK BAAR FORM - POSITION FIXED 🔥 -->
-        <div class="enquiry-fixed-form">
+        <div class="enquiry-fixed-form d-none d-md-block">
             <div class="bg-white p-4 rounded-3 shadow-lg">
                 @include('web.parts.enquery-form')
             </div>
         </div>
     </div>
-
-
     <div class="feature-sec-1 position-relative overflow-hidden space-bottom">
         <div class="about-shep-2 shape-mockup d-none d-xxl-block" data-top="19%" data-left="0%">
             <img src="assets/img/shape/feature-shep-home-1.png" alt="shape">
         </div>
         <div class="container th-container2">
             <div class="row gx-10 gy-10">
-                <div class="col-xl-3 col-md-6 feature-card_wrapp">
+                <div class="col-xl-3 col-md-6  col-sm-6 col-6 feature-card_wrapp">
                     <div class="feature-card wow fadeInUp" data-wow-delay=".2s">
                         <div class="box-icon">
                             <i class="fas fa-graduation-cap text-dark fs-2"></i>
                         </div>
-                        <h3 class="box-title">Global Recognition</h3>
-                        <p class="box-text style2">Internationally accredited degrees recognized worldwide.</p>
+                        <h3 class="box-title">Applied Learning Ecosystem</h3>
+                        <p class="box-text style2">Immersive, practice-driven academic framework </p>
                     </div>
                 </div>
-                <div class="col-xl-3 col-md-6 feature-card_wrapp">
+                <div class="col-xl-3 col-md-6  col-sm-6 col-6 feature-card_wrapp">
                     <div class="feature-card wow fadeInUp" data-wow-delay=".4s">
                         <div class="box-icon">
                             <i class="fas fa-globe-americas text-dark fs-2"></i>
                         </div>
-                        <h3 class="box-title">International Standards</h3>
-                        <p class="box-text style2">Global curriculum with international faculty and diverse student
-                            community.</p>
+                        <h3 class="box-title">Distinguished Faculty</h3>
+                        <p class="box-text style2">Scholars with academic and industry expertise .</p>
 
                     </div>
                 </div>
-                <div class="col-xl-3 col-md-6 feature-card_wrapp">
+                <div class="col-xl-3 col-md-6 col-sm-6 col-6 feature-card_wrapp">
                     <div class="feature-card wow fadeInUp" data-wow-delay=".6s">
                         <div class="box-icon">
                             <i class="fas fa-trophy text-dark fs-2"></i>
                         </div>
-                        <h3 class="box-title">Award Winning Programs</h3>
-                        <p class="box-text style2">Recognized for excellence in education and research innovation.</p>
+                        <h3 class="box-title">Career Acceleration</h3>
+                        <p class="box-text style2">Structured pathways toward employability </p>
 
                     </div>
                 </div>
 
                 <!-- ✅ 4th Card - Font Awesome 6.0 Icons -->
-                <div class="col-xl-3 col-md-6 feature-card_wrapp">
+                <div class="col-xl-3 col-md-6 col-sm-6 col-6 feature-card_wrapp">
                     <div class="feature-card wow fadeInUp" data-wow-delay=".8s">
                         <div class="box-icon">
                             <i class="fas fa-users text-dark fs-2"></i>
                         </div>
-                        <h3 class="box-title">Diverse Community</h3>
-                        <p class="box-text style2">Students from 50+ countries creating a global learning environment.</p>
+                        <h3 class="box-title">Innovation-Driven Curriculum</h3>
+                        <p class="box-text style2">Future-oriented, adaptive learning models.</p>
 
                     </div>
                 </div>
@@ -1165,18 +1692,19 @@
                     <div class="col-xl-6">
                         <div class="img-box1">
                             <div class="img1 text-center text-sm-start wow fadeInLeft" data-wow-delay=".2s"><img
-                                    src="assets/img/about/home-1-about-thumb1-1.jpg" alt="About"></div>
+                                    src="{{ '/new-miu/about/about-300-600.jpg' }}" alt="About"></div>
                             <div class="img2 wow fadeInUp" data-wow-delay=".3s">
                                 <div class="position-relative"><img class="mb-25"
-                                        src="assets/img/about/home-1-about-thumb1-2.jpg" alt="About"></div>
+                                        src="{{ '/new-miu/about/about-300-200.jpg' }}" alt="About"></div>
                                 <div class="position-relative wow fadeInUp" data-wow-delay=".3s"><img
-                                        src="assets/img/about/home-1-about-thumb1-3.jpg" alt="About"></div>
+                                        src="{{ '/new-miu/about/about-300-387.jpg' }}" alt="About"></div>
                             </div>
                             <div class="about-wrapp">
                                 <div class="discount-wrapp">
                                     <div class="logo"><img src="{{ asset('/new-miu/miu-white.png') }}" alt="img"
                                             width="60" height="60"></div>
-                                    <div class="discount-tag"><span class="discount-anime">* 2019 EST * UGC Approved Since
+                                    <div class="discount-tag"><span class="discount-anime">* 2019 EST * UGC Approved
+                                            Since
                                             2019</span></div>
                                 </div>
                             </div>
@@ -1186,28 +1714,26 @@
 
                         <div class="about-content ms-xxl-4 ps-xxl-2 ms-xl-2">
                             <div class="title-area">
-                                <span class="sub-title text-anim mt-2">About The Manipur International University</span>
-                                <h2 class="sec-title text-anim2">We Offer best program for Shaping the best Future</h2>
+                                <span class="sub-title text-anim mt-2">About the Institution</span>
+                                <h2 class="sec-title text-anim2">Advancing Knowledge, Shaping Futures, Creating Global
+                                    Impact</h2>
                                 <p class="sec-text mt-25 mb-0 wow fadeInUp" data-wow-delay=".2s">
-                                    The Manipur International University (MIU) is an Autonomous Statutory International
-                                    University established,
-                                    recognized, and institutionally accredited by the State Government of Manipur. The
-                                    university operates
-                                    under the Manipur International University Act, 2018 (Manipur Act No. 2 of 2019), which
-                                    was approved by
-                                    Her Excellency the Governor of Manipur on 23rd January 2019.
+                                    MIU University stands as a progressive center of higher education, dedicated to academic
+                                    excellence, innovation, and societal contribution. Established with a commitment to
+                                    quality and accessibility, the university operates in alignment with UGC regulations and
+                                    national education standards. Through a balanced integration of theoretical foundations
+                                    and applied learning, MIU fosters intellectual growth, professional competence, and
+                                    ethical responsibility among its learners.
                                 </p>
                             </div>
                             <div class="about-feature-box">
                                 <div class="about-feature wow fadeInUp" data-wow-delay=".3s">
                                     <span class="box-icon"><img src="assets/img/icon/ab-users.svg" alt="icon"></span>
                                     <div class="box-content">
-                                        <h3 class="box-title">UGC Approved University</h3>
+                                        <h3 class="box-title">Academic Rigor & Relevance</h3>
                                         <p class="box-text">
-                                            MIU is duly approved and listed by the University Grants Commission (UGC),
-                                            Ministry of Education,
-                                            Government of India under section 2(f) of UGC Act, 1956 as a State Private
-                                            University.
+                                            Curriculum meticulously designed to align scholarly knowledge with contemporary
+                                            industry requirements, ensuring intellectual and professional preparedness.
                                         </p>
                                     </div>
                                 </div>
@@ -1215,11 +1741,10 @@
                                     <span class="box-icon"><img src="assets/img/icon/ab-message.svg"
                                             alt="icon"></span>
                                     <div class="box-content">
-                                        <h3 class="box-title">Globally Recognized Degrees</h3>
+                                        <h3 class="box-title">Comprehensive Student Development</h3>
                                         <p class="box-text">
-                                            The university is empowered to award degrees under section 22 of the UGC Act,
-                                            1956, ensuring that
-                                            all degrees conferred by MIU hold national recognition and validity.
+                                            A holistic approach emphasizing critical thinking, leadership, communication,
+                                            and lifelong learning competencies.
                                         </p>
                                     </div>
                                 </div>
@@ -1233,6 +1758,396 @@
             </div>
         </div>
     </div>
+    <section class="academic1-area space overflow-hidden" id="program-sec">
+        <div class="container">
+            <div class="row justify-content-lg-between justify-content-center align-items-center">
+                <div class="col-lg-12 col-12">
+                    {{-- <div class="title-area text-center text-lg-start mb-75"><span
+                            class="sub-title text-anim">ACADEMICS</span>
+                        <h2 class="sec-title text-anim2">Schools & Faculties</h2>
+                        <p>Our Schools and Faculties bring together experienced academicians and subject experts dedicated
+                            to excellence in teaching and research. Each department is designed to foster specialized
+                            knowledge, critical thinking, and academic innovation.</p>
+                    </div> --}}
+                    <div class="title-area text-center text-lg-start mb-75">
+                        <span class="sub-title text-anim">AFFILIATIONS & ACCREDITATION</span>
+                        <h2 class="sec-title text-anim2">Recognized by Leading Education Bodies</h2>
+                        <p>MIU holds prestigious recognitions from top national and international councils. These
+                            affiliations validate our commitment to academic excellence, quality education, and adherence to
+                            global university standards, ensuring your degree is valued worldwide.</p>
+                    </div>
+                </div>
+                {{-- <div class="col-auto align-self-center">
+                    <div class="sec-btn wow fadeInUp" data-wow-delay=".3s"><a href="program.html"
+                            class="th-btn style-border1 th-icon">Explore All</a></div>
+                </div> --}}
+            </div>
+
+            <div class="row  justify-content-center">
+                <div class="col-lg-3 col-md-4 col-sm-6  col-6 mb-lg-0 mb-4">
+                    <div class="recruiter-card">
+                        <img src="{{ asset('/new-miu/affliation/All_India_Council_for_Technical_Education_logo.png') }}"
+                            alt="Accenture" class="img-fluid affliation_img">
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-6 mb-lg-0 mb-4">
+                    <div class="recruiter-card">
+                        <img src="{{ asset('/new-miu/affliation/Association_of_Indian_Universities_Logo.svg') }}"
+                            alt="Accenture" class="img-fluid affliation_img">
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-6 mb-lg-0 mb-4">
+                    <div class="recruiter-card">
+                        <img src="{{ asset('/new-miu/affliation/national-assessment-and-accreditation-council-01.jpg') }}"
+                            alt="Accenture" class="img-fluid affliation_img">
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-6 mb-lg-0 mb-4">
+                    <div class="recruiter-card">
+                        <img src="{{ asset('/new-miu/affliation/ugc.jpg') }}" alt="Accenture"
+                            class="img-fluid affliation_img">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="popular-course-area-1 space shape-mockup-wrap">
+        <div class="container th-container4">
+            <div class="row justify-content-xl-between justify-content-center align-items-center">
+                <div class="col-xl-6 col-12">
+                    <div class="title-wrap">
+                        {{-- <div class="title-area text-center text-xl-start">
+                            <span class="sub-title text-anim">POPULAR COURSES</span>
+                            <h2 class="sec-title text-anim2">Pick a course & <span class="d-block">get started your
+                                    career</span></h2>
+                        </div> --}}
+                        <div class="title-area text-center text-xl-start">
+                            <span class="sub-title text-anim">MIU PROGRAMS</span>
+                            <h2 class="sec-title text-anim2">Choose Your Path <span class="d-block">at Manipur
+                                    International University</span></h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-auto align-self-end">
+                    <div class="sec-btn">
+                        <ul class="nav nav-tabs course-tabs popularcourse-tab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active th-btn style-border1" id="diploma-tab"
+                                    data-bs-toggle="tab" data-bs-target="#diplomaTab" type="button" role="tab"
+                                    aria-selected="true">Diploma</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link th-btn style-border1" id="ug-tab" data-bs-toggle="tab"
+                                    data-bs-target="#ugTab" type="button" role="tab"
+                                    aria-selected="false">UG</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link th-btn style-border1" id="pg-tab" data-bs-toggle="tab"
+                                    data-bs-target="#pgTab" type="button" role="tab"
+                                    aria-selected="false">PG</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link th-btn style-border1" id="phd-tab" data-bs-toggle="tab"
+                                    data-bs-target="#phdTab" type="button" role="tab"
+                                    aria-selected="false">PhD</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-content">
+                <!-- ==================== DIPLOMA TAB (4 Cards) ==================== -->
+                <div class="tab-pane fade show active" id="diplomaTab" role="tabpanel" aria-labelledby="diploma-tab">
+                    <div class="popular-course-wrap1">
+                        <div class="row gy-24">
+                            <!-- Diploma Card 1 -->
+                            <div class="col-xxl-3 col-lg-4 col-md-6 col-6">
+                                <div class="course-card shadow-none p-0 mb-0">
+                                    <div class="course-img-thumb global-img mb-0" style="border-radius:10px;">
+                                        <img src="assets/img/popular-course/course-thumb-3-1.jpg" alt="Course">
+                                        <div class="course-overlay">
+                                            <div class="overlay-content" style="border-radius:10px;">
+                                                <h4>Diploma in Computer Application</h4>
+                                                <p class="program-none">Duration: 1 Year | Eligibility: 10+2</p>
+                                                <a href="#" class="overlay-btn program-none">Apply Now →</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Diploma Card 2 -->
+                            <div class="col-xxl-3 col-lg-4 col-md-6 col-6">
+                                <div class="course-card shadow-none p-0 mb-0">
+                                    <div class="course-img-thumb global-img mb-0" style="border-radius:10px;">
+                                        <img src="assets/img/popular-course/course-thumb-3-2.jpg" alt="Course">
+                                        <div class="course-overlay">
+                                            <div class="overlay-content" style="border-radius:10px;">
+                                                <h4>Diploma in Mechanical Engineering</h4>
+                                                <p class="program-none">Duration: 3 Year | Eligibility: 10th</p>
+                                                <a href="#" class="overlay-btn program-none">Apply Now →</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Diploma Card 3 -->
+                            <div class="col-xxl-3 col-lg-4 col-md-6 col-6">
+                                <div class="course-card shadow-none p-0 mb-0">
+                                    <div class="course-img-thumb global-img mb-0" style="border-radius:10px;">
+                                        <img src="assets/img/popular-course/course-thumb-3-3.jpg" alt="Course">
+                                        <div class="course-overlay">
+                                            <div class="overlay-content" style="border-radius:10px;">
+                                                <h4>Diploma in Hotel Management</h4>
+                                                <p class="program-none">Duration: 2 Year | Eligibility: 10+2</p>
+                                                <a href="#" class="overlay-btn program-none">Apply Now →</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Diploma Card 4 -->
+                            <div class="col-xxl-3 col-lg-4 col-md-6 col-6">
+                                <div class="course-card shadow-none p-0 mb-0">
+                                    <div class="course-img-thumb global-img mb-0" style="border-radius:10px;">
+                                        <img src="assets/img/popular-course/course-thumb-3-4.jpg" alt="Course">
+                                        <div class="course-overlay">
+                                            <div class="overlay-content" style="border-radius:10px;">
+                                                <h4>Diploma in Pharmacy</h4>
+                                                <p class="program-none">Duration: 2 Year | Eligibility: 10+2 PCB</p>
+                                                <a href="#" class="overlay-btn program-none">Apply Now →</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ==================== UG TAB (4 Cards) ==================== -->
+                <div class="tab-pane fade" id="ugTab" role="tabpanel" aria-labelledby="ug-tab">
+                    <div class="popular-course-wrap1">
+                        <div class="row gy-24">
+                            <!-- UG Card 1 -->
+                            <div class="col-xxl-3 col-lg-4 col-md-6 col-6">
+                                <div class="course-card shadow-none p-0 mb-0">
+                                    <div class="course-img-thumb global-img mb-0" style="border-radius:10px;">
+                                        <img src="assets/img/popular-course/course-thumb-3-5.jpg" alt="Course">
+                                        <div class="course-overlay">
+                                            <div class="overlay-content" style="border-radius:10px;">
+                                                <h4>B.Tech Computer Science</h4>
+                                                <p class="program-none">Duration: 4 Year | Eligibility: 10+2 PCM</p>
+                                                <a href="#" class="overlay-btn program-none">Apply Now →</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- UG Card 2 -->
+                            <div class="col-xxl-3 col-lg-4 col-md-6 col-6">
+                                <div class="course-card shadow-none p-0 mb-0">
+                                    <div class="course-img-thumb global-img mb-0" style="border-radius:10px;">
+                                        <img src="assets/img/popular-course/course-thumb-3-6.jpg" alt="Course">
+                                        <div class="course-overlay">
+                                            <div class="overlay-content" style="border-radius:10px;">
+                                                <h4>B.Com Accounting & Finance</h4>
+                                                <p class="program-none">Duration: 3 Year | Eligibility: 10+2 Commerce</p>
+                                                <a href="#" class="overlay-btn program-none">Apply Now →</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- UG Card 3 -->
+                            <div class="col-xxl-3 col-lg-4 col-md-6 col-6">
+                                <div class="course-card shadow-none p-0 mb-0">
+                                    <div class="course-img-thumb global-img mb-0" style="border-radius:10px;">
+                                        <img src="assets/img/popular-course/course-thumb-3-1.jpg" alt="Course">
+                                        <div class="course-overlay">
+                                            <div class="overlay-content" style="border-radius:10px;">
+                                                <h4>BA English Literature</h4>
+                                                <p class="program-none">Duration: 3 Year | Eligibility: 10+2</p>
+                                                <a href="#" class="overlay-btn program-none">Apply Now →</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- UG Card 4 -->
+                            <div class="col-xxl-3 col-lg-4 col-md-6 col-6">
+                                <div class="course-card shadow-none p-0 mb-0">
+                                    <div class="course-img-thumb global-img mb-0" style="border-radius:10px;">
+                                        <img src="assets/img/popular-course/course-thumb-3-2.jpg" alt="Course">
+                                        <div class="course-overlay">
+                                            <div class="overlay-content" style="border-radius:10px;">
+                                                <h4>BBA Business Administration</h4>
+                                                <p class="program-none">Duration: 3 Year | Eligibility: 10+2</p>
+                                                <a href="#" class="overlay-btn program-none">Apply Now →</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ==================== PG TAB (4 Cards) ==================== -->
+                <div class="tab-pane fade" id="pgTab" role="tabpanel" aria-labelledby="pg-tab">
+                    <div class="popular-course-wrap1">
+                        <div class="row gy-24">
+                            <!-- PG Card 1 -->
+                            <div class="col-xxl-3 col-lg-4 col-md-6 col-6">
+                                <div class="course-card shadow-none p-0 mb-0">
+                                    <div class="course-img-thumb global-img mb-0" style="border-radius:10px;">
+                                        <img src="assets/img/popular-course/course-thumb-3-3.jpg" alt="Course">
+                                        <div class="course-overlay">
+                                            <div class="overlay-content" style="border-radius:10px;">
+                                                <h4>M.Tech AI & Machine Learning</h4>
+                                                <p class="program-none">Duration: 2 Year | Eligibility: B.Tech</p>
+                                                <a href="#" class="overlay-btn program-none">Apply Now →</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- PG Card 2 -->
+                            <div class="col-xxl-3 col-lg-4 col-md-6 col-6">
+                                <div class="course-card shadow-none p-0 mb-0">
+                                    <div class="course-img-thumb global-img mb-0" style="border-radius:10px;">
+                                        <img src="assets/img/popular-course/course-thumb-3-4.jpg" alt="Course">
+                                        <div class="course-overlay">
+                                            <div class="overlay-content" style="border-radius:10px;">
+                                                <h4>MBA Marketing & Finance</h4>
+                                                <p class="program-none">Duration: 2 Year | Eligibility: Bachelor's Degree
+                                                </p>
+                                                <a href="#" class="overlay-btn program-none">Apply Now →</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- PG Card 3 -->
+                            <div class="col-xxl-3 col-lg-4 col-md-6 col-6">
+                                <div class="course-card shadow-none p-0 mb-0">
+                                    <div class="course-img-thumb global-img mb-0" style="border-radius:10px;">
+                                        <img src="assets/img/popular-course/course-thumb-3-5.jpg" alt="Course">
+                                        <div class="course-overlay">
+                                            <div class="overlay-content" style="border-radius:10px;">
+                                                <h4>MCA Data Science</h4>
+                                                <p class="program-none">Duration: 2 Year | Eligibility: BCA/B.Sc CS</p>
+                                                <a href="#" class="overlay-btn program-none">Apply Now →</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- PG Card 4 -->
+                            <div class="col-xxl-3 col-lg-4 col-md-6 col-6">
+                                <div class="course-card shadow-none p-0 mb-0">
+                                    <div class="course-img-thumb global-img mb-0" style="border-radius:10px;">
+                                        <img src="assets/img/popular-course/course-thumb-3-6.jpg" alt="Course">
+                                        <div class="course-overlay">
+                                            <div class="overlay-content" style="border-radius:10px;">
+                                                <h4>M.Com International Business</h4>
+                                                <p class="program-none">Duration: 2 Year | Eligibility: B.Com</p>
+                                                <a href="#" class="overlay-btn program-none">Apply Now →</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ==================== PhD TAB (4 Cards) ==================== -->
+                <div class="tab-pane fade" id="phdTab" role="tabpanel" aria-labelledby="phd-tab">
+                    <div class="popular-course-wrap1">
+                        <div class="row gy-24">
+                            <!-- PhD Card 1 -->
+                            <div class="col-xxl-3 col-lg-4 col-md-6 col-6">
+                                <div class="course-card shadow-none p-0 mb-0">
+                                    <div class="course-img-thumb global-img mb-0" style="border-radius:10px;">
+                                        <img src="assets/img/popular-course/course-thumb-3-1.jpg" alt="Course">
+                                        <div class="course-overlay">
+                                            <div class="overlay-content" style="border-radius:10px;">
+                                                <h4>PhD Computer Science</h4>
+                                                <p class="program-none">Duration: 3-5 Year | Eligibility: M.Tech/MCA</p>
+                                                <a href="#" class=" program-none overlay-btn">Apply Now →</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- PhD Card 2 -->
+                            <div class="col-xxl-3 col-lg-4 col-md-6 col-6">
+                                <div class="course-card shadow-none p-0 mb-0">
+                                    <div class="course-img-thumb global-img mb-0" style="border-radius:10px;">
+                                        <img src="assets/img/popular-course/course-thumb-3-2.jpg" alt="Course">
+                                        <div class="course-overlay">
+                                            <div class="overlay-content" style="border-radius:10px;">
+                                                <h4>PhD Business Administration</h4>
+                                                <p class="program-none">Duration: 3-5 Year | Eligibility: MBA</p>
+                                                <a href="#" class="overlay-btn program-none">Apply Now →</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- PhD Card 3 -->
+                            <div class="col-xxl-3 col-lg-4 col-md-6 col-6">
+                                <div class="course-card shadow-none p-0 mb-0">
+                                    <div class="course-img-thumb global-img mb-0" style="border-radius:10px;">
+                                        <img src="assets/img/popular-course/course-thumb-3-3.jpg" alt="Course">
+                                        <div class="course-overlay">
+                                            <div class="overlay-content" style="border-radius:10px;">
+                                                <h4>PhD Commerce & Economics</h4>
+                                                <p class="program-none">Duration: 3-5 Year | Eligibility: M.Com</p>
+                                                <a href="#" class="overlay-btn program-none">Apply Now →</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- PhD Card 4 -->
+                            <div class="col-xxl-3 col-lg-4 col-md-6 col-6">
+                                <div class="course-card shadow-none p-0 mb-0">
+                                    <div class="course-img-thumb global-img mb-0" style="border-radius:10px;">
+                                        <img src="assets/img/popular-course/course-thumb-3-4.jpg" alt="Course">
+                                        <div class="course-overlay">
+                                            <div class="overlay-content" style="border-radius:10px;">
+                                                <h4>PhD English Literature</h4>
+                                                <p class="program-none">Duration: 3-5 Year | Eligibility: MA English</p>
+                                                <a href="#" class="overlay-btn program-none">Apply Now →</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="btn-wrap mt-50 text-center d-block">
+                <a class="th-btn th-icon" href="#">Browse All Categories</a>
+            </div>
+        </div>
+    </section>
     <div class="counter-area1 overflow-hidden">
         <div class="container th-container2">
             <div class="counter-wrap1">
@@ -1288,46 +2203,6 @@
                             class="th-btn style-border1 th-icon">Explore All</a></div>
                 </div>
             </div>
-            {{-- <div class="academic-wrapp">
-                <div class="slider-area">
-                    <div class="swiper th-slider has-shadow" id="academicSlider2"
-                        data-slider-options='{"breakpoints":{"0":{"slidesPerView":1},"576":{"slidesPerView":"1"},"768":{"slidesPerView":"1"},"992":{"slidesPerView":"2"},"1200":{"slidesPerView":"3"},"1400":{"slidesPerView":"3", "spaceBetween": "24"}},"autoHeight": "true", "autoplay" : "false"}'>
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <div class="academic-card p-0"
-                                    style="border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden;">
-                                    <div class="academic-img mb-0"><a href="program-details.html"><img
-                                                src="assets/img/academic/academic1-1.jpg" alt="blog image"></a>
-
-                                    </div>
-                                    <div class="academic-content border-0 pb-0 mb-0 px-3 py-3">
-                                        <div class="academic-review mb-1"><span><i class="fa-solid fa-star"></i></span>
-                                            <span><i class="fa-solid fa-star"></i></span> <span><i
-                                                    class="fa-solid fa-star"></i></span> <span><i
-                                                    class="fa-solid fa-star"></i></span> <span><i
-                                                    class="fa-solid fa-star"></i></span>
-                                            <p class="review-text">(4.8)</p>
-                                        </div>
-                                        <h3 class="box-title"><a href="program-details.html">Bachelor in Applied
-                                                Mathematics</a></h3>
-
-                                        <p class="box-text style2 my-2" style="line-height: normal;">Every traditional
-                                            undergraduate student receives
-                                            scholarships. Rest assured you can afford us too. Rest assured you can afford us
-                                            too</p>
-                                        <div class="d-flex justify-content-between m-2 mb-2">
-                                            <a href="about.html" class="btn text-secondary custom_apply">Apply Now</a>
-                                            <a href="about.html" class="th-btn style-border1 th-icon">Read More</a>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-                          
-                        </div>
-                    </div>
-                </div>
-            </div> --}}
 
             <div class="academic-wrapp container my-4">
                 <div class="slider-area">
@@ -1430,136 +2305,13 @@
 
         </div>
     </section>
-    {{-- <section class="stack-slider-section" id="stackSlider">
-        <div class="stack-wrapper">
-            <div class="stack-sticky">
-                <div class="stack-container">
-                    <div class="cards-stack">
-
-                        <!-- Card 1 -->
-                        <div class="stack-card active" data-index="0">
-                            <div class="card-inner">
-                                <div class="card-left">
-                                    <div>
-                                        <span class="card-badge">360° LEARNING ECOSYSTEM</span>
-                                        <h2 class="card-title">Your Growth, Our Priority: Empowering every student.</h2>
-                                        <p class="card-text">State-of-the-art research facilities and partnerships with
-                                            international institutions to drive innovation and discovery.</p>
-                                        <span class="card-counter">01 / 05</span>
-                                    </div>
-                                </div>
-                                <div class="card-right">
-                                    <img src="{{ asset('/new-miu/banner1.png') }}" alt="Slide 1">
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Card 2 -->
-                        <div class="stack-card" data-index="1">
-                            <div class="card-inner">
-                                <div class="card-left">
-                                    <div>
-                                        <span class="card-badge">GLOBAL PERSPECTIVE</span>
-                                        <h2 class="card-title">International Collaborations & Exchange Programs</h2>
-                                        <p class="card-text">International collaborations, exchange programs, and
-                                            multicultural learning environments that prepare students for global careers.
-                                        </p>
-                                        <span class="card-counter">02 / 05</span>
-                                    </div>
-                                </div>
-                                <div class="card-right">
-                                    <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=800"
-                                        alt="Slide 2">
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Card 3 -->
-                        <div class="stack-card" data-index="2">
-                            <div class="card-inner">
-                                <div class="card-left">
-                                    <div>
-                                        <span class="card-badge">INNOVATION HUB</span>
-                                        <h2 class="card-title">Startup Support & Technology Transfer</h2>
-                                        <p class="card-text">Entrepreneurship incubation centers, startup support programs,
-                                            and technology transfer initiatives.</p>
-                                        <span class="card-counter">03 / 05</span>
-                                    </div>
-                                </div>
-                                <div class="card-right">
-                                    <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800"
-                                        alt="Slide 3">
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Card 4 -->
-                        <div class="stack-card" data-index="3">
-                            <div class="card-inner">
-                                <div class="card-left">
-                                    <div>
-                                        <span class="card-badge">CULTURAL HERITAGE</span>
-                                        <h2 class="card-title">Preserving Manipuri Culture & Traditions</h2>
-                                        <p class="card-text">Preservation and promotion of Manipuri culture, arts, and
-                                            traditions through dedicated academic programs.</p>
-                                        <span class="card-counter">04 / 05</span>
-                                    </div>
-                                </div>
-                                <div class="card-right">
-                                    <img src="https://images.unsplash.com/photo-1535061735340-d2c43404f2b0?w=800"
-                                        alt="Slide 4">
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Card 5 -->
-                        <div class="stack-card" data-index="4">
-                            <div class="card-inner">
-                                <div class="card-left">
-                                    <div>
-                                        <span class="card-badge">INDUSTRY INTEGRATION</span>
-                                        <h2 class="card-title">Career-Oriented Programs</h2>
-                                        <p class="card-text">Strong industry partnerships, internship opportunities,
-                                            skill-based training, and career-oriented programs designed to enhance
-                                            employability.</p>
-                                        <span class="card-counter">05 / 05</span>
-                                    </div>
-                                </div>
-                                <div class="card-right">
-                                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800"
-                                        alt="Slide 5">
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <!-- Progress Bar -->
-                    <div class="progress-indicator">
-                        <div class="progress-bar-bg">
-                            <div class="progress-fill"></div>
-                        </div>
-                        <div class="progress-text">
-                            <span id="current-num">01</span> / <span id="total-num">05</span>
-                        </div>
-                    </div>
-
-                    <!-- Scroll Hint -->
-                    <div class="scroll-hint">
-                        <div class="mouse"></div>
-                        <span>Scroll to explore slides</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> --}}
     <section class="stack-slider-section" id="stackSlider">
-        <div class="container space pb-0 mb-0">
+        <div class="container pt-5 pb-0 mb-0">
             <div class="events-header">
-                <span class="events-subtitle text-white">UPCOMING EVENTS</span>
-                <h2 class="events-heading text-white">Campus Events & Activities</h2>
-                <p class="events-description text-white">Stay updated with the latest happenings at MIU. From cultural
-                    fests to tech summits, there's something for everyone.</p>
+                <span class="events-subtitle text-white">Upcoming Events</span>
+                <h2 class="events-heading text-white">Engage, Learn, Experience Campus Life</h2>
+                <p class="events-description text-white">Discover a dynamic calendar of academic, cultural, and
+                    professional events designed to enrich learning and student engagement.</p>
             </div>
         </div>
         <div class="stack-wrapper">
@@ -1572,11 +2324,11 @@
                             <div class="card-inner">
                                 <div class="card-left">
                                     <div>
-                                        <span class="card-badge">📅 ANNUAL FEST</span>
-                                        <h2 class="card-title">MIU Utsav 2025: Cultural Extravaganza</h2>
-                                        <p class="card-text">Celebrate the spirit of Manipur with folk dances, music
-                                            competitions, food festival and art exhibitions. Open for all students and
-                                            faculty. March 15-17, 2025.</p>
+                                        <span class="card-badge">UPCOMING</span>
+                                        <h2 class="card-title">Industry Leadership Talk on Future Career Opportunities</h2>
+                                        <p class="card-text">A distinguished session featuring industry leaders sharing
+                                            insights on evolving career landscapes, emerging roles, and essential skills
+                                            required to succeed in a competitive global environment.</p>
                                         <span class="card-counter">01 / 05</span>
                                     </div>
                                 </div>
@@ -1592,11 +2344,12 @@
                             <div class="card-inner">
                                 <div class="card-left">
                                     <div>
-                                        <span class="card-badge">💻 TECH SUMMIT</span>
-                                        <h2 class="card-title">National Level Hackathon & IT Conclave</h2>
-                                        <p class="card-text">48-hour coding challenge, workshops on AI/ML, and networking
-                                            with industry leaders from Microsoft, Google and startups. Prizes worth ₹2
-                                            Lakhs. April 5-6, 2025.</p>
+                                        <span class="card-badge">WORKSHOP</span>
+                                        <h2 class="card-title">Advanced Skill Development Workshop on Emerging Technologies
+                                        </h2>
+                                        <p class="card-text">An intensive hands-on workshop focused on building practical
+                                            expertise in cutting-edge technologies, enhancing technical competencies, and
+                                            preparing students for future industry demands.</p>
                                         <span class="card-counter">02 / 05</span>
                                     </div>
                                 </div>
@@ -1612,11 +2365,11 @@
                             <div class="card-inner">
                                 <div class="card-left">
                                     <div>
-                                        <span class="card-badge">🏆 SPORTS CHAMPIONSHIP</span>
-                                        <h2 class="card-title">MIU Inter-Collegiate Sports League</h2>
-                                        <p class="card-text">Football, cricket, badminton, athletics, and traditional
-                                            Manipuri games. Opening ceremony with professional athletes. Register before
-                                            March 30, 2025. Event dates: April 10-14.</p>
+                                        <span class="card-badge">SEMINAR</span>
+                                        <h2 class="card-title">Strategy Seminar for Professional Growth and Success</h2>
+                                        <p class="card-text">An expert-driven seminar offering guidance on career planning,
+                                            professional development strategies, and actionable insights to navigate complex
+                                            industry expectations effectively.</p>
                                         <span class="card-counter">03 / 05</span>
                                     </div>
                                 </div>
@@ -1632,11 +2385,12 @@
                             <div class="card-inner">
                                 <div class="card-left">
                                     <div>
-                                        <span class="card-badge">🎤 GUEST LECTURE</span>
-                                        <h2 class="card-title">Leadership Talk: "Future of Work & Innovation"</h2>
-                                        <p class="card-text">Distinguished speakers from global industries and academic
-                                            leaders. Interactive session on entrepreneurship, digital transformation.
-                                            Certificate for participants. April 20, 2025.</p>
+                                        <span class="card-badge">EVENT</span>
+                                        <h2 class="card-title">Annual Academic and Cultural Excellence Fest Celebration
+                                        </h2>
+                                        <p class="card-text">A flagship campus event celebrating innovation, creativity,
+                                            and talent through diverse academic, cultural, and extracurricular activities
+                                            fostering holistic student development.</p>
                                         <span class="card-counter">04 / 05</span>
                                     </div>
                                 </div>
@@ -1652,11 +2406,12 @@
                             <div class="card-inner">
                                 <div class="card-left">
                                     <div>
-                                        <span class="card-badge">🚀 CAREER EXPO</span>
-                                        <h2 class="card-title">Annual Placement Drive & Job Fair 2025</h2>
-                                        <p class="card-text">50+ top recruiters, on-spot interviews, resume workshops, and
-                                            skill development sessions. Exclusive for final-year students. May 1-2, 2025.
-                                            Register early.</p>
+                                        <span class="card-badge">TRAINING</span>
+                                        <h2 class="card-title">Comprehensive Placement Preparation and Interview Readiness
+                                            Program</h2>
+                                        <p class="card-text">A structured training initiative focused on aptitude building,
+                                            communication enhancement, and interview mastery to maximize student success in
+                                            campus recruitment processes.</p>
                                         <span class="card-counter">05 / 05</span>
                                     </div>
                                 </div>
@@ -1688,26 +2443,22 @@
             </div>
         </div>
     </section>
-
-
-
-    <!-- Placement Section -->
     <section class="placement-section overflow-hidden space" id="placement">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-8 text-center">
                     <div class="title-area mb-5">
-                        <span class="sub-title">100% PLACEMENT ASSISTANCE</span>
-                        <h2 class="sec-title">Our Top Recruiters & Placements</h2>
-                        <p class="sec-text">MIU has a dedicated placement cell that works tirelessly to ensure promising
-                            career opportunities for all students.</p>
+                        <span class="sub-title">100% Placement Assistance</span>
+                        <h2 class="sec-title">Driving Career Outcomes Through Strategic Placement Excellence</h2>
+                        <p class="sec-text">A robust placement ecosystem integrating training, industry partnerships, and
+                            recruitment drives to ensure consistent and high-quality career opportunities.</p>
                     </div>
                 </div>
             </div>
 
             <!-- Stats Row -->
             <div class="row g-4 mb-5">
-                <div class="col-lg-3 col-md-6">
+                <div class="col-lg-3 col-md-6 col-3">
                     <div class="placement-stats-card text-center">
                         <div class="stats-icon mb-3">
                             <i class="fas fa-briefcase"></i>
@@ -1716,31 +2467,31 @@
                         <p class="stats-text">Placement Offers</p>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6">
+                <div class="col-lg-3 col-md-6 col-3">
                     <div class="placement-stats-card text-center">
                         <div class="stats-icon mb-3">
                             <i class="fas fa-building"></i>
                         </div>
-                        <h3 class="stats-number">200+</h3>
-                        <p class="stats-text">Top Companies</p>
+                        <h3 class="stats-number">500+</h3>
+                        <p class="stats-text">Recruiters </p>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6">
+                <div class="col-lg-3 col-md-6 col-3">
                     <div class="placement-stats-card text-center">
                         <div class="stats-icon mb-3">
                             <i class="fas fa-chart-line"></i>
                         </div>
-                        <h3 class="stats-number">₹25 LPA</h3>
-                        <p class="stats-text">Highest Package</p>
+                        <h3 class="stats-number">95%</h3>
+                        <p class="stats-text">Placement Rate </p>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6">
+                <div class="col-lg-3 col-md-6 col-3">
                     <div class="placement-stats-card text-center">
                         <div class="stats-icon mb-3">
                             <i class="fas fa-globe"></i>
                         </div>
-                        <h3 class="stats-number">50+</h3>
-                        <p class="stats-text">MNC Partners</p>
+                        <h3 class="stats-number">10 LPA </h3>
+                        <p class="stats-text">Highest Package </p>
                     </div>
                 </div>
             </div>
@@ -1819,46 +2570,46 @@
             <!-- Placement Process -->
             <div class="row mb-5">
                 <div class="col-12">
-                    <h3 class="text-center mb-4" style="color: #0a2540;">Our Placement Process</h3>
-                    <div class="row g-4">
-                        <div class="col-lg-3 col-md-6">
+                    <h3 class="text-center mb-4" style="color: #0a2540;">Placement Process</h3>
+                    <div class="row g-4 justify-content-center">
+                        <div class="col-lg-3 col-md-6 col-5">
                             <div class="process-card text-center">
                                 <div class="process-icon">
                                     <span>01</span>
                                     <i class="fas fa-user-graduate"></i>
                                 </div>
-                                <h4>Student Registration</h4>
-                                <p>Students register with placement cell</p>
+                                &emsp;<h4> Profile Development</h4>
+                                <p>Comprehensive resume building and portfolio enhancement </p>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-md-6">
+                        <div class="col-lg-3 col-md-6 col-5">
                             <div class="process-card text-center">
                                 <div class="process-icon">
                                     <span>02</span>
                                     <i class="fas fa-chalkboard-user"></i>
                                 </div>
-                                <h4>Training & Workshops</h4>
-                                <p>Aptitude, soft skills & technical training</p>
+                                &emsp;<h4> Skill Enhancement</h4>
+                                <p>Focused training in aptitude, technical, and communication skills </p>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-md-6">
+                        <div class="col-lg-3 col-md-6 col-5">
                             <div class="process-card text-center">
                                 <div class="process-icon">
                                     <span>03</span>
                                     <i class="fas fa-file-alt"></i>
                                 </div>
-                                <h4>Company Drives</h4>
-                                <p>Companies visit for recruitment drives</p>
+                                &emsp; <h4> Interview Readiness</h4>
+                                <p>Mock interviews with expert evaluation and feedback </p>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-md-6">
+                        <div class="col-lg-3 col-md-6 col-5">
                             <div class="process-card text-center">
                                 <div class="process-icon">
                                     <span>04</span>
                                     <i class="fas fa-handshake"></i>
                                 </div>
-                                <h4>Offer Letter</h4>
-                                <p>Selected students receive offer letters</p>
+                                &emsp; <h4> Career Placement</h4>
+                                <p>Final recruitment through campus drives and industry networks </p>
                             </div>
                         </div>
                     </div>
@@ -1873,87 +2624,14 @@
             </div>
         </div>
     </section>
-
-
-
-
     <section class="why-area why-bg position-relative space overflow-hidden" style="    background-color: #44272a14;">
-        {{-- <div class="why-shape jump shape-mockup" data-left="0%" data-bottom="10%"><img
-                src="assets/img/shape/why-1-1.png" alt=""></div> --}}
         <div class="container">
             <div class="row gy-4">
-                {{-- <div class="col-xl-8">
-                    <div class="title-area text-center text-lg-start"><span class="sub-title text-anim">WHY
-                            CHOOSEUS</span>
-                        <h2 class="sec-title text-anim2">We help every student to <span class="d-block">stantout from
-                                the rest</span></h2>
-                    </div>
-                    <div class="row gy-60">
-                        <div class="col-lg-6 col-md-6">
-                            <div class="why-card wow fadeInUp" data-wow-delay=".2s">
-                                <div class="why-content">
-                                    <div class="why-titlebox"><span class="why-number position-relative">1</span>
-                                        <h3 class="box-title"><a href="about.html">Get a Top-Tier Global Education</a>
-                                        </h3>
-                                    </div>
-                                    <div class="box-text-wrap">
-                                        <p class="box-text">A Kingdom perspective is integrated into your studies and
-                                            woven through the entire stadum experience.</p>
-                                    </div>
-                                </div><a href="about.html" class="th-btn style-border1 th-icon mt-40">Explore More</a>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6">
-                            <div class="why-card wow fadeInUp" data-wow-delay=".4s">
-                                <div class="why-content">
-                                    <div class="why-titlebox"><span class="why-number position-relative">2</span>
-                                        <h3 class="box-title"><a href="about.html">Join a Spiritually Vibrant Campus
-                                                Community</a></h3>
-                                    </div>
-                                    <div class="box-text-wrap">
-                                        <p class="box-text">Opportunities for faith and fellowship are all around, from
-                                            chapel worship and dorm devotions to communal meals, clubs and activities.
-                                        </p>
-                                    </div>
-                                </div><a href="about.html" class="th-btn style-border1 th-icon mt-40">Explore More</a>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6">
-                            <div class="why-card wow fadeInUp" data-wow-delay=".6s">
-                                <div class="why-content">
-                                    <div class="why-titlebox"><span class="why-number position-relative">3</span>
-                                        <h3 class="box-title"><a href="about.html">Be Prepared for a
-                                                Thriving Career</a></h3>
-                                    </div>
-                                    <div class="box-text-wrap">
-                                        <p class="box-text">A Kingdom perspective is integrated into your studies and
-                                            woven through the entire stadum experience.</p>
-                                    </div>
-                                </div><a href="about.html" class="th-btn style-border1 th-icon mt-40">Explore More</a>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6">
-                            <div class="why-card wow fadeInUp" data-wow-delay=".8s">
-                                <div class="why-content">
-                                    <div class="why-titlebox"><span class="why-number position-relative">4</span>
-                                        <h3 class="box-title"><a href="about.html">Experience a Cost-Competitive
-                                                Education</a></h3>
-                                    </div>
-                                    <div class="box-text-wrap">
-                                        <p class="box-text">Opportunities for faith and fellowship are all around, from
-                                            chapel worship and dorm devotions to communal meals, clubs and activities.
-                                        </p>
-                                    </div>
-                                </div><a href="about.html" class="th-btn style-border1 th-icon mt-40">Explore More</a>
-                            </div>
-                        </div>
-                    </div>
-                </div> --}}
                 <div class="col-xl-8">
                     <div class="title-area text-center text-lg-start">
-                        <span class="sub-title text-anim">ACADEMIC EXCELLENCE & INNOVATION</span>
-                        <h2 class="sec-title text-anim2">We help every student to <span class="d-block">standout from the
-                                rest</span></h2>
+                        <span class="sub-title text-anim">Excellence & Distinction</span>
+                        <h2 class="sec-title text-anim2">Why MIU Continues to <span class="d-block"> Standout from The
+                                Rest</span></h2>
                     </div>
                     <div class="row gy-60">
                         <div class="col-lg-6 col-md-6">
@@ -1961,11 +2639,11 @@
                                 <div class="why-content">
                                     <div class="why-titlebox">
                                         <span class="why-number position-relative">1</span>
-                                        <h3 class="box-title"><a href="about.html">Research Excellence</a></h3>
+                                        <h3 class="box-title"><a href="about.html">Strategic Industry Alignment</a></h3>
                                     </div>
                                     <div class="box-text-wrap">
-                                        <p class="box-text">State-of-the-art research facilities and partnerships with
-                                            international institutions to drive innovation and discovery.</p>
+                                        <p class="box-text">Academic programs co-developed with industry insights to ensure
+                                            immediate relevance and long-term career sustainability. </p>
                                     </div>
                                 </div>
                                 <a href="about.html" class="th-btn style-border1 th-icon mt-40">Explore More</a>
@@ -1976,11 +2654,11 @@
                                 <div class="why-content">
                                     <div class="why-titlebox">
                                         <span class="why-number position-relative">2</span>
-                                        <h3 class="box-title"><a href="about.html">Global Perspective</a></h3>
+                                        <h3 class="box-title"><a href="about.html">World-Class Infrastructure</a></h3>
                                     </div>
                                     <div class="box-text-wrap">
-                                        <p class="box-text">International collaborations, exchange programs, and
-                                            multicultural learning environments that prepare students for global careers.
+                                        <p class="box-text">Advanced facilities designed to foster innovation, research,
+                                            and collaborative learning experiences.
                                         </p>
                                     </div>
                                 </div>
@@ -1992,11 +2670,11 @@
                                 <div class="why-content">
                                     <div class="why-titlebox">
                                         <span class="why-number position-relative">3</span>
-                                        <h3 class="box-title"><a href="about.html">Innovation Hub</a></h3>
+                                        <h3 class="box-title"><a href="about.html">Faculty of Distinction</a></h3>
                                     </div>
                                     <div class="box-text-wrap">
-                                        <p class="box-text">Entrepreneurship incubation centers, startup support programs,
-                                            and technology transfer initiatives.</p>
+                                        <p class="box-text">Academicians and practitioners delivering intellectually
+                                            enriching and application-oriented education.</p>
                                     </div>
                                 </div>
                                 <a href="about.html" class="th-btn style-border1 th-icon mt-40">Explore More</a>
@@ -2007,11 +2685,11 @@
                                 <div class="why-content">
                                     <div class="why-titlebox">
                                         <span class="why-number position-relative">4</span>
-                                        <h3 class="box-title"><a href="about.html">Cultural Heritage</a></h3>
+                                        <h3 class="box-title"><a href="about.html">Career-Centric Ecosystem</a></h3>
                                     </div>
                                     <div class="box-text-wrap">
-                                        <p class="box-text">Preservation and promotion of Manipuri culture, arts, and
-                                            traditions through dedicated academic programs.</p>
+                                        <p class="box-text">Integrated placement architecture with training, internships,
+                                            and corporate engagement. </p>
                                     </div>
                                 </div>
                                 <a href="about.html" class="th-btn style-border1 th-icon mt-40">Explore More</a>
@@ -2022,11 +2700,11 @@
                                 <div class="why-content">
                                     <div class="why-titlebox">
                                         <span class="why-number position-relative">5</span>
-                                        <h3 class="box-title"><a href="about.html">Sustainable Development</a></h3>
+                                        <h3 class="box-title"><a href="about.html">Skill & Leadership Development</a></h3>
                                     </div>
                                     <div class="box-text-wrap">
-                                        <p class="box-text">Green campus initiatives, environmental research, and
-                                            commitment to UN Sustainable Development Goals.</p>
+                                        <p class="box-text">Focus on developing adaptable, confident, and industry-ready
+                                            professionals. </p>
                                     </div>
                                 </div>
                                 <a href="about.html" class="th-btn style-border1 th-icon mt-40">Explore More</a>
@@ -2037,12 +2715,11 @@
                                 <div class="why-content">
                                     <div class="why-titlebox">
                                         <span class="why-number position-relative">6</span>
-                                        <h3 class="box-title"><a href="about.html">Industry Integration</a></h3>
+                                        <h3 class="box-title"><a href="about.html">Global Academic Outlook</a></h3>
                                     </div>
                                     <div class="box-text-wrap">
-                                        <p class="box-text">Strong industry partnerships, internship opportunities,
-                                            skill-based training, and career-oriented programs designed to enhance
-                                            employability.</p>
+                                        <p class="box-text">Exposure to international standards, practices, and
+                                            cross-cultural learning environments.</p>
                                     </div>
                                 </div>
                                 <a href="about.html" class="th-btn style-border1 th-icon mt-40">Explore More</a>
@@ -2062,267 +2739,21 @@
             </div>
         </div>
     </section>
-    {{-- <section class="campus overflow-hidden space">
-        <div class="campus-shape jump shape-mockup d-none d-xxl-block" data-bottom="22%" data-right="5%"><img
-                src="assets/img/shape/campus-1-1.png" alt="shape"></div>
-        <div class="container">
-            <div class="row justify-content-lg-between justify-content-center align-items-center">
-                <div class="col-lg-8 col-12">
-                    <div class="title-area text-center text-lg-start"><span class="sub-title text-anim">EXPERIENCE
-                            STADUM</span>
-                        <h2 class="sec-title text-anim2">Campus Life</h2>
-                    </div>
-                </div>
-                <div class="col-auto align-self-end">
-                    <div class="sec-btn"><a href="campus.html" class="th-btn style-border1 th-icon wow fadeInUp"
-                            data-wow-delay=".2s">Explore All</a></div>
-                </div>
-            </div>
-            <div class="row gy-5 justify-content-center">
-                <div class="col-xl-4 col-lg-6">
-                    <div class="campus-card wow fadeInLeft" data-wow-delay=".2s">
-                        <div class="campus-img global-img"><a href="campus.html" class="d-block position-relative"><img
-                                    src="assets/img/campus/campus-1-1.jpg" alt="campus image" class="img-1"></a></div>
-                        <div class="campus-content">
-                            <h3 class="box-title"><a href="campus.html">Mentor Lecture</a></h3>
-                            <p class="box-text">Schedule a personalized tour of our Ancaster, Ontario campus and a
-                                one-on-one meeting with an Admissions Counsellor. Daily visits are offered regularly to
-                                accommodate your schedule.</p>
-                        </div><a href="campus.html" class="th-btn style-border1 th-icon">View The Campus</a>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-6">
-                    <div class="campus-card wow fadeInLeft" data-wow-delay=".4s">
-                        <div class="campus-img global-img"><a href="campus.html" class="d-block position-relative"><img
-                                    src="assets/img/campus/campus-1-2.jpg" alt="campus image" class="img-1"></a></div>
-                        <div class="campus-content">
-                            <h3 class="box-title"><a href="campus.html">Group Study in Campus</a></h3>
-                            <p class="box-text">Our scheduled visits are pre-planned days that are specially catered
-                                to the different interests of each student. Tour campus and connect with staff, faculty
-                                and current students to help discover your place.</p>
-                        </div><a href="campus.html" class="th-btn style-border1 th-icon">View The Campus</a>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-6">
-                    <div class="campus-card wow fadeInLeft" data-wow-delay=".6s">
-                        <div class="campus-img global-img"><a href="campus.html" class="d-block position-relative"><img
-                                    src="assets/img/campus/campus-1-3.jpg" alt="campus image" class="img-1"></a></div>
-                        <div class="campus-content">
-                            <h3 class="box-title"><a href="campus.html">Art & Culture</a></h3>
-                            <p class="box-text">Can’t make it to campus? Explore parts of Redeemer’s 70-acre campus
-                                through a series of short videos and get a glimpse of what it has to offer—wherever and
-                                whenever works best for you.</p>
-                        </div><a href="campus.html" class="th-btn style-border1 th-icon">View The Campus</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> --}}
-    {{-- <section class="campus overflow-hidden space pb-0">
-        <div class="story-area-1 overflow-hidden">
-            <div class="container">
-                <div class="row justify-content-lg-between justify-content-center align-items-center">
-                    <div class="col-lg-8 col-12">
-                        <div class="title-area text-center text-lg-start"><span class="sub-title text-anim">STUDENT
-                                STORIES</span>
-                            <h2 class="sec-title text-anim2">Our Student Stories</h2>
-                        </div>
-                    </div>
-                    <div class="col-auto align-self-end">
-                        <div class="sec-btn wow fadeInUp" data-wow-delay=".3s"><a href="program.html"
-                                class="th-btn style-border1 th-icon">Discover More Stories</a></div>
-                    </div>
-                </div>
-            </div>
-            <div class="container-fluid">
-                <div class="swiper th-slider story-slider1" id="storySlider1"
-                    data-slider-options='{"breakpoints":{"0":{"slidesPerView":1},"1400":{"slidesPerView":"5"},"1200":{"slidesPerView":"4"},"992":{"slidesPerView":"4"},"768":{"slidesPerView":"3"},"576":{"slidesPerView":"2"}},"spaceBetween":"0"}'>
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="story-card">
-                                <div class="box-img"><img src="assets/img/story/story-1-1.jpg" alt="img"></div>
-                                <div class="story-content">
-                                    <h3 class="box-title"><a href="program.html">Alex Smith</a></h3>
-                                </div>
-                                <div class="story-content hover-style">
-                                    <div class="quote-icon"><img src="assets/img/icon/quote.svg" alt=""></div>
-                                    <p class="box-text">"Stadum University’s humanities program is helping me develop the
-                                        perspective, critical thinking and adaptability I need to navigate and contribute to
-                                        this changing world."</p>
-                                    <h3 class="box-title"><a href="program.html">Alex Smith</a></h3>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="story-card">
-                                <div class="box-img"><img src="assets/img/story/story-1-2.jpg" alt="img"></div>
-                                <div class="story-content">
-                                    <h3 class="box-title"><a href="program.html">Brone Due</a></h3>
-                                </div>
-                                <div class="story-content hover-style">
-                                    <div class="quote-icon"><img src="assets/img/icon/quote.svg" alt=""></div>
-                                    <p class="box-text">"Stadum University’s humanities program is helping me develop the
-                                        perspective, critical thinking and adaptability I need to navigate and contribute to
-                                        this changing world."</p>
-                                    <h3 class="box-title"><a href="program.html">Brone Due</a></h3>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="story-card">
-                                <div class="box-img"><img src="assets/img/story/story-1-3.jpg" alt="img"></div>
-                                <div class="story-content">
-                                    <h3 class="box-title"><a href="program.html">Moumita Mira</a></h3>
-                                </div>
-                                <div class="story-content hover-style">
-                                    <div class="quote-icon"><img src="assets/img/icon/quote.svg" alt=""></div>
-                                    <p class="box-text">"Stadum University’s humanities program is helping me develop the
-                                        perspective, critical thinking and adaptability I need to navigate and contribute to
-                                        this changing world."</p>
-                                    <h3 class="box-title"><a href="program.html">Moumita Mira</a></h3>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="story-card">
-                                <div class="box-img"><img src="assets/img/story/story-1-4.jpg" alt="img"></div>
-                                <div class="story-content">
-                                    <h3 class="box-title"><a href="program.html">Maya Lily</a></h3>
-                                </div>
-                                <div class="story-content hover-style">
-                                    <div class="quote-icon"><img src="assets/img/icon/quote.svg" alt=""></div>
-                                    <p class="box-text">"Stadum University’s humanities program is helping me develop the
-                                        perspective, critical thinking and adaptability I need to navigate and contribute to
-                                        this changing world."</p>
-                                    <h3 class="box-title"><a href="program.html">Maya Lily</a></h3>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="story-card">
-                                <div class="box-img"><img src="assets/img/story/story-1-5.jpg" alt="img"></div>
-                                <div class="story-content">
-                                    <h3 class="box-title"><a href="program.html">Sony & Ovi</a></h3>
-                                </div>
-                                <div class="story-content hover-style">
-                                    <div class="quote-icon"><img src="assets/img/icon/quote.svg" alt=""></div>
-                                    <p class="box-text">"Stadum University’s humanities program is helping me develop the
-                                        perspective, critical thinking and adaptability I need to navigate and contribute to
-                                        this changing world."</p>
-                                    <h3 class="box-title"><a href="program.html">Sony & Ovi</a></h3>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="story-card">
-                                <div class="box-img"><img src="assets/img/story/story-1-1.jpg" alt="img"></div>
-                                <div class="story-content">
-                                    <h3 class="box-title"><a href="program.html">Alex Smith</a></h3>
-                                </div>
-                                <div class="story-content hover-style">
-                                    <div class="quote-icon"><img src="assets/img/icon/quote.svg" alt=""></div>
-                                    <p class="box-text">"Stadum University’s humanities program is helping me develop the
-                                        perspective, critical thinking and adaptability I need to navigate and contribute to
-                                        this changing world."</p>
-                                    <h3 class="box-title"><a href="program.html">Alex Smith</a></h3>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="story-card">
-                                <div class="box-img"><img src="assets/img/story/story-1-2.jpg" alt="img"></div>
-                                <div class="story-content">
-                                    <h3 class="box-title"><a href="program.html">Brone Due</a></h3>
-                                </div>
-                                <div class="story-content hover-style">
-                                    <div class="quote-icon"><img src="assets/img/icon/quote.svg" alt=""></div>
-                                    <p class="box-text">"Stadum University’s humanities program is helping me develop the
-                                        perspective, critical thinking and adaptability I need to navigate and contribute to
-                                        this changing world."</p>
-                                    <h3 class="box-title"><a href="program.html">Brone Due</a></h3>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="story-card">
-                                <div class="box-img"><img src="assets/img/story/story-1-3.jpg" alt="img"></div>
-                                <div class="story-content">
-                                    <h3 class="box-title"><a href="program.html">Moumita Mira</a></h3>
-                                </div>
-                                <div class="story-content hover-style">
-                                    <div class="quote-icon"><img src="assets/img/icon/quote.svg" alt=""></div>
-                                    <p class="box-text">"Stadum University’s humanities program is helping me develop the
-                                        perspective, critical thinking and adaptability I need to navigate and contribute to
-                                        this changing world."</p>
-                                    <h3 class="box-title"><a href="program.html">Moumita Mira</a></h3>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="story-card">
-                                <div class="box-img"><img src="assets/img/story/story-1-4.jpg" alt="img"></div>
-                                <div class="story-content">
-                                    <h3 class="box-title"><a href="program.html">Maya Lily</a></h3>
-                                </div>
-                                <div class="story-content hover-style">
-                                    <div class="quote-icon"><img src="assets/img/icon/quote.svg" alt=""></div>
-                                    <p class="box-text">"Stadum University’s humanities program is helping me develop the
-                                        perspective, critical thinking and adaptability I need to navigate and contribute to
-                                        this changing world."</p>
-                                    <h3 class="box-title"><a href="program.html">Maya Lily</a></h3>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="story-card">
-                                <div class="box-img"><img src="assets/img/story/story-1-5.jpg" alt="img"></div>
-                                <div class="story-content">
-                                    <h3 class="box-title"><a href="program.html">Sony & Ovi</a></h3>
-                                </div>
-                                <div class="story-content hover-style">
-                                    <div class="quote-icon"><img src="assets/img/icon/quote.svg" alt=""></div>
-                                    <p class="box-text">"Stadum University’s humanities program is helping me develop the
-                                        perspective, critical thinking and adaptability I need to navigate and contribute to
-                                        this changing world."</p>
-                                    <h3 class="box-title"><a href="program.html">Sony & Ovi</a></h3>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="story-card">
-                                <div class="box-img"><img src="assets/img/story/story-1-1.jpg" alt="img"></div>
-                                <div class="story-content">
-                                    <h3 class="box-title"><a href="program.html">Alex Smith</a></h3>
-                                </div>
-                                <div class="story-content hover-style">
-                                    <div class="quote-icon"><img src="assets/img/icon/quote.svg" alt=""></div>
-                                    <p class="box-text">"Stadum University’s humanities program is helping me develop the
-                                        perspective, critical thinking and adaptability I need to navigate and contribute to
-                                        this changing world."</p>
-                                    <h3 class="box-title"><a href="program.html">Alex Smith</a></h3>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> --}}
     <section class="campus overflow-hidden space pb-0">
         <div class="story-area-1 overflow-hidden">
             <div class="container">
                 <div class="row justify-content-lg-between justify-content-center align-items-center">
                     <div class="col-lg-8 col-12">
                         <div class="title-area text-center text-lg-start">
-                            <span class="sub-title text-anim mt-2">MIU STUDENT STORIES</span>
-                            <h2 class="sec-title text-anim2">Our MIU Student Stories</h2>
+                            <span class="sub-title text-anim mt-2">MIU Student Stories</span>
+                            <h2 class="sec-title text-anim2">Voices of Achievement and Transformation</h2>
                         </div>
                     </div>
-                    <div class="col-auto align-self-end">
+                    {{-- <div class="col-auto align-self-end">
                         <div class="sec-btn wow fadeInUp" data-wow-delay=".3s">
                             <a href="program.html" class="th-btn style-border1 th-icon">Discover More Stories</a>
                         </div>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
             <div class="container-fluid">
@@ -2334,14 +2765,15 @@
                             <div class="story-card">
                                 <div class="box-img"><img src="assets/img/story/story-1-1.jpg" alt="img"></div>
                                 <div class="story-content">
-                                    <h3 class="box-title"><a href="program.html">Priya Sharma</a></h3>
+                                    <h3 class="box-title"><a href="program.html">Aman Verma</a></h3>
                                 </div>
                                 <div class="story-content hover-style">
                                     <div class="quote-icon"><img src="assets/img/icon/quote.svg" alt=""></div>
-                                    <p class="box-text">"MIU's placement training was exceptional! I got placed at Amazon
-                                        with 28 LPA. The faculty guidance and real-world projects made all the difference."
+                                    <p class="box-text">"MIU University provided a strong academic foundation complemented
+                                        by practical exposure. The structured training and faculty mentorship played a
+                                        pivotal role in helping me secure a rewarding position in a leading organization."
                                     </p>
-                                    <h3 class="box-title"><a href="program.html">Priya Sharma</a></h3>
+                                    <h3 class="box-title"><a href="program.html">Aman Verma</a></h3>
                                 </div>
                             </div>
                         </div>
@@ -2350,13 +2782,15 @@
                             <div class="story-card">
                                 <div class="box-img"><img src="assets/img/story/story-1-2.jpg" alt="img"></div>
                                 <div class="story-content">
-                                    <h3 class="box-title"><a href="program.html">Rahul Verma</a></h3>
+                                    <h3 class="box-title"><a href="program.html">Priya Sharma</a></h3>
                                 </div>
                                 <div class="story-content hover-style">
                                     <div class="quote-icon"><img src="assets/img/icon/quote.svg" alt=""></div>
-                                    <p class="box-text">"The coding bootcamps and mock interviews at MIU helped me crack
-                                        Microsoft. I'm now working as a Software Engineer in Seattle. Thank you MIU!"</p>
-                                    <h3 class="box-title"><a href="program.html">Rahul Verma</a></h3>
+                                    <p class="box-text">"The learning environment at MIU fostered both confidence and
+                                        competence. Industry-oriented curriculum and continuous skill development
+                                        initiatives helped me transition seamlessly from academics to a professional career"
+                                    </p>
+                                    <h3 class="box-title"><a href="program.html">Priya Sharma</a></h3>
                                 </div>
                             </div>
                         </div>
@@ -2365,13 +2799,14 @@
                             <div class="story-card">
                                 <div class="box-img"><img src="assets/img/story/story-1-3.jpg" alt="img"></div>
                                 <div class="story-content">
-                                    <h3 class="box-title"><a href="program.html">Sneha Kulkarni</a></h3>
+                                    <h3 class="box-title"><a href="program.html">Rahul Singh</a></h3>
                                 </div>
                                 <div class="story-content hover-style">
                                     <div class="quote-icon"><img src="assets/img/icon/quote.svg" alt=""></div>
-                                    <p class="box-text">"MIU's industry connect program gave me internship opportunities at
-                                        Google. The hands-on learning approach is what every student needs today."</p>
-                                    <h3 class="box-title"><a href="program.html">Sneha Kulkarni</a></h3>
+                                    <p class="box-text">"MIU’s emphasis on experiential learning and placement preparation
+                                        significantly enhanced my career readiness. The guidance from faculty and training
+                                        sessions ensured I performed confidently during recruitment processes."</p>
+                                    <h3 class="box-title"><a href="program.html">Rahul Singh</a></h3>
                                 </div>
                             </div>
                         </div>
@@ -2380,13 +2815,14 @@
                             <div class="story-card">
                                 <div class="box-img"><img src="assets/img/story/story-1-4.jpg" alt="img"></div>
                                 <div class="story-content">
-                                    <h3 class="box-title"><a href="program.html">Ankit Mehta</a></h3>
+                                    <h3 class="box-title"><a href="program.html">Neha Gupta</a></h3>
                                 </div>
                                 <div class="story-content hover-style">
                                     <div class="quote-icon"><img src="assets/img/icon/quote.svg" alt=""></div>
-                                    <p class="box-text">"Coming from a small town, MIU gave me the confidence and skills to
-                                        compete globally. I received offers from Deloitte and PwC. Forever grateful!"</p>
-                                    <h3 class="box-title"><a href="program.html">Ankit Mehta</a></h3>
+                                    <p class="box-text">"The university’s holistic approach towards education helped me
+                                        develop both technical and interpersonal skills. The placement support system
+                                        provided excellent opportunities to begin my professional journey successfully"</p>
+                                    <h3 class="box-title"><a href="program.html">Neha Gupta</a></h3>
                                 </div>
                             </div>
                         </div>
@@ -2395,13 +2831,14 @@
                             <div class="story-card">
                                 <div class="box-img"><img src="assets/img/story/story-1-5.jpg" alt="img"></div>
                                 <div class="story-content">
-                                    <h3 class="box-title"><a href="program.html">Neha Gupta</a></h3>
+                                    <h3 class="box-title"><a href="program.html">Arjun Mehta</a></h3>
                                 </div>
                                 <div class="story-content hover-style">
                                     <div class="quote-icon"><img src="assets/img/icon/quote.svg" alt=""></div>
-                                    <p class="box-text">"The placement cell at MIU is amazing! They brought 200+ companies
-                                        and prepared us thoroughly. I got placed at Infosys with a great package."</p>
-                                    <h3 class="box-title"><a href="program.html">Neha Gupta</a></h3>
+                                    <p class="box-text">"With a focus on real-world applications and continuous learning,
+                                        MIU prepared me for industry challenges. The exposure to practical training and
+                                        mentorship proved invaluable for my career growth."</p>
+                                    <h3 class="box-title"><a href="program.html">Arjun Mehta</a></h3>
                                 </div>
                             </div>
                         </div>
@@ -2410,14 +2847,15 @@
                             <div class="story-card">
                                 <div class="box-img"><img src="assets/img/story/story-1-1.jpg" alt="img"></div>
                                 <div class="story-content">
-                                    <h3 class="box-title"><a href="program.html">Rohan Das</a></h3>
+                                    <h3 class="box-title"><a href="program.html">Sneha Kapoor</a></h3>
                                 </div>
                                 <div class="story-content hover-style">
                                     <div class="quote-icon"><img src="assets/img/icon/quote.svg" alt=""></div>
-                                    <p class="box-text">"MIU's global alumni network helped me get referrals. I'm now
-                                        working at TCS and also pursuing my passion for AI research. Best decision ever!"
+                                    <p class="box-text">"MIU University offered a perfect blend of academic excellence and
+                                        skill development. The structured placement programs and faculty support helped me
+                                        secure a position aligned with my career aspirations."
                                     </p>
-                                    <h3 class="box-title"><a href="program.html">Rohan Das</a></h3>
+                                    <h3 class="box-title"><a href="program.html">Sneha Kapoor</a></h3>
                                 </div>
                             </div>
                         </div>
@@ -2426,14 +2864,15 @@
                             <div class="story-card">
                                 <div class="box-img"><img src="assets/img/story/story-1-2.jpg" alt="img"></div>
                                 <div class="story-content">
-                                    <h3 class="box-title"><a href="program.html">Divya Singh</a></h3>
+                                    <h3 class="box-title"><a href="program.html">Vikas Yadav</a></h3>
                                 </div>
                                 <div class="story-content hover-style">
                                     <div class="quote-icon"><img src="assets/img/icon/quote.svg" alt=""></div>
-                                    <p class="box-text">"The practical curriculum and hackathons at MIU sharpened my
-                                        skills. I got placed at IBM as a Cloud Architect. Highly recommend MIU to everyone!"
+                                    <p class="box-text">"The emphasis on industry integration and practical learning gave
+                                        me a competitive edge. MIU’s placement training and expert guidance were
+                                        instrumental in shaping my professional success."
                                     </p>
-                                    <h3 class="box-title"><a href="program.html">Divya Singh</a></h3>
+                                    <h3 class="box-title"><a href="program.html">Vikas Yadav</a></h3>
                                 </div>
                             </div>
                         </div>
@@ -2442,13 +2881,14 @@
                             <div class="story-card">
                                 <div class="box-img"><img src="assets/img/story/story-1-3.jpg" alt="img"></div>
                                 <div class="story-content">
-                                    <h3 class="box-title"><a href="program.html">Karthik S</a></h3>
+                                    <h3 class="box-title"><a href="program.html">Pooja Singh</a></h3>
                                 </div>
                                 <div class="story-content hover-style">
                                     <div class="quote-icon"><img src="assets/img/icon/quote.svg" alt=""></div>
-                                    <p class="box-text">"MIU's entrepreneurship cell helped me launch my startup. Even
-                                        before graduation, I received funding. The mentorship is world-class!"</p>
-                                    <h3 class="box-title"><a href="program.html">Karthik S</a></h3>
+                                    <p class="box-text">"From classroom learning to corporate readiness, MIU ensured a
+                                        comprehensive development journey. The faculty mentorship and placement initiatives
+                                        played a key role in my successful career transition"</p>
+                                    <h3 class="box-title"><a href="program.html">Pooja Singh</a></h3>
                                 </div>
                             </div>
                         </div>
@@ -2457,13 +2897,14 @@
                             <div class="story-card">
                                 <div class="box-img"><img src="assets/img/story/story-1-4.jpg" alt="img"></div>
                                 <div class="story-content">
-                                    <h3 class="box-title"><a href="program.html">Ishita Roy</a></h3>
+                                    <h3 class="box-title"><a href="program.html">Rohit Kumar</a></h3>
                                 </div>
                                 <div class="story-content hover-style">
                                     <div class="quote-icon"><img src="assets/img/icon/quote.svg" alt=""></div>
-                                    <p class="box-text">"The corporate mentorship program at MIU connected me with leaders
-                                        at Google. I'm now working on cutting-edge AI projects. Truly transformative!"</p>
-                                    <h3 class="box-title"><a href="program.html">Ishita Roy</a></h3>
+                                    <p class="box-text">"MIU’s focus on skill enhancement and industry exposure helped me
+                                        build confidence and expertise. The structured training programs prepared me
+                                        effectively for real-world job opportunities."</p>
+                                    <h3 class="box-title"><a href="program.html">Rohit Kumar</a></h3>
                                 </div>
                             </div>
                         </div>
@@ -2472,13 +2913,29 @@
                             <div class="story-card">
                                 <div class="box-img"><img src="assets/img/story/story-1-5.jpg" alt="img"></div>
                                 <div class="story-content">
-                                    <h3 class="box-title"><a href="program.html">Vikram Joshi</a></h3>
+                                    <h3 class="box-title"><a href="program.html">Anjali Verma</a></h3>
                                 </div>
                                 <div class="story-content hover-style">
                                     <div class="quote-icon"><img src="assets/img/icon/quote.svg" alt=""></div>
-                                    <p class="box-text">"MIU's focus on soft skills and technical excellence helped me
-                                        crack interviews at top MNCs. I chose Accenture and I'm loving my career!"</p>
-                                    <h3 class="box-title"><a href="program.html">Vikram Joshi</a></h3>
+                                    <p class="box-text">"The academic environment at MIU encouraged continuous learning
+                                        and growth. The practical exposure and career-focused training helped me secure a
+                                        position in a reputed organization."</p>
+                                    <h3 class="box-title"><a href="program.html">Anjali Verma</a></h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="story-card">
+                                <div class="box-img"><img src="assets/img/story/story-1-5.jpg" alt="img"></div>
+                                <div class="story-content">
+                                    <h3 class="box-title"><a href="program.html">Karan Malhotra</a></h3>
+                                </div>
+                                <div class="story-content hover-style">
+                                    <div class="quote-icon"><img src="assets/img/icon/quote.svg" alt=""></div>
+                                    <p class="box-text">"MIU University provided me with the right platform to develop my
+                                        skills and achieve my goals. The placement support and industry exposure were
+                                        crucial in shaping my career path."</p>
+                                    <h3 class="box-title"><a href="program.html">Karan Malhotra</a></h3>
                                 </div>
                             </div>
                         </div>
@@ -2495,9 +2952,9 @@
         <div class="container">
             <div class="row justify-content-lg-between justify-content-center align-items-center">
                 <div class="col-lg-8 col-12">
-                    <div class="title-area text-center text-lg-start"><span class="sub-title text-anim">LATEST NEWS &
-                            BLOG</span>
-                        <h2 class="sec-title text-anim2">Blog & Insights</h2>
+                    <div class="title-area text-center text-lg-start"><span class="sub-title text-anim">Latest News &
+                            Blog</span>
+                        <h2 class="sec-title text-anim2">Insights, Ideas & Perspectives</h2>
                     </div>
                 </div>
                 <div class="col-auto align-self-end">
@@ -2505,94 +2962,9 @@
                             class="th-btn style-border1 th-icon">Our Blogs</a></div>
                 </div>
             </div>
-            {{-- <div class="event-card-wrap">
-                <div class="event-card wow fadeInUp" data-wow-delay=".2s">
-                    <div class="event-card-img global-img"><img src="assets/img/event/event-1-1.jpg" alt="event">
-                        <p class="event-card-tag"><span class="tag-number">12</span>Jan</p>
-                    </div>
-                    <div class="event-content">
-                        <div class="event-wrapp">
-                            <h3 class="box-title text-anim2"><a href="event-details.html">Programming languages for
-                                    a better world</a></h3>
-                            <p class="box-text">Come for a quick session on how this question has crucially helped
-                                humanity with achieving one of its most impressive feats yet: orchestrating electric
-                                currents.</p>
-                            <div class="blog-meta"><a class="location" href="#"><i
-                                        class="fa-solid fa-location-dot"></i> 25 Circular Road, New York City </a><a
-                                    class="date" href="#"><i class="fa-regular fa-calendar-days"></i>
-                                    25.02.2025 </a><a class="time" href="#"><i class="fa-solid fa-clock"></i>
-                                    09:00am - 12:00pm</a></div>
-                        </div>
-                        <div class="btn-wrap"><a class="th-btn style-border1 th-icon"
-                                href="event-details.html">Details</a></div>
-                    </div>
-                </div>
-                <div class="event-card wow fadeInUp" data-wow-delay=".4s">
-                    <div class="event-card-img global-img"><img src="assets/img/event/event-1-2.jpg" alt="event">
-                        <p class="event-card-tag"><span class="tag-number">07</span>Feb</p>
-                    </div>
-                    <div class="event-content">
-                        <div class="event-wrapp">
-                            <h3 class="box-title text-anim2"><a href="event-details.html">Center for Subjectivity
-                                    Research 2024</a></h3>
-                            <p class="box-text">Center for subjectivity research at the university of copenhagen was
-                                established in 2002 on the basis of a grant from national research.</p>
-                            <div class="blog-meta"><a class="location" href="#"><i
-                                        class="fa-solid fa-location-dot"></i> 25 Circular Road, New York City </a><a
-                                    class="date" href="#"><i class="fa-regular fa-calendar-days"></i>
-                                    03.08.2025 </a><a class="time" href="#"><i class="fa-solid fa-clock"></i>
-                                    10:00am - 03:20pm</a></div>
-                        </div>
-                        <div class="btn-wrap"><a class="th-btn style-border1 th-icon"
-                                href="event-details.html">Details</a></div>
-                    </div>
-                </div>
-                <div class="event-card wow fadeInUp" data-wow-delay=".6s">
-                    <div class="event-card-img global-img"><img src="assets/img/event/event-1-3.jpg" alt="event">
-                        <p class="event-card-tag"><span class="tag-number">22</span>Sep</p>
-                    </div>
-                    <div class="event-content">
-                        <div class="event-wrapp">
-                            <h3 class="box-title text-anim2"><a href="event-details.html">The Future of Archives in
-                                    the Digital Age</a></h3>
-                            <p class="box-text">This talk explores the potential future of archives in the digital
-                                age, using one of the oldest philosophical archives and research institutes for
-                                philosophy in Germany</p>
-                            <div class="blog-meta"><a class="location" href="#"><i
-                                        class="fa-solid fa-location-dot"></i> 25 Circular Road, New York City </a><a
-                                    class="date" href="#"><i class="fa-regular fa-calendar-days"></i>
-                                    14.11.2025 </a><a class="time" href="#"><i class="fa-solid fa-clock"></i>
-                                    11:00am - 04:00pm</a></div>
-                        </div>
-                        <div class="btn-wrap"><a class="th-btn style-border1 th-icon"
-                                href="event-details.html">Details</a></div>
-                    </div>
-                </div>
-            </div> --}}
+
             <div class="row gy-4 event-card-wrap">
-                {{-- <div class="col-lg-4">
-                    <div class="blog-card wow fadeInUp">
-                        <div class="blog-img position-relative p-3 pb-0" ><a href="blog-details.html">
-                                <div class="blog-img-box position-relative overflow-hidden "><img
-                                        src="assets/img/blog/blog_1_1.jpg" alt="blog image"> <img
-                                        src="assets/img/blog/blog_1_1.jpg" alt="blog image"></div>
-                            </a>
-                            <div class="blog-date">
-                                <h5 class="blog-date-title">24</h5>
-                                <p class="blog-date-text">FEB,2025</p>
-                            </div>
-                        </div>
-                        <div class="blog-content">
-                            
-                            <h3 class="box-title"><a href="blog-details.html">Platform Innovation Centre & Parkade
-                                    for generation</a></h3>
-                            <p class="box-text">Studam fuels student success through smart tools and guides for
-                                academic excellence.</p>
-                            <div class="btn-wrap"><a href="blog-details.html"
-                                    class="th-btn style-border1 th-icon">Read More</a></div>
-                        </div>
-                    </div>
-                     </div> --}}
+
                 <div class="row">
                     <!-- Card 1 - Blog 1 -->
                     <div class="col-lg-4 col-md-6">
@@ -2606,15 +2978,15 @@
                                     </div>
                                 </a>
                                 <div class="blog-date">
-                                    <h5 class="blog-date-title">15</h5>
-                                    <p class="blog-date-text">JAN,2025</p>
+                                    <h5 class="blog-date-title">12</h5>
+                                    <p class="blog-date-text">MAR,2026</p>
                                 </div>
                             </div>
                             <div class="blog-content pt-0 px-3">
-                                <h3 class="box-title"><a href="blog-details.html">Advanced AI & Machine
-                                        Learning Certification Program</a></h3>
-                                <p class="box-text">MIU introduces industry-aligned AI curriculum with hands-on projects
-                                    and placement assistance for tech enthusiasts.</p>
+                                <h3 class="box-title"><a href="blog-details.html">The Rise of Skill-Based Higher
+                                        Education in India</a></h3>
+                                <p class="box-text">An in-depth analysis of how skill-driven education models is reshaping
+                                    academic frameworks and enhancing employability outcomes across industries.</p>
                             </div>
                         </div>
                     </div>
@@ -2631,15 +3003,15 @@
                                     </div>
                                 </a>
                                 <div class="blog-date">
-                                    <h5 class="blog-date-title">22</h5>
-                                    <p class="blog-date-text">FEB,2025</p>
+                                    <h5 class="blog-date-title">05</h5>
+                                    <p class="blog-date-text">Mar, 2026</p>
                                 </div>
                             </div>
                             <div class="blog-content pt-0 px-3">
-                                <h3 class="box-title"><a href="blog-details.html">Top Recruiters Visit MIU Campus for Mega
-                                        Placement Drive 2025</a></h3>
-                                <p class="box-text">Over 50+ leading companies including Amazon, Microsoft, and Google
-                                    participated in MIU's annual placement event.</p>
+                                <h3 class="box-title"><a href="blog-details.html">Bridging the Gap Between Academia and
+                                        Industry</a></h3>
+                                <p class="box-text">Exploring the importance of industry collaboration in designing
+                                    relevant curriculum and preparing students for real-world challenges.</p>
                             </div>
                         </div>
                     </div>
@@ -2656,15 +3028,15 @@
                                     </div>
                                 </a>
                                 <div class="blog-date">
-                                    <h5 class="blog-date-title">10</h5>
-                                    <p class="blog-date-text">MAR,2025</p>
+                                    <h5 class="blog-date-title">25 </h5>
+                                    <p class="blog-date-text">Feb, 2026</p>
                                 </div>
                             </div>
                             <div class="blog-content pt-0 px-3">
-                                <h3 class="box-title"><a href="blog-details.html">MIU Students Shine at National Level
-                                        Hackathon 2025</a></h3>
-                                <p class="box-text">MIU's tech team wins first prize at Smart India Hackathon, showcasing
-                                    innovative solutions for real-world problems.</p>
+                                <h3 class="box-title"><a href="blog-details.html">Emerging Career Opportunities in
+                                        Technology and Management</a></h3>
+                                <p class="box-text">A comprehensive overview of high-growth career domains and strategies
+                                    students can adopt to remain competitive in evolving job markets.</p>
                             </div>
                         </div>
                     </div>
@@ -2675,41 +3047,7 @@
     <section class="apply-stadum-area bg-title position-relative space overflow-hidden">
         <div class="container">
             <div class="row gy-4 align-items-center justify-content-between">
-                <div class="col-xl-6 order-1 order-xl-0">
-                    {{-- <div class="apply-stadum-titlebox title-area">
-                        <div class="sec-title-wrap"><span class="sub-title text-anim">APPLY TO STADUM</span>
-                            <h2 class="sec-title text-white text-anim2">We are one of the largest university</h2>
-                        </div>
-                        <div class="box-text-wrap">
-                            <p class="box-text text-white mt-25 wow fadeInUp" data-wow-delay=".2s">A place to
-                                provide students with enough knowledge and skills in a complex world. Are you looking
-                                for exceptional education experience? Stadum might be the place for you.</p>
-                            <p></p>
-                        </div>
-                    </div>
-                    <div class="apply-stadum-wrapp">
-                        <div class="apply-stadum-box">
-                            <div class="checklist">
-                                <ul class="list-unstyled">
-                                    <li class="wow fadeInUp" data-wow-delay=".2s">Undergraduate Admissions</li>
-                                    <li class="wow fadeInUp" data-wow-delay=".3s">Graduate Admissions</li>
-                                    <li class="wow fadeInUp" data-wow-delay=".4s">International Students</li>
-                                    <li class="wow fadeInUp" data-wow-delay=".5s">Scholarship Opportunities</li>
-                                </ul>
-                            </div>
-                            <div class="checklist">
-                                <ul class="list-unstyled">
-                                    <li class="wow fadeInUp" data-wow-delay=".6s">Transfer Admissions</li>
-                                    <li class="wow fadeInUp" data-wow-delay=".7s">Financial Aid Applications</li>
-                                    <li class="wow fadeInUp" data-wow-delay=".8s">Scholarship Opportunities</li>
-                                    <li class="wow fadeInUp" data-wow-delay=".9s">Campus Visit Scheduling</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="apply-stadum-action th-btn-wrap wow fadeInUp" data-wow-delay=".10s"><a
-                                href="contact.html" class="th-btn th-icon white-hover">More About Admission</a>
-                        </div>
-                    </div> --}}
+                <div class="col-xl-6 order-1 order-xl-0">                  
                     <div class="bg-white p-4 rounded-3 shadow-lg">
 
                         @include('web.parts.enquery-form')
@@ -2723,156 +3061,8 @@
             </div>
         </div><span class="apply-stadum-shape wow fadeInRight" data-wow-delay=".3s"></span>
     </section>
-    {{-- <section class="chancellor-area position-relative space">
-        <div class="container">
-            <div class="row align-items-center justify-content-between">
-                <div class="col-xl-6">
-                    <div class="chancellor-thumb"><img src="assets/img/chancellor/chancellor-img-home-1.jpg"
-                            alt="image">
-                        <div class="ripple-shape style2"><span class="ripple-1"></span> <span class="ripple-2"></span>
-                            <span class="ripple-3"></span> <span class="ripple-4"></span> <span class="ripple-5"></span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-6">
-                    <div class="chancellor-wrapp">
-                        <div class="chancellor-titlebox title-area"><span class="sub-title text-anim">OUR CHANCELLOR
-                                & LECTURE</span>
-                            <h2 class="sec-title text-anim2">Chancellor & Lecturer</h2>
-                            <p class="box-text mt-25 wow fadeInUp" data-wow-delay=".4s">A place to provide students
-                                with enough knowledge and skills in a complex world. Are you looking for exceptional
-                                education experience? Stadum might be the place for you.</p>
-                        </div>
-                        <div class="chancellor-content">
-                            <div class="skill-feature wow fadeInUp" data-wow-delay=".2s">
-                                <h3 class="skill-feature-title">Faculty Skilled</h3>
-                                <div class="progress">
-                                    <div class="progress-bar" style="width: 95%;">
-                                        <div class="progress-value">95%</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="skill-feature wow fadeInUp" data-wow-delay=".4s">
-                                <h3 class="skill-feature-title">Computer Science</h3>
-                                <div class="progress">
-                                    <div class="progress-bar" style="width: 98%;">
-                                        <div class="progress-value">98%</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="skill-feature wow fadeInUp" data-wow-delay=".6s">
-                                <h3 class="skill-feature-title">Communication</h3>
-                                <div class="progress">
-                                    <div class="progress-bar" style="width: 95%;">
-                                        <div class="progress-value">95%</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="chancellor-bottom">
-                                <div class="chancellor-action"><a href="contact.html" class="th-btn th-icon">Lecturer
-                                        at
-                                        Faculty</a></div>
-                                <div class="chancellor-signature-box text-sm-center">
-                                    <p class="box-text">Prof. Dr. Simons Doe, Ph.D</p><img
-                                        src="assets/img/icon/signature.png" class="chancellor-signature" alt="signature">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <div class="marquee-area space-bottom overflow-hidden">
-        <div class="container-fluid p-0">
-            <div class="swiper th-slider marquee-slider1"
-                data-slider-options='{"breakpoints":{"0":{"slidesPerView":"auto"}},"autoplay":{"delay":0,"disableOnInteraction":false},"noSwiping":"true","speed":10000,"spaceBetween":40}'>
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="marquee-card">
-                            <div class="color-masking"><img src="assets/img/icon/open-book.svg" alt="icon">
-                            </div><a target="_blank" href="#">CREATION</a>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="marquee-card">
-                            <div class="color-masking"><img src="assets/img/icon/scollarship.svg" alt="icon">
-                            </div><a target="_blank" href="#">DISCOVER</a>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="marquee-card">
-                            <div class="color-masking"><img src="assets/img/icon/open-book.svg" alt="icon">
-                            </div><a target="_blank" href="#">INNOVATE</a>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="marquee-card">
-                            <div class="color-masking"><img src="assets/img/icon/open-book.svg" alt="icon">
-                            </div><a target="_blank" href="#">EDUCATION</a>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="marquee-card">
-                            <div class="color-masking"><img src="assets/img/icon/scollarship.svg" alt="icon">
-                            </div><a target="_blank" href="#">CASE STUDIES</a>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="marquee-card">
-                            <div class="color-masking"><img src="assets/img/icon/open-book.svg" alt="icon">
-                            </div><a target="_blank" href="#">CREATION</a>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="marquee-card">
-                            <div class="color-masking"><img src="assets/img/icon/open-book.svg" alt="icon">
-                            </div><a target="_blank" href="#">DISCOVER</a>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="marquee-card">
-                            <div class="color-masking"><img src="assets/img/icon/scollarship.svg" alt="icon">
-                            </div><a target="_blank" href="#">INNOVATE</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="community-area space" data-bg-src="assets/img/bg/community-home-1.png">
-        <div class="container">
-            <div class="row">
-                <div class="col-xxl-7">
-                    <div class="community-wrap">
-                        <div class="title-area"><span class="sub-title text-anim">INTERESTED IN JOINING WITH
-                                US?</span>
-                            <h2 class="sec-title text-anim2 mb-55">Join Us For Information About New Student Admission
-                            </h2>
-                            <div class="box-text-wrap mt-30 wow fadeInUp" data-wow-delay=".3s">
-                                <p class="box-text">At stadum eductin, we redefine consultancy through a dynamic
-                                    fusion of innovation, expertise, and strategic vision. Our dedicated team is
-                                    committed to delivering tailored solutions that transcend traditional consulting
-                                    boundaries.</p>
-                            </div>
-                        </div>
-                        <div class="btn-wrap wow fadeInUp" data-wow-delay=".4s"><a href="contact.html"
-                                class="th-btn th-icon">Join Community</a></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> --}}
     <section class="faq-area-1 bg-white position-relative space overflow-hidden">
-        {{-- <div class="faq-shape1 shape-mockup" data-top="0%" data-left="0%"><img
-                src="assets/img/shape/feature-shep-home-1.png" alt="shape"></div>
-        <div class="faq-shape2 shape-mockup" data-bottom="0%" data-right="0%"><img
-                src="assets/img/shape/feature-shep-2-home-1.png" alt="shape"></div>
-        <div class="faq-shape3 movingX shape-mockup" data-bottom="0%" data-right="2%"><img
-                src="assets/img/shape/faq-1-1.png" alt="shape"></div>
-        <div class="ripple-shape d-none d-xl-block"><span class="ripple-1"></span> <span class="ripple-2"></span>
-            <span class="ripple-3"></span> <span class="ripple-4"></span> <span class="ripple-5"></span>
-        </div> --}}
+
         <div class="container">
             <div class="row gy-30 gx-30 align-items-center justify-content-center">
                 <div class="col-xxl-4">
@@ -2882,127 +3072,14 @@
                         <div class="img2"><img src="assets/img/faq/faq-1-3.jpg" alt="image"></div>
                     </div>
                 </div>
-                {{-- <div class="col-xxl-8">
-                    <div class="faq-content">
-                        <div class="faq-wrap">
-                            <div class="title-area"><span class="sub-title text-anim">FAQ</span>
-                                <h2 class="sec-title text-anim2">Frequently Ask Questions</h2>
-                                <p class="box-text mt-20 wow fadeInUp" data-wow-delay=".3s">We are committed to
-                                    leaving the world a better place. We pursue new technology, encourage creativity,
-                                </p>
-                            </div>
-                        </div>
-                        <div class="faq-box">
-                            <div class="faq-wrap1">
-                                <div class="accordion" id="faqAccordion">
-                                    <div class="accordion-card wow fadeInUp" data-wow-delay=".1s">
-                                        <div class="accordion-header" id="collapse-item-1"><button
-                                                class="accordion-button" type="button" data-bs-toggle="collapse"
-                                                data-bs-target="#collapse-1" aria-expanded="true"
-                                                aria-controls="collapse-1">01. How this Stadum works?</button></div>
-                                        <div id="collapse-1" class="accordion-collapse collapse show"
-                                            aria-labelledby="collapse-item-1" data-bs-parent="#faqAccordion">
-                                            <div class="accordion-body">
-                                                <p class="faq-text">At stadum eductin, we redefine consultancy through
-                                                    a dynamic fusion of innovation, expertise, and strategic vision. Our
-                                                    dedicated team is committed to delivering tailored solutions that
-                                                    transcend traditional consulting boundaries.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="accordion-card wow fadeInUp" data-wow-delay=".2s">
-                                        <div class="accordion-header" id="collapse-item-2"><button
-                                                class="accordion-button collapsed" type="button"
-                                                data-bs-toggle="collapse" data-bs-target="#collapse-2"
-                                                aria-expanded="false" aria-controls="collapse-2">02. How can i make
-                                                Cancel here?</button></div>
-                                        <div id="collapse-2" class="accordion-collapse collapse"
-                                            aria-labelledby="collapse-item-2" data-bs-parent="#faqAccordion">
-                                            <div class="accordion-body">
-                                                <p class="faq-text">At stadum eductin, we redefine consultancy through
-                                                    a dynamic fusion of innovation, expertise, and strategic vision. Our
-                                                    dedicated team is committed to delivering tailored solutions that
-                                                    transcend traditional consulting boundaries.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="accordion-card wow fadeInUp" data-wow-delay=".3s">
-                                        <div class="accordion-header" id="collapse-item-3"><button
-                                                class="accordion-button collapsed" type="button"
-                                                data-bs-toggle="collapse" data-bs-target="#collapse-3"
-                                                aria-expanded="false" aria-controls="collapse-3">03. What services
-                                                do yo offer?</button></div>
-                                        <div id="collapse-3" class="accordion-collapse collapse"
-                                            aria-labelledby="collapse-item-3" data-bs-parent="#faqAccordion">
-                                            <div class="accordion-body">
-                                                <p class="faq-text">At stadum eductin, we redefine consultancy through
-                                                    a dynamic fusion of innovation, expertise, and strategic vision. Our
-                                                    dedicated team is committed to delivering tailored solutions that
-                                                    transcend traditional consulting boundaries.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="accordion-card wow fadeInUp" data-wow-delay=".4s">
-                                        <div class="accordion-header" id="collapse-item-4"><button
-                                                class="accordion-button collapsed" type="button"
-                                                data-bs-toggle="collapse" data-bs-target="#collapse-4"
-                                                aria-expanded="false" aria-controls="collapse-4">04. How can
-                                                consultant benefits in my business?</button></div>
-                                        <div id="collapse-4" class="accordion-collapse collapse"
-                                            aria-labelledby="collapse-item-4" data-bs-parent="#faqAccordion">
-                                            <div class="accordion-body">
-                                                <p class="faq-text">At stadum eductin, we redefine consultancy through
-                                                    a dynamic fusion of innovation, expertise, and strategic vision. Our
-                                                    dedicated team is committed to delivering tailored solutions that
-                                                    transcend traditional consulting boundaries.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="accordion-card wow fadeInUp" data-wow-delay=".5s">
-                                        <div class="accordion-header" id="collapse-item-5"><button
-                                                class="accordion-button collapsed" type="button"
-                                                data-bs-toggle="collapse" data-bs-target="#collapse-5"
-                                                aria-expanded="false" aria-controls="collapse-5">05. How to get all
-                                                programs?</button></div>
-                                        <div id="collapse-5" class="accordion-collapse collapse"
-                                            aria-labelledby="collapse-item-5" data-bs-parent="#faqAccordion">
-                                            <div class="accordion-body">
-                                                <p class="faq-text">At stadum eductin, we redefine consultancy through
-                                                    a dynamic fusion of innovation, expertise, and strategic vision. Our
-                                                    dedicated team is committed to delivering tailored solutions that
-                                                    transcend traditional consulting boundaries.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="accordion-card wow fadeInUp" data-wow-delay=".6s">
-                                        <div class="accordion-header" id="collapse-item-6"><button
-                                                class="accordion-button collapsed" type="button"
-                                                data-bs-toggle="collapse" data-bs-target="#collapse-6"
-                                                aria-expanded="false" aria-controls="collapse-6">06. When available
-                                                community join?</button></div>
-                                        <div id="collapse-6" class="accordion-collapse collapse"
-                                            aria-labelledby="collapse-item-6" data-bs-parent="#faqAccordion">
-                                            <div class="accordion-body">
-                                                <p class="faq-text">At stadum eductin, we redefine consultancy through
-                                                    a dynamic fusion of innovation, expertise, and strategic vision. Our
-                                                    dedicated team is committed to delivering tailored solutions that
-                                                    transcend traditional consulting boundaries.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div> --}}
+          
                 <div class="col-xxl-8">
                     <div class="faq-content">
                         <div class="faq-wrap">
                             <div class="title-area">
                                 <span class="sub-title text-anim">FAQ</span>
                                 <h2 class="sec-title text-anim2">Frequently Ask Questions</h2>
-                                <p class="box-text mt-20 wow fadeInUp" data-wow-delay=".3s">Get answers to the most common
-                                    questions about admissions, courses, fees, and campus life at our university.
+                                <p class="box-text mt-20 wow fadeInUp" data-wow-delay=".3s">Explore detailed answers to commonly asked questions regarding admissions, academic programs, placements, and campus facilities.
                                 </p>
                             </div>
                         </div>
@@ -3013,17 +3090,12 @@
                                         <div class="accordion-header" id="collapse-item-1">
                                             <button class="accordion-button" type="button" data-bs-toggle="collapse"
                                                 data-bs-target="#collapse-1" aria-expanded="true"
-                                                aria-controls="collapse-1">01. What are the admission requirements for
-                                                undergraduate programs?</button>
+                                                aria-controls="collapse-1">01. What academic programs are offered at MIU University?</button>
                                         </div>
                                         <div id="collapse-1" class="accordion-collapse collapse show"
                                             aria-labelledby="collapse-item-1" data-bs-parent="#faqAccordion">
                                             <div class="accordion-body">
-                                                <p class="faq-text">For undergraduate programs, you need a minimum of 50%
-                                                    aggregate in 10+2 from a recognized board. Entrance exam scores
-                                                    (JEE/NEET/University Entrance Test) are accepted. International students
-                                                    require IELTS/TOEFL scores. The application deadline for the fall
-                                                    semester is May 31st.</p>
+                                                <p class="faq-text">MIU University offers a diverse portfolio of undergraduate (UG), postgraduate (PG), Skill, vocational and PhD programs across management, technology, healthcare, and skill-based disciplines, all designed to align with industry requirements and career outcomes.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -3031,17 +3103,12 @@
                                         <div class="accordion-header" id="collapse-item-2">
                                             <button class="accordion-button collapsed" type="button"
                                                 data-bs-toggle="collapse" data-bs-target="#collapse-2"
-                                                aria-expanded="false" aria-controls="collapse-2">02. How can I apply for
-                                                scholarships?</button>
+                                                aria-expanded="false" aria-controls="collapse-2">02. Is MIU University recognized and approved by regulatory authorities?</button>
                                         </div>
                                         <div id="collapse-2" class="accordion-collapse collapse"
                                             aria-labelledby="collapse-item-2" data-bs-parent="#faqAccordion">
                                             <div class="accordion-body">
-                                                <p class="faq-text">We offer merit-based, need-based, and sports
-                                                    scholarships. You can apply through the university portal after
-                                                    receiving your admission offer. The application deadline for
-                                                    scholarships is usually one month before the semester starts. Some
-                                                    scholarships cover up to 100% of tuition fees.</p>
+                                                <p class="faq-text">Yes, MIU University operates in accordance with established regulatory frameworks and complies with UGC guidelines, ensuring credibility, quality education, and recognized academic standards.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -3049,16 +3116,12 @@
                                         <div class="accordion-header" id="collapse-item-3">
                                             <button class="accordion-button collapsed" type="button"
                                                 data-bs-toggle="collapse" data-bs-target="#collapse-3"
-                                                aria-expanded="false" aria-controls="collapse-3">03. What is the fee
-                                                structure and payment process?</button>
+                                                aria-expanded="false" aria-controls="collapse-3">03. Does the university provide placement assistance to students?</button>
                                         </div>
                                         <div id="collapse-3" class="accordion-collapse collapse"
                                             aria-labelledby="collapse-item-3" data-bs-parent="#faqAccordion">
                                             <div class="accordion-body">
-                                                <p class="faq-text">Annual tuition fees range from ₹50,000 to ₹2,50,000
-                                                    depending on the program. Payment can be made online via credit/debit
-                                                    card, net banking, UPI, or demand draft. We also offer easy EMI options
-                                                    through our banking partners. Hostel and mess fees are separate.</p>
+                                                <p class="faq-text">The university offers structured placement support, including training, internships, and recruitment drives, facilitated by strong industry connections and a dedicated placement cell.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -3066,17 +3129,12 @@
                                         <div class="accordion-header" id="collapse-item-4">
                                             <button class="accordion-button collapsed" type="button"
                                                 data-bs-toggle="collapse" data-bs-target="#collapse-4"
-                                                aria-expanded="false" aria-controls="collapse-4">04. What placement
-                                                opportunities does the university offer?</button>
+                                                aria-expanded="false" aria-controls="collapse-4">04. Are there opportunities for practical and skill-based learning?</button>
                                         </div>
                                         <div id="collapse-4" class="accordion-collapse collapse"
                                             aria-labelledby="collapse-item-4" data-bs-parent="#faqAccordion">
                                             <div class="accordion-body">
-                                                <p class="faq-text">Our dedicated placement cell has partnerships with 200+
-                                                    companies including Google, Microsoft, Amazon, TCS, and Infosys. Average
-                                                    package is ₹6-8 LPA, with the highest reaching ₹42 LPA. We provide
-                                                    resume building workshops, mock interviews, and internship opportunities
-                                                    throughout the year.</p>
+                                                <p class="faq-text">Yes, MIU emphasizes experiential learning through workshops, labs, industry projects, and skill development programs to ensure students gain hands-on knowledge.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -3084,17 +3142,12 @@
                                         <div class="accordion-header" id="collapse-item-5">
                                             <button class="accordion-button collapsed" type="button"
                                                 data-bs-toggle="collapse" data-bs-target="#collapse-5"
-                                                aria-expanded="false" aria-controls="collapse-5">05. What are the hostel
-                                                and campus facilities available?</button>
+                                                aria-expanded="false" aria-controls="collapse-5">05. What facilities are available on campus for students?</button>
                                         </div>
                                         <div id="collapse-5" class="accordion-collapse collapse"
                                             aria-labelledby="collapse-item-5" data-bs-parent="#faqAccordion">
                                             <div class="accordion-body">
-                                                <p class="faq-text">We have separate hostels for boys and girls with
-                                                    AC/non-AC rooms, 24/7 Wi-Fi, security, and mess facilities. Campus
-                                                    includes a central library, modern labs, sports complex, gym, cafeteria,
-                                                    medical center, and transport services. Hostel admission is on a
-                                                    first-come basis.</p>
+                                                <p class="faq-text">The campus provides modern infrastructure including smart classrooms, laboratories, libraries, and dedicated spaces for academic and extracurricular activities.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -3102,17 +3155,12 @@
                                         <div class="accordion-header" id="collapse-item-6">
                                             <button class="accordion-button collapsed" type="button"
                                                 data-bs-toggle="collapse" data-bs-target="#collapse-6"
-                                                aria-expanded="false" aria-controls="collapse-6">06. How can I contact the
-                                                admission counselor?</button>
+                                                aria-expanded="false" aria-controls="collapse-6">06. How can students apply for admission at MIU University?</button>
                                         </div>
                                         <div id="collapse-6" class="accordion-collapse collapse"
                                             aria-labelledby="collapse-item-6" data-bs-parent="#faqAccordion">
                                             <div class="accordion-body">
-                                                <p class="faq-text">You can reach our admission counselors via phone at
-                                                    +91-XXXXXXXXXX, email at admissions@university.edu, or visit the
-                                                    admission office from Monday to Saturday (9 AM to 5 PM). You can also
-                                                    fill out the enquiry form on our website and we'll contact you within 24
-                                                    hours.</p>
+                                                <p class="faq-text">Students can apply through the official website by filling out the application form, submitting required documents, and following the admission guidelines provided.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -3124,114 +3172,10 @@
             </div>
         </div>
     </section>
-    {{-- <section class="blog-area-1 overflow-hidden space" id="blog-sec">
-        <div class="container">
-            <div class="row justify-content-lg-between justify-content-center align-items-center">
-                <div class="col-lg-8 col-12">
-                    <div class="title-area text-center text-lg-start"><span class="sub-title text-anim">LATEST NEWS
-                            & BLOG</span>
-                        <h2 class="sec-title text-anim2">Blog & Insights</h2>
-                    </div>
-                </div>
-                <div class="col-auto align-self-end">
-                    <div class="sec-btn wow fadeInUp" data-wow-delay=".3s"><a href="blog.html"
-                            class="th-btn style-border1 th-icon">Our Blogs</a></div>
-                </div>
-            </div>
-            <div class="row gy-4">
-                <div class="col-lg-4">
-                    <div class="blog-card wow fadeInUp">
-                        <div class="blog-img position-relative"><a href="blog-details.html">
-                                <div class="blog-img-box position-relative overflow-hidden"><img
-                                        src="assets/img/blog/blog_1_1.jpg" alt="blog image"> <img
-                                        src="assets/img/blog/blog_1_1.jpg" alt="blog image"></div>
-                            </a>
-                            <div class="blog-date">
-                                <h5 class="blog-date-title">24</h5>
-                                <p class="blog-date-text">FEB,2025</p>
-                            </div>
-                        </div>
-                        <div class="blog-content">
-                            <div class="blog-meta"><a class="author" href="blog.html"><span class="author-icon"><img
-                                            src="assets/img/blog/author.png" alt="img"></span>By themeholy</a> <a
-                                    href="blog.html"><span class="comment-icon"><i
-                                            class="fa-solid fa-comments"></i></span> 0
-                                    Comment</a></div>
-                            <h3 class="box-title"><a href="blog-details.html">Platform Innovation Centre & Parkade
-                                    for generation</a></h3>
-                            <p class="box-text">Studam fuels student success through smart tools and guides for
-                                academic excellence.</p>
-                            <div class="btn-wrap"><a href="blog-details.html"
-                                    class="th-btn style-border1 th-icon">Read More</a></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="blog-card wow fadeInUp">
-                        <div class="blog-img position-relative"><a href="blog-details.html">
-                                <div class="blog-img-box position-relative overflow-hidden"><img
-                                        src="assets/img/blog/blog_1_2.jpg" alt="blog image"> <img
-                                        src="assets/img/blog/blog_1_2.jpg" alt="blog image"></div>
-                            </a>
-                            <div class="blog-date">
-                                <h5 class="blog-date-title">29</h5>
-                                <p class="blog-date-text">JAN,2025</p>
-                            </div>
-                        </div>
-                        <div class="blog-content">
-                            <div class="blog-meta"><a class="author" href="blog.html"><span class="author-icon"><img
-                                            src="assets/img/blog/author.png" alt="img"></span>By themeholy</a> <a
-                                    href="blog.html"><span class="comment-icon"><i
-                                            class="fa-solid fa-comments"></i></span> 0
-                                    Comment</a></div>
-                            <h3 class="box-title"><a href="blog-details.html">Olympic Plaza Transformar Advence
-                                    project</a></h3>
-                            <p class="box-text">Studam enables learners with powerful tools and support for every
-                                education phase.</p>
-                            <div class="btn-wrap"><a href="blog-details.html"
-                                    class="th-btn style-border1 th-icon">Read More</a></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="blog-card wow fadeInUp">
-                        <div class="blog-img position-relative"><a href="blog-details.html">
-                                <div class="blog-img-box position-relative overflow-hidden"><img
-                                        src="assets/img/blog/blog_1_3.jpg" alt="blog image"> <img
-                                        src="assets/img/blog/blog_1_3.jpg" alt="blog image"></div>
-                            </a>
-                            <div class="blog-date">
-                                <h5 class="blog-date-title">18</h5>
-                                <p class="blog-date-text">FEB,2025</p>
-                            </div>
-                        </div>
-                        <div class="blog-content">
-                            <div class="blog-meta"><a class="author" href="blog.html"><span class="author-icon"><img
-                                            src="assets/img/blog/author.png" alt="img"></span>By themeholy</a> <a
-                                    href="blog.html"><span class="comment-icon"><i
-                                            class="fa-solid fa-comments"></i></span> 0
-                                    Comment</a></div>
-                            <h3 class="box-title"><a href="blog-details.html">Calgary Municipal Land Corporation
-                                    launches</a></h3>
-                            <p class="box-text">Studam builds strong student networks and platforms for academic
-                                transformation daily.</p>
-                            <div class="btn-wrap"><a href="blog-details.html"
-                                    class="th-btn style-border1 th-icon">Read More</a></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> --}}
-
 @endsection
-
-{{-- 
 @section('scripts')
-    <script>
+    {{-- <script>
         (function() {
-            // STRICT SCROLL LOCK STACKED SLIDER - FIXED VERSION
-
             document.addEventListener('DOMContentLoaded', function() {
 
                 const cards = document.querySelectorAll('.stack-card');
@@ -3254,362 +3198,35 @@
                     totalNumSpan.textContent = totalCards.toString().padStart(2, '0');
                 }
 
-                // Lock body scroll
+                // Lock body scroll with smooth transition
                 function lockBodyScroll() {
                     if (!isSliderLocked) {
                         scrollPositionBeforeLock = window.scrollY;
                         document.body.classList.add('slider-active');
                         document.body.style.top = `-${scrollPositionBeforeLock}px`;
                         isSliderLocked = true;
+                        console.log('🔒 Slider LOCKED at scroll:', scrollPositionBeforeLock);
                     }
                 }
 
-                // Unlock body scroll
+                // Unlock body scroll with smooth transition
                 function unlockBodyScroll() {
                     if (isSliderLocked) {
+                        const scrollPos = scrollPositionBeforeLock;
                         document.body.classList.remove('slider-active');
                         document.body.style.top = '';
-                        window.scrollTo(0, scrollPositionBeforeLock);
                         isSliderLocked = false;
+
+                        // Smooth scroll restoration
+                        requestAnimationFrame(() => {
+                            window.scrollTo({
+                                top: scrollPos,
+                                behavior: 'instant'
+                            });
+                        });
+
+                        console.log('🔓 Slider UNLOCKED, restored scroll:', scrollPos);
                     }
-                }
-
-                // Update progress and counter
-                function updateProgress() {
-                    if (progressFill) {
-                        const progress = (currentIndex / (totalCards - 1)) * 100;
-                        progressFill.style.width = progress + '%';
-                    }
-                    if (currentNumSpan) {
-                        currentNumSpan.textContent = (currentIndex + 1).toString().padStart(2, '0');
-                    }
-                }
-
-                // Update scroll hint text
-                function updateScrollHint() {
-                    const scrollHintSpan = document.querySelector('.scroll-hint span');
-                    if (scrollHintSpan) {
-                        if (currentIndex === 0) {
-                            scrollHintSpan.innerHTML = '⬆️ Scroll UP to go to previous section ⬆️';
-                            scrollHintSpan.style.color = '#f37021';
-                        } else if (currentIndex === totalCards - 1) {
-                            scrollHintSpan.innerHTML = '⬇️ Scroll DOWN to go to next section ⬇️';
-                            scrollHintSpan.style.color = '#10b981';
-                        } else {
-                            scrollHintSpan.innerHTML = '↕️ Scroll to navigate slides ↕️';
-                            scrollHintSpan.style.color = '#94a3b8';
-                        }
-                    }
-                }
-
-                // Update cards position
-                function updateCards() {
-                    cards.forEach((card, idx) => {
-                        card.classList.remove('active', 'prev', 'next', 'hidden');
-
-                        if (idx === currentIndex) {
-                            card.classList.add('active');
-                        } else if (idx === currentIndex - 1) {
-                            card.classList.add('prev');
-                        } else if (idx === currentIndex + 1) {
-                            card.classList.add('next');
-                        } else {
-                            card.classList.add('hidden');
-                        }
-                    });
-                    updateProgress();
-                    updateScrollHint();
-                }
-
-                // Go to specific card
-                function goToCard(index) {
-                    if (isAnimating) return;
-                    if (index < 0 || index >= totalCards) return;
-
-                    isAnimating = true;
-                    currentIndex = index;
-                    updateCards();
-
-                    // Show completion message on last slide
-                    if (currentIndex === totalCards - 1 && completionMsg) {
-                        completionMsg.classList.add('show');
-                        setTimeout(() => {
-                            completionMsg.classList.remove('show');
-                        }, 3000);
-                    }
-
-                    setTimeout(() => {
-                        isAnimating = false;
-                    }, 500);
-                }
-
-                // Next card
-                function nextCard() {
-                    if (currentIndex < totalCards - 1) {
-                        goToCard(currentIndex + 1);
-                        return true;
-                    }
-                    return false;
-                }
-
-                // Previous card
-                function prevCard() {
-                    if (currentIndex > 0) {
-                        goToCard(currentIndex - 1);
-                        return true;
-                    }
-                    return false;
-                }
-
-                // Check if slider is in viewport
-                function isSliderInViewport() {
-                    const rect = sliderSection.getBoundingClientRect();
-                    const windowHeight = window.innerHeight;
-                    // Consider slider in view if its center is visible
-                    const sliderCenter = rect.top + rect.height / 2;
-                    return sliderCenter > 0 && sliderCenter < windowHeight;
-                }
-
-                // Handle wheel events
-                let wheelTimeout = null;
-
-                function handleWheel(e) {
-                    const isInView = isSliderInViewport();
-
-                    // If slider not in view, ensure it's unlocked
-                    if (!isInView) {
-                        if (isSliderLocked) {
-                            unlockBodyScroll();
-                        }
-                        return;
-                    }
-
-                    // If animating, block
-                    if (isAnimating) {
-                        e.preventDefault();
-                        return;
-                    }
-
-                    // Throttle
-                    if (wheelTimeout) {
-                        e.preventDefault();
-                        return;
-                    }
-
-                    const delta = e.deltaY;
-
-                    // SCROLL DOWN
-                    if (delta > 0) {
-                        if (currentIndex === totalCards - 1) {
-                            // On LAST slide - UNLOCK and let user scroll to next section
-                            unlockBodyScroll();
-                            // Don't prevent default - allow natural scroll
-                            return;
-                        } else {
-                            // Not on last slide - go to next card
-                            nextCard();
-                            e.preventDefault();
-                            // Keep scroll position locked
-                            if (isSliderLocked) {
-                                window.scrollTo(0, scrollPositionBeforeLock);
-                            }
-                        }
-                    }
-                    // SCROLL UP
-                    else if (delta < 0) {
-                        if (currentIndex === 0) {
-                            // On FIRST slide - UNLOCK and let user scroll to previous section
-                            unlockBodyScroll();
-                            // Don't prevent default - allow natural scroll
-                            return;
-                        } else {
-                            // Not on first slide - go to previous card
-                            prevCard();
-                            e.preventDefault();
-                            // Keep scroll position locked
-                            if (isSliderLocked) {
-                                window.scrollTo(0, scrollPositionBeforeLock);
-                            }
-                        }
-                    }
-
-                    // Set throttle
-                    wheelTimeout = setTimeout(() => {
-                        wheelTimeout = null;
-                    }, 400);
-                }
-
-                // Handle scroll event for locking/unlocking
-                let scrollTimer = null;
-
-                function handleScroll() {
-                    if (scrollTimer) return;
-
-                    scrollTimer = setTimeout(() => {
-                        const isInView = isSliderInViewport();
-
-                        if (isInView && !isSliderLocked) {
-                            // Slider came into view - lock it
-                            lockBodyScroll();
-                        } else if (!isInView && isSliderLocked) {
-                            // Slider left view - unlock it
-                            unlockBodyScroll();
-                        }
-
-                        scrollTimer = null;
-                    }, 50);
-                }
-
-                // Touch support for mobile
-                let touchStartY = 0;
-                let touchEndY = 0;
-
-                function handleTouchStart(e) {
-                    if (!isAnimating) {
-                        touchStartY = e.touches[0].clientY;
-                    }
-                }
-
-                function handleTouchMove(e) {
-                    const isInView = isSliderInViewport();
-
-                    if (!isInView || isAnimating) {
-                        return;
-                    }
-
-                    touchEndY = e.touches[0].clientY;
-                    const diff = touchStartY - touchEndY;
-
-                    if (Math.abs(diff) > 30) {
-                        // Swipe UP (diff > 0)
-                        if (diff > 0) {
-                            if (currentIndex === totalCards - 1) {
-                                // On last slide - unlock
-                                unlockBodyScroll();
-                            } else {
-                                // Go to next card
-                                nextCard();
-                                e.preventDefault();
-                            }
-                        }
-                        // Swipe DOWN (diff < 0)
-                        else if (diff < 0) {
-                            if (currentIndex === 0) {
-                                // On first slide - unlock
-                                unlockBodyScroll();
-                            } else {
-                                // Go to previous card
-                                prevCard();
-                                e.preventDefault();
-                            }
-                        }
-                        touchStartY = touchEndY;
-                    }
-                }
-
-                // Add event listeners
-                window.addEventListener('wheel', handleWheel, {
-                    passive: false
-                });
-                window.addEventListener('scroll', handleScroll);
-
-                // Touch events for mobile
-                sliderSection.addEventListener('touchstart', handleTouchStart, {
-                    passive: false
-                });
-                sliderSection.addEventListener('touchmove', handleTouchMove, {
-                    passive: false
-                });
-
-                // Initialize
-                function init() {
-                    updateCards();
-                    // Initially lock if slider is in view
-                    if (isSliderInViewport()) {
-                        lockBodyScroll();
-                    }
-                }
-
-                init();
-
-                // Maintain scroll position when locked
-                let maintainInterval = setInterval(() => {
-                    if (isSliderLocked && isSliderInViewport()) {
-                        if (window.scrollY !== scrollPositionBeforeLock) {
-                            window.scrollTo(0, scrollPositionBeforeLock);
-                        }
-                    }
-                }, 50);
-
-                // Cleanup
-                window.addEventListener('beforeunload', () => {
-                    if (maintainInterval) {
-                        clearInterval(maintainInterval);
-                    }
-                    unlockBodyScroll();
-                });
-
-            });
-        })();
-    </script>
-@endsection --}}
-@section('scripts')
-    <script>
-        (function() {
-            // PERFECT STACKED CARDS SLIDER - COMPLETELY FIXED
-
-            document.addEventListener('DOMContentLoaded', function() {
-
-                const cards = document.querySelectorAll('.stack-card');
-                const totalCards = cards.length;
-                const progressFill = document.querySelector('.progress-fill');
-                const currentNumSpan = document.getElementById('current-num');
-                const sliderSection = document.getElementById('stackSlider');
-                const completionMsg = document.getElementById('completionMessage');
-
-                if (totalCards === 0 || !sliderSection) return;
-
-                let currentIndex = 0;
-                let isAnimating = false;
-                let isSliderLocked = false;
-                let scrollPositionBeforeLock = 0;
-                let isUserExiting = false; // Flag to track if user is exiting slider
-
-                // Set total number
-                const totalNumSpan = document.getElementById('total-num');
-                if (totalNumSpan) {
-                    totalNumSpan.textContent = totalCards.toString().padStart(2, '0');
-                }
-
-                // Lock body scroll
-                function lockBodyScroll() {
-                    if (!isSliderLocked && !isUserExiting) {
-                        scrollPositionBeforeLock = window.scrollY;
-                        document.body.classList.add('slider-active');
-                        document.body.style.top = `-${scrollPositionBeforeLock}px`;
-                        isSliderLocked = true;
-                        console.log('Slider LOCKED');
-                    }
-                }
-
-                // Unlock body scroll
-                function unlockBodyScroll() {
-                    if (isSliderLocked) {
-                        document.body.classList.remove('slider-active');
-                        document.body.style.top = '';
-                        window.scrollTo(0, scrollPositionBeforeLock);
-                        isSliderLocked = false;
-                        console.log('Slider UNLOCKED');
-                    }
-                }
-
-                // Force unlock (for exiting)
-                function forceUnlockAndExit() {
-                    isUserExiting = true;
-                    unlockBodyScroll();
-                    setTimeout(() => {
-                        isUserExiting = false;
-                    }, 100);
                 }
 
                 // Update progress and counter
@@ -3640,7 +3257,7 @@
                     }
                 }
 
-                // Update cards position
+                // Update cards position with smooth transitions
                 function updateCards() {
                     cards.forEach((card, idx) => {
                         card.classList.remove('active', 'prev', 'next', 'hidden');
@@ -3659,10 +3276,10 @@
                     updateScrollHint();
                 }
 
-                // Go to specific card
+                // Go to specific card with improved animation handling
                 function goToCard(index) {
-                    if (isAnimating) return;
-                    if (index < 0 || index >= totalCards) return;
+                    if (isAnimating) return false;
+                    if (index < 0 || index >= totalCards) return false;
 
                     isAnimating = true;
                     currentIndex = index;
@@ -3676,67 +3293,87 @@
                         }, 3000);
                     }
 
+                    // Shorter animation lock for smoother feel
                     setTimeout(() => {
                         isAnimating = false;
-                    }, 500);
+                    }, 350);
+
+                    return true;
                 }
 
                 // Next card
                 function nextCard() {
-                    if (currentIndex < totalCards - 1) {
-                        goToCard(currentIndex + 1);
-                        return true;
-                    }
-                    return false;
+                    return currentIndex < totalCards - 1 ? goToCard(currentIndex + 1) : false;
                 }
 
                 // Previous card
                 function prevCard() {
-                    if (currentIndex > 0) {
-                        goToCard(currentIndex - 1);
-                        return true;
-                    }
-                    return false;
+                    return currentIndex > 0 ? goToCard(currentIndex - 1) : false;
                 }
 
-                // Check if slider is actively in view (not just partially)
-                function isSliderActiveInView() {
+                // Improved viewport detection - uses intersection-based approach
+                function isSliderInViewport() {
                     const rect = sliderSection.getBoundingClientRect();
                     const windowHeight = window.innerHeight;
-                    const scrollY = window.scrollY;
 
-                    // Get slider's absolute position
-                    const sliderTop = rect.top + scrollY;
-                    const sliderBottom = rect.bottom + scrollY;
+                    // Slider is "active" when at least 40% is visible
+                    const visibleHeight = Math.min(rect.bottom, windowHeight) - Math.max(rect.top, 0);
+                    const sliderHeight = rect.height;
+                    const visibilityRatio = visibleHeight / sliderHeight;
 
-                    // Check if viewport center is within slider bounds
-                    const viewportCenter = scrollY + (windowHeight / 2);
-
-                    return viewportCenter >= sliderTop && viewportCenter <= sliderBottom;
+                    return visibilityRatio > 0.4 && rect.top < windowHeight * 0.6;
                 }
 
-                // Handle wheel events for navigation AND exit
-                let wheelTimeout = null;
+                // Debounced scroll handler for lock/unlock
+                let scrollTimeout = null;
+
+                function handleScroll() {
+                    if (scrollTimeout) {
+                        clearTimeout(scrollTimeout);
+                    }
+
+                    scrollTimeout = setTimeout(() => {
+                        const isInView = isSliderInViewport();
+
+                        if (isInView && !isSliderLocked) {
+                            // Slider entered view - lock it
+                            lockBodyScroll();
+                        } else if (!isInView && isSliderLocked) {
+                            // Slider left view - unlock it
+                            unlockBodyScroll();
+                        }
+                    }, 100); // Debounce for smoother detection
+                }
+
+                // Improved wheel handler with better throttling
+                let lastWheelTime = 0;
+                const WHEEL_THROTTLE = 250; // Reduced from 400ms for snappier feel
 
                 function handleWheel(e) {
-                    const isInView = isSliderActiveInView();
+                    const now = Date.now();
 
-                    // If slider not in view, ensure it's unlocked
-                    if (!isInView) {
+                    // Check if slider is in viewport
+                    if (!isSliderInViewport()) {
+                        // Not in view - allow normal scrolling
                         if (isSliderLocked) {
-                            forceUnlockAndExit();
+                            unlockBodyScroll();
                         }
                         return;
                     }
 
-                    // If animating, block
+                    // If not locked yet, lock now
+                    if (!isSliderLocked) {
+                        lockBodyScroll();
+                    }
+
+                    // Block if animating
                     if (isAnimating) {
                         e.preventDefault();
                         return;
                     }
 
-                    // Throttle
-                    if (wheelTimeout) {
+                    // Throttle wheel events
+                    if (now - lastWheelTime < WHEEL_THROTTLE) {
                         e.preventDefault();
                         return;
                     }
@@ -3746,112 +3383,85 @@
                     // SCROLL DOWN
                     if (delta > 0) {
                         if (currentIndex === totalCards - 1) {
-                            // On LAST slide - EXIT slider (go to next section)
-                            console.log('Exit slider - DOWN from last slide');
-                            forceUnlockAndExit();
-                            // Don't prevent default - let browser scroll
-                            return;
+                            // On LAST slide - exit slider smoothly
+                            console.log('⬇️ Exit slider - scrolling down from last slide');
+                            unlockBodyScroll();
+                            // Allow one natural scroll, then re-enable locking
+                            setTimeout(() => {
+                                // Natural scroll will happen
+                            }, 300);
+                            return; // Don't prevent - let browser scroll
                         } else {
-                            // Not on last slide - go to next card
-                            nextCard();
-                            e.preventDefault();
-                            // Maintain scroll position
-                            if (isSliderLocked) {
-                                window.scrollTo(0, scrollPositionBeforeLock);
+                            // Go to next card
+                            if (nextCard()) {
+                                e.preventDefault();
+                                lastWheelTime = now;
                             }
                         }
                     }
                     // SCROLL UP
                     else if (delta < 0) {
                         if (currentIndex === 0) {
-                            // On FIRST slide - EXIT slider (go to previous section)
-                            console.log('Exit slider - UP from first slide');
-                            forceUnlockAndExit();
-                            // Don't prevent default - let browser scroll
-                            return;
+                            // On FIRST slide - exit slider smoothly
+                            console.log('⬆️ Exit slider - scrolling up from first slide');
+                            unlockBodyScroll();
+                            setTimeout(() => {
+                                // Natural scroll will happen
+                            }, 300);
+                            return; // Don't prevent - let browser scroll
                         } else {
-                            // Not on first slide - go to previous card
-                            prevCard();
-                            e.preventDefault();
-                            // Maintain scroll position
-                            if (isSliderLocked) {
-                                window.scrollTo(0, scrollPositionBeforeLock);
+                            // Go to previous card
+                            if (prevCard()) {
+                                e.preventDefault();
+                                lastWheelTime = now;
                             }
                         }
                     }
-
-                    // Set throttle
-                    wheelTimeout = setTimeout(() => {
-                        wheelTimeout = null;
-                    }, 400);
                 }
 
-                // Handle scroll event for auto lock/unlock
-                let scrollTimer = null;
-                let lastScrollY = window.scrollY;
-
-                function handleScroll() {
-                    if (scrollTimer) return;
-
-                    scrollTimer = setTimeout(() => {
-                        const isInView = isSliderActiveInView();
-                        const currentScrollY = window.scrollY;
-                        const scrollDirection = currentScrollY > lastScrollY ? 'down' : 'up';
-
-                        if (isInView && !isSliderLocked && !isUserExiting) {
-                            // Slider came into view - lock it
-                            lockBodyScroll();
-                        } else if (!isInView && isSliderLocked) {
-                            // Slider left view - unlock it
-                            forceUnlockAndExit();
-                        }
-
-                        lastScrollY = currentScrollY;
-                        scrollTimer = null;
-                    }, 50);
-                }
-
-                // Touch support for mobile
+                // Touch support for mobile with improved handling
                 let touchStartY = 0;
+                let touchStartTime = 0;
 
                 function handleTouchStart(e) {
                     if (!isAnimating) {
                         touchStartY = e.touches[0].clientY;
+                        touchStartTime = Date.now();
                     }
                 }
 
                 function handleTouchMove(e) {
-                    const isInView = isSliderActiveInView();
-
-                    if (!isInView || isAnimating) {
+                    if (!isSliderInViewport() || isAnimating) {
                         return;
                     }
 
                     const touchEndY = e.touches[0].clientY;
                     const diff = touchStartY - touchEndY;
+                    const swipeTime = Date.now() - touchStartTime;
 
-                    if (Math.abs(diff) > 30) {
-                        // Swipe UP (diff > 0)
+                    // Require minimum swipe distance and limit swipe time for better UX
+                    if (Math.abs(diff) > 50 && swipeTime < 500) {
                         if (diff > 0) {
+                            // Swipe UP - next card or exit
                             if (currentIndex === totalCards - 1) {
-                                // On last slide - exit
-                                forceUnlockAndExit();
+                                unlockBodyScroll();
                             } else {
-                                nextCard();
-                                e.preventDefault();
+                                if (nextCard()) {
+                                    e.preventDefault();
+                                }
                             }
-                        }
-                        // Swipe DOWN (diff < 0)
-                        else if (diff < 0) {
+                        } else {
+                            // Swipe DOWN - previous card or exit
                             if (currentIndex === 0) {
-                                // On first slide - exit
-                                forceUnlockAndExit();
+                                unlockBodyScroll();
                             } else {
-                                prevCard();
-                                e.preventDefault();
+                                if (prevCard()) {
+                                    e.preventDefault();
+                                }
                             }
                         }
                         touchStartY = touchEndY;
+                        touchStartTime = Date.now();
                     }
                 }
 
@@ -3859,11 +3469,13 @@
                 window.addEventListener('wheel', handleWheel, {
                     passive: false
                 });
-                window.addEventListener('scroll', handleScroll);
+                window.addEventListener('scroll', handleScroll, {
+                    passive: true
+                });
 
                 // Touch events for mobile
                 sliderSection.addEventListener('touchstart', handleTouchStart, {
-                    passive: false
+                    passive: true
                 });
                 sliderSection.addEventListener('touchmove', handleTouchMove, {
                     passive: false
@@ -3872,29 +3484,724 @@
                 // Initialize
                 function init() {
                     updateCards();
-                    // Initially lock if slider is in view
-                    if (isSliderActiveInView()) {
+                    // Check initial position
+                    if (isSliderInViewport()) {
                         lockBodyScroll();
                     }
                 }
 
                 init();
 
-                // Maintain scroll position when locked
-                let maintainInterval = setInterval(() => {
-                    if (isSliderLocked && isSliderActiveInView() && !isUserExiting) {
-                        if (window.scrollY !== scrollPositionBeforeLock) {
-                            window.scrollTo(0, scrollPositionBeforeLock);
+                // Cleanup on page unload
+                window.addEventListener('beforeunload', () => {
+                    if (isSliderLocked) {
+                        unlockBodyScroll();
+                    }
+                });
+
+                // Handle visibility change (tab switching)
+                document.addEventListener('visibilitychange', () => {
+                    if (document.hidden && isSliderLocked) {
+                        unlockBodyScroll();
+                    }
+                });
+
+            });
+        })();
+    </script> --}}
+    {{-- <script>
+        (function() {
+            document.addEventListener('DOMContentLoaded', function() {
+
+                const cards = document.querySelectorAll('.stack-card');
+                const totalCards = cards.length;
+                const progressFill = document.querySelector('.progress-fill');
+                const currentNumSpan = document.getElementById('current-num');
+                const sliderSection = document.getElementById('stackSlider');
+                const completionMsg = document.getElementById('completionMessage');
+
+                if (totalCards === 0 || !sliderSection) return;
+
+                let currentIndex = 0;
+                let isAnimating = false;
+                let isSliderLocked = false;
+                let scrollPositionBeforeLock = 0;
+
+                // Set total number
+                const totalNumSpan = document.getElementById('total-num');
+                if (totalNumSpan) {
+                    totalNumSpan.textContent = totalCards.toString().padStart(2, '0');
+                }
+
+                // Lock body scroll with smooth transition
+                function lockBodyScroll() {
+                    if (!isSliderLocked) {
+                        scrollPositionBeforeLock = window.scrollY;
+                        document.body.classList.add('slider-active');
+                        document.body.style.top = `-${scrollPositionBeforeLock}px`;
+                        isSliderLocked = true;
+                        console.log('🔒 Slider LOCKED at scroll:', scrollPositionBeforeLock);
+                    }
+                }
+
+                // Unlock body scroll with smooth transition
+                function unlockBodyScroll() {
+                    if (isSliderLocked) {
+                        const scrollPos = scrollPositionBeforeLock;
+                        document.body.classList.remove('slider-active');
+                        document.body.style.top = '';
+                        isSliderLocked = false;
+
+                        // Smooth scroll restoration
+                        requestAnimationFrame(() => {
+                            window.scrollTo({
+                                top: scrollPos,
+                                behavior: 'instant'
+                            });
+                        });
+
+                        console.log('🔓 Slider UNLOCKED, restored scroll:', scrollPos);
+                    }
+                }
+
+                // Update progress and counter
+                function updateProgress() {
+                    if (progressFill) {
+                        const progress = (currentIndex / (totalCards - 1)) * 100;
+                        progressFill.style.width = progress + '%';
+                    }
+                    if (currentNumSpan) {
+                        currentNumSpan.textContent = (currentIndex + 1).toString().padStart(2, '0');
+                    }
+                }
+
+                // Update scroll hint text
+                function updateScrollHint() {
+                    const scrollHintSpan = document.querySelector('.scroll-hint span');
+                    if (scrollHintSpan) {
+                        if (currentIndex === 0) {
+                            scrollHintSpan.innerHTML = '⬆️ Scroll UP to exit slider ⬆️';
+                            scrollHintSpan.style.color = '#f37021';
+                        } else if (currentIndex === totalCards - 1) {
+                            scrollHintSpan.innerHTML = '⬇️ Scroll DOWN to exit slider ⬇️';
+                            scrollHintSpan.style.color = '#10b981';
+                        } else {
+                            scrollHintSpan.innerHTML = '↕️ Scroll to navigate slides ↕️';
+                            scrollHintSpan.style.color = '#94a3b8';
                         }
                     }
-                }, 50);
+                }
 
-                // Cleanup
-                window.addEventListener('beforeunload', () => {
-                    if (maintainInterval) {
-                        clearInterval(maintainInterval);
+                // Update cards position with smooth transitions
+                function updateCards() {
+                    cards.forEach((card, idx) => {
+                        card.classList.remove('active', 'prev', 'next', 'hidden');
+
+                        if (idx === currentIndex) {
+                            card.classList.add('active');
+                        } else if (idx === currentIndex - 1) {
+                            card.classList.add('prev');
+                        } else if (idx === currentIndex + 1) {
+                            card.classList.add('next');
+                        } else {
+                            card.classList.add('hidden');
+                        }
+                    });
+                    updateProgress();
+                    updateScrollHint();
+                }
+
+                // Go to specific card with improved animation handling
+                function goToCard(index) {
+                    if (isAnimating) return false;
+                    if (index < 0 || index >= totalCards) return false;
+
+                    isAnimating = true;
+                    currentIndex = index;
+                    updateCards();
+
+                    // Show completion message on last slide
+                    if (currentIndex === totalCards - 1 && completionMsg) {
+                        completionMsg.classList.add('show');
+                        setTimeout(() => {
+                            completionMsg.classList.remove('show');
+                        }, 3000);
                     }
-                    forceUnlockAndExit();
+
+                    // Shorter animation lock for smoother feel
+                    setTimeout(() => {
+                        isAnimating = false;
+                    }, 350);
+
+                    return true;
+                }
+
+                // Next card
+                function nextCard() {
+                    return currentIndex < totalCards - 1 ? goToCard(currentIndex + 1) : false;
+                }
+
+                // Previous card
+                function prevCard() {
+                    return currentIndex > 0 ? goToCard(currentIndex - 1) : false;
+                }
+
+                // UPDATED: Check if section is at least 80% visible in viewport
+                function isSliderSufficientlyVisible() {
+                    const rect = sliderSection.getBoundingClientRect();
+                    const windowHeight = window.innerHeight;
+                    
+                    // Calculate visible portion
+                    const visibleTop = Math.max(0, rect.top);
+                    const visibleBottom = Math.min(windowHeight, rect.bottom);
+                    const visibleHeight = Math.max(0, visibleBottom - visibleTop);
+                    
+                    // Calculate visibility percentage
+                    const totalHeight = rect.height;
+                    const visibilityPercentage = (visibleHeight / totalHeight) * 100;
+                    
+                    // Return true only if 80% or more is visible
+                    return visibilityPercentage >= 80;
+                }
+
+                // Debounced scroll handler for lock/unlock
+                let scrollTimeout = null;
+
+                function handleScroll() {
+                    if (scrollTimeout) {
+                        clearTimeout(scrollTimeout);
+                    }
+
+                    scrollTimeout = setTimeout(() => {
+                        const isSufficientlyVisible = isSliderSufficientlyVisible();
+
+                        if (isSufficientlyVisible && !isSliderLocked) {
+                            // Slider is 80%+ visible - lock it
+                            lockBodyScroll();
+                        } else if (!isSufficientlyVisible && isSliderLocked) {
+                            // Slider is less than 80% visible - unlock it
+                            unlockBodyScroll();
+                        }
+                    }, 100); // Debounce for smoother detection
+                }
+
+                // Improved wheel handler with better throttling
+                let lastWheelTime = 0;
+                const WHEEL_THROTTLE = 250;
+
+                function handleWheel(e) {
+                    const now = Date.now();
+                    
+                    // Check if slider is sufficiently visible (80%+)
+                    if (!isSliderSufficientlyVisible()) {
+                        // Not sufficiently visible - allow normal scrolling
+                        if (isSliderLocked) {
+                            unlockBodyScroll();
+                        }
+                        return;
+                    }
+
+                    // If not locked yet, lock now
+                    if (!isSliderLocked) {
+                        lockBodyScroll();
+                    }
+
+                    // Block if animating
+                    if (isAnimating) {
+                        e.preventDefault();
+                        return;
+                    }
+
+                    // Throttle wheel events
+                    if (now - lastWheelTime < WHEEL_THROTTLE) {
+                        e.preventDefault();
+                        return;
+                    }
+
+                    const delta = e.deltaY;
+
+                    // SCROLL DOWN
+                    if (delta > 0) {
+                        if (currentIndex === totalCards - 1) {
+                            // On LAST slide - exit slider smoothly
+                            console.log('⬇️ Exit slider - scrolling down from last slide');
+                            unlockBodyScroll();
+                            setTimeout(() => {
+                                // Natural scroll will happen
+                            }, 300);
+                            return; // Don't prevent - let browser scroll
+                        } else {
+                            // Go to next card
+                            if (nextCard()) {
+                                e.preventDefault();
+                                lastWheelTime = now;
+                            }
+                        }
+                    }
+                    // SCROLL UP
+                    else if (delta < 0) {
+                        if (currentIndex === 0) {
+                            // On FIRST slide - exit slider smoothly
+                            console.log('⬆️ Exit slider - scrolling up from first slide');
+                            unlockBodyScroll();
+                            setTimeout(() => {
+                                // Natural scroll will happen
+                            }, 300);
+                            return; // Don't prevent - let browser scroll
+                        } else {
+                            // Go to previous card
+                            if (prevCard()) {
+                                e.preventDefault();
+                                lastWheelTime = now;
+                            }
+                        }
+                    }
+                }
+
+                // Touch support for mobile with improved handling
+                let touchStartY = 0;
+                let touchStartTime = 0;
+
+                function handleTouchStart(e) {
+                    if (!isAnimating) {
+                        touchStartY = e.touches[0].clientY;
+                        touchStartTime = Date.now();
+                    }
+                }
+
+                function handleTouchMove(e) {
+                    if (!isSliderSufficientlyVisible() || isAnimating) {
+                        return;
+                    }
+
+                    const touchEndY = e.touches[0].clientY;
+                    const diff = touchStartY - touchEndY;
+                    const swipeTime = Date.now() - touchStartTime;
+
+                    // Require minimum swipe distance and limit swipe time for better UX
+                    if (Math.abs(diff) > 50 && swipeTime < 500) {
+                        if (diff > 0) {
+                            // Swipe UP - next card or exit
+                            if (currentIndex === totalCards - 1) {
+                                unlockBodyScroll();
+                            } else {
+                                if (nextCard()) {
+                                    e.preventDefault();
+                                }
+                            }
+                        } else {
+                            // Swipe DOWN - previous card or exit
+                            if (currentIndex === 0) {
+                                unlockBodyScroll();
+                            } else {
+                                if (prevCard()) {
+                                    e.preventDefault();
+                                }
+                            }
+                        }
+                        touchStartY = touchEndY;
+                        touchStartTime = Date.now();
+                    }
+                }
+
+                // Add event listeners
+                window.addEventListener('wheel', handleWheel, {
+                    passive: false
+                });
+                window.addEventListener('scroll', handleScroll, {
+                    passive: true
+                });
+
+                // Touch events for mobile
+                sliderSection.addEventListener('touchstart', handleTouchStart, {
+                    passive: true
+                });
+                sliderSection.addEventListener('touchmove', handleTouchMove, {
+                    passive: false
+                });
+
+                // Initialize
+                function init() {
+                    updateCards();
+                    // Check initial position
+                    if (isSliderSufficientlyVisible()) {
+                        lockBodyScroll();
+                    }
+                }
+
+                init();
+
+                // Cleanup on page unload
+                window.addEventListener('beforeunload', () => {
+                    if (isSliderLocked) {
+                        unlockBodyScroll();
+                    }
+                });
+
+                // Handle visibility change (tab switching)
+                document.addEventListener('visibilitychange', () => {
+                    if (document.hidden && isSliderLocked) {
+                        unlockBodyScroll();
+                    }
+                });
+
+            });
+        })();
+    </script> --}}
+    <script>
+       (function() {
+            document.addEventListener('DOMContentLoaded', function() {
+
+                const cards = document.querySelectorAll('.stack-card');
+                const totalCards = cards.length;
+                const progressFill = document.querySelector('.progress-fill');
+                const currentNumSpan = document.getElementById('current-num');
+                const sliderSection = document.getElementById('stackSlider');
+                const completionMsg = document.getElementById('completionMessage');
+
+                if (totalCards === 0 || !sliderSection) return;
+
+                let currentIndex = 0;
+                let isAnimating = false;
+                let isSliderLocked = false;
+                let scrollPositionBeforeLock = 0;
+                let unlockTimeout = null;
+
+                // Set total number
+                const totalNumSpan = document.getElementById('total-num');
+                if (totalNumSpan) {
+                    totalNumSpan.textContent = totalCards.toString().padStart(2, '0');
+                }
+
+                // Lock body scroll with smooth transition
+                function lockBodyScroll() {
+                    if (!isSliderLocked) {
+                        scrollPositionBeforeLock = window.scrollY;
+                        document.body.classList.add('slider-active');
+                        document.body.style.position = 'fixed';
+                        document.body.style.top = `-${scrollPositionBeforeLock}px`;
+                        document.body.style.width = '100%';
+                        isSliderLocked = true;
+                        console.log('🔒 Slider LOCKED at scroll:', scrollPositionBeforeLock);
+                    }
+                }
+
+                // Unlock body scroll with NO JITTER
+                function unlockBodyScroll() {
+                    if (isSliderLocked) {
+                        // Clear any pending unlock timeout
+                        if (unlockTimeout) {
+                            clearTimeout(unlockTimeout);
+                        }
+                        
+                        const scrollPos = scrollPositionBeforeLock;
+                        
+                        // Remove fixed positioning FIRST
+                        document.body.classList.remove('slider-active');
+                        document.body.style.position = '';
+                        document.body.style.top = '';
+                        document.body.style.width = '';
+                        isSliderLocked = false;
+                        
+                        // Use setTimeout to ensure DOM updates before scroll
+                        setTimeout(() => {
+                            window.scrollTo({
+                                top: scrollPos,
+                                behavior: 'instant'
+                            });
+                        }, 10);
+                        
+                        console.log('🔓 Slider UNLOCKED, restored scroll:', scrollPos);
+                    }
+                }
+
+                // Update progress and counter
+                function updateProgress() {
+                    if (progressFill) {
+                        const progress = (currentIndex / (totalCards - 1)) * 100;
+                        progressFill.style.width = progress + '%';
+                    }
+                    if (currentNumSpan) {
+                        currentNumSpan.textContent = (currentIndex + 1).toString().padStart(2, '0');
+                    }
+                }
+
+                // Update scroll hint text
+                function updateScrollHint() {
+                    const scrollHintSpan = document.querySelector('.scroll-hint span');
+                    if (scrollHintSpan) {
+                        if (currentIndex === 0) {
+                            scrollHintSpan.innerHTML = '⬆️ Scroll UP to exit slider ⬆️';
+                            scrollHintSpan.style.color = '#f37021';
+                        } else if (currentIndex === totalCards - 1) {
+                            scrollHintSpan.innerHTML = '⬇️ Scroll DOWN to exit slider ⬇️';
+                            scrollHintSpan.style.color = '#10b981';
+                        } else {
+                            scrollHintSpan.innerHTML = '↕️ Scroll to navigate slides ↕️';
+                            scrollHintSpan.style.color = '#94a3b8';
+                        }
+                    }
+                }
+
+                // Update cards position with smooth transitions
+                function updateCards() {
+                    cards.forEach((card, idx) => {
+                        card.classList.remove('active', 'prev', 'next', 'hidden');
+
+                        if (idx === currentIndex) {
+                            card.classList.add('active');
+                        } else if (idx === currentIndex - 1) {
+                            card.classList.add('prev');
+                        } else if (idx === currentIndex + 1) {
+                            card.classList.add('next');
+                        } else {
+                            card.classList.add('hidden');
+                        }
+                    });
+                    updateProgress();
+                    updateScrollHint();
+                }
+
+                // Go to specific card with improved animation handling
+                function goToCard(index) {
+                    if (isAnimating) return false;
+                    if (index < 0 || index >= totalCards) return false;
+
+                    isAnimating = true;
+                    currentIndex = index;
+                    updateCards();
+
+                    // Show completion message on last slide
+                    if (currentIndex === totalCards - 1 && completionMsg) {
+                        completionMsg.classList.add('show');
+                        setTimeout(() => {
+                            completionMsg.classList.remove('show');
+                        }, 3000);
+                    }
+
+                    // Shorter animation lock for smoother feel
+                    setTimeout(() => {
+                        isAnimating = false;
+                    }, 350);
+
+                    return true;
+                }
+
+                // Next card
+                function nextCard() {
+                    return currentIndex < totalCards - 1 ? goToCard(currentIndex + 1) : false;
+                }
+
+                // Previous card
+                function prevCard() {
+                    return currentIndex > 0 ? goToCard(currentIndex - 1) : false;
+                }
+
+                // CHECK: Section at least 80% visible in viewport
+                function isSliderSufficientlyVisible() {
+                    const rect = sliderSection.getBoundingClientRect();
+                    const windowHeight = window.innerHeight;
+                    
+                    // Calculate visible portion
+                    const visibleTop = Math.max(0, rect.top);
+                    const visibleBottom = Math.min(windowHeight, rect.bottom);
+                    const visibleHeight = Math.max(0, visibleBottom - visibleTop);
+                    
+                    // Calculate visibility percentage
+                    const totalHeight = rect.height;
+                    const visibilityPercentage = (visibleHeight / totalHeight) * 100;
+                    
+                    // Return true only if 80% or more is visible
+                    return visibilityPercentage >= 80;
+                }
+
+                // Debounced scroll handler for lock/unlock with RAF for smoothness
+                let ticking = false;
+                let lastVisibilityState = false;
+
+                function handleScroll() {
+                    if (!ticking) {
+                        requestAnimationFrame(() => {
+                            const isSufficientlyVisible = isSliderSufficientlyVisible();
+                            
+                            // Only trigger if state actually changed
+                            if (isSufficientlyVisible !== lastVisibilityState) {
+                                lastVisibilityState = isSufficientlyVisible;
+                                
+                                if (isSufficientlyVisible && !isSliderLocked) {
+                                    // Slider is 80%+ visible - lock it
+                                    lockBodyScroll();
+                                } else if (!isSufficientlyVisible && isSliderLocked) {
+                                    // Slider is less than 80% visible - unlock it
+                                    unlockBodyScroll();
+                                }
+                            }
+                            ticking = false;
+                        });
+                        ticking = true;
+                    }
+                }
+
+                // Improved wheel handler with better throttling
+                let lastWheelTime = 0;
+                const WHEEL_THROTTLE = 250;
+
+                function handleWheel(e) {
+                    const now = Date.now();
+                    
+                    // Check if slider is sufficiently visible (80%+)
+                    if (!isSliderSufficientlyVisible()) {
+                        // Not sufficiently visible - allow normal scrolling
+                        if (isSliderLocked) {
+                            unlockBodyScroll();
+                        }
+                        return;
+                    }
+
+                    // If not locked yet, lock now
+                    if (!isSliderLocked) {
+                        lockBodyScroll();
+                    }
+
+                    // Block if animating
+                    if (isAnimating) {
+                        e.preventDefault();
+                        return;
+                    }
+
+                    // Throttle wheel events
+                    if (now - lastWheelTime < WHEEL_THROTTLE) {
+                        e.preventDefault();
+                        return;
+                    }
+
+                    const delta = e.deltaY;
+
+                    // SCROLL DOWN
+                    if (delta > 0) {
+                        if (currentIndex === totalCards - 1) {
+                            // On LAST slide - exit slider smoothly
+                            console.log('⬇️ Exit slider - scrolling down from last slide');
+                            unlockBodyScroll();
+                            return;
+                        } else {
+                            // Go to next card
+                            if (nextCard()) {
+                                e.preventDefault();
+                                lastWheelTime = now;
+                            }
+                        }
+                    }
+                    // SCROLL UP
+                    else if (delta < 0) {
+                        if (currentIndex === 0) {
+                            // On FIRST slide - exit slider smoothly
+                            console.log('⬆️ Exit slider - scrolling up from first slide');
+                            unlockBodyScroll();
+                            return;
+                        } else {
+                            // Go to previous card
+                            if (prevCard()) {
+                                e.preventDefault();
+                                lastWheelTime = now;
+                            }
+                        }
+                    }
+                }
+
+                // Touch support for mobile with improved handling
+                let touchStartY = 0;
+                let touchStartTime = 0;
+
+                function handleTouchStart(e) {
+                    if (isSliderSufficientlyVisible() && !isAnimating) {
+                        touchStartY = e.touches[0].clientY;
+                        touchStartTime = Date.now();
+                    }
+                }
+
+                function handleTouchMove(e) {
+                    if (!isSliderSufficientlyVisible() || isAnimating) {
+                        return;
+                    }
+
+                    // Ensure slider is locked when touching
+                    if (!isSliderLocked && isSliderSufficientlyVisible()) {
+                        lockBodyScroll();
+                    }
+
+                    const touchEndY = e.touches[0].clientY;
+                    const diff = touchStartY - touchEndY;
+                    const swipeTime = Date.now() - touchStartTime;
+
+                    // Require minimum swipe distance and limit swipe time for better UX
+                    if (Math.abs(diff) > 50 && swipeTime < 500) {
+                        if (diff > 0) {
+                            // Swipe UP - next card or exit
+                            if (currentIndex === totalCards - 1) {
+                                unlockBodyScroll();
+                            } else {
+                                if (nextCard()) {
+                                    e.preventDefault();
+                                }
+                            }
+                        } else {
+                            // Swipe DOWN - previous card or exit
+                            if (currentIndex === 0) {
+                                unlockBodyScroll();
+                            } else {
+                                if (prevCard()) {
+                                    e.preventDefault();
+                                }
+                            }
+                        }
+                        touchStartY = touchEndY;
+                        touchStartTime = Date.now();
+                    }
+                }
+
+                // Add event listeners
+                window.addEventListener('wheel', handleWheel, {
+                    passive: false
+                });
+                window.addEventListener('scroll', handleScroll, {
+                    passive: true
+                });
+
+                // Touch events for mobile
+                sliderSection.addEventListener('touchstart', handleTouchStart, {
+                    passive: true
+                });
+                sliderSection.addEventListener('touchmove', handleTouchMove, {
+                    passive: false
+                });
+
+                // Initialize
+                function init() {
+                    updateCards();
+                    // Small delay to ensure proper calculation
+                    setTimeout(() => {
+                        lastVisibilityState = isSliderSufficientlyVisible();
+                        if (lastVisibilityState) {
+                            lockBodyScroll();
+                        }
+                    }, 100);
+                }
+
+                init();
+
+                // Cleanup on page unload
+                window.addEventListener('beforeunload', () => {
+                    if (isSliderLocked) {
+                        unlockBodyScroll();
+                    }
+                });
+
+                // Handle visibility change (tab switching)
+                document.addEventListener('visibilitychange', () => {
+                    if (document.hidden && isSliderLocked) {
+                        unlockBodyScroll();
+                    }
                 });
 
             });
