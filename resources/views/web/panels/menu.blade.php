@@ -206,9 +206,9 @@
      <div class="sticky-wrapper">
          <div class="menu-area">
              <div class="container th-container2">
-                 <div class="menu-wrapp">
+                 <div class="menu-wrapp" style="border-radius:10px;">
                      <div class="row align-items-center justify-content-between">
-                         <div class="col-auto">
+                         <div class="col-12 justify-content-center d-flex">
                              <div class="header-left d-flex align-items-center">
                                  <div class="header-logo d-block d-sm-none"><a href="home-university.html"><img
                                              src="{{ asset('/new-miu/web-logo.png') }}"  width="200" height="160" alt="Stadum"></a></div>
@@ -384,10 +384,10 @@
                                  {{-- <form class="search-form"><input type="text" placeholder="Search..."> <button
                                          type="submit"><i class="fa-light fa-magnifying-glass"></i></button>
                                  </form> --}}
-                                 <a href="#" class="icon-btn sideMenuToggler d-none d-xl-block "><img
+                                 {{-- <a href="#" class="icon-btn sideMenuToggler d-none d-xl-block "><img
                                          src="assets/img/icon/grid2.svg" alt=""></a><button type="button"
                                      class="th-menu-toggle d-inline-block d-xl-none"><i
-                                         class="far fa-bars"></i></button>
+                                         class="far fa-bars"></i></button> --}}
                              </div>
                          </div>
                      </div>

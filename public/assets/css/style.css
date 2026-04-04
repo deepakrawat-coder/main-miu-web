@@ -3428,6 +3428,7 @@ textarea.is-invalid {
     position: fixed;
     right: 30px;
     bottom: 55px;
+
     height: 50px;
     width: 50px;
     cursor: pointer;
@@ -27283,6 +27284,15 @@ span.select2-selection.select2-selection--single:focus {
     .space-extra2,
     .space-extra2-bottom {
         padding-bottom: calc(var(--section-space-mobile) - 30px);
+    }
+}
+
+@media(max-width:600px){
+    .sticky-wrapper{
+        background-color: var(--white-color);
+    }
+    .header-layout1 .menu-area .menu-wrapp {
+        background-color: var(--white-color);
     }
 }
 
