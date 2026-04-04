@@ -51,42 +51,61 @@
                                 <span class="sub-title text-anim">Welcome to MIU</span>
                                 <h2 class="sec-title text-anim2">Welcome message</h2>
                                 <p class="sec-text mt-25 wow fadeInUp" data-wow-delay=".3s">
-                                    Dear Students, Faculty, and Friends,
+                                    Dear Students, Faculty, and Esteemed Stakeholders,
                                 </p>
                                 <p class="sec-text wow fadeInUp" data-wow-delay=".3s">
-                                    It is my pleasure to extend to you this warm welcome to Manipur International University. Being the Pro Vice Chancellor, I have the honour to be part of this excellent academic society and I want to show you some of the exciting prospects that lie ahead for you here.
-                                </p>
+                                    It is with great pride and a deep sense of responsibility that I extend a warm welcome
+                                    to you at Manipur International University. </p>
                                 <p class="sec-text wow fadeInUp" data-wow-delay=".3s">
-                                    At MIU, it is our privilege to embrace and foster a culture of success, innovation and advocacy in learning, research and the wider community. Our aim is to offer quality education that can be instrumental in the student's achievement of their dreams and play a significant role of bringing value in the whole society.
-
-
-                                </p>
-                                <p class="sec-text wow fadeInUp" data-wow-delay=".3s">
-                                    It is through this vision that we strive to excel in all we do — whether it is the academic experience we provide in our academic programs; the research that students and faculty undertake through innovative programs; or the environment that is welcoming and inclusive of all students at the campus. We are always in a position to transform with a view of offering our students the necessary preparation in order to be in a position to meet the expectations of the society in the global nation.
+                                    As the Pro Vice Chancellor, I am honored to be part of a progressive academic
+                                    institution committed to excellence, innovation, and transformative education. At MIU,
+                                    we believe that education is not merely the acquisition of knowledge, but the foundation
+                                    for shaping capable, ethical, and future-ready individuals.
 
 
                                 </p>
                                 <p class="sec-text wow fadeInUp" data-wow-delay=".3s">
-                                    The office of the Pro Vice Chancellor aims at improving scholars' performance as well as efficiency in all aspects of MIU's performance and advancing the university's position in the realm of higher learning. We are strongly committed to ensuring our students, faculty, and staff to foster a special commitment towards cultivating an educational community of learners, scholars, and workers with the purpose of learning and personal development.
+                                    Our university is dedicated to fostering an ecosystem that nurtures intellectual
+                                    curiosity, critical thinking, and professional competence. Through a carefully designed
+                                    blend of academic rigor, skill-based learning, and industry engagement, we strive to
+                                    empower our students to achieve their aspirations and contribute meaningfully to
+                                    society.
 
 
                                 </p>
                                 <p class="sec-text wow fadeInUp" data-wow-delay=".3s">
-                                   Please, take your time and go through the information provided in this site, as it will help you learn more about our academic programs, research opportunities, and student life on our campus. Please feel free to contact us and find out more on how MIU can assist you achieve your dreams of education and career.
+                                    We continuously endeavor to enhance the quality of education, research, and
+                                    institutional practices. Whether through our dynamic academic programs, forward-looking
+                                    research initiatives, or an inclusive and supportive campus environment, MIU remains
+                                    steadfast in its mission to prepare learners for the evolving demands of a global
+                                    landscape.
 
 
                                 </p>
-                              
+                                <p class="sec-text wow fadeInUp" data-wow-delay=".3s">
+                                    The Office of the Pro Vice Chancellor is committed to strengthening academic excellence,
+                                    operational efficiency, and institutional growth. We aim to cultivate a vibrant academic
+                                    community where students, faculty, and staff work collaboratively towards knowledge
+                                    creation, innovation, and holistic development.
+                                    I encourage you to explore the opportunities that MIU offers and become a part of a
+                                    learning environment that inspires growth, ambition, and success. Should you require any
+                                    assistance, our team will be pleased to support you in your academic and professional
+                                    journey.
+
+                                </p>
+
 
                                 <div class="row align-items-center">
                                     <div class="col-8 col-sm-8">
                                         <div class="re mb-2">
-                                            <p class="sec-text fw-bold wow fadeInUp mb-0" data-wow-delay=".3s">Best wishes,
+                                            <p class="sec-text fw-bold wow fadeInUp mb-0" data-wow-delay=".3s">With best wishes for your future success,
                                             </p>
-                                            <p class="sec-text fw-bold wow fadeInUp mb-0" data-wow-delay=".3s">Prof. Dr. Potsangbam Kumar Singh
+                                            <p class="sec-text fw-bold wow fadeInUp mb-0" data-wow-delay=".3s">Prof. Dr.
+                                                Potsangbam Kumar Singh
 
                                             </p>
-                                            <p class="sec-text fw-bold wow fadeInUp mb-0" data-wow-delay=".3s">Pro Vice Chancellor (Acting Vice Chancellor)
+                                            <p class="sec-text fw-bold wow fadeInUp mb-0" data-wow-delay=".3s">Pro Vice
+                                                Chancellor (Acting Vice Chancellor)
 
 
                                             </p>

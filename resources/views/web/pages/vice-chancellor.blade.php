@@ -51,41 +51,54 @@
                                 <span class="sub-title text-anim">Welcome to MIU</span>
                                 <h2 class="sec-title text-anim2">Message from the Vice Chancellor</h2>
                                 <p class="sec-text mt-25 wow fadeInUp" data-wow-delay=".3s">
-                                   Dear Students, Faculty Members, and Distinguished Visitors,
+                                    Dear Students, Faculty Members, and Distinguished Visitors,
                                 </p>
                                 <p class="sec-text wow fadeInUp" data-wow-delay=".3s">
-                                   It is both an honor and a privilege to welcome you to Manipur International University.
-
-                                </p>
-                                <p class="sec-text wow fadeInUp" data-wow-delay=".3s">
-                                    Our university has a rich history of accomplishments and firm dedication to shaping future leaders. We offer a supportive setting that fosters personal and professional development. Our esteemed faculty members serve as educators, mentors, and trailblazers, spearheading cutting-edge research.
-
+                                    It is both an honor and a privilege to welcome you to Manipur International University.
 
                                 </p>
                                 <p class="sec-text wow fadeInUp" data-wow-delay=".3s">
-                                  We are dedicated to upholding our legacy of excellence by introducing innovative programs, forging interdisciplinary partnerships, and striving for societal impact.
+                                    As the Vice Chancellor, I take great pride in leading an institution that is committed
+                                    to academic excellence, innovation, and the holistic development of its learners. At
+                                    MIU, we envision education not merely as the acquisition of knowledge, but as a
+                                    transformative journey that empowers individuals to think critically, act responsibly,
+                                    and contribute meaningfully to society.
+                                </p>
+                                <p class="sec-text wow fadeInUp" data-wow-delay=".3s">
+                                    Our university strives to create a dynamic and inclusive learning ecosystem where
+                                    intellectual curiosity is nurtured, research is encouraged, and innovation thrives. With
+                                    a strong focus on interdisciplinary learning and industry integration, we prepare our
+                                    students to meet the evolving challenges of a rapidly changing global landscape.
+
+                                </p>
+                                <p class="sec-text wow fadeInUp" data-wow-delay=".3s">
+                                    We are dedicated to upholding the highest standards of teaching, research, and
+                                    professional development. Through the collective efforts of our distinguished faculty
+                                    and vibrant academic community, we aim to cultivate leaders who are not only competent
+                                    professionals but also responsible global citizens.
 
 
                                 </p>
                                 <p class="sec-text wow fadeInUp" data-wow-delay=".3s">
-                                    Feel free to explore our website to discover more about our programs, research projects, and vibrant campus atmosphere
-
-
+                                    As you explore Manipur International University, you will find a community driven by
+                                    purpose, excellence, and continuous growth. Whether you are a prospective student, a
+                                    current learner, or an esteemed alumnus, you are an integral part of our vision to build
+                                    a progressive and impactful institution.
                                 </p>
                                 <p class="sec-text wow fadeInUp" data-wow-delay=".3s">
-                                   We appreciate your interest in Manipur International University. Let's work together towards a brighter future.
-
-
+                                    I extend my best wishes to all of you for a successful and fulfilling journey ahead. We
+                                    look forward to your association with MIU as we continue to strive for excellence in
+                                    higher education.
                                 </p>
-                                
 
                                 <div class="row align-items-center">
                                     <div class="col-8 col-sm-8">
                                         <div class="re mb-2">
-                                            <p class="sec-text fw-bold wow fadeInUp mb-0" data-wow-delay=".3s">Best wishes,
+                                            <p class="sec-text fw-bold wow fadeInUp mb-0" data-wow-delay=".3s">Warm regards,
                                             </p>
-                                           
-                                            <p class="sec-text fw-bold wow fadeInUp mb-0" data-wow-delay=".3s">Vice Chancellor
+
+                                            <p class="sec-text fw-bold wow fadeInUp mb-0" data-wow-delay=".3s">Vice
+                                                Chancellor
                                             </p>
                                         </div>
                                     </div>

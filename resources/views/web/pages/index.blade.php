@@ -799,7 +799,7 @@
                                     </div>
                                 </div>
                                 <div class="card-right">
-                                    <img src="{{ asset('/new-miu/events/1jpg') }}"
+                                    <img src="{{ asset('/new-miu/events/1.jpg') }}"
                                         alt="Cultural Fest">
                                 </div>
                             </div>
