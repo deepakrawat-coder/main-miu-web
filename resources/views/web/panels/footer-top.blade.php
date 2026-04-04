@@ -472,7 +472,7 @@
 
           <!-- Phone Number Option (call directly) -->
           <a href="tel:+919319727766" class="tab-item tab-phone">
-              <i class="fas fa-phone-alt"></i>
+             <i class="fa-solid fa-phone"></i>
 
           </a>
           <a href="mailto:enquiry@miu.edu.in" class="tab-item tab-phone">

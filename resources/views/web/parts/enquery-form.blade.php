@@ -23,7 +23,7 @@
 
       <!-- Phone -->
       <div class="form-group">
-          <label class="mb-0 pb-0"><i class="fas fa-phone-alt"></i> Phone Number <span class="required-star">*</span></label>
+          <label class="mb-0 pb-0"><i class="fa-solid fa-phone"></i> Phone Number <span class="required-star">*</span></label>
           <input type="tel" name="phone" id="phone" placeholder="+91 98765 43210" value="{{ old('phone') }}"
               required>
           @error('phone')
