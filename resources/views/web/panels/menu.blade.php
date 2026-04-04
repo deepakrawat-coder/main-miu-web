@@ -287,7 +287,7 @@
                                                          </li>
                                                          <li><a href="/vice-chancellor">Vice Chancellor's Message</a></li>
                                                          <li><a href="/registrar">Registrar's Message</a></li>
-                                                         <li><a href="#">Academic Leadership</a></li>
+                                                         {{-- <li><a href="#">Academic Leadership</a></li> --}}
                                                          <li><a href="#">Controller of Examinations</a>
                                                          </li>
                                                          <li><a href="#">Director</a></li>
