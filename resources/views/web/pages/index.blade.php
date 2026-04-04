@@ -163,7 +163,7 @@
                                 <div class="position-relative wow fadeInUp" data-wow-delay=".3s"><img
                                         src="{{ asset('/new-miu/about/about-300-387.jpg') }}" alt="About"></div>
                             </div>
-                            <div class="about-wrapp">
+                            {{-- <div class="about-wrapp">
                                 <div class="discount-wrapp">
                                     <div class="logo"><img src="{{ asset('/new-miu/miu-white.png') }}" alt="img"
                                             width="60" height="60"></div>
@@ -171,7 +171,7 @@
                                             Since
                                             2019</span></div>
                                 </div>
-                            </div>
+                            </div> --}}
                         </div>
                     </div>
                     <div class="col-xl-6">
