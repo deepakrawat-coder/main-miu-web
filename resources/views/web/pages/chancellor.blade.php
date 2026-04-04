@@ -102,7 +102,7 @@
                                     </div>
                                     <div class="col-4 col-sm-4">
                                         <div class="re-logo">
-                                            <img src="{{ asset('/new-miu/web-logo.png') }}" alt="Stadum">
+                                            <img src="{{ asset('/new-miu/weblogo.png') }}" alt="Stadum">
                                         </div>
                                     </div>
                                 </div>
@@ -115,10 +115,10 @@
 
             </div>
         </div>
-        <div class="about-shep-2 shape-mockup d-none d-xxl-block" data-top="0%" data-left="0%"><img
-                src="assets/img/shape/shape-3.png" alt="shape"></div>
+        {{-- <div class="about-shep-2 shape-mockup d-none d-xxl-block" data-top="0%" data-left="0%"><img
+                src="{{ asset('/assets/img/shape/shape-3.png') }}" alt="shape"></div>
         <div class="about-shep-2 shape-mockup d-none d-xxl-block" data-bottom="4%" data-left="0%"><img
-                src="assets/img/shape/shape-4.png" alt="shape"></div>
+                src="{{ asset('/assets/img/shape/shape-4.png') }}" alt="shape"></div> --}}
     </section>
 
 

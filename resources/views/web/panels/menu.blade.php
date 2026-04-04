@@ -2,12 +2,12 @@
      <div class="sidemenu-content"><button class="closeButton sideMenuCls"><i class="far fa-times"></i></button>
          <div class="widget footer-widget">
              <div class="th-widget-about">
-                 <div class="about-logo"><a href="home-university.html"><img src="{{ asset('/new-miu/weblogo.png') }}"
+                 <div class="about-logo"><a href="/"><img src="{{ asset('/new-miu/weblogo.png') }}"
                              class="bg-white rounded-sm" style="border-radius:8px;" alt="Stadum"></a></div>
                  <p class="about-text">Since 1999, when the newly minted Stadum team embraced its mandate to breathe
                      new life into the downtrodden neighbourhood, East Village’s transformation has been nothing
                      short of remarkable. </p>
-                 <div class="footer-info"><a href="#"><span class="footer-info-icon"><i
+                 <div class="footer-info"><a href="/"><span class="footer-info-icon"><i
                                  class="fa-solid fa-location-dot"></i></span> Manipur International University Imphal,
                          Manipur India - 795001</a><a href="mailto:info@miu.edu.in"><span class="footer-info-icon"><i
                                  class="fa-solid fa-envelope"></i></span> info@miu.edu.in</a></div>
@@ -64,11 +64,11 @@
  </div>
  <div class="th-menu-wrapper">
      <div class="th-menu-area text-center"><button class="th-menu-toggle"><i class="fal fa-times"></i></button>
-         <div class="mobile-logo"><a href="home-university.html"><img src="assets/img/logo.svg" alt="Stadum"></a>
+         <div class="mobile-logo"><a href="/"><img src="assets/img/logo.svg" alt="Stadum"></a>
          </div>
          <div class="th-mobile-menu">
              <ul>
-                 <li class="menu-item-has-children"><a href="home-university.html">Home</a>
+                 <li class="menu-item-has-children"><a href="/">Home</a>
                      <ul class="sub-menu">
                          <li><a href="index.html">University Home</a></li>
                          <li><a href="home-admission.html">Admission Home</a></li>
@@ -210,7 +210,7 @@
                      <div class="row align-items-center justify-content-between">
                          <div class="col-12 justify-content-center d-flex">
                              <div class="header-left d-flex align-items-center">
-                                 <div class="header-logo d-block d-sm-none"><a href="home-university.html"><img
+                                 <div class="header-logo d-block d-sm-none"><a href="/"><img
                                              src="{{ asset('/new-miu/weblogo.png') }}"  width="200" height="160" alt="Stadum"></a></div>
                                  {{-- <div class="header-button d-none d-sm-block"><a href="contact.html"
                                          class="th-btn">Get More Info <img src="assets/img/icon/right-icon.svg"
