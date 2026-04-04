@@ -53,45 +53,44 @@
                                 <p class="sec-text mt-25 wow fadeInUp" data-wow-delay=".3s">
                                     Dear Students, Faculty, Staff, and Visitors,
                                 </p>
+                                <p class="sec-text mt-25 wow fadeInUp" data-wow-delay=".3s">Welcome to Manipur International
+                                    University.</p>
                                 <p class="sec-text wow fadeInUp" data-wow-delay=".3s">
-                                    Being the Chancellor of such a prestigious institution is a great honor. At MIU, we
-                                    focus on
-                                    creating an environment where innovation, inclusivity, and excellence guide our actions.
+                                    It is both an honor and a privilege to serve as the Chancellor of this esteemed
+                                    institution. At MIU, we are committed to fostering a culture defined by academic
+                                    excellence, innovation, and inclusivity, where every learner is empowered to realize
+                                    their fullest potential.
                                 </p>
                                 <p class="sec-text wow fadeInUp" data-wow-delay=".3s">
-                                    Our university has a rich history of accomplishments and firm dedication to shaping
-                                    future
-                                    leaders. We offer a supportive setting that fosters personal and professional
-                                    development.
-                                    Our esteemed faculty members serve as educators, mentors, and trailblazers, spearheading
-                                    cutting-edge research.
+                                    Our university reflects a strong legacy of achievement and an unwavering commitment to
+                                    shaping future-ready leaders. We provide a dynamic academic environment that nurtures
+                                    intellectual growth, professional competence, and ethical responsibility. Our
+                                    distinguished faculty serve not only as educators but as mentors and thought leaders,
+                                    driving impactful research and knowledge creation.
                                 </p>
                                 <p class="sec-text wow fadeInUp" data-wow-delay=".3s">
-                                    We believe education transforms lives and communities. Our diverse campus provides
-                                    opportunities for collaboration, exploration, and progress. You will encounter a
-                                    community
-                                    that values creativity, critical thinking, and continuous learning.
+                                    We firmly believe that education is a transformative force that shapes individuals and
+                                    contributes meaningfully to society. Our diverse and vibrant campus encourages
+                                    collaboration, critical inquiry, and lifelong learning.
                                 </p>
                                 <p class="sec-text wow fadeInUp" data-wow-delay=".3s">
-                                    We are dedicated to upholding our legacy of excellence by introducing innovative
-                                    programs,
-                                    forging interdisciplinary partnerships, and striving for societal impact.
+                                    As we move forward, we remain dedicated to advancing academic excellence through
+                                    innovative programs, interdisciplinary engagement, and a strong focus on societal
+                                    progress.
                                 </p>
                                 <p class="sec-text wow fadeInUp" data-wow-delay=".3s">
-                                    Feel free to explore our website to discover more about our programs, research projects,
-                                    and
-                                    vibrant campus atmosphere
+                                  I invite you to explore our university and become a part of this inspiring journey.
                                 </p>
-                                <p class="sec-text wow fadeInUp" data-wow-delay=".3s">
+                                {{-- <p class="sec-text wow fadeInUp" data-wow-delay=".3s">
                                     We appreciate your interest in Manipur International University. Let's work together
                                     towards
                                     a brighter future.
-                                </p>
+                                </p> --}}
 
                                 <div class="row align-items-center">
                                     <div class="col-8 col-sm-8">
                                         <div class="re mb-2">
-                                            <p class="sec-text fw-bold wow fadeInUp mb-0" data-wow-delay=".3s">Best wishes,
+                                            <p class="sec-text fw-bold wow fadeInUp mb-0" data-wow-delay=".3s">Warm regards,
                                             </p>
                                             <p class="sec-text fw-bold wow fadeInUp mb-0" data-wow-delay=".3s">Dr. Hari
                                                 kumar

@@ -49,13 +49,12 @@
                             style="border-radius: 16px">
                             <div class="title-area  text-lg-start mt-3 mb-1">
                                 <span class="sub-title text-anim">Welcome to MIU</span>
-                                <h2 class="sec-title text-anim2">Welcome message</h2>
+                                <h2 class="sec-title text-anim2">Message from the Vice Chancellor</h2>
                                 <p class="sec-text mt-25 wow fadeInUp" data-wow-delay=".3s">
-                                    Dear Students, Faculty, Staff, and Visitors,
+                                   Dear Students, Faculty Members, and Distinguished Visitors,
                                 </p>
                                 <p class="sec-text wow fadeInUp" data-wow-delay=".3s">
-                                    Being the Chancellor of such a prestigious institution is a great honor. At MIU, we focus on creating an environment where innovation, inclusivity, and excellence guide our actions.
-
+                                   It is both an honor and a privilege to welcome you to Manipur International University.
 
                                 </p>
                                 <p class="sec-text wow fadeInUp" data-wow-delay=".3s">
