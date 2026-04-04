@@ -509,20 +509,20 @@
        </div>
    </div>
 
-   <footer class="footer-wrapper footer-default footer-overlay" data-bg-src="assets/img/bg/footer-bg-1.jpg"
+   <footer class="footer-wrapper footer-default footer-overlay" data-bg-src="{{asset('/assets/img/bg/footer-bg-1.jpg"
        style="background-color: black;">
        {{-- <div class="footer-top">
             <div class="container">
                 <div class="row gy-40 align-items-center justify-content-between">
                     <div class="col-xl-auto">
                         <div class="footer-logo z-index-common" data-cue="slideInLeft"><a
-                                href="home-university.html"><img src="{{ asset('/new-miu/web-logo.png') }}" width="200" height="160" class="bg-white rounded-sm p-2" style="border-radius:8px;" alt="Stadum"></a></div>
+                                href="home-university.html"><img src="{{asset('/{{ asset('/new-miu/web-logo.png') }}" width="200" height="160" class="bg-white rounded-sm p-2" style="border-radius:8px;" alt="Stadum"></a></div>
                     </div>
                     <div class="col-xl-auto">
                         <div class="client-group-wrap z-index-common" data-cue="slideInRight"><img
-                                src="assets/img/normal/client-group1.png" alt="img">
+                                src="{{asset('/assets/img/normal/client-group1.png" alt="img">
                             <h4 class="title">Have any question? <a href="contact.html"><img
-                                        src="assets/img/icon/chat2.svg" alt=""> <span
+                                        src="{{asset('/assets/img/icon/chat2.svg" alt=""> <span
                                         class="text-theme">Live</span></a> chat now</h4>
                         </div>
                     </div>
@@ -535,18 +535,18 @@
                    <div class="col-xl-auto">
                        <div class="footer-logo z-index-common" data-cue="slideInLeft">
                            <a href="home-university.html">
-                               <img src="{{ asset('/new-miu/web-logo.png') }}" width="200" height="160"
+                               <img src="{{asset('/{{ asset('/new-miu/web-logo.png') }}" width="200" height="160"
                                    class="bg-white rounded-sm p-2" style="border-radius:8px;" alt="MIU University">
                            </a>
                        </div>
                    </div>
                    <div class="col-xl-auto">
                        <div class="client-group-wrap z-index-common" data-cue="slideInRight">
-                           {{-- <img src="assets/img/normal/client-group1.png" alt="Happy Students"> --}}
+                           {{-- <img src="{{asset('/assets/img/normal/client-group1.png" alt="Happy Students"> --}}
                            <h4 class="title">
                              Need admission guidance? <br>
                                <a href="contact.html">
-                                   <img src="assets/img/icon/chat2.svg" alt="Chat Icon">
+                                   <img src="{{asset('/assets/img/icon/chat2.svg')}}" alt="Chat Icon">
                                    <span class="text-theme">Connect with Our Academic Counselors </span>
                                </a>
                                Today
@@ -646,41 +646,41 @@
                        <div class="widget th-widget-instagram footer-widget">
                            <h3 class="widget_title">Gallery</h3>
                            <div class="instagram-feeds">
-                               <div class="insta-thumb"><img src="assets/img/widget/insta-feed-1-1.jpg"
+                               <div class="insta-thumb"><img src="{{asset('/assets/img/widget/insta-feed-1-1.jpg')}}"
                                        alt="Image">
                                    <a href="assets/img/widget/insta-feed-1-1.jpg" class="insta-btn popup-image"><i
                                            class="fab fa-instagram"></i></a>
                                </div>
-                               <div class="insta-thumb"><img src="assets/img/widget/insta-feed-1-2.jpg"
+                               <div class="insta-thumb"><img src="{{asset('/assets/img/widget/insta-feed-1-2.jpg')}}"
                                        alt="Image">
                                    <a href="assets/img/widget/insta-feed-1-2.jpg" class="insta-btn popup-image"><i
                                            class="fab fa-instagram"></i></a>
                                </div>
-                               <div class="insta-thumb"><img src="assets/img/widget/insta-feed-1-3.jpg"
+                               <div class="insta-thumb"><img src="{{asset('/assets/img/widget/insta-feed-1-3.jpg')}}"
                                        alt="Image">
                                    <a href="assets/img/widget/insta-feed-1-3.jpg" class="insta-btn popup-image"><i
                                            class="fab fa-instagram"></i></a>
                                </div>
-                               <div class="insta-thumb"><img src="assets/img/widget/insta-feed-1-4.jpg"
+                               <div class="insta-thumb"><img src="{{asset('/assets/img/widget/insta-feed-1-4.jpg')}}"
                                        alt="Image">
                                    <a href="assets/img/widget/insta-feed-1-4.jpg" class="insta-btn popup-image"><i
                                            class="fab fa-instagram"></i></a>
                                </div>
-                               <div class="insta-thumb"><img src="assets/img/widget/insta-feed-1-5.jpg"
+                               <div class="insta-thumb"><img src="{{asset('/assets/img/widget/insta-feed-1-5.jpg')}}"
                                        alt="Image">
                                    <a href="assets/img/widget/insta-feed-1-5.jpg" class="insta-btn popup-image"><i
                                            class="fab fa-instagram"></i></a>
                                </div>
-                               <div class="insta-thumb"><img src="assets/img/widget/insta-feed-1-6.jpg"
+                               <div class="insta-thumb"><img src="{{asset('/assets/img/widget/insta-feed-1-6.jpg')}}"
                                        alt="Image"> <a href="assets/img/widget/insta-feed-1-6.jpg"
                                        class="insta-btn popup-image"><i class="fab fa-instagram"></i></a></div>
-                               <div class="insta-thumb"><img src="assets/img/widget/insta-feed-1-7.jpg"
+                               <div class="insta-thumb"><img src="{{asset('/assets/img/widget/insta-feed-1-7.jpg')}}"
                                        alt="Image"> <a href="assets/img/widget/insta-feed-1-7.jpg"
                                        class="insta-btn popup-image"><i class="fab fa-instagram"></i></a></div>
-                               <div class="insta-thumb"><img src="assets/img/widget/insta-feed-1-8.jpg"
+                               <div class="insta-thumb"><img src="{{asset('/assets/img/widget/insta-feed-1-8.jpg')}}"
                                        alt="Image"> <a href="assets/img/widget/insta-feed-1-8.jpg"
                                        class="insta-btn popup-image"><i class="fab fa-instagram"></i></a></div>
-                               <div class="insta-thumb"><img src="assets/img/widget/insta-feed-1-9.jpg"
+                               <div class="insta-thumb"><img src="{{asset('/assets/img/widget/insta-feed-1-9.jpg')}}"
                                        alt="Image"> <a href="assets/img/widget/insta-feed-1-9.jpg"
                                        class="insta-btn popup-image"><i class="fab fa-instagram"></i></a></div>
                            </div>
@@ -773,20 +773,20 @@
            </div>
        </div>
    </div>
-   <script src="assets/js/vendor/jquery-3.7.1.min.js"></script>
-   <script src="assets/js/swiper-bundle.min.js"></script>
-   <script src="assets/js/bootstrap.min.js"></script>
-   <script src="assets/js/jquery.magnific-popup.min.js"></script>
-   <script src="assets/js/jquery.counterup.min.js"></script>
-   <script src="assets/js/jquery-ui.min.js"></script>
-   <script src="assets/js/imagesloaded.pkgd.min.js"></script>
-   <script src="assets/js/isotope.pkgd.min.js"></script>
-   <script src="assets/js/wow.min.js"></script>
-   <script src="assets/js/gsap.min.js"></script>
-   <script src="assets/js/ScrollTrigger.min.js"></script>
-   <script src="assets/js/SplitText.min.js"></script>
-   <script src="assets/js/lenis.min.js"></script>
-   <script src="assets/js/main.js"></script>
+   <script src="{{asset('/assets/js/vendor/jquery-3.7.1.min.js')}}"></script>
+   <script src="{{asset('/assets/js/swiper-bundle.min.js')}}"></script>
+   <script src="{{asset('/assets/js/bootstrap.min.js')}}"></script>
+   <script src="{{asset('/assets/js/jquery.magnific-popup.min.js')}}"></script>
+   <script src="{{asset('/assets/js/jquery.counterup.min.js')}}"></script>
+   <script src="{{asset('/assets/js/jquery-ui.min.js')}}"></script>
+   <script src="{{asset('/assets/js/imagesloaded.pkgd.min.js')}}"></script>
+   <script src="{{asset('/assets/js/isotope.pkgd.min.js')}}"></script>
+   <script src="{{asset('/assets/js/wow.min.js')}}"></script>
+   <script src="{{asset('/assets/js/gsap.min.js')}}"></script>
+   <script src="{{asset('/assets/js/ScrollTrigger.min.js')}}"></script>
+   <script src="{{asset('/assets/js/SplitText.min.js')}}"></script>
+   <script src="{{asset('/assets/js/lenis.min.js')}}"></script>
+   <script src="{{asset('/assets/js/main.js')}}"></script>
    <script>
        // Modal handling for Contact tab (mobile only, but works everywhere for consistency)
        const modal = document.getElementById('contactModal');

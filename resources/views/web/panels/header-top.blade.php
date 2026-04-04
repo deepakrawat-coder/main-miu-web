@@ -43,7 +43,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('/assets-old/images/web-image/web-log.png') }}">
     <link rel="icon" type="image/png" sizes="96x96" href="{{ asset('/assets-old/images/web-image/web-log.png') }}">
     <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('/assets-old/images/web-image/web-log.png') }}">
-    <link  rel="stylesheet" href="assets/css/custom-css.css">
+    <link  rel="stylesheet" href={{asset('/assets/css/custom-css.css')}}">
     <link rel="manifest" href="{{ asset('/assets-old/images/web-image/web-log.png') }}">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="{{ asset('/assets-old/images/web-image/web-log.png') }}">
@@ -53,9 +53,9 @@
     <link
         href="../../css2-1?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
-    <link rel="stylesheet" href="assets/css/magnific-popup.min.css">
-    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href={{asset('/assets/css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href={{asset('/assets/css/fontawesome.min.css')}}">
+    <link rel="stylesheet" href={{asset('/assets/css/magnific-popup.min.css')}}">
+    <link rel="stylesheet" href={{asset('/assets/css/swiper-bundle.min.css')}}">
+    <link rel="stylesheet" href={{asset('/assets/css/style.css')}}">
     
