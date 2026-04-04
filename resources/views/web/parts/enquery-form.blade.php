@@ -52,7 +52,7 @@
       </div>
 
       <button type="submit" class="btn-submit">
-          <i class="fas fa-paper-plane"></i> Submit Enquiry
+          <i class="fas fa-paper-plane"></i>  Enquire Now
       </button>
 
       <div id="formSuccessMessage" class="success-message">
