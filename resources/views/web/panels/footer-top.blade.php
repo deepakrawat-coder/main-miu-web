@@ -509,7 +509,7 @@
        </div>
    </div>
 
-   <footer class="footer-wrapper footer-default footer-overlay" data-bg-src="{{asset('/assets/img/bg/footer-bg-1.jpg"
+   <footer class="footer-wrapper footer-default footer-overlay" data-bg-src="{{asset('/assets/img/bg/footer-bg-1.jpg')}}"
        style="background-color: black;">
        {{-- <div class="footer-top">
             <div class="container">
