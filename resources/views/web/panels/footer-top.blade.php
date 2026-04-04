@@ -787,7 +787,7 @@
    <script src="{{asset('/assets/js/SplitText.min.js')}}"></script>
    <script src="{{asset('/assets/js/lenis.min.js')}}"></script>
    <script src="{{asset('/assets/js/main.js')}}"></script> --}}
-  <script src="{{ asset('assets/js/vendor/jquery-3.7.1.min.js') }}"></script>
+  <script src="{{ asset('assets/js/vendor/jquery.min.js') }}"></script>
   <script src="{{ asset('assets/js/swiper-bundle.min.js') }}"></script>
   <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
   <script src="{{ asset('assets/js/jquery.magnific-popup.min.js') }}"></script>
