@@ -43,7 +43,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('/assets-old/images/web-image/web-log.png') }}">
     <link rel="icon" type="image/png" sizes="96x96" href="{{ asset('/assets-old/images/web-image/web-log.png') }}">
     <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('/assets-old/images/web-image/web-log.png') }}">
-    <link  rel="stylesheet" href={{asset('/assets/css/custom-css.css')}}">
+    <link  rel="stylesheet" href="{{asset('/assets/css/custom-css.css')}}">
     <link rel="manifest" href="{{ asset('/assets-old/images/web-image/web-log.png') }}">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="{{ asset('/assets-old/images/web-image/web-log.png') }}">
