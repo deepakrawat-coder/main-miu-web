@@ -65,7 +65,7 @@
                     </div>
                 </div>
                 <div class="col-lg-4">
-
+                    @include('web.parts.enquery-form')
                 </div>
             </div>
         </div>
