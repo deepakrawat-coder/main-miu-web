@@ -535,7 +535,7 @@
                    <div class="col-xl-auto">
                        <div class="footer-logo z-index-common" data-cue="slideInLeft">
                            <a href="home-university.html">
-                               <img src="{{asset('/new-miu/web-logo.png') }}" width="200" height="160"
+                               <img src="{{asset('/new-miu/weblogo.png') }}" width="200" height="160"
                                    class="bg-white rounded-sm p-2" style="border-radius:8px;" alt="MIU University">
                            </a>
                        </div>
