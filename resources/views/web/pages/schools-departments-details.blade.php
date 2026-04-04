@@ -37,31 +37,18 @@
 
                         <h3 class="h3 mt-n2">About the School of Science</h3>
                         <p class="mb-30">
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat unde perspiciatis sint, minima
-                            deserunt nobis quasi facere suscipit quo, tenetur saepe consectetur qui dignissimos nostrum fuga
-                            voluptatem aliquam! Delectus, hic?
+                            The School of Basic Sciences and Biotechnology at Manipur International University (MIU) offers interdisciplinary B.Sc. and M.Sc. programs designed to provide a strong foundation in core scientific disciplines. The School exposes students to diverse areas such as Chemistry, Biochemistry, Physics, Mathematics, Life Sciences, Environmental Sciences, and Biotechnology. These programs are aligned with the latest scientific and technological advancements, preparing students for both higher education and professional careers.
                         </p>
 
                         <p class="mb-30">
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat unde perspiciatis sint, minima
-                            deserunt nobis quasi facere suscipit quo, tenetur saepe consectetur qui dignissimos nostrum fuga
-                            voluptatem aliquam! Delectus, hic?
+                           The School is committed to imparting knowledge in pure and applied sciences, which form the backbone of scientific innovation and technological progress. The B.Sc. and M.Sc. programs are designed to equip students with analytical thinking, research skills, and practical knowledge, enabling them to pursue careers across multiple scientific domains.
                         </p>
 
                         <div class="mb-30">
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id autem aperiam perferendis vero
-                            placeat rerum maxime in debitis dolore. Pariatur, sed eum obcaecati deserunt similique esse sunt
-                            dolorem cumque atque asperiores ipsam ad possimus quia, aperiam maxime laboriosam. Ipsam,
-                            voluptatem.
+                            The School aims to nurture a new generation of scientific thinkers capable of addressing real-world challenges through innovation and critical reasoning. The programs combine strong theoretical foundations with hands-on experience through laboratory work, field studies, guest lectures, and project-based learning. Students apply scientific concepts to practical challenges in healthcare, agriculture, environmental science, and emerging technologies.
                         </div>
 
-                        <div class="mb-30">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque rerum voluptas voluptatibus.
-                            Voluptate inventore deleniti, quibusdam quidem consequuntur debitis expedita in alias dolores
-                            sit quasi impedit omnis dignissimos, molestiae rem laudantium optio. Cum illum aut labore nemo
-                            sed a dignissimos fuga eius dolores. Ducimus fugit tempora labore at distinctio dolore!
-                        </div>
-
+                        
                     </div>
                 </div>
                 <div class="col-lg-4">
