@@ -302,23 +302,23 @@
 
                                                      </ul>
                                                  </li>
-
+                                                 <li><a href="/contact">Contact</a></li>
                                              </ul>
                                          </li>
                                          <li class="menu-item-has-children"><a href="#">Schools</a>
                                              <ul class="sub-menu">
-                                                 <li><a href="program.html">School of Commerce</a></li>
-                                                 <li><a href="program-2.html">School of Computer Application</a></li>
-                                                 <li><a href="program-details.html">School of Engineering</a></li>
-                                                 <li><a href="program-details-sidebar.html">School of Law</a></li>
-                                                 <li><a href="program-details-sidebar.html">School of Management</a>
+                                                 <li><a href="/schools-departments-details">School of Commerce</a></li>
+                                                 <li><a href="/schools-departments-details">School of Computer Application</a></li>
+                                                 <li><a href="/schools-departments-details">School of Engineering</a></li>
+                                                 {{-- <li><a href="program-details-sidebar.html">School of Law</a></li> --}}
+                                                 <li><a href="/schools-departments-details">School of Management</a>
                                                  </li>
-                                                 <li><a href="program-details-sidebar.html">School of Pharmacy</a></li>
-                                                 <li><a href="program-details-sidebar.html">School of Education</a>
+                                                 {{-- <li><a href="program-details-sidebar.html">School of Pharmacy</a></li> --}}
+                                                 {{-- <li><a href="program-details-sidebar.html">School of Education</a> --}}
                                                  </li>
-                                                 <li><a href="program-details-sidebar.html">School of Science</a></li>
-                                                 <li><a href="program-details-sidebar.html">School of Pragmatism</a>
-                                                 </li>
+                                                 <li><a href="/schools-departments-details">School of Science</a></li>
+                                                 {{-- <li><a href="program-details-sidebar.html">School of Pragmatism</a>
+                                                 </li> --}}
                                              </ul>
                                          </li>
                                          <li class="menu-item-has-children"><a href="#">Academics</a>

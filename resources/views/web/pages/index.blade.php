@@ -748,14 +748,15 @@
                                 style="border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden; height: 100%;">
                                 <div class="academic-img mb-0">
                                     <a href="program-details.html"><img src="assets/img/academic/academic1-1.jpg"
-                                            alt="School of Law"></a>
+                                            alt="School of Engineering"></a>
                                 </div>
                                 <div class="academic-content border-0 pb-0 mb-0 px-3 py-3">
-                                    <h3 class="box-title"><a href="program-details.html">School of Law</a></h3>
+                                    <h3 class="box-title"><a href="program-details.html">School of Engineering</a></h3>
                                     <p class="box-text style2 my-2"
                                         style="line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
-                                        BA LLB, LLB, LLM programs. Moot courts, legal aid clinics, and assured scholarships
-                                        for all deserving candidates.</p>
+                                        B.Tech, M.Tech programs in CSE, AI & ML, Civil, Mechanical. State-of-the-art labs,
+                                        industry training, and assured scholarships for deserving candidates.
+                                    </p>
                                     <div class="d-flex justify-content-between mt-2 mb-2">
                                         <a href="about.html" class="btn text-secondary custom_apply">Apply Now</a>
                                         <a href="about.html" class="th-btn style-border1 th-icon">Read More</a>
@@ -766,6 +767,7 @@
                     </div>
                 </div>
             </div>
+        </div>
 
         </div>
     </section>
@@ -2693,299 +2695,301 @@
 
         //     });
         // })();
-       
-        
+
+
         (function() {
-    document.addEventListener('DOMContentLoaded', function() {
+            document.addEventListener('DOMContentLoaded', function() {
 
-        const cards = document.querySelectorAll('.stack-card');
-        const totalCards = cards.length;
-        const progressFill = document.querySelector('.progress-fill');
-        const currentNumSpan = document.getElementById('current-num');
-        const sliderSection = document.getElementById('stackSlider');
-        const completionMsg = document.getElementById('completionMessage');
+                const cards = document.querySelectorAll('.stack-card');
+                const totalCards = cards.length;
+                const progressFill = document.querySelector('.progress-fill');
+                const currentNumSpan = document.getElementById('current-num');
+                const sliderSection = document.getElementById('stackSlider');
+                const completionMsg = document.getElementById('completionMessage');
 
-        if (totalCards === 0 || !sliderSection) return;
+                if (totalCards === 0 || !sliderSection) return;
 
-        let currentIndex = 0;
-        let isAnimating = false;
-        let isSliderActive = false;
-        let scrollInSlider = false;
+                let currentIndex = 0;
+                let isAnimating = false;
+                let isSliderActive = false;
+                let scrollInSlider = false;
 
-        // Set total number
-        const totalNumSpan = document.getElementById('total-num');
-        if (totalNumSpan) {
-            totalNumSpan.textContent = totalCards.toString().padStart(2, '0');
-        }
-
-        // NO body scroll locking - just prevent default on wheel/touch
-        function isSliderVisible() {
-            const rect = sliderSection.getBoundingClientRect();
-            const windowHeight = window.innerHeight;
-            
-            const visibleTop = Math.max(0, rect.top);
-            const visibleBottom = Math.min(windowHeight, rect.bottom);
-            const visibleHeight = Math.max(0, visibleBottom - visibleTop);
-            const totalHeight = rect.height;
-            const visibilityPercentage = (visibleHeight / totalHeight) * 100;
-            
-            return visibilityPercentage >= 80;
-        }
-
-        // Update progress and counter
-        function updateProgress() {
-            if (progressFill) {
-                const progress = (currentIndex / (totalCards - 1)) * 100;
-                progressFill.style.width = progress + '%';
-            }
-            if (currentNumSpan) {
-                currentNumSpan.textContent = (currentIndex + 1).toString().padStart(2, '0');
-            }
-        }
-
-        // Update scroll hint text
-        function updateScrollHint() {
-            const scrollHintSpan = document.querySelector('.scroll-hint span');
-            if (scrollHintSpan) {
-                if (currentIndex === 0) {
-                    scrollHintSpan.innerHTML = '⬆️ Scroll UP to exit slider ⬆️';
-                    scrollHintSpan.style.color = '#f37021';
-                } else if (currentIndex === totalCards - 1) {
-                    scrollHintSpan.innerHTML = '⬇️ Scroll DOWN to exit slider ⬇️';
-                    scrollHintSpan.style.color = '#10b981';
-                } else {
-                    scrollHintSpan.innerHTML = '↕️ Scroll to navigate slides ↕️';
-                    scrollHintSpan.style.color = '#94a3b8';
+                // Set total number
+                const totalNumSpan = document.getElementById('total-num');
+                if (totalNumSpan) {
+                    totalNumSpan.textContent = totalCards.toString().padStart(2, '0');
                 }
-            }
-        }
 
-        // Update cards position with smooth transitions
-        function updateCards() {
-            cards.forEach((card, idx) => {
-                card.classList.remove('active', 'prev', 'next', 'hidden');
+                // NO body scroll locking - just prevent default on wheel/touch
+                function isSliderVisible() {
+                    const rect = sliderSection.getBoundingClientRect();
+                    const windowHeight = window.innerHeight;
 
-                if (idx === currentIndex) {
-                    card.classList.add('active');
-                } else if (idx === currentIndex - 1) {
-                    card.classList.add('prev');
-                } else if (idx === currentIndex + 1) {
-                    card.classList.add('next');
-                } else {
-                    card.classList.add('hidden');
+                    const visibleTop = Math.max(0, rect.top);
+                    const visibleBottom = Math.min(windowHeight, rect.bottom);
+                    const visibleHeight = Math.max(0, visibleBottom - visibleTop);
+                    const totalHeight = rect.height;
+                    const visibilityPercentage = (visibleHeight / totalHeight) * 100;
+
+                    return visibilityPercentage >= 80;
                 }
+
+                // Update progress and counter
+                function updateProgress() {
+                    if (progressFill) {
+                        const progress = (currentIndex / (totalCards - 1)) * 100;
+                        progressFill.style.width = progress + '%';
+                    }
+                    if (currentNumSpan) {
+                        currentNumSpan.textContent = (currentIndex + 1).toString().padStart(2, '0');
+                    }
+                }
+
+                // Update scroll hint text
+                function updateScrollHint() {
+                    const scrollHintSpan = document.querySelector('.scroll-hint span');
+                    if (scrollHintSpan) {
+                        if (currentIndex === 0) {
+                            scrollHintSpan.innerHTML = '⬆️ Scroll UP to exit slider ⬆️';
+                            scrollHintSpan.style.color = '#f37021';
+                        } else if (currentIndex === totalCards - 1) {
+                            scrollHintSpan.innerHTML = '⬇️ Scroll DOWN to exit slider ⬇️';
+                            scrollHintSpan.style.color = '#10b981';
+                        } else {
+                            scrollHintSpan.innerHTML = '↕️ Scroll to navigate slides ↕️';
+                            scrollHintSpan.style.color = '#94a3b8';
+                        }
+                    }
+                }
+
+                // Update cards position with smooth transitions
+                function updateCards() {
+                    cards.forEach((card, idx) => {
+                        card.classList.remove('active', 'prev', 'next', 'hidden');
+
+                        if (idx === currentIndex) {
+                            card.classList.add('active');
+                        } else if (idx === currentIndex - 1) {
+                            card.classList.add('prev');
+                        } else if (idx === currentIndex + 1) {
+                            card.classList.add('next');
+                        } else {
+                            card.classList.add('hidden');
+                        }
+                    });
+                    updateProgress();
+                    updateScrollHint();
+                }
+
+                // Go to specific card
+                function goToCard(index) {
+                    if (isAnimating) return false;
+                    if (index < 0 || index >= totalCards) return false;
+
+                    isAnimating = true;
+                    currentIndex = index;
+                    updateCards();
+
+                    // Show completion message on last slide
+                    if (currentIndex === totalCards - 1 && completionMsg) {
+                        completionMsg.classList.add('show');
+                        setTimeout(() => {
+                            completionMsg.classList.remove('show');
+                        }, 3000);
+                    }
+
+                    // Animation lock duration
+                    setTimeout(() => {
+                        isAnimating = false;
+                    }, 350);
+
+                    return true;
+                }
+
+                // Next card
+                function nextCard() {
+                    return currentIndex < totalCards - 1 ? goToCard(currentIndex + 1) : false;
+                }
+
+                // Previous card
+                function prevCard() {
+                    return currentIndex > 0 ? goToCard(currentIndex - 1) : false;
+                }
+
+                // Wheel handler - preventDefault when slider is active
+                let lastWheelTime = 0;
+                const WHEEL_THROTTLE = 300;
+
+                function handleWheel(e) {
+                    if (!isSliderVisible()) {
+                        return; // Allow normal scrolling outside slider
+                    }
+
+                    isSliderActive = true;
+                    scrollInSlider = true;
+
+                    const now = Date.now();
+
+                    // Throttle
+                    if (now - lastWheelTime < WHEEL_THROTTLE) {
+                        e.preventDefault();
+                        return;
+                    }
+
+                    if (isAnimating) {
+                        e.preventDefault();
+                        return;
+                    }
+
+                    const delta = e.deltaY;
+
+                    // SCROLL DOWN
+                    if (delta > 0) {
+                        if (currentIndex === totalCards - 1) {
+                            // Last slide - allow exit
+                            console.log('⬇️ Exiting slider - last slide');
+                            isSliderActive = false;
+                            return;
+                        } else {
+                            // Next card
+                            if (nextCard()) {
+                                e.preventDefault();
+                                lastWheelTime = now;
+                            }
+                        }
+                    }
+                    // SCROLL UP
+                    else if (delta < 0) {
+                        if (currentIndex === 0) {
+                            // First slide - allow exit
+                            console.log('⬆️ Exiting slider - first slide');
+                            isSliderActive = false;
+                            return;
+                        } else {
+                            // Previous card
+                            if (prevCard()) {
+                                e.preventDefault();
+                                lastWheelTime = now;
+                            }
+                        }
+                    }
+                }
+
+                // Touch support for mobile
+                let touchStartY = 0;
+                let touchStartTime = 0;
+                let lastTouchTime = 0;
+                const TOUCH_THROTTLE = 300;
+
+                function handleTouchStart(e) {
+                    if (!isSliderVisible() || isAnimating) return;
+
+                    touchStartY = e.touches[0].clientY;
+                    touchStartTime = Date.now();
+                    isSliderActive = true;
+                }
+
+                function handleTouchMove(e) {
+                    if (!isSliderVisible() || isAnimating || !isSliderActive) {
+                        return;
+                    }
+
+                    const touchEndY = e.touches[0].clientY;
+                    const diff = touchStartY - touchEndY;
+                    const swipeTime = Date.now() - touchStartTime;
+                    const now = Date.now();
+
+                    // Check throttle
+                    if (now - lastTouchTime < TOUCH_THROTTLE) {
+                        return;
+                    }
+
+                    // Require minimum swipe distance and time
+                    if (Math.abs(diff) > 50 && swipeTime < 600) {
+                        if (diff > 0) {
+                            // Swipe UP - next card or exit
+                            if (currentIndex === totalCards - 1) {
+                                isSliderActive = false;
+                                return;
+                            } else {
+                                if (nextCard()) {
+                                    e.preventDefault();
+                                    lastTouchTime = now;
+                                }
+                            }
+                        } else {
+                            // Swipe DOWN - previous card or exit
+                            if (currentIndex === 0) {
+                                isSliderActive = false;
+                                return;
+                            } else {
+                                if (prevCard()) {
+                                    e.preventDefault();
+                                    lastTouchTime = now;
+                                }
+                            }
+                        }
+                        touchStartY = touchEndY;
+                        touchStartTime = Date.now();
+                    }
+                }
+
+                function handleTouchEnd(e) {
+                    if (!isSliderVisible()) {
+                        isSliderActive = false;
+                    }
+                }
+
+                // Mouse wheel outside slider should unlock
+                document.addEventListener('wheel', function(e) {
+                    if (!isSliderVisible() && isSliderActive) {
+                        isSliderActive = false;
+                    }
+                }, {
+                    passive: true
+                });
+
+                // Add event listeners
+                window.addEventListener('wheel', handleWheel, {
+                    passive: false
+                });
+
+                // Touch events for mobile
+                sliderSection.addEventListener('touchstart', handleTouchStart, {
+                    passive: true
+                });
+                sliderSection.addEventListener('touchmove', handleTouchMove, {
+                    passive: false
+                });
+                sliderSection.addEventListener('touchend', handleTouchEnd, {
+                    passive: true
+                });
+
+                // Initialize
+                function init() {
+                    updateCards();
+                    if (isSliderVisible()) {
+                        isSliderActive = true;
+                    }
+                }
+
+                init();
+
+                // Cleanup
+                window.addEventListener('beforeunload', () => {
+                    isSliderActive = false;
+                });
+
+                document.addEventListener('visibilitychange', () => {
+                    if (document.hidden) {
+                        isSliderActive = false;
+                    }
+                });
+
             });
-            updateProgress();
-            updateScrollHint();
-        }
-
-        // Go to specific card
-        function goToCard(index) {
-            if (isAnimating) return false;
-            if (index < 0 || index >= totalCards) return false;
-
-            isAnimating = true;
-            currentIndex = index;
-            updateCards();
-
-            // Show completion message on last slide
-            if (currentIndex === totalCards - 1 && completionMsg) {
-                completionMsg.classList.add('show');
-                setTimeout(() => {
-                    completionMsg.classList.remove('show');
-                }, 3000);
-            }
-
-            // Animation lock duration
-            setTimeout(() => {
-                isAnimating = false;
-            }, 350);
-
-            return true;
-        }
-
-        // Next card
-        function nextCard() {
-            return currentIndex < totalCards - 1 ? goToCard(currentIndex + 1) : false;
-        }
-
-        // Previous card
-        function prevCard() {
-            return currentIndex > 0 ? goToCard(currentIndex - 1) : false;
-        }
-
-        // Wheel handler - preventDefault when slider is active
-        let lastWheelTime = 0;
-        const WHEEL_THROTTLE = 300;
-
-        function handleWheel(e) {
-            if (!isSliderVisible()) {
-                return; // Allow normal scrolling outside slider
-            }
-
-            isSliderActive = true;
-            scrollInSlider = true;
-
-            const now = Date.now();
-
-            // Throttle
-            if (now - lastWheelTime < WHEEL_THROTTLE) {
-                e.preventDefault();
-                return;
-            }
-
-            if (isAnimating) {
-                e.preventDefault();
-                return;
-            }
-
-            const delta = e.deltaY;
-
-            // SCROLL DOWN
-            if (delta > 0) {
-                if (currentIndex === totalCards - 1) {
-                    // Last slide - allow exit
-                    console.log('⬇️ Exiting slider - last slide');
-                    isSliderActive = false;
-                    return;
-                } else {
-                    // Next card
-                    if (nextCard()) {
-                        e.preventDefault();
-                        lastWheelTime = now;
-                    }
-                }
-            }
-            // SCROLL UP
-            else if (delta < 0) {
-                if (currentIndex === 0) {
-                    // First slide - allow exit
-                    console.log('⬆️ Exiting slider - first slide');
-                    isSliderActive = false;
-                    return;
-                } else {
-                    // Previous card
-                    if (prevCard()) {
-                        e.preventDefault();
-                        lastWheelTime = now;
-                    }
-                }
-            }
-        }
-
-        // Touch support for mobile
-        let touchStartY = 0;
-        let touchStartTime = 0;
-        let lastTouchTime = 0;
-        const TOUCH_THROTTLE = 300;
-
-        function handleTouchStart(e) {
-            if (!isSliderVisible() || isAnimating) return;
-            
-            touchStartY = e.touches[0].clientY;
-            touchStartTime = Date.now();
-            isSliderActive = true;
-        }
-
-        function handleTouchMove(e) {
-            if (!isSliderVisible() || isAnimating || !isSliderActive) {
-                return;
-            }
-
-            const touchEndY = e.touches[0].clientY;
-            const diff = touchStartY - touchEndY;
-            const swipeTime = Date.now() - touchStartTime;
-            const now = Date.now();
-
-            // Check throttle
-            if (now - lastTouchTime < TOUCH_THROTTLE) {
-                return;
-            }
-
-            // Require minimum swipe distance and time
-            if (Math.abs(diff) > 50 && swipeTime < 600) {
-                if (diff > 0) {
-                    // Swipe UP - next card or exit
-                    if (currentIndex === totalCards - 1) {
-                        isSliderActive = false;
-                        return;
-                    } else {
-                        if (nextCard()) {
-                            e.preventDefault();
-                            lastTouchTime = now;
-                        }
-                    }
-                } else {
-                    // Swipe DOWN - previous card or exit
-                    if (currentIndex === 0) {
-                        isSliderActive = false;
-                        return;
-                    } else {
-                        if (prevCard()) {
-                            e.preventDefault();
-                            lastTouchTime = now;
-                        }
-                    }
-                }
-                touchStartY = touchEndY;
-                touchStartTime = Date.now();
-            }
-        }
-
-        function handleTouchEnd(e) {
-            if (!isSliderVisible()) {
-                isSliderActive = false;
-            }
-        }
-
-        // Mouse wheel outside slider should unlock
-        document.addEventListener('wheel', function(e) {
-            if (!isSliderVisible() && isSliderActive) {
-                isSliderActive = false;
-            }
-        }, { passive: true });
-
-        // Add event listeners
-        window.addEventListener('wheel', handleWheel, {
-            passive: false
-        });
-
-        // Touch events for mobile
-        sliderSection.addEventListener('touchstart', handleTouchStart, {
-            passive: true
-        });
-        sliderSection.addEventListener('touchmove', handleTouchMove, {
-            passive: false
-        });
-        sliderSection.addEventListener('touchend', handleTouchEnd, {
-            passive: true
-        });
-
-        // Initialize
-        function init() {
-            updateCards();
-            if (isSliderVisible()) {
-                isSliderActive = true;
-            }
-        }
-
-        init();
-
-        // Cleanup
-        window.addEventListener('beforeunload', () => {
-            isSliderActive = false;
-        });
-
-        document.addEventListener('visibilitychange', () => {
-            if (document.hidden) {
-                isSliderActive = false;
-            }
-        });
-
-    });
-})();
+        })();
     </script>
-    
+
     <script>
         (function() {
             const form = document.getElementById('enquiryForm');
