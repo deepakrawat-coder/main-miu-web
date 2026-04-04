@@ -2,7 +2,7 @@
      <div class="sidemenu-content"><button class="closeButton sideMenuCls"><i class="far fa-times"></i></button>
          <div class="widget footer-widget">
              <div class="th-widget-about">
-                 <div class="about-logo"><a href="home-university.html"><img src="{{ asset('/new-miu/web-logo.png') }}"
+                 <div class="about-logo"><a href="home-university.html"><img src="{{ asset('/new-miu/weblogo.png') }}"
                              class="bg-white rounded-sm" style="border-radius:8px;" alt="Stadum"></a></div>
                  <p class="about-text">Since 1999, when the newly minted Stadum team embraced its mandate to breathe
                      new life into the downtrodden neighbourhood, East Village’s transformation has been nothing
@@ -170,7 +170,7 @@
          <div class="container th-container2">
              <div class="row justify-content-between align-items-center">
                  <div class="col-auto">
-                     <div class="header-logo"><a href="/"><img src="{{ asset('/new-miu/web-logo.png') }}"
+                     <div class="header-logo"><a href="/"><img src="{{ asset('/new-miu/weblogo.png') }}"
                                  width="200" height="160" alt="Stadum"></a></div>
                  </div>
                  <div class="col-auto">
@@ -211,7 +211,7 @@
                          <div class="col-12 justify-content-center d-flex">
                              <div class="header-left d-flex align-items-center">
                                  <div class="header-logo d-block d-sm-none"><a href="home-university.html"><img
-                                             src="{{ asset('/new-miu/web-logo.png') }}"  width="200" height="160" alt="Stadum"></a></div>
+                                             src="{{ asset('/new-miu/weblogo.png') }}"  width="200" height="160" alt="Stadum"></a></div>
                                  {{-- <div class="header-button d-none d-sm-block"><a href="contact.html"
                                          class="th-btn">Get More Info <img src="assets/img/icon/right-icon.svg"
                                              class="th-arrow" alt="icon"></a></div> --}}
