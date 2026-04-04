@@ -90,7 +90,7 @@
                         <div class="academic-img"><img src="{{ asset('/new-miu/courses/1.jpg') }}" alt="img">
                         </div>
                         <div class="academic-content">
-                            <h3 class="box-title"><a href="#">School of Arts & Humanities</a></h3>
+                            <h3 class="box-title"><a href="/schools-departments-details">School of Arts & Humanities</a></h3>
 
                             <p class="box-text style2 mt-2">
                                 The School of Arts and Humanities at Manipur International University (MIU) is a dynamic
@@ -99,12 +99,12 @@
                         </div>
                         <div class="academic-meta-wrap d-block">
                             <div class="academic-meta d-block">
-                                <p class="mb-1"><a href="#" class="subject"><i class="fa-solid fa-check"></i>
+                                <p class="mb-1"><a href="/schools-departments-details" class="subject"><i class="fa-solid fa-check"></i>
                                         Creative Writing & Literature </a></p>
-                                <p><a href="#" class="duration"><i class="fa-solid fa-check"></i> Cultural &
+                                <p><a href="/schools-departments-details" class="duration"><i class="fa-solid fa-check"></i> Cultural &
                                         Historical Studies</a></p>
                             </div>
-                            <a href="#" class="th-btn style-border1 th-icon">Explore</a>
+                            <a href="/schools-departments-details" class="th-btn style-border1 th-icon">Explore</a>
                         </div>
                     </div>
                 </div>
@@ -114,7 +114,7 @@
                         <div class="academic-img"><img src="{{ asset('/new-miu/courses/1.jpg') }}" alt="img">
                         </div>
                         <div class="academic-content">
-                            <h3 class="box-title"><a href="#">School of Science</a></h3>
+                            <h3 class="box-title"><a href="/schools-departments-details">School of Science</a></h3>
 
                             <p class="box-text style2 mt-2">
                                 The School of Basic Sciences and Biotechnology at Manipur International University (MIU)
@@ -123,10 +123,10 @@
                         </div>
                         <div class="academic-meta-wrap d-block">
                             <div class="academic-meta d-block">
-                                <p class="mb-1"><a href="#" class="subject"><i class="fa-solid fa-check"></i>
+                                <p class="mb-1"><a href="/schools-departments-details" class="subject"><i class="fa-solid fa-check"></i>
                                         Physics & Chemistry Labs,Biotechnology Research </a></p>
                             </div>
-                            <a href="#" class="th-btn style-border1 th-icon">Explore</a>
+                            <a href="/schools-departments-details" class="th-btn style-border1 th-icon">Explore</a>
                         </div>
                     </div>
                 </div>
@@ -136,7 +136,7 @@
                         <div class="academic-img"><img src="{{ asset('/new-miu/courses/1.jpg') }}" alt="img">
                         </div>
                         <div class="academic-content">
-                            <h3 class="box-title"><a href="#">School of Yoga Science</a></h3>
+                            <h3 class="box-title"><a href="/schools-departments-details">School of Yoga Science</a></h3>
 
                             <p class="box-text style2 mt-2">
                                 The School of Yoga at Manipur International University (MIU) offers B.A. (Yoga) and M.A.
@@ -145,10 +145,10 @@
                         </div>
                         <div class="academic-meta-wrap d-block">
                             <div class="academic-meta d-block">
-                                <p class="mb-1"><a href="#" class="subject"><i class="fa-solid fa-check"></i>
+                                <p class="mb-1"><a href="/schools-departments-details" class="subject"><i class="fa-solid fa-check"></i>
                                         Practical Yoga Training,Meditation & Wellness </a></p>
                             </div>
-                            <a href="#" class="th-btn style-border1 th-icon">Explore</a>
+                            <a href="/schools-departments-details" class="th-btn style-border1 th-icon">Explore</a>
                         </div>
                     </div>
                 </div>
@@ -158,7 +158,7 @@
                         <div class="academic-img"><img src="{{ asset('/new-miu/courses/1.jpg') }}" alt="img">
                         </div>
                         <div class="academic-content">
-                            <h3 class="box-title"><a href="#">School of Business, Management & Commerce</a></h3>
+                            <h3 class="box-title"><a href="/schools-departments-details">School of Business, Management & Commerce</a></h3>
 
                             <p class="box-text style2 mt-2">
                                 The School of Business Management and Commerce at Manipur International University (MIU) is
@@ -167,12 +167,12 @@
                         </div>
                         <div class="academic-meta-wrap d-block">
                             <div class="academic-meta d-block">
-                                <p class="mb-1"><a href="#" class="subject"><i class="fa-solid fa-check"></i>
+                                <p class="mb-1"><a href="/schools-departments-details" class="subject"><i class="fa-solid fa-check"></i>
                                         Business Administration </a></p>
-                                <p><a href="#" class="duration"><i class="fa-solid fa-check"></i> Financial
+                                <p><a href="/schools-departments-details" class="duration"><i class="fa-solid fa-check"></i> Financial
                                         Management</a></p>
                             </div>
-                            <a href="#" class="th-btn style-border1 th-icon">Explore</a>
+                            <a href="/schools-departments-details" class="th-btn style-border1 th-icon">Explore</a>
                         </div>
                     </div>
                 </div>
@@ -182,7 +182,7 @@
                         <div class="academic-img"><img src="{{ asset('/new-miu/courses/1.jpg') }}" alt="img">
                         </div>
                         <div class="academic-content">
-                            <h3 class="box-title"><a href="#">School of Engineering & Technology</a></h3>
+                            <h3 class="box-title"><a href="/schools-departments-details">School of Engineering & Technology</a></h3>
 
                             <p class="box-text style2 mt-2">
                                 The School of Technology at Manipur International University (MIU) offers a comprehensive
@@ -191,12 +191,12 @@
                         </div>
                         <div class="academic-meta-wrap d-block">
                             <div class="academic-meta d-block">
-                                <p class="mb-1"><a href="#" class="subject"><i class="fa-solid fa-check"></i>
+                                <p class="mb-1"><a href="/schools-departments-details" class="subject"><i class="fa-solid fa-check"></i>
                                         B.Tech & M.Tech Programs </a></p>
-                                <p><a href="#" class="duration"><i class="fa-solid fa-check"></i> Research &
+                                <p><a href="/schools-departments-details" class="duration"><i class="fa-solid fa-check"></i> Research &
                                         Development Labs</a></p>
                             </div>
-                            <a href="#" class="th-btn style-border1 th-icon">Explore</a>
+                            <a href="/schools-departments-details" class="th-btn style-border1 th-icon">Explore</a>
                         </div>
                     </div>
                 </div>
@@ -206,7 +206,7 @@
                         <div class="academic-img"><img src="{{ asset('/new-miu/courses/1.jpg') }}" alt="img">
                         </div>
                         <div class="academic-content">
-                            <h3 class="box-title"><a href="#">School of Mass Communication and Journalism</a></h3>
+                            <h3 class="box-title"><a href="/schools-departments-details">School of Mass Communication and Journalism</a></h3>
 
                             <p class="box-text style2 mt-2">
                                 The School of Journalism and Mass Communication at Manipur International University (MIU)
@@ -215,10 +215,10 @@
                         </div>
                         <div class="academic-meta-wrap d-block">
                             <div class="academic-meta d-block">
-                                <p class="mb-1"><a href="#" class="subject"><i class="fa-solid fa-check"></i>
+                                <p class="mb-1"><a href="/schools-departments-details" class="subject"><i class="fa-solid fa-check"></i>
                                         Practical Journalism Training,Media Production & Editing </a></p>
                             </div>
-                            <a href="#" class="th-btn style-border1 th-icon">Explore</a>
+                            <a href="/schools-departments-details" class="th-btn style-border1 th-icon">Explore</a>
                         </div>
                     </div>
                 </div>
@@ -228,7 +228,7 @@
                         <div class="academic-img"><img src="{{ asset('/new-miu/courses/1.jpg') }}" alt="img">
                         </div>
                         <div class="academic-content">
-                            <h3 class="box-title"><a href="#">School of Library & Information Science</a></h3>
+                            <h3 class="box-title"><a href="/schools-departments-details">School of Library & Information Science</a></h3>
 
                             <p class="box-text style2 mt-2">
                                 The School of Library and Information Science at Manipur International University (MIU)
@@ -237,10 +237,10 @@
                         </div>
                         <div class="academic-meta-wrap d-block">
                             <div class="academic-meta d-block">
-                                <p class="mb-1"><a href="#" class="subject"><i class="fa-solid fa-check"></i>
+                                <p class="mb-1"><a href="/schools-departments-details" class="subject"><i class="fa-solid fa-check"></i>
                                         Digital Library Management,Information Architecture </a></p>
                             </div>
-                            <a href="#" class="th-btn style-border1 th-icon">Explore</a>
+                            <a href="/schools-departments-details" class="th-btn style-border1 th-icon">Explore</a>
                         </div>
                     </div>
                 </div>
@@ -250,7 +250,7 @@
                         <div class="academic-img"><img src="{{ asset('/new-miu/courses/1.jpg') }}" alt="img">
                         </div>
                         <div class="academic-content">
-                            <h3 class="box-title"><a href="#">School of Computer Science & Information</a></h3>
+                            <h3 class="box-title"><a href="/schools-departments-details">School of Computer Science & Information</a></h3>
 
                             <p class="box-text style2 mt-2">
                                 The School of Computer Science and Information Technology at Manipur International
@@ -259,12 +259,12 @@
                         </div>
                         <div class="academic-meta-wrap d-block">
                             <div class="academic-meta d-block">
-                                <p class="mb-1"><a href="#" class="subject"><i class="fa-solid fa-check"></i>
+                                <p class="mb-1"><a href="/schools-departments-details" class="subject"><i class="fa-solid fa-check"></i>
                                         Software Development </a></p>
-                                <p><a href="#" class="subject"><i class="fa-solid fa-check"></i> Data Science & AI
+                                <p><a href="/schools-departments-details" class="subject"><i class="fa-solid fa-check"></i> Data Science & AI
                                     </a></p>
                             </div>
-                            <a href="#" class="th-btn style-border1 th-icon">Explore</a>
+                            <a href="/schools-departments-details" class="th-btn style-border1 th-icon">Explore</a>
                         </div>
                     </div>
                 </div>
@@ -274,7 +274,7 @@
                         <div class="academic-img"><img src="{{ asset('/new-miu/courses/1.jpg') }}" alt="img">
                         </div>
                         <div class="academic-content">
-                            <h3 class="box-title"><a href="#">School of Animation</a></h3>
+                            <h3 class="box-title"><a href="/schools-departments-details">School of Animation</a></h3>
 
                             <p class="box-text style2 mt-2">
                                 The School of Fine Arts at Manipur International University (MIU) offers B.F.A. and M.F.A.
@@ -283,12 +283,12 @@
                         </div>
                         <div class="academic-meta-wrap d-block">
                             <div class="academic-meta d-block">
-                                <p class="mb-1"><a href="#" class="subject"><i class="fa-solid fa-check"></i> 2D
+                                <p class="mb-1"><a href="/schools-departments-details" class="subject"><i class="fa-solid fa-check"></i> 2D
                                         & 3D Animation </a></p>
-                                <p><a href="#" class="subject"><i class="fa-solid fa-check"></i> Visual Effects
+                                <p><a href="/schools-departments-details" class="subject"><i class="fa-solid fa-check"></i> Visual Effects
                                         (VFX) </a></p>
                             </div>
-                            <a href="#" class="th-btn style-border1 th-icon">Explore</a>
+                            <a href="/schools-departments-details" class="th-btn style-border1 th-icon">Explore</a>
                         </div>
                     </div>
                 </div>

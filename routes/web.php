@@ -28,6 +28,7 @@ Route::view('/about', 'web.pages.about');
 Route::view('/contact', 'web.pages.contact');
 Route::view('/chancellor', 'web.pages.chancellor');
 Route::view('/schools-and-departments', 'web.pages.schools-and-departments');
+Route::view('/schools-departments-details', 'web.pages.schools-departments-details');
 
 // Route::get('/', [WebHomeController::class, 'index'])->name('home');
 // Route::view('/about-us', 'web.pages.about-us');
