@@ -278,7 +278,7 @@
                                          <li><a href="/">Home</a></li>
                                          <li class="menu-item-has-children"><a href="#">About Us</a>
                                              <ul class="sub-menu">
-                                                 <li><a href="program.html">Overview</a></li>
+                                                 <li><a href="/about">Overview</a></li>
                                                  <li class="menu-item-has-children"><a
                                                          href="#">Administration</a>
                                                      <ul class="sub-menu">
