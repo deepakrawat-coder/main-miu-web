@@ -51,48 +51,65 @@
                                 <span class="sub-title text-anim">Welcome to MIU</span>
                                 <h2 class="sec-title text-anim2">Welcome message</h2>
                                 <p class="sec-text mt-25 wow fadeInUp" data-wow-delay=".3s">
-                                   Dear Students, Faculty, and Friends,
+                                    Dear Students, Faculty, and Esteemed Stakeholders,
                                 </p>
                                 <p class="sec-text wow fadeInUp" data-wow-delay=".3s">
-                                    Manipur International University, with its campuses spread across the pristine lush green valley and blue hills in the serene environment of the unique valley of Manipur state India, is an ideal place conducive to high quality learning.
-
-
-                                </p>
-                                <p class="sec-text wow fadeInUp" data-wow-delay=".3s">
-                                    Education and learning, the acquisition of knowledge, skills and values aids the all-round growth of the physical, mental, intellectual and spiritual aspects of an individual, leading to career growth and self-development.
-
+                                    It gives me immense pleasure to welcome you to Manipur International University (MIU)—an
+                                    institution committed to academic excellence, innovation, and holistic development.
 
                                 </p>
                                 <p class="sec-text wow fadeInUp" data-wow-delay=".3s">
-                                   In the present Hi-tech era and globalization, technology influences occupation, working systems and lifestyle; this situation demands to the individuals a need to prepare for a space in the hi-tech competitive world and tech-savvy skills are a must for advancing their careers in the global marketplace.
+                                    Nestled amidst the pristine valleys and scenic blue hills of Manipur, MIU offers an
+                                    intellectually stimulating and serene environment that is uniquely conducive to
+                                    high-quality learning and research. Our campus is not merely a place of education, but a
+                                    vibrant ecosystem where ideas flourish, curiosity is nurtured, and future leaders are
+                                    shaped.
+
+                                </p>
+                                <p class="sec-text wow fadeInUp" data-wow-delay=".3s">
+                                    At MIU, we believe that education extends beyond the acquisition of knowledge. It is a
+                                    transformative journey that cultivates intellectual depth, practical competence, ethical
+                                    values, and a lifelong passion for learning. Our academic framework is designed to
+                                    foster the all-round development of individuals—empowering them physically, mentally,
+                                    intellectually, and socially to excel in an increasingly complex world.
+
+                                </p>
+                                <p class="sec-text wow fadeInUp" data-wow-delay=".3s">
+                                    In today’s rapidly evolving, technology-driven global landscape, the demands on learners
+                                    are dynamic and ever-expanding. The integration of advanced technologies, changing
+                                    professional paradigms, and global interconnectedness require individuals to be agile,
+                                    skilled, and forward-thinking. At MIU, we are deeply committed to equipping our students
+                                    with future-ready competencies, ensuring they remain competitive and relevant in the
+                                    global marketplace.
 
 
                                 </p>
                                 <p class="sec-text wow fadeInUp" data-wow-delay=".3s">
-                                    Learning, however, is complex, it is so exciting when interested and well heavy when forced, with all technical support of modern world, it has not changed much, it cannot be forced. The "National Education Policy 2020" and the "National Science, Technology and Innovation Policy 2020" emphasize Research and Innovation including multidisciplinary and interdisciplinary researches from young age to enable our academia and students compete in the global tech scenario and contribute to National growth and development.
+                                    Our focus lies in nurturing a culture of innovation, creativity, and research-oriented
+                                    learning. Through a supportive academic environment, we strive to ignite young minds,
+                                    encourage introspection, and empower individuals to realize their fullest potential—both
+                                    as professionals and as responsible members of society.
+                                    I encourage all students, scholars, and aspirants to fully leverage the academic
+                                    resources, research opportunities, and enriching environment at MIU. May your journey
+                                    here be one of discovery, growth, and excellence, leading you to become accomplished
+                                    professionals and visionary leaders who contribute positively to the world.
 
-
-                                </p>
-                                <p class="sec-text wow fadeInUp" data-wow-delay=".3s">
-                                  MIU emphasizes in inculcating scientific learning, research mindedness, creative thinking, innovations and gaining skills to suit the modern hi-tech era as well as maintain an environment to nurture talent and ignite their minds to facilitate learning with introspection which is enlightening and empowering to elevate them to ideal-character individuals.
-
-
-                                </p>
-                                <p class="sec-text wow fadeInUp" data-wow-delay=".3s">
-                                   I hope all aspirants and research scholars will make the most of the facilities of the University to make learning enjoyable, exciting and to start a process to elevate self to the highest to become an accomplished and competent academic scholar and societal leader contributing to the betterment of the world.
 
 
                                 </p>
+                                {{-- <p class="sec-text wow fadeInUp" data-wow-delay=".3s">
+                                  With my best wishes for your success and future endeavors.                                </p> --}}
 
                                 <div class="row align-items-center">
                                     <div class="col-8 col-sm-8">
                                         <div class="re mb-2">
-                                            <p class="sec-text fw-bold wow fadeInUp mb-0" data-wow-delay=".3s">Best wishes,
+                                            <p class="sec-text fw-bold wow fadeInUp mb-0" data-wow-delay=".3s">With my best wishes for your success and future endeavors. 
                                             </p>
-                                            <p class="sec-text fw-bold wow fadeInUp mb-0" data-wow-delay=".3s">Prof. T. Brajeshwari Devi
+                                            <p class="sec-text fw-bold wow fadeInUp mb-0" data-wow-delay=".3s">Prof. T.
+                                                Brajeshwari Devi
 
                                             </p>
-                                            <p class="sec-text fw-bold wow fadeInUp mb-0" data-wow-delay=".3s">Registrar
+                                            <p class="sec-text fw-bold wow fadeInUp mb-0" data-wow-delay=".3s">Registrar <br>Manipur International University
 
 
                                             </p>

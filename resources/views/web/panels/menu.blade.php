@@ -283,14 +283,15 @@
                                                          href="#">Administration</a>
                                                      <ul class="sub-menu">
                                                          <li><a href="/chancellor">Chancellor's Message</a></li>
+                                                         <li><a href="/vice-chancellor">Vice Chancellor's Message</a></li>                                                      
                                                          <li><a href="/pro-vice-chancellor">Pro Chancellor's Message</a>
                                                          </li>
-                                                         <li><a href="/vice-chancellor">Vice Chancellor's Message</a></li>
                                                          <li><a href="/registrar">Registrar's Message</a></li>
                                                          {{-- <li><a href="#">Academic Leadership</a></li> --}}
-                                                         <li><a href="#">Controller of Examinations</a>
+                                                         <li><a href="/director ">Director</a></li>
+                                                         <li><a href="/coe">Controller of Examinations</a>
                                                          </li>
-                                                         <li><a href="#">Director</a></li>
+                                                         
                                                      </ul>
                                                  </li>
                                                  <li class="menu-item-has-children"><a href="#">Governance</a>

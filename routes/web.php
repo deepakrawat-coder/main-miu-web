@@ -30,6 +30,8 @@ Route::view('/chancellor', 'web.pages.chancellor');
 Route::view('/pro-vice-chancellor', 'web.pages.pro-vice-chancellor');
 Route::view('/vice-chancellor', 'web.pages.vice-chancellor');
 Route::view('/registrar', 'web.pages.registrar');
+Route::view('/director', 'web.pages.director');
+Route::view('/coe', 'web.pages.coe');
 Route::view('/schools-and-departments', 'web.pages.schools-and-departments');
 Route::view('/schools-departments-details', 'web.pages.schools-departments-details');
 

@@ -98,7 +98,7 @@
                                             </p>
 
                                             <p class="sec-text fw-bold wow fadeInUp mb-0" data-wow-delay=".3s">Vice
-                                                Chancellor
+                                                Chancellor <br>Manipur International University
                                             </p>
                                         </div>
                                     </div>

@@ -51,35 +51,36 @@
                                 <span class="sub-title text-anim">Welcome to MIU</span>
                                 <h2 class="sec-title text-anim2">Welcome message</h2>
                                 <p class="sec-text mt-25 wow fadeInUp" data-wow-delay=".3s">
-                                    Dear Students, Faculty, Staff, and Visitors,
+                                    Dear Students,
                                 </p>
-                                <p class="sec-text mt-25 wow fadeInUp" data-wow-delay=".3s">Welcome to Manipur International
-                                    University.</p>
+                                <p class="sec-text mt-25 wow fadeInUp" data-wow-delay=".3s">Greetings from Manipur
+                                    International University.</p>
                                 <p class="sec-text wow fadeInUp" data-wow-delay=".3s">
-                                    It is both an honor and a privilege to serve as the Chancellor of this esteemed
-                                    institution. At MIU, we are committed to fostering a culture defined by academic
-                                    excellence, innovation, and inclusivity, where every learner is empowered to realize
-                                    their fullest potential.
-                                </p>
-                                <p class="sec-text wow fadeInUp" data-wow-delay=".3s">
-                                    Our university reflects a strong legacy of achievement and an unwavering commitment to
-                                    shaping future-ready leaders. We provide a dynamic academic environment that nurtures
-                                    intellectual growth, professional competence, and ethical responsibility. Our
-                                    distinguished faculty serve not only as educators but as mentors and thought leaders,
-                                    driving impactful research and knowledge creation.
+                                    It is my privilege to extend my best wishes to all students as you embark on your
+                                    academic journey with us. The Office of the Controller of Examinations plays a pivotal
+                                    role in upholding the integrity, transparency, and credibility of the university’s
+                                    evaluation system.
                                 </p>
                                 <p class="sec-text wow fadeInUp" data-wow-delay=".3s">
-                                    We firmly believe that education is a transformative force that shapes individuals and
-                                    contributes meaningfully to society. Our diverse and vibrant campus encourages
-                                    collaboration, critical inquiry, and lifelong learning.
+                                    At MIU, we are committed to ensuring a fair, robust, and student-centric examination
+                                    process that accurately reflects academic performance and learning outcomes. Our
+                                    evaluation framework is designed to maintain the highest standards of confidentiality,
+                                    consistency, and academic rigor, while also supporting continuous improvement and
+                                    innovation in assessment practices.
                                 </p>
                                 <p class="sec-text wow fadeInUp" data-wow-delay=".3s">
-                                    As we move forward, we remain dedicated to advancing academic excellence through
-                                    innovative programs, interdisciplinary engagement, and a strong focus on societal
-                                    progress.
+                                    We encourage all students to approach their academic responsibilities with dedication,
+                                    discipline, and a spirit of excellence. Examinations are not merely a measure of
+                                    knowledge, but an opportunity to demonstrate understanding, analytical ability, and
+                                    personal growth.
                                 </p>
                                 <p class="sec-text wow fadeInUp" data-wow-delay=".3s">
-                                  I invite you to explore our university and become a part of this inspiring journey.
+                                    The Examination Department remains dedicated to providing timely support, clear
+                                    communication, and efficient processes to facilitate a smooth and stress-free
+                                    examination experience for every student.
+                                </p>
+                                <p class="sec-text wow fadeInUp" data-wow-delay=".3s">
+                                   I extend my sincere wishes for your success and encourage you to make the most of the academic opportunities available at MIU.
                                 </p>
                                 {{-- <p class="sec-text wow fadeInUp" data-wow-delay=".3s">
                                     We appreciate your interest in Manipur International University. Let's work together
@@ -90,13 +91,16 @@
                                 <div class="row align-items-center">
                                     <div class="col-8 col-sm-8">
                                         <div class="re mb-2">
-                                            <p class="sec-text fw-bold wow fadeInUp mb-0" data-wow-delay=".3s">Warm regards,
+                                            <p class="sec-text fw-bold wow fadeInUp mb-0" data-wow-delay=".3s">With best wishes,
                                             </p>
-                                            <p class="sec-text fw-bold wow fadeInUp mb-0" data-wow-delay=".3s">Dr. Hari
+                                            {{-- <p class="sec-text fw-bold wow fadeInUp mb-0" data-wow-delay=".3s">Dr. Hari
                                                 kumar
+                                            </p> --}}
+                                            <p class="sec-text fw-bold wow fadeInUp mb-0" data-wow-delay=".3s">Controller of Examinations (COE)<br>Manipur International University
+
+
                                             </p>
-                                            <p class="sec-text fw-bold wow fadeInUp mb-0" data-wow-delay=".3s">Chancellor <br>Manipur International University
-                                            </p>
+
                                         </div>
                                     </div>
                                     <div class="col-4 col-sm-4">

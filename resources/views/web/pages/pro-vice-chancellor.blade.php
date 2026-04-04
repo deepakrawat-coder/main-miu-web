@@ -105,7 +105,7 @@
 
                                             </p>
                                             <p class="sec-text fw-bold wow fadeInUp mb-0" data-wow-delay=".3s">Pro Vice
-                                                Chancellor (Acting Vice Chancellor)
+                                                Chancellor (Acting Vice Chancellor) <br>Manipur International University
 
 
                                             </p>

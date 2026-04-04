@@ -1,5 +1,5 @@
 @extends('web.layouts.main')
-@section('title', '| Chancellor Message ')
+@section('title', '| Registrar Message ')
 @section('description',
     'MIU University is a renowned university, serving students with more than 35 UGC-certified
     courses.')
@@ -51,51 +51,61 @@
                                 <span class="sub-title text-anim">Welcome to MIU</span>
                                 <h2 class="sec-title text-anim2">Welcome message</h2>
                                 <p class="sec-text mt-25 wow fadeInUp" data-wow-delay=".3s">
-                                    Dear Students, Faculty, Staff, and Visitors,
-                                </p>
-                                <p class="sec-text mt-25 wow fadeInUp" data-wow-delay=".3s">Welcome to Manipur International
-                                    University.</p>
-                                <p class="sec-text wow fadeInUp" data-wow-delay=".3s">
-                                    It is both an honor and a privilege to serve as the Chancellor of this esteemed
-                                    institution. At MIU, we are committed to fostering a culture defined by academic
-                                    excellence, innovation, and inclusivity, where every learner is empowered to realize
-                                    their fullest potential.
+                                    Dear Students, Faculty, and Friends,
                                 </p>
                                 <p class="sec-text wow fadeInUp" data-wow-delay=".3s">
-                                    Our university reflects a strong legacy of achievement and an unwavering commitment to
-                                    shaping future-ready leaders. We provide a dynamic academic environment that nurtures
-                                    intellectual growth, professional competence, and ethical responsibility. Our
-                                    distinguished faculty serve not only as educators but as mentors and thought leaders,
-                                    driving impactful research and knowledge creation.
+                                    It gives me immense pleasure to welcome you to Manipur International University.
+
                                 </p>
                                 <p class="sec-text wow fadeInUp" data-wow-delay=".3s">
-                                    We firmly believe that education is a transformative force that shapes individuals and
-                                    contributes meaningfully to society. Our diverse and vibrant campus encourages
-                                    collaboration, critical inquiry, and lifelong learning.
+                                    At MIU, we are committed to fostering an academic environment that promotes excellence,
+                                    innovation, and meaningful engagement. As the Director of Admissions, I take pride in
+                                    inviting you to explore an institution that is dedicated to shaping future-ready
+                                    professionals through quality education and holistic development.
                                 </p>
                                 <p class="sec-text wow fadeInUp" data-wow-delay=".3s">
-                                    As we move forward, we remain dedicated to advancing academic excellence through
-                                    innovative programs, interdisciplinary engagement, and a strong focus on societal
-                                    progress.
+                                    We firmly believe that every learner possesses the potential to achieve excellence when
+                                    guided by the right opportunities and mentorship. Whether you are an aspiring student, a
+                                    researcher, or a valued member of the academic community, MIU offers a supportive
+                                    ecosystem designed to help you grow, excel, and succeed.
+
                                 </p>
                                 <p class="sec-text wow fadeInUp" data-wow-delay=".3s">
-                                  I invite you to explore our university and become a part of this inspiring journey.
+                                    Recognized among the emerging private universities in Manipur, MIU emphasizes
+                                    industry-aligned programs, practical learning, and a vibrant campus experience. Through
+                                    our academic offerings and student-centric approach, we strive to create pathways that
+                                    lead to both personal fulfillment and professional success.
+
+
+                                </p>
+                                <p class="sec-text wow fadeInUp" data-wow-delay=".3s">
+                                    As you explore our website, you will discover the diverse opportunities that await
+                                    you—from innovative programs to a dynamic learning environment. Whether you are
+                                    considering joining us, are already part of our university, or are one of our proud
+                                    alumni, you remain an integral part of our journey toward excellence.
+                                    I extend my sincere gratitude for your interest and support. We look forward to
+                                    welcoming you to the MIU community and being a part of your academic and professional
+                                    journey.
+
+
+
+
                                 </p>
                                 {{-- <p class="sec-text wow fadeInUp" data-wow-delay=".3s">
-                                    We appreciate your interest in Manipur International University. Let's work together
-                                    towards
-                                    a brighter future.
-                                </p> --}}
+                                  With my best wishes for your success and future endeavors.                                </p> --}}
 
                                 <div class="row align-items-center">
                                     <div class="col-8 col-sm-8">
                                         <div class="re mb-2">
                                             <p class="sec-text fw-bold wow fadeInUp mb-0" data-wow-delay=".3s">Warm regards,
                                             </p>
-                                            <p class="sec-text fw-bold wow fadeInUp mb-0" data-wow-delay=".3s">Dr. Hari
-                                                kumar
-                                            </p>
-                                            <p class="sec-text fw-bold wow fadeInUp mb-0" data-wow-delay=".3s">Chancellor <br>Manipur International University
+                                            {{-- <p class="sec-text fw-bold wow fadeInUp mb-0" data-wow-delay=".3s">Prof. T.
+                                                Brajeshwari Devi
+
+                                            </p> --}}
+                                            <p class="sec-text fw-bold wow fadeInUp mb-0" data-wow-delay=".3s">Director – Admissions <br>Manipur International University
+
+
                                             </p>
                                         </div>
                                     </div>
@@ -115,9 +125,9 @@
             </div>
         </div>
         {{-- <div class="about-shep-2 shape-mockup d-none d-xxl-block" data-top="0%" data-left="0%"><img
-                src="{{ asset('/assets/img/shape/shape-3.png') }}" alt="shape"></div>
+                src="assets/img/shape/shape-3.png" alt="shape"></div>
         <div class="about-shep-2 shape-mockup d-none d-xxl-block" data-bottom="4%" data-left="0%"><img
-                src="{{ asset('/assets/img/shape/shape-4.png') }}" alt="shape"></div> --}}
+                src="assets/img/shape/shape-4.png" alt="shape"></div> --}}
     </section>
 
 
