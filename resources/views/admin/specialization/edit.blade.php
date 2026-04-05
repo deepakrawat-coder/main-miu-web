@@ -74,7 +74,7 @@
 
         <hr>
 
-        <!-- WHY CHOOSE SPECIALIZATION -->
+        {{-- <!-- WHY CHOOSE SPECIALIZATION -->
         <h5>Why Choose Specialization</h5>
         <div id="why-choose-wrapper"></div>
         <button type="button" class="btn btn-sm btn-success mb-3" onclick="addWhyChoose()">+ Add Why Choose
@@ -99,7 +99,7 @@
         <!-- RECRUITER PARTNER -->
         <h5>Recruiter Partner</h5>
         <div id="recruiter-wrapper"></div>
-        <button type="button" class="btn btn-sm btn-success mb-3" onclick="addRecruiter()">+ Add Recruiter</button>
+        <button type="button" class="btn btn-sm btn-success mb-3" onclick="addRecruiter()">+ Add Recruiter</button> --}}
 
         <div class="text-end mt-4">
             <button type="submit" class="btn btn-primary">Update</button>

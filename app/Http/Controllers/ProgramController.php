@@ -64,9 +64,7 @@ class ProgramController extends Controller
 
     public function store(Request $request)
     {
-        $validator = Validator::make($request->all(), [
-            'course_id'        => 'required|array',
-            'course_id.*'      => 'exists:courses,id',
+        $validator = Validator::make($request->all(), [           
             'name'             => 'required|string|max:255',
             'short_description' => 'nullable|string',
             'meta_title'       => 'nullable|string|max:255',
@@ -100,9 +98,9 @@ class ProgramController extends Controller
             $program->save();
 
             // Attach multiple courses - using course_id array
-            if ($request->has('course_id')) {
-                $program->courses()->sync($request->course_id);
-            }
+            // if ($request->has('course_id')) {
+            //     $program->courses()->sync($request->course_id);
+            // }
             return response()->json([
                 'status' => 'success',
                 'message' => 'Program created successfully',
@@ -134,9 +132,7 @@ class ProgramController extends Controller
 
     public function update(Request $request, $id)
     {
-        $validator = Validator::make($request->all(), [
-            'course_id'          => 'required|array',
-            'course_id.*'        => 'exists:courses,id',
+        $validator = Validator::make($request->all(), [           
             'name'               => 'required|string|max:255',
             'short_description'  => 'nullable|string',
             'meta_title'         => 'nullable|string|max:255',
@@ -181,7 +177,7 @@ class ProgramController extends Controller
             /* =========================
            Sync Multiple Courses
         ==========================*/
-            $program->courses()->sync($request->course_id);
+            // $program->courses()->sync($request->course_id);
             return response()->json([
                 'status' => 'success',
                 'message' => 'Program updated successfully',

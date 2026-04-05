@@ -21,15 +21,6 @@
                 {!! $school->short_description !!}
             </textarea>
         </div>
-
-        <!-- Full Description -->
-        <div class="mb-3">
-            <label class="form-label">Full Description</label>
-            <textarea name="description" id="description_edit" class="form-control" rows="4">
-                {!! $school->description !!}
-            </textarea>
-        </div>
-
         <!-- Content -->
         <div class="mb-3">
             <label class="form-label">Content</label>
@@ -49,30 +40,7 @@
             @endif
         </div>
 
-        <!-- Icon -->
-        <div class="mb-3">
-            <label class="form-label">Icon</label>
-            <input type="file" name="icon" class="form-control">
-            @if($school->icon)
-            <div class="mt-2">
-                <img src="{{ asset($school->icon) }}" style="width:60px; border-radius:6px;">
-            </div>
-            @endif
-        </div>
-
-        <!-- Features -->
-        <div class="mb-3">
-            <label class="form-label">Features (comma separated)</label>
-            <input type="text" name="features[]" class="form-control"
-                value="{{ $school->features ? implode(', ', json_decode($school->features)) : '' }}">
-        </div>
-
-        <!-- Highlights -->
-        <div class="mb-3">
-            <label class="form-label">Highlights (comma separated)</label>
-            <input type="text" name="highlights[]" class="form-control"
-                value="{{ $school->highlights ? implode(', ', json_decode($school->highlights)) : '' }}">
-        </div>
+       
 
         <div class="mb-3 text-end">
             <button type="submit" class="btn btn-primary">Update</button>

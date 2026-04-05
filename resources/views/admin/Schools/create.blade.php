@@ -16,12 +16,7 @@
         <div class="mb-3">
             <label class="form-label">Short Description</label>
             <textarea name="short_description" id="short_description" class="form-control" rows="3"></textarea>
-        </div>
-
-        <div class="mb-3">
-            <label class="form-label">Full Description</label>
-            <textarea name="description" id="description" class="form-control" rows="4"></textarea>
-        </div>
+        </div>    
 
         <div class="mb-3">
             <label class="form-label">Content</label>
@@ -31,23 +26,7 @@
         <div class="mb-3">
             <label class="form-label">Image <span class="text-danger">*</span></label>
             <input type="file" name="image" class="form-control" required>
-        </div>
-
-        <div class="mb-3">
-            <label class="form-label">Icon</label>
-            <input type="file" name="icon" class="form-control">
-        </div>
-
-        <!-- Features & Highlights JSON -->
-        <div class="mb-3">
-            <label class="form-label">Features (comma separated)</label>
-            <input type="text" name="features[]" class="form-control" placeholder="Feature1, Feature2">
-        </div>
-
-        <div class="mb-3">
-            <label class="form-label">Highlights (comma separated)</label>
-            <input type="text" name="highlights[]" class="form-control" placeholder="Highlight1, Highlight2">
-        </div>
+        </div>       
 
         <div class="mb-3 text-end">
             <button type="submit" class="btn btn-primary">Save</button>
@@ -72,18 +51,7 @@
             })
             .catch(error => {
                 console.error(error);
-            });
-
-        // Full Description Editor
-        ClassicEditor
-            .create(document.querySelector('#description'))
-            .then(editor => {
-                descriptionEditor = editor;
-            })
-            .catch(error => {
-                console.error(error);
-            });
-
+            });      
         // Content Editor
         ClassicEditor
             .create(document.querySelector('#content'))
@@ -99,8 +67,7 @@
             e.preventDefault();
 
             // Set all editor data before submit
-            $('textarea[name="short_description"]').val(shortDescriptionEditor.getData());
-            $('textarea[name="description"]').val(descriptionEditor.getData());
+            $('textarea[name="short_description"]').val(shortDescriptionEditor.getData());            
             $('textarea[name="content"]').val(contentEditor.getData());
 
             let formData = new FormData(this);

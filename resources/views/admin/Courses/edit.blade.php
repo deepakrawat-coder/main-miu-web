@@ -5,9 +5,7 @@
         <small class="text-muted">Update course details carefully</small>
     </div>
 
-    <form id="course-edit-form"
-        action="{{ route('courses.update', $course->id) }}"
-        method="POST"
+    <form id="course-edit-form" action="{{ route('courses.update', $course->id) }}" method="POST"
         enctype="multipart/form-data">
         @csrf
         <!-- @method('PUT') -->
@@ -17,11 +15,10 @@
             <label class="form-label">School <span class="text-danger">*</span></label>
             <select name="school_id" class="form-select" required>
                 <option value="">Select School</option>
-                @foreach($schools as $school)
-                <option value="{{ $school->id }}"
-                    {{ $course->school_id == $school->id ? 'selected' : '' }}>
-                    {{ $school->name }}
-                </option>
+                @foreach ($schools as $school)
+                    <option value="{{ $school->id }}" {{ $course->school_id == $school->id ? 'selected' : '' }}>
+                        {{ $school->name }}
+                    </option>
                 @endforeach
             </select>
         </div>
@@ -29,59 +26,68 @@
         <!-- Course Name -->
         <div class="mb-3">
             <label class="form-label">Course Name <span class="text-danger">*</span></label>
-            <input type="text" name="name"
-                class="form-control"
-                value="{{ $course->name }}" required>
+            <input type="text" name="name" class="form-control" value="{{ $course->name }}" required>
         </div>
-         <div class="mb-3">
+        <div class="mb-3">
             <label class="form-label">Eligibility</label>
-            <input type="text" name="eligibility"
-                class="form-control"
-                value="{{ $course->eligibility }}" >
+            <input type="text" name="eligibility" class="form-control" value="{{ $course->eligibility }}">
         </div>
-          <div class="mb-3">
+        <div class="mb-3">
             <label class="form-label">Duration</label>
-            <input type="text" name="duration"
-                class="form-control"
-                value="{{ $course->duration }}" >
+            <input type="text" name="duration" class="form-control" value="{{ $course->duration }}">
         </div>
         <!-- Short Description -->
         <div class="mb-3">
             <label class="form-label">Short Description</label>
-            <textarea name="short_description"
-                id="edit_short_description"
-                class="form-control"
-                rows="4">{{ strip_tags($course->short_description) }}</textarea>
+            <textarea name="short_description" id="edit_short_description" class="form-control" rows="4">{{ strip_tags($course->short_description) }}</textarea>
         </div>
 
         <!-- Meta Title -->
         <div class="mb-3">
             <label class="form-label">Meta Title</label>
-            <input type="text"
-                name="meta_title"
-                class="form-control"
-                value="{{ $course->meta_title }}">
+            <input type="text" name="meta_title" class="form-control" value="{{ $course->meta_title }}">
         </div>
 
         <!-- Meta Description -->
         <div class="mb-3">
             <label class="form-label">Meta Description</label>
-            <textarea name="meta_description"
-                class="form-control"
-                rows="2">{{ $course->meta_description }}</textarea>
+            <textarea name="meta_description" class="form-control" rows="2">{{ $course->meta_description }}</textarea>
+        </div>
+        @php
+            $decodedNames = json_decode($course->program_course_name, true);
+
+            // agar JSON hai → array ko string me convert karo
+            if (is_array($decodedNames)) {
+                $courseNames = $decodedNames;
+                $courseNamesString = implode(', ', $decodedNames);
+            } else {
+                // agar already string hai
+                $courseNames = explode(',', $course->program_course_name);
+                $courseNamesString = $course->program_course_name;
+            }
+        @endphp
+
+        <div class="mb-3">
+            <label class="form-label">School Course Name</label>
+            <input type="text" name="program_course_name[]" class="form-control"
+                placeholder="e.g. Commerce, Engineering, Arts" value="{{ $courseNamesString }}">
         </div>
 
+        {{-- Display as badges --}}
+        @if (!empty($courseNames))
+            @foreach ($courseNames as $name)
+                <span class="badge bg-primary me-1">{{ trim($name) }}</span>
+            @endforeach
+        @endif
         <!-- Image -->
         <div class="mb-3">
             <label class="form-label">Course Image</label>
             <input type="file" name="image" class="form-control">
 
-            @if($course->image)
-            <div class="mt-2">
-                <img src="{{ asset($course->image) }}"
-                    width="80"
-                    class="rounded border">
-            </div>
+            @if ($course->image)
+                <div class="mt-2">
+                    <img src="{{ asset($course->image) }}" width="80" class="rounded border">
+                </div>
             @endif
         </div>
 
@@ -153,7 +159,7 @@
     });
 </script>
 
-<!-- 
+<!--
 <script>
     $(document).ready(function() {
 

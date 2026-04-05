@@ -13,7 +13,7 @@
 
 
         {{-- Courses --}}
-        <div class="mb-3">
+        {{-- <div class="mb-3">
             <label class="form-label">Courses *</label>
             <select name="course_id[]" id="edit_course_ids" class="form-select" multiple required>
                 @foreach($courses as $course)
@@ -23,7 +23,7 @@
                 </option>
                 @endforeach
             </select>
-        </div>
+        </div> --}}
 
         {{-- Name --}}
         <div class="mb-3">
@@ -92,10 +92,10 @@
     $(document).ready(function() {
 
         // Select2
-        $('#edit_course_ids').select2({
-            dropdownParent: $('#edit-program-form'),
-            width: '100%'
-        });
+        // $('#edit_course_ids').select2({
+        //     dropdownParent: $('#edit-program-form'),
+        //     width: '100%'
+        // });
 
         // CKEditor
         let editor;

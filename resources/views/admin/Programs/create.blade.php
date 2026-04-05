@@ -8,14 +8,14 @@
 
     <form id="program-form" action="{{ route('programs.store') }}" method="POST" enctype="multipart/form-data">
         @csrf
-        <div class="mb-3">
+        {{-- <div class="mb-3">
             <label class="form-label">Courses <span class="text-danger">*</span></label>
             <select name="course_id[]" id="course_ids" class="form-select" multiple required>
                 @foreach($courses as $course)
                 <option value="{{ $course->id }}">{{ $course->name }}</option>
                 @endforeach
             </select>
-        </div>
+        </div> --}}
 
         {{-- Program Name --}}
         <div class="mb-3">
@@ -61,21 +61,21 @@
     // Single function to initialize both Select2 and CKEditor
     function initProgramForm() {
         // Initialize Select2
-        if ($.fn.select2 && $('#course_ids').length) {
-            // Destroy existing Select2 instance if it exists
-            if ($('#course_ids').hasClass("select2-hidden-accessible")) {
-                $('#course_ids').select2('destroy');
-            }
+        // if ($.fn.select2 && $('#course_ids').length) {
+        //     // Destroy existing Select2 instance if it exists
+        //     if ($('#course_ids').hasClass("select2-hidden-accessible")) {
+        //         $('#course_ids').select2('destroy');
+        //     }
 
-            // Initialize Select2 with proper dropdown parent
-            $('#course_ids').select2({
-                dropdownParent: $('#course_ids').closest('.modal'),
-                width: '100%',
-                placeholder: "Select Courses"
-            });
-        } else {
-            console.log('Select2 not loaded or element not found');
-        }
+        //     // Initialize Select2 with proper dropdown parent
+        //     $('#course_ids').select2({
+        //         dropdownParent: $('#course_ids').closest('.modal'),
+        //         width: '100%',
+        //         placeholder: "Select Courses"
+        //     });
+        // } else {
+        //     console.log('Select2 not loaded or element not found');
+        // }
 
         // Initialize CKEditor
         if (document.querySelector('#short_description')) {
@@ -148,14 +148,14 @@
     });
 
     // Clean up when modal is hidden
-    $(document).on('hidden.bs.modal', function() {
-        if (editorInstance) {
-            editorInstance.destroy();
-            editorInstance = null;
-        }
+    // $(document).on('hidden.bs.modal', function() {
+    //     if (editorInstance) {
+    //         editorInstance.destroy();
+    //         editorInstance = null;
+    //     }
 
-        if ($.fn.select2 && $('#course_ids').hasClass("select2-hidden-accessible")) {
-            $('#course_ids').select2('destroy');
-        }
-    });
+    //     if ($.fn.select2 && $('#course_ids').hasClass("select2-hidden-accessible")) {
+    //         $('#course_ids').select2('destroy');
+    //     }
+    // });
 </script>

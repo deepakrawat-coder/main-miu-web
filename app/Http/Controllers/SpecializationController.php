@@ -145,68 +145,68 @@ class SpecializationController extends Controller
         |--------------------------------------------------------------------------
         */
 
-            $successRates = $request->success_rate ?? [];
-            $careers      = $request->career ?? [];
-            $recruiters   = $request->recruiter ?? [];
-            $whyChoose = $request->why_choose ?? [];
+            // $successRates = $request->success_rate ?? [];
+            // $careers      = $request->career ?? [];
+            // $recruiters   = $request->recruiter ?? [];
+            // $whyChoose = $request->why_choose ?? [];
 
-            foreach ($whyChoose as $key => $item) {
+            // foreach ($whyChoose as $key => $item) {
 
-                if ($request->hasFile("why_choose.$key.image")) {
+            //     if ($request->hasFile("why_choose.$key.image")) {
 
-                    $file = $request->file("why_choose.$key.image");
-                    $filename = time() . '_why_' . $file->getClientOriginalName();
+            //         $file = $request->file("why_choose.$key.image");
+            //         $filename = time() . '_why_' . $file->getClientOriginalName();
 
-                    $file->move(public_path('uploads/specializations/why_choose'), $filename);
+            //         $file->move(public_path('uploads/specializations/why_choose'), $filename);
 
-                    $whyChoose[$key]['image'] =
-                        'uploads/specializations/why_choose/' . $filename;
-                }
-            }
-            // ✅ Career Images Upload
-            foreach ($careers as $key => $career) {
+            //         $whyChoose[$key]['image'] =
+            //             'uploads/specializations/why_choose/' . $filename;
+            //     }
+            // }
+            // // ✅ Career Images Upload
+            // foreach ($careers as $key => $career) {
 
-                if ($request->hasFile("career.$key.image")) {
+            //     if ($request->hasFile("career.$key.image")) {
 
-                    $file = $request->file("career.$key.image");
-                    $filename = time() . '_career_' . $file->getClientOriginalName();
+            //         $file = $request->file("career.$key.image");
+            //         $filename = time() . '_career_' . $file->getClientOriginalName();
 
-                    $file->move(public_path('uploads/specializations/careers'), $filename);
+            //         $file->move(public_path('uploads/specializations/careers'), $filename);
 
-                    $careers[$key]['image'] =
-                        'uploads/specializations/careers/' . $filename;
-                }
-            }
+            //         $careers[$key]['image'] =
+            //             'uploads/specializations/careers/' . $filename;
+            //     }
+            // }
 
-            // ✅ Recruiter Images Upload
-            foreach ($recruiters as $key => $rec) {
+            // // ✅ Recruiter Images Upload
+            // foreach ($recruiters as $key => $rec) {
 
-                if ($request->hasFile("recruiter.$key.image")) {
+            //     if ($request->hasFile("recruiter.$key.image")) {
 
-                    $file = $request->file("recruiter.$key.image");
-                    $filename = time() . '_recruiter_' . $file->getClientOriginalName();
+            //         $file = $request->file("recruiter.$key.image");
+            //         $filename = time() . '_recruiter_' . $file->getClientOriginalName();
 
-                    $file->move(public_path('uploads/specializations/recruiters'), $filename);
+            //         $file->move(public_path('uploads/specializations/recruiters'), $filename);
 
-                    $recruiters[$key]['image'] =
-                        'uploads/specializations/recruiters/' . $filename;
-                }
-            }
+            //         $recruiters[$key]['image'] =
+            //             'uploads/specializations/recruiters/' . $filename;
+            //     }
+            // }
 
-            $featureData = [
-                'why_choose' => $whyChoose,
-                'success_rate' => $successRates,
-                'career'       => $careers,
-                'recruiter'    => $recruiters
-            ];
+            // $featureData = [
+            //     'why_choose' => $whyChoose,
+            //     'success_rate' => $successRates,
+            //     'career'       => $careers,
+            //     'recruiter'    => $recruiters
+            // ];
 
             // ✅ Insert into specialization_features table
-            DB::table('specialization_features')->insert([
-                'specialization_id' => $specialization->id,
-                'features_json'     => base64_encode(json_encode($featureData)),
-                'created_at'        => now(),
-                'updated_at'        => now()
-            ]);
+            // DB::table('specialization_features')->insert([
+            //     'specialization_id' => $specialization->id,
+            //     'features_json'     => base64_encode(json_encode($featureData)),
+            //     'created_at'        => now(),
+            //     'updated_at'        => now()
+            // ]);
 
             return response()->json([
                 'status'  => 'success',
@@ -226,21 +226,21 @@ class SpecializationController extends Controller
         $specialization = Specialization::findOrFail($id);
         $programs = Program::where('status', 1)->get();
 
-        $featureRow = DB::table('specialization_features')
-            ->where('specialization_id', $id)
-            ->first();
+        // $featureRow = DB::table('specialization_features')
+        //     ->where('specialization_id', $id)
+        //     ->first();
 
-        $features = [];
-        // dd($featureRow);
-        if ($featureRow && !empty($featureRow->features_json)) {
-            $decoded = base64_decode($featureRow->features_json);
-            $features = json_decode($decoded, true) ?? [];
-        }
+        // $features = [];
+        // // dd($featureRow);
+        // if ($featureRow && !empty($featureRow->features_json)) {
+        //     $decoded = base64_decode($featureRow->features_json);
+        //     $features = json_decode($decoded, true) ?? [];
+        // }
         // dd($features);
         return view('admin.specialization.edit', compact(
             'specialization',
-            'programs',
-            'features'
+            'programs'
+            
         ));
     }
     public function update(Request $request, $id)
@@ -252,7 +252,7 @@ class SpecializationController extends Controller
             'image'      => 'nullable|image|mimes:jpg,jpeg,png,webp|max:2048',
         ]);
 
-        DB::transaction(function () use ($request, $id) {
+        // DB::transaction(function () use ($request, $id) {
 
             $specialization = Specialization::findOrFail($id);
 
@@ -270,13 +270,13 @@ class SpecializationController extends Controller
             $specialization->content           = $request->content;
             $specialization->meta_title        = $request->meta_title;
             $specialization->meta_description  = $request->meta_description;
-            $specialization->status            = $request->status ?? 1;
+            // $specialization->status            = $request->status ?? 1;
 
-            /*
-        |--------------------------------------------------------------------------
-        | MAIN IMAGE REPLACE
-        |--------------------------------------------------------------------------
-        */
+        //     /*
+        // |--------------------------------------------------------------------------
+        // | MAIN IMAGE REPLACE
+        // |--------------------------------------------------------------------------
+        // */
 
             if ($request->hasFile('image')) {
 
@@ -296,127 +296,127 @@ class SpecializationController extends Controller
                     'uploads/specializations/' . $filename;
             }
 
-            $specialization->save();
+         $specialization->save();
 
-            /*
-        |--------------------------------------------------------------------------
-        | FETCH OLD FEATURES
-        |--------------------------------------------------------------------------
-        */
+        //     /*
+        // |--------------------------------------------------------------------------
+        // | FETCH OLD FEATURES
+        // |--------------------------------------------------------------------------
+        // */
 
-            $oldFeatureRow = DB::table('specialization_features')
-                ->where('specialization_id', $id)
-                ->first();
+        //     $oldFeatureRow = DB::table('specialization_features')
+        //         ->where('specialization_id', $id)
+        //         ->first();
 
-            $oldFeatures = [];
+        //     $oldFeatures = [];
 
-            if ($oldFeatureRow) {
-                $oldFeatures = json_decode(
-                    base64_decode($oldFeatureRow->features_json),
-                    true
-                );
-            }
+        //     if ($oldFeatureRow) {
+        //         $oldFeatures = json_decode(
+        //             base64_decode($oldFeatureRow->features_json),
+        //             true
+        //         );
+        //     }
 
-            $successRates = $request->success_rate ?? [];
-            $careers      = $request->career ?? [];
-            $recruiters   = $request->recruiter ?? [];
-            $whyChoose    = $request->why_choose ?? [];
+        //     $successRates = $request->success_rate ?? [];
+        //     $careers      = $request->career ?? [];
+        //     $recruiters   = $request->recruiter ?? [];
+        //     $whyChoose    = $request->why_choose ?? [];
 
-            /*
-        |--------------------------------------------------------------------------
-        | WHY CHOOSE IMAGE HANDLE
-        |--------------------------------------------------------------------------
-        */
+        //     /*
+        // |--------------------------------------------------------------------------
+        // | WHY CHOOSE IMAGE HANDLE
+        // |--------------------------------------------------------------------------
+        // */
 
-            foreach ($whyChoose as $key => $item) {
+        //     foreach ($whyChoose as $key => $item) {
 
-                if ($request->hasFile("why_choose.$key.image")) {
+        //         if ($request->hasFile("why_choose.$key.image")) {
 
-                    if (
-                        !empty($oldFeatures['why_choose'][$key]['image']) &&
-                        file_exists(public_path($oldFeatures['why_choose'][$key]['image']))
-                    ) {
+        //             if (
+        //                 !empty($oldFeatures['why_choose'][$key]['image']) &&
+        //                 file_exists(public_path($oldFeatures['why_choose'][$key]['image']))
+        //             ) {
 
-                        unlink(public_path($oldFeatures['why_choose'][$key]['image']));
-                    }
+        //                 unlink(public_path($oldFeatures['why_choose'][$key]['image']));
+        //             }
 
-                    $file = $request->file("why_choose.$key.image");
-                    $filename = time() . '_why_' . uniqid() . '.' . $file->getClientOriginalExtension();
+        //             $file = $request->file("why_choose.$key.image");
+        //             $filename = time() . '_why_' . uniqid() . '.' . $file->getClientOriginalExtension();
 
-                    $file->move(public_path('uploads/specializations/why_choose'), $filename);
+        //             $file->move(public_path('uploads/specializations/why_choose'), $filename);
 
-                    $whyChoose[$key]['image'] =
-                        'uploads/specializations/why_choose/' . $filename;
-                } else {
+        //             $whyChoose[$key]['image'] =
+        //                 'uploads/specializations/why_choose/' . $filename;
+        //         } else {
 
-                    $whyChoose[$key]['image'] =
-                        $oldFeatures['why_choose'][$key]['image'] ?? null;
-                }
-            }
+        //             $whyChoose[$key]['image'] =
+        //                 $oldFeatures['why_choose'][$key]['image'] ?? null;
+        //         }
+        //     }
 
-            /*
-        |--------------------------------------------------------------------------
-        | CAREER IMAGE HANDLE
-        |--------------------------------------------------------------------------
-        */
+        //     /*
+        // |--------------------------------------------------------------------------
+        // | CAREER IMAGE HANDLE
+        // |--------------------------------------------------------------------------
+        // */
 
-            foreach ($careers as $key => $career) {
+        //     foreach ($careers as $key => $career) {
 
-                if ($request->hasFile("career.$key.image")) {
+        //         if ($request->hasFile("career.$key.image")) {
 
-                    if (
-                        !empty($oldFeatures['career'][$key]['image']) &&
-                        file_exists(public_path($oldFeatures['career'][$key]['image']))
-                    ) {
+        //             if (
+        //                 !empty($oldFeatures['career'][$key]['image']) &&
+        //                 file_exists(public_path($oldFeatures['career'][$key]['image']))
+        //             ) {
 
-                        unlink(public_path($oldFeatures['career'][$key]['image']));
-                    }
+        //                 unlink(public_path($oldFeatures['career'][$key]['image']));
+        //             }
 
-                    $file = $request->file("career.$key.image");
-                    $filename = time() . '_career_' . uniqid() . '.' . $file->getClientOriginalExtension();
+        //             $file = $request->file("career.$key.image");
+        //             $filename = time() . '_career_' . uniqid() . '.' . $file->getClientOriginalExtension();
 
-                    $file->move(public_path('uploads/specializations/careers'), $filename);
+        //             $file->move(public_path('uploads/specializations/careers'), $filename);
 
-                    $careers[$key]['image'] =
-                        'uploads/specializations/careers/' . $filename;
-                } else {
+        //             $careers[$key]['image'] =
+        //                 'uploads/specializations/careers/' . $filename;
+        //         } else {
 
-                    $careers[$key]['image'] =
-                        $oldFeatures['career'][$key]['image'] ?? null;
-                }
-            }
+        //             $careers[$key]['image'] =
+        //                 $oldFeatures['career'][$key]['image'] ?? null;
+        //         }
+        //     }
 
-            /*
-        |--------------------------------------------------------------------------
-        | RECRUITER IMAGE HANDLE
-        |--------------------------------------------------------------------------
-        */
+        //     /*
+        // |--------------------------------------------------------------------------
+        // | RECRUITER IMAGE HANDLE
+        // |--------------------------------------------------------------------------
+        // */
 
-            foreach ($recruiters as $key => $rec) {
+        //     foreach ($recruiters as $key => $rec) {
 
-                if ($request->hasFile("recruiter.$key.image")) {
+        //         if ($request->hasFile("recruiter.$key.image")) {
 
-                    if (
-                        !empty($oldFeatures['recruiter'][$key]['image']) &&
-                        file_exists(public_path($oldFeatures['recruiter'][$key]['image']))
-                    ) {
+        //             if (
+        //                 !empty($oldFeatures['recruiter'][$key]['image']) &&
+        //                 file_exists(public_path($oldFeatures['recruiter'][$key]['image']))
+        //             ) {
 
-                        unlink(public_path($oldFeatures['recruiter'][$key]['image']));
-                    }
+        //                 unlink(public_path($oldFeatures['recruiter'][$key]['image']));
+        //             }
 
-                    $file = $request->file("recruiter.$key.image");
-                    $filename = time() . '_recruiter_' . uniqid() . '.' . $file->getClientOriginalExtension();
+        //             $file = $request->file("recruiter.$key.image");
+        //             $filename = time() . '_recruiter_' . uniqid() . '.' . $file->getClientOriginalExtension();
 
-                    $file->move(public_path('uploads/specializations/recruiters'), $filename);
+        //             $file->move(public_path('uploads/specializations/recruiters'), $filename);
 
-                    $recruiters[$key]['image'] =
-                        'uploads/specializations/recruiters/' . $filename;
-                } else {
+        //             $recruiters[$key]['image'] =
+        //                 'uploads/specializations/recruiters/' . $filename;
+        //         } else {
 
-                    $recruiters[$key]['image'] =
-                        $oldFeatures['recruiter'][$key]['image'] ?? null;
-                }
-            }
+        //             $recruiters[$key]['image'] =
+        //                 $oldFeatures['recruiter'][$key]['image'] ?? null;
+        //         }
+        //     }
 
             /*
         |--------------------------------------------------------------------------
@@ -424,21 +424,21 @@ class SpecializationController extends Controller
         |--------------------------------------------------------------------------
         */
 
-            $featureData = [
-                'why_choose'   => array_values($whyChoose),
-                'success_rate' => array_values($successRates),
-                'career'       => array_values($careers),
-                'recruiter'    => array_values($recruiters),
-            ];
+        //     $featureData = [
+        //         'why_choose'   => array_values($whyChoose),
+        //         'success_rate' => array_values($successRates),
+        //         'career'       => array_values($careers),
+        //         'recruiter'    => array_values($recruiters),
+        //     ];
 
-            DB::table('specialization_features')->updateOrInsert(
-                ['specialization_id' => $id],
-                [
-                    'features_json' => base64_encode(json_encode($featureData)),
-                    'updated_at'    => now(),
-                ]
-            );
-        });
+        //     DB::table('specialization_features')->updateOrInsert(
+        //         ['specialization_id' => $id],
+        //         [
+        //             'features_json' => base64_encode(json_encode($featureData)),
+        //             'updated_at'    => now(),
+        //         ]
+        //     );
+        // });
 
         return redirect()->route('specialization.index')
             ->with('success', 'Specialization Updated Successfully');
@@ -446,9 +446,9 @@ class SpecializationController extends Controller
     public function destroy($id)
     {
         // Delete related features manually
-        DB::table('specialization_features')
-            ->where('specialization_id', $id)
-            ->delete();
+        // DB::table('specialization_features')
+        //     ->where('specialization_id', $id)
+        //     ->delete();
 
         // Delete specialization
         Specialization::findOrFail($id)->delete();

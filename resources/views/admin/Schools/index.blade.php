@@ -28,8 +28,7 @@
                                 <tr>
                                     <th>No.</th>
                                     <th>Name</th>
-                                    <th>Image</th>
-                                    <th>Icon</th>
+                                    <th>Image</th>                                    
                                     <th>Status</th>
                                     <th>Action</th>
                                 </tr>
@@ -84,21 +83,7 @@
                         }
                         return '-';
                     }
-                },
-
-                // ✅ Icon Column
-                {
-                    data: 'icon',
-                    name: 'icon',
-                    orderable: false,
-                    searchable: false,
-                    render: function(data) {
-                        if (data) {
-                            return `<img src="/${data}" style="width:40px; height:40px; object-fit:contain;">`;
-                        }
-                        return '-';
-                    }
-                },
+                },               
 
                 // ✅ Status Column
                 {

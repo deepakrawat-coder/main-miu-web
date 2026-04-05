@@ -26,8 +26,7 @@
                         <table id="programs-table" class="table table-hover align-middle table-nowrap w-100">
                             <thead class="bg-light bg-opacity-30">
                                 <tr>
-                                    <th>No.</th>
-                                    <th>Course</th>
+                                    <th>No.</th>                                   
                                     <th>Name</th>
                                     <th>Short Description</th>
                                     <th>Image</th>
@@ -70,14 +69,7 @@
                     searchable: false
                 },
 
-                // ✅ Course Name (relationship)
-                {
-                    data: 'courses',
-                    name: 'courses',
-                    orderable: false,
-                    searchable: false
-                },
-
+               
                 {
                     data: 'name',
                     name: 'name'

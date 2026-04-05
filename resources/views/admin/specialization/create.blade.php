@@ -34,10 +34,10 @@
             <textarea name="short_description" id="short_description" class="form-control"></textarea>
         </div>
 
-        <div class="mb-3">
+        {{-- <div class="mb-3">
             <label>Description</label>
             <textarea name="description" id="description" class="form-control"></textarea>
-        </div>
+        </div> --}}
 
         <div class="mb-3">
             <label>Content</label>
@@ -62,7 +62,7 @@
         </div>
 
         <!-- WHY CHOOSE SPECIALIZATION -->
-        <h5>Why Choose Specialization</h5>
+        {{-- <h5>Why Choose Specialization</h5>
         <div id="why-choose-wrapper"></div>
         <button type="button" class="btn btn-sm btn-success mb-3" onclick="addWhyChoose()">+ Add Why Choose Specialization</button>
 
@@ -85,7 +85,7 @@
         <!-- RECRUITER -->
         <h5>Recruiter Partner</h5>
         <div id="recruiter-wrapper"></div>
-        <button type="button" class="btn btn-sm btn-success mb-3" onclick="addRecruiter()">+ Add Recruiter</button>
+        <button type="button" class="btn btn-sm btn-success mb-3" onclick="addRecruiter()">+ Add Recruiter</button> --}}
 
         <div class="text-end mt-4">
             <button type="submit" class="btn btn-primary">Save</button>

@@ -50,6 +50,10 @@
             <textarea name="meta_description" class="form-control" rows="2"></textarea>
         </div>
 
+        <div class="mb-3">
+            <label class="form-label">School Course Name</label>
+            <input name="program_course_name[]" class="form-control" rows="2"/>
+        </div>
         <!-- Image -->
         <div class="mb-3">
             <label class="form-label">Course Image</label>

@@ -25,6 +25,10 @@ class CourseController extends Controller
             return DataTables::of($courses)
                 ->addIndexColumn()
                 ->addColumn('action', fn($row) => '')
+                ->addColumn('program_course_name', function ($row) {
+                    $names = json_decode($row->program_course_name, true);
+                    return is_array($names) ? implode(', ', $names) : '';
+                })
                 ->addColumn('short_description', function ($row) {
                     return \Illuminate\Support\Str::limit(strip_tags($row->short_description), 80);
                 })
@@ -46,6 +50,7 @@ class CourseController extends Controller
     }
     public function store(Request $request)
     {
+        // dd($request->all());
         // ✅ Validation
         $validator = Validator::make($request->all(), [
             'school_id'        => 'required|exists:schools,id',
@@ -56,6 +61,8 @@ class CourseController extends Controller
             'meta_title'       => 'nullable|string|max:255',
             'meta_description' => 'nullable|string',
             'image'            => 'nullable|image|mimes:jpg,jpeg,png,webp|max:2048',
+            'program_course_name' => 'nullable|array',
+            'program_course_name.*' => 'nullable|string|max:255',
         ]);
 
         if ($validator->fails()) {
@@ -78,6 +85,7 @@ class CourseController extends Controller
             $course->meta_description = $request->meta_description;
             // ✅ Image Upload
 
+            $course->program_course_name = $request->program_course_name ? json_encode($request->program_course_name) : null;
             if ($request->hasFile('image')) {
                 $file = $request->file('image');
                 $filename = time() . '_' . $file->getClientOriginalName();
@@ -149,6 +157,8 @@ class CourseController extends Controller
             'duration'         => 'nullable|string|max:255',
             'eligibility'      => 'nullable|string|max:255',
             'image'            => 'nullable|image|mimes:jpg,jpeg,png,webp|max:2048',
+            'program_course_name' => 'nullable|array',
+            'program_course_name.*' => 'nullable|string|max:255',
         ]);
 
         if ($validator->fails()) {
@@ -168,7 +178,7 @@ class CourseController extends Controller
             $course->short_description = $request->short_description;
             $course->meta_title        = $request->meta_title;
             $course->meta_description  = $request->meta_description;
-
+            $course->program_course_name = $request->program_course_name ? json_encode($request->program_course_name) : null;
             // ✅ Image Update (Replace Old Image)
             if ($request->hasFile('image')) {
 
