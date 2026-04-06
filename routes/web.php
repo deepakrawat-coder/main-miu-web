@@ -35,6 +35,10 @@ Route::view('/coe', 'web.pages.coe');
 Route::view('/schools-and-departments', 'web.pages.schools-and-departments');
 Route::view('/programs-listing', 'web.pages.programs');
 Route::view('/schools-departments-details', 'web.pages.schools-departments-details');
+Route::view('/blog', 'web.pages.blog');
+Route::view('/blog-details', 'web.pages.blog-details');
+Route::view('/all-events', 'web.pages.events');
+Route::view('/event-details', 'web.pages.event-details');
 
 // Route::get('/', [WebHomeController::class, 'index'])->name('home');
 // Route::view('/about-us', 'web.pages.about-us');
