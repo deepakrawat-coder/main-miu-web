@@ -1,3 +1,6 @@
+  @php
+      $schools = DB::select('SELECT name,slug FROM schools');
+  @endphp
   <!-- ============================================ -->
   <!-- WHATSAPP FLOATING BUTTON (Desktop + Tablet)   -->
   <!-- ============================================ -->
@@ -186,12 +189,16 @@
                           <h3 class="widget_title">Our Schools</h3>
                           <div class="menu-all-pages-container">
                               <ul class="menu">
-                                  <li><a href="about.html">School of Science</a></li>
+                                  {{-- <li><a href="about.html">School of Science</a></li>
                                   <li><a href="about.html">School of Education</a></li>
                                   <li><a href="about.html">School of Pharmacy</a></li>
                                   <li><a href="about.html">School of Management</a></li>
                                   <li><a href="about.html">School of Humanities</a></li>
-                                  <li><a href="about.html">School of Engineering</a></li>
+                                  <li><a href="about.html">School of Engineering</a></li> --}}
+                                  @foreach ($schools as $school)
+                                      <li><a href="/school/{{ $school->slug }}">{{ $school->name }}</a>
+                                      </li>
+                                  @endforeach
                               </ul>
                           </div>
                       </div>
@@ -225,12 +232,14 @@
                                   <a href="assets/img/widget/insta-feed-1-5.jpg" class="insta-btn popup-image"><i
                                           class="fab fa-instagram"></i></a>
                               </div>
-                              <div class="insta-thumb"><img src="{{ asset('/assets/img/widget/insta-feed-1-6.jpg') }}"
-                                      alt="Image"> <a href="assets/img/widget/insta-feed-1-6.jpg"
-                                      class="insta-btn popup-image"><i class="fab fa-instagram"></i></a></div>
-                              <div class="insta-thumb"><img src="{{ asset('/assets/img/widget/insta-feed-1-7.jpg') }}"
-                                      alt="Image"> <a href="assets/img/widget/insta-feed-1-7.jpg"
-                                      class="insta-btn popup-image"><i class="fab fa-instagram"></i></a></div>
+                              <div class="insta-thumb"><img
+                                      src="{{ asset('/assets/img/widget/insta-feed-1-6.jpg') }}" alt="Image"> <a
+                                      href="assets/img/widget/insta-feed-1-6.jpg" class="insta-btn popup-image"><i
+                                          class="fab fa-instagram"></i></a></div>
+                              <div class="insta-thumb"><img
+                                      src="{{ asset('/assets/img/widget/insta-feed-1-7.jpg') }}" alt="Image"> <a
+                                      href="assets/img/widget/insta-feed-1-7.jpg" class="insta-btn popup-image"><i
+                                          class="fab fa-instagram"></i></a></div>
                               <div class="insta-thumb"><img
                                       src="{{ asset('/assets/img/widget/insta-feed-1-8.jpg') }}" alt="Image"> <a
                                       href="assets/img/widget/insta-feed-1-8.jpg" class="insta-btn popup-image"><i

@@ -1,3 +1,18 @@
+ @php
+     $schools = DB::select('SELECT name,slug FROM schools');
+     $programsRaw = DB::select("
+        SELECT 
+            programs.name as program_name,
+            specializations.slug,
+            specializations.title
+        FROM specializations 
+        JOIN programs ON specializations.program_id = programs.id
+    ");
+
+     // GROUP BY program_name
+     $programs = collect($programsRaw)->groupBy('program_name');
+     //  dd($programs);
+ @endphp
  <div class="sidemenu-wrapper">
      <div class="sidemenu-content"><button class="closeButton sideMenuCls"><i class="far fa-times"></i></button>
          <div class="widget footer-widget">
@@ -71,73 +86,7 @@
          </div>
          <div class="th-mobile-menu">
              <ul>
-                 {{-- <li class="menu-item-has-children"><a href="/">Home</a>
-                     <ul class="sub-menu">
-                         <li><a href="index.html">University Home</a></li>
-                         <li><a href="home-admission.html">Admission Home</a></li>
-                         <li><a href="home-courses.html">Course Home</a></li>
-                     </ul>
-                 </li>
-                 <li><a href="about.html">About Us</a></li>
-                 <li class="menu-item-has-children"><a href="#">Programs</a>
-                     <ul class="sub-menu">
-                         <li><a href="program.html">Programs Style 1</a></li>
-                         <li><a href="program-2.html">Programs Style 2</a></li>
-                         <li><a href="program-details.html">Program Details</a></li>
-                         <li><a href="program-details-sidebar.html">Program Details With Sidebar</a></li>
-                     </ul>
-                 </li>
-                 <li class="menu-item-has-children"><a href="#">Pages</a>
-                     <ul class="sub-menu">
-                         <li class="menu-item-has-children"><a href="#">Shop</a>
-                             <ul class="sub-menu">
-                                 <li><a href="shop.html">Shop</a></li>
-                                 <li><a href="shop-details.html">Shop Details</a></li>
-                                 <li><a href="cart.html">Cart Page</a></li>
-                                 <li><a href="checkout.html">Checkout</a></li>
-                                 <li><a href="wishlist.html">Wishlist</a></li>
-                             </ul>
-                         </li>
-                         <li class="menu-item-has-children"><a href="#">Faculties</a>
-                             <ul class="sub-menu">
-                                 <li><a href="faculty.html">Faculty</a></li>
-                                 <li><a href="faculty-details.html">Faculty Details</a></li>
-                             </ul>
-                         </li>
-                         <li><a href="alumni.html">Alumni Page</a></li>
-                         <li class="menu-item-has-children"><a href="#">Researches</a>
-                             <ul class="sub-menu">
-                                 <li><a href="research.html">Research</a></li>
-                                 <li><a href="research-details.html">Research Details</a></li>
-                             </ul>
-                         </li>
-                         <li class="menu-item-has-children"><a href="#">Teachers</a>
-                             <ul class="sub-menu">
-                                 <li><a href="teacher.html">Teacher</a></li>
-                                 <li><a href="teacher-details.html">Teacher Details</a></li>
-                             </ul>
-                         </li>
-                         <li><a href="campus.html">Campus Life</a></li>
-                         <li><a href="pricing.html">Pricing Plan</a></li>
-                         <li><a href="faq.html">Faqs Page</a></li>
-                         <li><a href="error.html">Error Page</a></li>
-                     </ul>
-                 </li>
-                 <li class="menu-item-has-children"><a href="#">Events</a>
-                     <ul class="sub-menu">
-                         <li><a href="event.html">Events Page</a></li>
-                         <li><a href="event-details.html">Event Details</a></li>
-                     </ul>
-                 </li>
-                 <li class="menu-item-has-children"><a href="#">Blogs</a>
-                     <ul class="sub-menu">
-                         <li><a href="blog.html">Blog</a></li>
-                         <li><a href="blog-details.html">Blog Details</a></li>
-                         <li><a href="blog-details-sidebar.html">Blog Details With Sidebar</a></li>
-                     </ul>
-                 </li>
-                 <li><a href="contact.html">Contact Us</a></li> --}}
-                 <!-- 1. Home -->
+
                  <li><a href="/">Home</a></li>
 
                  <!-- 2. About Us (父菜单) -->
@@ -168,14 +117,11 @@
                      </ul>
                  </li>
 
-                 <!-- 3. Schools (父菜单) -->
                  <li class="menu-item-has-children"><a href="#">Schools</a>
                      <ul class="sub-menu">
-                         <li><a href="/schools-departments-details">School of Commerce</a></li>
-                         <li><a href="/schools-departments-details">School of Computer Application</a></li>
-                         <li><a href="/schools-departments-details">School of Engineering</a></li>
-                         <li><a href="/schools-departments-details">School of Management</a></li>
-                         <li><a href="/schools-departments-details">School of Science</a></li>
+                         @foreach ($schools as $school)
+                             <li><a href="/school/{{ $school->slug }}">{{ $school->name }}</a></li>
+                         @endforeach
                      </ul>
                  </li>
 
@@ -195,18 +141,34 @@
                          <li><a href="program.html">Admission Process</a></li>
 
                          <!-- Programs (子菜单) -->
-                         <li class="menu-item-has-children"><a href="#">Programs</a>
+                         <li class="menu-item-has-children">
+                             <a href="#">Programs</a>
                              <ul class="sub-menu">
-                                 <li><a href="shop.html">Diploma</a></li>
-                                 <li><a href="shop-details.html">UG</a></li>
-                                 <li><a href="cart.html">PG</a></li>
-                                 <li><a href="checkout.html">PHD</a></li>
+
+                                 @foreach ($programs as $programName => $items)
+                                     <li class="menu-item-has-children">
+                                         <a href="#">{{ $programName }}</a>
+
+                                         <ul class="sub-menu">
+                                             @foreach ($items as $course)
+                                                 <li>
+                                                     <a href="/course/{{ $course->slug }}">
+                                                         {{ $course->title }}
+                                                     </a>
+                                                 </li>
+                                             @endforeach
+                                         </ul>
+
+                                     </li>
+                                 @endforeach
+
                              </ul>
                          </li>
 
                          <li><a href="program-2.html">Fee Structure</a></li>
                          <li><a href="program-details.html">Apply Now</a></li>
                          <li><a href="program-details-sidebar.html">Rules for Admission</a></li>
+                         <li><a href="program-details-sidebar.html">Brochure </a></li>
                      </ul>
                  </li>
 
@@ -353,17 +315,14 @@
                                          </li>
                                          <li class="menu-item-has-children"><a href="#">Schools</a>
                                              <ul class="sub-menu">
-                                                 <li><a href="/schools-departments-details">School of Commerce</a></li>
-                                                 <li><a href="/schools-departments-details">School of Computer
-                                                         Application</a></li>
-                                                 <li><a href="/schools-departments-details">School of Engineering</a>
-                                                 </li>
-                                                 {{-- <li><a href="program-details-sidebar.html">School of Law</a></li> --}}
-                                                 <li><a href="/schools-departments-details">School of Management</a>
-                                                 </li>
-                                                 {{-- <li><a href="program-details-sidebar.html">School of Pharmacy</a></li> --}}
-                                                 {{-- <li><a href="program-details-sidebar.html">School of Education</a> --}}
+                                                 @foreach ($schools as $school)
+                                                     <li><a
+                                                             href="/schools/{{ $school->slug }}">{{ $school->name }}</a>
+                                                     </li>
+                                                 @endforeach
+
                                          </li>
+
                                          <li><a href="/schools-departments-details">School of Science</a></li>
                                          {{-- <li><a href="program-details-sidebar.html">School of Pragmatism</a>
                                                  </li> --}}
@@ -380,7 +339,7 @@
                                      <li class="menu-item-has-children"><a href="#">Admissions</a>
                                          <ul class="sub-menu">
                                              <li><a href="program.html">Admission Process</a></li>
-                                             <li class="menu-item-has-children"><a href="#">Programs</a>
+                                             {{-- <li class="menu-item-has-children"><a href="#">Programs</a>
                                                  <ul class="sub-menu">
                                                      <li><a href="shop.html">Diploma</a></li>
                                                      <li><a href="shop-details.html">UG</a>
@@ -388,12 +347,37 @@
                                                      <li><a href="cart.html">PG</a></li>
                                                      <li><a href="checkout.html">PHD</a></li>
                                                  </ul>
+                                             </li> --}}
+                                             <li class="menu-item-has-children">
+                                                 <a href="#">Programs</a>
+                                                 <ul class="sub-menu">
+
+                                                     @foreach ($programs as $programName => $items)
+                                                         <li class="menu-item-has-children">
+                                                             <a href="#">{{ $programName }}</a>
+
+                                                             <ul class="sub-menu">
+                                                                 @foreach ($items as $course)
+                                                                     <li>
+                                                                         <a href="/course/{{ $course->slug }}">
+                                                                             {{ $course->title }}
+                                                                         </a>
+                                                                     </li>
+                                                                 @endforeach
+                                                             </ul>
+
+                                                         </li>
+                                                     @endforeach
+
+                                                 </ul>
                                              </li>
+
                                              <li><a href="program-2.html">Fee Structure</a></li>
                                              <li><a href="program-details.html">Apply Now</a></li>
                                              <li><a href="program-details-sidebar.html">Rules for Admission</a>
-                                             </li>
-                                         </ul>
+                                             <li><a href="program-details-sidebar.html">Brochure </a></li>
+                                     </li>
+                                     </ul>
                                      </li>
                                      <li class="menu-item-has-children"><a href="#">Student Life</a>
                                          <ul class="sub-menu">

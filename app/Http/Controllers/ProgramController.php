@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Program;
 use App\Models\Course;
+use App\Models\Specialization;
 use Illuminate\Http\Request;
 use Yajra\DataTables\Facades\DataTables;
 use Illuminate\Support\Facades\Validator;
@@ -12,6 +13,26 @@ use Exception;
 
 class ProgramController extends Controller
 {
+
+    public function show()
+    {
+        $programs = Program::with('specializations')
+            ->where('status', 1)
+            ->orderBy('name')
+            ->get()
+            ->groupBy('name'); // Diploma, UG, PG, PhD group
+            // dd($programs);
+        // $programsName=$programs
+        return view('web.pages.programs', compact('programs'));
+    }
+
+    public function details($slug)
+    {
+        $program = Specialization::where('slug', $slug)->firstOrFail();
+        $ProgramName=Program::where('id',$program->program_id)->firstOrFail()->name;
+        // dd($programName);
+        return view('web.pages.program-course-details', compact('program', 'ProgramName'));
+    }
     /**
      * Display listing
      */
@@ -64,7 +85,7 @@ class ProgramController extends Controller
 
     public function store(Request $request)
     {
-        $validator = Validator::make($request->all(), [           
+        $validator = Validator::make($request->all(), [
             'name'             => 'required|string|max:255',
             'short_description' => 'nullable|string',
             'meta_title'       => 'nullable|string|max:255',
@@ -132,7 +153,7 @@ class ProgramController extends Controller
 
     public function update(Request $request, $id)
     {
-        $validator = Validator::make($request->all(), [           
+        $validator = Validator::make($request->all(), [
             'name'               => 'required|string|max:255',
             'short_description'  => 'nullable|string',
             'meta_title'         => 'nullable|string|max:255',

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Blog;
 use App\Models\EventsPost;
 use App\Models\Faq;
+use App\Models\Program;
 use App\Models\School;
 use App\Models\Specialization;
 use App\Models\Testimonial;
@@ -16,16 +17,14 @@ class WebHomeController extends Controller
     public function index()
     {
         $schools = School::where('status', 1)
-            ->orderBy('order', 'asc')
-            ->limit(6)
+            ->orderBy('order', 'asc')->limit(6)
+            ->get();
+        $programs = Program::with('specializations')
+            ->where('status', 1)
+            ->orderBy('name')
             ->get()
-            ->map(function ($school) {
-                $features = json_decode($school->features, true);
-                $school->features_comma = is_array($features) ? implode(', ', $features) : '';
-                return $school;
-            });
-        // dd($schools->all()); // <-- REMOVE THIS LINE or comment it out
-
+            ->groupBy('name');
+        // dd($schools);
         $Testimonials = Testimonial::where('status', 1)->where('page_type', 'home')->get();
         // dd($Testimonials);
 
@@ -43,6 +42,6 @@ class WebHomeController extends Controller
             $faq = [];
         }
         $specializations = Specialization::where('status', 1)->get(); // Added this line
-        return view('web.pages.index', compact('schools', 'Testimonials', 'events', 'blogs', 'faq', 'specializations')); // Modified this line
+        return view('web.pages.index', compact('schools', 'Testimonials', 'events', 'blogs', 'faq', 'programs')); // Modified this line
     }
 }

@@ -25,13 +25,13 @@
         </div>
         <div class="mb-3">
             <label class="form-label">Duration</label>
-            <input type="text" name="duration" id="duration" class="form-control" >
+            <input type="text" name="duration" id="duration" class="form-control">
         </div>
         <div class="mb-3">
             <label class="form-label">Eligibility</label>
             <input name="eligibility" id="eligibility" class="form-control" rows="3"></input>
         </div>
-        
+
         <!-- Short Description -->
         <div class="mb-3">
             <label class="form-label">Short Description</label>
@@ -52,7 +52,11 @@
 
         <div class="mb-3">
             <label class="form-label">School Course Name</label>
-            <input name="program_course_name[]" class="form-control" rows="2"/>
+            <input name="program_course_name[]" class="form-control" rows="2" />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Content</label>
+            <textarea name="content" id="content" class="form-control" rows="3"></textarea>
         </div>
         <!-- Image -->
         <div class="mb-3">
@@ -70,7 +74,7 @@
 
 <script>
     let shortDescriptionEditor;
-
+    let contentEditor;
     $(document).ready(function() {
 
         // Initialize CKEditor for Short Description
@@ -78,6 +82,14 @@
             .create(document.querySelector('#short_description'))
             .then(editor => {
                 shortDescriptionEditor = editor;
+            })
+            .catch(error => {
+                console.error(error);
+            });
+            ClassicEditor
+            .create(document.querySelector('#content'))
+            .then(editor => {
+                contentEditor = editor;
             })
             .catch(error => {
                 console.error(error);
@@ -90,6 +102,9 @@
             // CKEditor data set before submit
             if (shortDescriptionEditor) {
                 $('textarea[name="short_description"]').val(shortDescriptionEditor.getData());
+            }
+            if (contentEditor) {
+                $('textarea[name="content"]').val(contentEditor.getData());
             }
 
             let formData = new FormData(this);

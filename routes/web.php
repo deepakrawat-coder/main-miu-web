@@ -23,7 +23,8 @@ Route::view('dashboard', 'dashboard')
     ->middleware(['auth', 'verified'])
     ->name('dashboard');
 
-Route::view('/', 'web.pages.index');
+// Route::view('/', 'web.pages.index');
+Route::get('/', [WebHomeController::class, 'index'])->name('home');
 Route::view('/about', 'web.pages.about');
 Route::view('/contact', 'web.pages.contact');
 Route::view('/chancellor', 'web.pages.chancellor');
@@ -32,8 +33,13 @@ Route::view('/vice-chancellor', 'web.pages.vice-chancellor');
 Route::view('/registrar', 'web.pages.registrar');
 Route::view('/director', 'web.pages.director');
 Route::view('/coe', 'web.pages.coe');
-Route::view('/schools-and-departments', 'web.pages.schools-and-departments');
-Route::view('/programs-listing', 'web.pages.programs');
+// Route::view('/schools-and-departments', 'web.pages.schools-and-departments');
+Route::get('/school', [SchoolController::class, 'show'])->name('schools.show');
+Route::get('/program', [ProgramController::class, 'show'])->name('programs');
+Route::get('/program/{slug}', [ProgramController::class, 'details'])->name('program.details');
+Route::get('/school/{slug}', [SchoolController::class, 'details'])->name('school.details');
+Route::get('/course/{slug}', [CourseController::class, 'details'])->name('course.details');
+// Route::view('/programs-listing', 'web.pages.programs');
 Route::view('/schools-departments-details', 'web.pages.schools-departments-details');
 
 // Route::get('/', [WebHomeController::class, 'index'])->name('home');
