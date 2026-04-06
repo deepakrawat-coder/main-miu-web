@@ -41,4 +41,12 @@ class Program extends Model
     {
         return $this->hasMany(Specialization::class);
     }
+    public function school()
+    {
+        return $this->belongsTo(School::class);
+    }
+    public function category()
+    {
+        return $this->belongsTo(Category::class);
+    }
 }

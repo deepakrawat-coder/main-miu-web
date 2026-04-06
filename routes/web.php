@@ -12,6 +12,7 @@ use App\Http\Controllers\TestimonialController;
 use App\Http\Controllers\FaqController;
 use App\Http\Controllers\WebHomeController;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\EnquiryController;
 
@@ -94,7 +95,7 @@ Route::get('/dashboard', function () {
     return view('admin.home');
 })->middleware(['auth', 'verified'])->name('dashboard'); // route for frontend
 // Route::get('/schools-and-departments', [SchoolController::class, 'show'])->name('schools.show');
-Route::prefix('events')->group(function () {
+Route::prefix('admin/events')->group(function () {
     Route::get('/', [EventsCategoryController::class, 'index'])->name('events.index');
     Route::get('/create', [EventsCategoryController::class, 'create'])->name('events.create');
     Route::post('/store', [EventsCategoryController::class, 'store'])->name('events.store');
@@ -105,91 +106,101 @@ Route::prefix('events')->group(function () {
 });
 // Route::get('/notice-and-events', [EventsCategoryController::class, 'noticeAndEvents'])->name('notice.events');
 // Route::get('/notice-and-events/{slug}', [EventsCategoryController::class, 'showPost'])->name('post.details');
-Route::prefix('posts')->group(function () {
-    Route::get('/', [EventsPostController::class, 'index'])->name('posts.index');
-    Route::get('/create', [EventsPostController::class, 'create'])->name('posts.create');
-    Route::post('/store', [EventsPostController::class, 'store'])->name('posts.store');
-    Route::get('/edit/{id}', [EventsPostController::class, 'edit'])->name('posts.edit');
-    Route::post('/update/{id}', [EventsPostController::class, 'update'])->name('posts.update');
-    Route::delete('/delete/{id}', [EventsPostController::class, 'destroy'])->name('posts.delete');
-    Route::get('/status/{id}', [EventsPostController::class, 'status'])->name('posts.status');
+Route::prefix('admin/posts')->group(function () {
+    Route::get('/', [EventsPostController::class, 'index'])->name('admin.posts.index');
+    Route::get('/create', [EventsPostController::class, 'create'])->name('admin.posts.create');
+    Route::post('/store', [EventsPostController::class, 'store'])->name('admin.posts.store');
+    Route::get('/edit/{id}', [EventsPostController::class, 'edit'])->name('admin.posts.edit');
+    Route::post('/update/{id}', [EventsPostController::class, 'update'])->name('admin.posts.update');
+    Route::delete('/delete/{id}', [EventsPostController::class, 'destroy'])->name('admin.posts.delete');
+    Route::get('/status/{id}', [EventsPostController::class, 'status'])->name('admin.posts.status');
 });
-Route::prefix('schools')->group(function () {
-    Route::get('/', [SchoolController::class, 'index'])->name('schools.index');
-    Route::get('/create', [SchoolController::class, 'create'])->name('schools.create');
-    Route::post('/store', [SchoolController::class, 'store'])->name('schools.store');
-    Route::get('/edit/{id}', [SchoolController::class, 'edit'])->name('schools.edit');
-    Route::post('/update/{id}', [SchoolController::class, 'update'])->name('schools.update');
-    Route::delete('/delete/{id}', [SchoolController::class, 'destroy'])->name('schools.delete');
-    Route::get('/status/{id}', [SchoolController::class, 'status'])->name('schools.status');
+Route::prefix('admin/schools')->group(function () {
+    Route::get('/', [SchoolController::class, 'index'])->name('admin.schools.index');
+    Route::get('/create', [SchoolController::class, 'create'])->name('admin.schools.create');
+    Route::post('/store', [SchoolController::class, 'store'])->name('admin.schools.store');
+    Route::get('/edit/{id}', [SchoolController::class, 'edit'])->name('admin.schools.edit');
+    Route::post('/update/{id}', [SchoolController::class, 'update'])->name('admin.schools.update');
+    Route::delete('/delete/{id}', [SchoolController::class, 'destroy'])->name('admin.schools.delete');
+    Route::get('/status/{id}', [SchoolController::class, 'status'])->name('admin.schools.status');
 });
-Route::prefix('programs')->group(function () {
-    Route::get('/', [ProgramController::class, 'index'])->name('programs.index');
-    Route::get('/create', [ProgramController::class, 'create'])->name('programs.create');
-    Route::post('/store', [ProgramController::class, 'store'])->name('programs.store');
-    Route::get('/edit/{id}', [ProgramController::class, 'edit'])->name('programs.edit');
-    Route::post('/update/{id}', [ProgramController::class, 'update'])->name('programs.update');
-    Route::delete('/delete/{id}', [ProgramController::class, 'destroy'])->name('programs.delete');
-    Route::get('/status/{id}', [ProgramController::class, 'status'])->name('programs.status');
+Route::prefix('admin/programs')->group(function () {
+    Route::get('/', [ProgramController::class, 'index'])->name('admin.programs.index');
+     Route::get('/get-categories-by-school', [ProgramController::class, 'getCategoriesBySchool'])->name('admin.programs.getCategoriesBySchool');
+    Route::get('/create', [ProgramController::class, 'create'])->name('admin.programs.create');
+    Route::post('/store', [ProgramController::class, 'store'])->name('admin.programs.store');
+    Route::get('/edit/{id}', [ProgramController::class, 'edit'])->name('admin.programs.edit');
+    Route::post('/update/{id}', [ProgramController::class, 'update'])->name('admin.programs.update');
+    Route::delete('/delete/{id}', [ProgramController::class, 'destroy'])->name('admin.programs.delete');
+    Route::get('/status/{id}', [ProgramController::class, 'status'])->name('admin.programs.status');
 });
-Route::prefix('courses')->group(function () {
-    Route::get('/', [CourseController::class, 'index'])->name('courses.index');
-    Route::get('/create', [CourseController::class, 'create'])->name('courses.create');
-    Route::post('/store', [CourseController::class, 'store'])->name('courses.store');
-    Route::get('/edit/{id}', [CourseController::class, 'edit'])->name('courses.edit');
-    Route::post('/update/{id}', [CourseController::class, 'update'])->name('courses.update');
-    Route::delete('/delete/{id}', [CourseController::class, 'destroy'])->name('courses.delete');
-    Route::get('/status/{id}', [CourseController::class, 'status'])->name('courses.status');
+Route::prefix('admin/courses')->group(function () {
+    Route::get('/', [CourseController::class, 'index'])->name('admin.courses.index');
+    Route::get('/create', [CourseController::class, 'create'])->name('admin.courses.create');
+   
+    Route::post('/store', [CourseController::class, 'store'])->name('admin.courses.store');
+    Route::get('/edit/{id}', [CourseController::class, 'edit'])->name('admin.courses.edit');
+    Route::post('/update/{id}', [CourseController::class, 'update'])->name('admin.courses.update');
+    Route::delete('/delete/{id}', [CourseController::class, 'destroy'])->name('admin.courses.delete');
+    Route::get('/status/{id}', [CourseController::class, 'status'])->name('admin.courses.status');
 });
-Route::prefix('testimonials')->group(function () {
-    Route::get('/', [TestimonialController::class, 'index'])->name('testimonials.index');
-    Route::get('/create', [TestimonialController::class, 'create'])->name('testimonials.create');
-    Route::post('/store', [TestimonialController::class, 'store'])->name('testimonials.store');
-    Route::get('/edit/{id}', [TestimonialController::class, 'edit'])->name('testimonials.edit');
-    Route::post('/update/{id}', [TestimonialController::class, 'update'])->name('testimonials.update');
-    Route::delete('/delete/{id}', [TestimonialController::class, 'destroy'])->name('testimonials.delete');
-    Route::get('/status/{id}', [TestimonialController::class, 'status'])->name('testimonials.status');
+Route::prefix('admin/testimonials')->group(function () {
+    Route::get('/', [TestimonialController::class, 'index'])->name('admin.testimonials.index');
+    Route::get('/create', [TestimonialController::class, 'create'])->name('admin.testimonials.create');
+    Route::post('/store', [TestimonialController::class, 'store'])->name('admin.testimonials.store');
+    Route::get('/edit/{id}', [TestimonialController::class, 'edit'])->name('admin.testimonials.edit');
+    Route::post('/update/{id}', [TestimonialController::class, 'update'])->name('admin.testimonials.update');
+    Route::delete('/delete/{id}', [TestimonialController::class, 'destroy'])->name('admin.testimonials.delete');
+    Route::get('/status/{id}', [TestimonialController::class, 'status'])->name('admin.testimonials.status');
 });
-Route::prefix('faqs')->group(function () {
-    Route::get('/', [FaqController::class, 'index'])->name('faqs.index');
-    Route::get('/create', [FaqController::class, 'create'])->name('faqs.create');
-    Route::post('/store', [FaqController::class, 'store'])->name('faqs.store');
-    Route::get('/edit/{id}', [FaqController::class, 'edit'])->name('faqs.edit');
-    Route::post('/update/{id}', [FaqController::class, 'update'])->name('faqs.update');
-    Route::delete('/delete/{id}', [FaqController::class, 'destroy'])->name('faqs.delete');
-    Route::get('/status/{id}', [FaqController::class, 'status'])->name('faqs.status');
+Route::prefix('admin/faqs')->group(function () {
+    Route::get('/', [FaqController::class, 'index'])->name('admin.faqs.index');
+    Route::get('/create', [FaqController::class, 'create'])->name('admin.faqs.create');
+    Route::post('/store', [FaqController::class, 'store'])->name('admin.faqs.store');
+    Route::get('/edit/{id}', [FaqController::class, 'edit'])->name('admin.faqs.edit');
+    Route::post('/update/{id}', [FaqController::class, 'update'])->name('admin.faqs.update');
+    Route::delete('/delete/{id}', [FaqController::class, 'destroy'])->name('admin.faqs.delete');
+    Route::get('/status/{id}', [FaqController::class, 'status'])->name('admin.faqs.status');
 });
-Route::prefix('admin-blogs')->group(function () {
-    Route::get('/', [BlogController::class, 'index'])->name('admin-blogs.index');
-    Route::get('/create', [BlogController::class, 'create'])->name('admin-blogs.create');
-    Route::post('/store', [BlogController::class, 'store'])->name('admin-blogs.store');
-    Route::get('/edit/{id}', [BlogController::class, 'edit'])->name('admin-blogs.edit');
-    Route::post('/update/{id}', [BlogController::class, 'update'])->name('admin-blogs.update');
-    Route::delete('/delete/{id}', [BlogController::class, 'destroy'])->name('admin-blogs.delete');
-    Route::get('/status/{id}', [BlogController::class, 'status'])->name('admin-blogs.status');
+Route::prefix('admin/blogs')->group(function () {
+    Route::get('/', [BlogController::class, 'index'])->name('admin.blogs.index');
+    Route::get('/create', [BlogController::class, 'create'])->name('admin.blogs.create');
+    Route::post('/store', [BlogController::class, 'store'])->name('admin.blogs.store');
+    Route::get('/edit/{id}', [BlogController::class, 'edit'])->name('admin.blogs.edit');
+    Route::post('/update/{id}', [BlogController::class, 'update'])->name('admin.blogs.update');
+    Route::delete('/delete/{id}', [BlogController::class, 'destroy'])->name('admin.blogs.delete');
+    Route::get('/status/{id}', [BlogController::class, 'status'])->name('admin.blogs.status');
 });
-Route::prefix('specialization')->group(function () {
-    Route::get('/', [SpecializationController::class, 'index'])->name('specialization.index');
-    Route::get('/create', [SpecializationController::class, 'create'])->name('specialization.create');
-    Route::post('/store', [SpecializationController::class, 'store'])->name('specialization.store');
-    Route::get('/edit/{id}', [SpecializationController::class, 'edit'])->name('specialization.edit');
-    Route::post('/update/{id}', [SpecializationController::class, 'update'])->name('specialization.update');
-    Route::delete('/delete/{id}', [SpecializationController::class, 'destroy'])->name('specialization.delete');
-    Route::get('/status/{id}', [SpecializationController::class, 'status'])->name('specialization.status');
+Route::prefix('admin/specialization')->group(function () {
+    Route::get('/', [SpecializationController::class, 'index'])->name('admin.specialization.index');
+    Route::get('/create', [SpecializationController::class, 'create'])->name('admin.specialization.create');
+    Route::post('/store', [SpecializationController::class, 'store'])->name('admin.specialization.store');
+    Route::get('/edit/{id}', [SpecializationController::class, 'edit'])->name('admin.specialization.edit');
+    Route::post('/update/{id}', [SpecializationController::class, 'update'])->name('admin.specialization.update');
+    Route::delete('/delete/{id}', [SpecializationController::class, 'destroy'])->name('admin.specialization.delete');
+    Route::get('/status/{id}', [SpecializationController::class, 'status'])->name('admin.specialization.status');
 });
-
-Route::prefix('gallery')->group(function () {
-    Route::get('/', [GalleryController::class, 'index'])->name('gallery.index');
-    Route::get('/create', [GalleryController::class, 'create'])->name('gallery.create');
-    Route::post('/store', [GalleryController::class, 'store'])->name('gallery.store');
-    Route::get('/edit/{id}', [GalleryController::class, 'edit'])->name('gallery.edit');
-    Route::post('/update/{id}', [GalleryController::class, 'update'])->name('gallery.update');
-    Route::delete('/delete/{id}', [GalleryController::class, 'destroy'])->name('gallery.delete');
-    Route::get('/status/{id}', [GalleryController::class, 'status'])->name('gallery.status');
-    Route::get('/image-status/{id}', [GalleryController::class, 'toggleImageStatus'])->name('gallery.image-status');
+Route::prefix('admin/category')->group(function () {
+    Route::get('/', [CategoryController::class, 'index'])->name('admin.category.index');
+    Route::get('/create', [CategoryController::class, 'create'])->name('admin.category.create');
+    Route::post('/store', [CategoryController::class, 'store'])->name('admin.category.store');
+    Route::get('/edit/{id}', [CategoryController::class, 'edit'])->name('admin.category.edit');
+    Route::post('/update/{id}', [CategoryController::class, 'update'])->name('admin.category.update');
+    Route::delete('/delete/{id}', [CategoryController::class, 'destroy'])->name('admin.category.delete');
+    Route::get('/status/{id}', [CategoryController::class, 'status'])->name('admin.category.status');
 });
-// Route::get('/gallery-list', [GalleryController::class, 'frontendGallery'])->name('gallery.frontend');
-Route::post('/enquiry/store', [EnquiryController::class, 'store'])->name('enquiry.store');
+Route::prefix('admin/gallery')->group(function () {
+    Route::get('/', [GalleryController::class, 'index'])->name('admin.gallery.index');
+    Route::get('/create', [GalleryController::class, 'create'])->name('admin.gallery.create');
+    Route::post('/store', [GalleryController::class, 'store'])->name('admin.gallery.store');
+    Route::get('/edit/{id}', [GalleryController::class, 'edit'])->name('admin.gallery.edit');
+    Route::post('/update/{id}', [GalleryController::class, 'update'])->name('admin.gallery.update');
+    Route::delete('/delete/{id}', [GalleryController::class, 'destroy'])->name('admin.gallery.delete');
+    Route::get('/status/{id}', [GalleryController::class, 'status'])->name('admin.gallery.status');
+    Route::get('/image-status/{id}', [GalleryController::class, 'toggleImageStatus'])->name('admin.gallery.image-status');
+});
+// Route::get('/gallery-list', [GalleryController::class, 'frontendGallery'])->name('admin.gallery.frontend');
+// Route::post('/enquiry/store', [EnquiryController::class, 'store'])->name('admin.enquiry.store');
 
 
 
@@ -199,9 +210,11 @@ Route::post('/enquiry/store', [EnquiryController::class, 'store'])->name('enquir
 // Route::get('/schools/{slug}', [SchoolController::class, 'details'])
 //     ->name('schools.{slug}');
 // Route::get('/{course}/{program}/{specialization}', [SpecializationController::class, 'show'])->name('specialization.show');
-Route::middleware(['auth', 'verified'])->prefix('admin')->group(function () {
-    Route::resource('enquiries', EnquiryController::class);
-    Route::post('enquiries/toggle-status/{id}', [EnquiryController::class, 'toggleStatus'])->name('enquiries.toggle-status');
-});
+// Route::middleware(['auth', 'verified'])->prefix('admin')->group(function () {
+    // Route::prefix('admin/')->group(function () {
+    //     Route::resource('enquiries', EnquiryController::class);
+    //     Route::post('enquiries/toggle-status/{id}', [EnquiryController::class, 'toggleStatus'])->name('enquiries.toggle-status');
+    // });
+// });
 
 require __DIR__ . '/settings.php';

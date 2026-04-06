@@ -574,6 +574,6 @@
                     src="assets/img/shape/communiti-3-1.png" alt="Stadum"></div> --}}
         </section>
         {{-- the gurdian elephants ends --}}
+    </div>
 
-
-    @endsection
+@endsection

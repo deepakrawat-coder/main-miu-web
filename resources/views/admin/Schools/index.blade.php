@@ -52,14 +52,14 @@
             text: 'Add School',
             className: 'add-new btn btn-primary mb-3 mb-md-0',
             attr: {
-                'onclick': "add('/schools/create', 'modal-xl')"
+                'onclick': "add('schools/create', 'modal-xl')"
             }
         };
 
         var table = $('#schools-table').DataTable({
             processing: true,
             serverSide: true,
-            ajax: "{{ route('schools.index') }}",
+            ajax: "{{ route('admin.schools.index') }}",
             columns: [{
                     data: 'DT_RowIndex',
                     name: 'DT_RowIndex',

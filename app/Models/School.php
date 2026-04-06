@@ -15,12 +15,16 @@ class School extends Model
     {
         return $this->hasMany(Course::class);
     }
-public function courses()
+    public function courses()
     {
         return $this->hasMany(Course::class);
     }
     public function enquiries()
     {
         return $this->hasMany(Enquiry::class);
+    }
+    public function categories()
+    {
+         return $this->belongsToMany(Category::class, 'category_school');
     }
 }

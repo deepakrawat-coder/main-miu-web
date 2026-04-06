@@ -5,7 +5,7 @@
         <small class="text-muted">Update course details carefully</small>
     </div>
 
-    <form id="course-edit-form" action="{{ route('courses.update', $course->id) }}" method="POST"
+    <form id="course-edit-form" action="{{ route('admin.courses.update', $course->id) }}" method="POST"
         enctype="multipart/form-data">
         @csrf
         <!-- @method('PUT') -->

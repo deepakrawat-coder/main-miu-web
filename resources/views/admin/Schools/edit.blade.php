@@ -5,7 +5,7 @@
         <small class="text-muted">Update details and optional features/highlights</small>
     </div>
 
-    <form id="school-edit-form" action="{{ route('schools.update', $school->id) }}" method="POST"
+    <form id="school-edit-form" action="{{ route('admin.schools.update', $school->id) }}" method="POST"
         enctype="multipart/form-data">
         @csrf
 

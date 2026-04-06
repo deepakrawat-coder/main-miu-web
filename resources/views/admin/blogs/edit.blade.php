@@ -5,7 +5,7 @@
         <small class="text-muted">Modify blog details and SEO settings</small>
     </div>
 
-    <form id="blog-form-edit" action="{{ route('admin-blogs.update', $blog->id) }}" method="POST" enctype="multipart/form-data" class="row g-3">
+    <form id="blog-form-edit" action="{{ route('admin.blogs.update', $blog->id) }}" method="POST" enctype="multipart/form-data" class="row g-3">
         @csrf
         @method('POST') {{-- Using POST with AJAX and FormData --}}
 

@@ -4,7 +4,7 @@
         <small class="text-muted">Fill course details carefully</small>
     </div>
 
-    <form id="course-form" action="{{ route('courses.store') }}" method="POST" enctype="multipart/form-data">
+    <form id="course-form" action="{{ route('admin.courses.store') }}" method="POST" enctype="multipart/form-data">
         @csrf
 
         <!-- School -->
