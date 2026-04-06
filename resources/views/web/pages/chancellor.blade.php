@@ -48,6 +48,10 @@
                         <div class="scholar-content z-index-common ms-xxl-4 ms-xl-2 bg-white p-4 shadow-sm"
                             style="border-radius: 16px">
                             <div class="title-area  text-lg-start mt-3 mb-1">
+                                <div>
+                                    <img src="{{ asset('/new-miu/about/chancellor.jpg') }}" width="200" height="160"
+                                        class="img-fluid mb-3" alt="Stadum">
+                                </div>
                                 <span class="sub-title text-anim">Welcome to MIU</span>
                                 <h2 class="sec-title text-anim2">Welcome message</h2>
                                 <p class="sec-text mt-25 wow fadeInUp" data-wow-delay=".3s">
@@ -79,7 +83,7 @@
                                     progress.
                                 </p>
                                 <p class="sec-text wow fadeInUp" data-wow-delay=".3s">
-                                  I invite you to explore our university and become a part of this inspiring journey.
+                                    I invite you to explore our university and become a part of this inspiring journey.
                                 </p>
                                 {{-- <p class="sec-text wow fadeInUp" data-wow-delay=".3s">
                                     We appreciate your interest in Manipur International University. Let's work together
@@ -95,7 +99,8 @@
                                             <p class="sec-text fw-bold wow fadeInUp mb-0" data-wow-delay=".3s">Dr. Hari
                                                 kumar
                                             </p>
-                                            <p class="sec-text fw-bold wow fadeInUp mb-0" data-wow-delay=".3s">Chancellor <br>Manipur International University
+                                            <p class="sec-text fw-bold wow fadeInUp mb-0" data-wow-delay=".3s">Chancellor
+                                                <br>Manipur International University
                                             </p>
                                         </div>
                                     </div>
