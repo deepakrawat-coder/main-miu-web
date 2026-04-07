@@ -147,10 +147,10 @@
             <div class="row">
                 <div class="col-xxl-5">
                     <div class="breadcumb-content">
-                        <h1 class="breadcumb-title">{{ $program->title }}</h1>
+                        <h1 class="breadcumb-title">{{ $program->name }}</h1>
                         <ul class="breadcumb-menu">
                             <li><a href="/">Home</a></li>
-                            <li>{{ $program->title }}</li>
+                            <li>{{ $program->name }}</li>
                         </ul>
                     </div>
                 </div>
@@ -174,10 +174,10 @@
 
                         {{-- ==================== COURSE BADGES SECTION (DESIGNED) ==================== --}}
                         @php
-                            $decoded = json_decode($program->course_name, true);
+                            $decoded = json_decode($program->program_course_name, true);
                             
                             // Get string
-                            $raw = is_array($decoded) ? ($decoded[0] ?? '') : $program->course_name;
+                            $raw = is_array($decoded) ? ($decoded[0] ?? '') : $program->program_course_name;
                             
                             // Split by comma OR dot OR semicolon
                             $programName = preg_split('/[,.;]+/', $raw ?? '');
@@ -197,7 +197,7 @@
                                 <div class="section-title-wrapper">
                                     <h4>
                                         <i class="fas fa-graduation-cap me-2" style="color: #1e3a5f;"></i>
-                                      {{ $ProgramName }}  Programs Offered By
+                                      {{ $program->name }}  Programs Offered By
                                     </h4>
                                     <p>Explore our comprehensive range of courses and specializations</p>
                                 </div>

@@ -35,7 +35,7 @@
                             {{-- <p class="tag"><span class="tag-number">12</span>june</p> --}}
                         </div>
 
-                        <h3 class="h3 mt-n2">About the School of Science</h3>
+                        <h3 class="h3 mt-n2">About the {{ $school->name }}</h3>
                         <p class="mb-30">
                             {{ $school->content }}
                         </p>
@@ -68,16 +68,16 @@
                     </div>
                     <div class="row g-4 row-cols-1 row-cols-md-2 row-cols-lg-3">
                         <!-- Card 1 -->
-                        @foreach ($course as $course)
+                        @foreach ($program as $course)
                             <div class="col">
                                 <div class="academic-card p-0 border-0"
                                     style="border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden; height: 100%;">
                                     <div class="academic-img mb-0">
-                                        <a href="/course/{{ $course->slug }}"><img src="{{ asset($course->image) }}"
+                                        <a href="/program/{{ $course->slug }}"><img src="{{ asset($course->image) }}"
                                                 alt="School of Commerce"></a>
                                     </div>
                                     <div class="academic-content border-0 pb-0 mb-0 px-0 py-3">
-                                        <h3 class="box-title"><a href="/course/{{ $course->slug }}">{{ $course->name }}</a></h3>
+                                        <h3 class="box-title"><a href="/program/{{ $course->slug }}">{{ $course->name }}</a></h3>
                                         <p class="box-text style2 my-2"
                                             style="line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
                                             {!! substr($course->short_description, 0, 50) !!}...

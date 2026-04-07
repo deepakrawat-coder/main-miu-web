@@ -9,28 +9,26 @@ class Program extends Model
 {
     protected $fillable = [
         'school_id',
+        'category_id',
         'name',
-        'slug',
-        'degree_type',
         'duration',
-        'level',
-        'overview',
         'eligibility',
-        'curriculum_structure',
-        'highlights',
-        'featured_image',
-        'total_seats',
-        'fee_min',
-        'fee_max',
-        'order',
+        'short_description',
+        'content',
+        'meta_title',
+        'meta_description',
+        'image',
         'status',
+        'slug',
+        'order',
+        'program_course_name'
     ];
 
-    protected $casts = [
-        'eligibility' => 'array',
-        'curriculum_structure' => 'array',
-        'highlights' => 'array',
-    ];
+    // protected $casts = [
+    //     'eligibility' => 'array',
+    //     'curriculum_structure' => 'array',
+    //     'highlights' => 'array',
+    // ];
 
     // Relationship
     public function courses()

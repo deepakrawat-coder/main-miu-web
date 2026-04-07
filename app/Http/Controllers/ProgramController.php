@@ -16,24 +16,35 @@ use Exception;
 class ProgramController extends Controller
 {
 
-    public function show()
-    {
-        $programs = Program::with('specializations')
-            ->where('status', 1)
-            ->orderBy('name')
-            ->get()
-            ->groupBy('name'); // Diploma, UG, PG, PhD group
-        // dd($programs);
-        // $programsName=$programs
-        return view('web.pages.programs', compact('programs'));
+  public function show()
+{
+    $programs = Program::with(['category', 'school'])
+        ->where('status', 1)
+        ->orderBy('order', 'asc') // Order by 'order' column
+        ->get();
+    
+    // Group programs by category name for tabs
+    $groupedPrograms = [];
+    foreach ($programs as $program) {
+        $categoryName = $program->category ? $program->category->name : 'Other';
+        $groupedPrograms[$categoryName][] = $program;
     }
+    
+    // Get unique categories for tabs
+    $categories = $programs->pluck('category')->filter()->unique('id')->values();
+    
+    return view('web.pages.programs', compact('groupedPrograms', 'categories', 'programs'));
+}
 
     public function details($slug)
     {
-        $program = Specialization::where('slug', $slug)->firstOrFail();
-        $ProgramName = Program::where('id', $program->program_id)->firstOrFail()->name;
-        // dd($programName);
-        return view('web.pages.program-course-details', compact('program', 'ProgramName'));
+        // dd($slug);
+       
+        $program = Program::where('slug', $slug)
+            ->where('status', 1)
+            ->firstOrFail();
+        // dd($program);
+        return view('web.pages.program-details', compact('program'));
     }
 
     public function index(Request $request)
@@ -229,78 +240,163 @@ class ProgramController extends Controller
     //     }
     // }
     public function store(Request $request)
-{
-    $request->validate([
-        'school_id' => 'required|exists:schools,id',
-        'category_id' => 'required|exists:categories,id',
-        'name' => 'required|string|max:255',
-        'program_course_name' => 'nullable|array',
-        'image' => 'nullable|image|mimes:jpeg,png,jpg|max:2048'
-    ]);
-    
-    // Handle program_course_name as JSON
-    $programCourseName = null;
-    if ($request->has('program_course_name')) {
-        $programCourseName = json_encode(array_filter($request->program_course_name));
+    {
+        $request->validate([
+            'school_id' => 'required|exists:schools,id',
+            'category_id' => 'required|exists:categories,id',
+            'name' => 'required|string|max:255',
+            'duration' => 'nullable|string|max:255',
+            'eligibility' => 'nullable|string',
+            'short_description' => 'nullable|string',
+            'content' => 'nullable|string',
+            'meta_title' => 'nullable|string|max:255',
+            'meta_description' => 'nullable|string',
+            'program_course_name' => 'nullable|array',
+            'program_course_name.*' => 'nullable|string',
+            'order' => 'nullable|integer',
+            'image' => 'nullable|image|mimes:jpeg,png,jpg|max:2048'
+        ]);
+
+        // Handle image upload
+        $imagePath = null;
+        if ($request->hasFile('image')) {
+            $image = $request->file('image');
+            $imageName = time() . '_' . uniqid() . '.' . $image->getClientOriginalExtension();
+            $image->move(public_path('uploads/programs'), $imageName);
+            $imagePath = 'uploads/programs/' . $imageName;
+        }
+
+        // Create program
+        $program = Program::create([
+            'school_id' => $request->school_id,
+            'category_id' => $request->category_id,
+            'slug' => Str::slug($request->name),
+            'name' => $request->name,
+            'duration' => $request->duration,
+            'eligibility' => $request->eligibility,
+            'short_description' => $request->short_description,
+            'content' => $request->content,
+            'meta_title' => $request->meta_title,
+            'meta_description' => $request->meta_description,
+            'order' => $request->order ?? 0,
+            'image' => $imagePath,
+            'program_course_name' => $request->program_course_name ? json_encode($request->program_course_name) : null,
+        ]);
+
+        return response()->json([
+            'status' => 'success',
+            'message' => 'Program created successfully',
+            'data' => $program
+        ]);
     }
-    
-    // Handle image upload
-    $imagePath = null;
-    if ($request->hasFile('image')) {
-        $image = $request->file('image');
-        $imagePath = $image->store('programs', 'public');
-    }
-    
-    $program = Program::create([
-        'school_id' => $request->school_id,
-        'category_id' => $request->category_id,
-        'name' => $request->name,
-        'duration' => $request->duration,
-        'eligibility' => $request->eligibility,
-        'short_description' => $request->short_description,
-        'content' => $request->content,
-        'program_course_name' => $programCourseName,
-        'meta_title' => $request->meta_title,
-        'meta_description' => $request->meta_description,
-        'image' => $imagePath,
-        'status' => 1
-    ]);
-    
-    return response()->json([
-        'status' => 'success',
-        'message' => 'Program created successfully',
-        'data' => $program
-    ]);
-}
     public function edit($courseID)
     {
         $schools = School::where('status', 1)->get();
-        $programs  = Program::findOrFail($courseID);
-
-        return view('admin.programs.edit', compact('programs', 'schools'));
-    }
-    public function update(Request $request, $courseID)
-    {
-        // dd([
-        //     'request' => $request->all(),
-        //     'courseID' => $courseID
-        // ]);
-        // ✅ Find Program
         $programs = Program::findOrFail($courseID);
 
-        // ✅ Validation
+        // Get categories via pivot table category_school
+        $categories = Category::where('status', 1)
+            ->whereHas('schools', function ($query) use ($programs) {
+                $query->where('school_id', $programs->school_id);
+            })
+            ->get();
+
+        return view('admin.programs.edit', compact('programs', 'schools', 'categories'));
+    }
+    // public function update(Request $request, $courseID)
+    // {
+    //     // dd([
+    //     //     'request' => $request->all(),
+    //     //     'courseID' => $courseID
+    //     // ]);
+    //     // ✅ Find Program
+    //     $programs = Program::findOrFail($courseID);
+
+    //     // ✅ Validation
+    //     $validator = Validator::make($request->all(), [
+    //         'school_id'        => 'required|exists:schools,id',
+    //         'name'             => 'required|string|max:255',
+    //         'short_description' => 'nullable|string',
+    //         'meta_title'       => 'nullable|string|max:255',
+    //         'meta_description' => 'nullable|string',
+    //         'duration'         => 'nullable|string|max:255',
+    //         'eligibility'      => 'nullable|string|max:255',
+    //         'image'            => 'nullable|image|mimes:jpg,jpeg,png,webp|max:2048',
+    //         'program_course_name' => 'nullable|array',
+    //         'program_course_name.*' => 'nullable|string',
+    //         'content'           => 'nullable|string',
+    //     ]);
+
+    //     if ($validator->fails()) {
+    //         return response()->json([
+    //             'status' => 0,
+    //             'errors' => $validator->errors()
+    //         ], 422);
+    //     }
+
+    //     try {
+
+    //         // ✅ Update Fields
+    //         $programs->school_id         = $request->school_id;
+    //         $programs->name              = $request->name;
+    //         $programs->slug             = Str::slug($request->name);
+    //         $programs->duration          = $request->duration;
+    //         $programs->eligibility       = $request->eligibility;
+    //         $programs->short_description = $request->short_description;
+    //         $programs->meta_title        = $request->meta_title;
+    //         $programs->meta_description  = $request->meta_description;
+    //         $programs->content           = $request->content;
+    //         $programs->program_course_name = $request->program_course_name ? json_encode($request->program_course_name) : null;
+    //         // ✅ Image Update (Replace Old Image)
+    //         if ($request->hasFile('image')) {
+
+    //             // Delete old image if exists
+    //             if ($programs->image && file_exists(public_path($programs->image))) {
+    //                 unlink(public_path($programs->image));
+    //             }
+
+    //             $file = $request->file('image');
+    //             $filename = time() . '_' . $file->getClientOriginalName();
+    //             $file->move(public_path('uploads/programs'), $filename);
+
+    //             $programs->image = 'uploads/programs/' . $filename;
+    //         }
+
+    //         $programs->save();
+
+    //         return response()->json([
+    //             'status' => 'success',
+    //             'message' => 'Program updated successfully',
+    //             'data' => $programs
+    //         ]);
+    //     } catch (Exception $e) {
+
+    //         return response()->json([
+    //             'status' => 0,
+    //             'message' => 'Something went wrong: ' . $e->getMessage()
+    //         ], 500);
+    //     }
+    // }
+    public function update(Request $request, $courseID)
+    {
+        // ✅ Find Program
+        $program = Program::findOrFail($courseID);
+
+        // ✅ Validation (Match with store function)
         $validator = Validator::make($request->all(), [
-            'school_id'        => 'required|exists:schools,id',
-            'name'             => 'required|string|max:255',
+            'school_id' => 'required|exists:schools,id',
+            'category_id' => 'nullable  |exists:categories,id',  // ✅ Added category_id validation
+            'name' => 'required|string|max:255',
+            'duration' => 'nullable|string|max:255',
+            'eligibility' => 'nullable|string',
             'short_description' => 'nullable|string',
-            'meta_title'       => 'nullable|string|max:255',
+            'content' => 'nullable|string',
+            'meta_title' => 'nullable|string|max:255',
             'meta_description' => 'nullable|string',
-            'duration'         => 'nullable|string|max:255',
-            'eligibility'      => 'nullable|string|max:255',
-            'image'            => 'nullable|image|mimes:jpg,jpeg,png,webp|max:2048',
             'program_course_name' => 'nullable|array',
+            'order' => 'nullable|integer',
             'program_course_name.*' => 'nullable|string',
-            'content'           => 'nullable|string',
+            'image' => 'nullable|image|mimes:jpeg,png,jpg,webp|max:2048'
         ]);
 
         if ($validator->fails()) {
@@ -311,42 +407,43 @@ class ProgramController extends Controller
         }
 
         try {
-
-            // ✅ Update Fields
-            $programs->school_id         = $request->school_id;
-            $programs->name              = $request->name;
-            $programs->slug             = Str::slug($request->name);
-            $programs->duration          = $request->duration;
-            $programs->eligibility       = $request->eligibility;
-            $programs->short_description = $request->short_description;
-            $programs->meta_title        = $request->meta_title;
-            $programs->meta_description  = $request->meta_description;
-            $programs->content           = $request->content;
-            $programs->program_course_name = $request->program_course_name ? json_encode($request->program_course_name) : null;
-            // ✅ Image Update (Replace Old Image)
+            // ✅ Handle image upload (Delete old if exists)
+            $imagePath = $program->image;
             if ($request->hasFile('image')) {
-
-                // Delete old image if exists
-                if ($programs->image && file_exists(public_path($programs->image))) {
-                    unlink(public_path($programs->image));
+                // Delete old image
+                if ($program->image && file_exists(public_path($program->image))) {
+                    unlink(public_path($program->image));
                 }
 
-                $file = $request->file('image');
-                $filename = time() . '_' . $file->getClientOriginalName();
-                $file->move(public_path('uploads/programs'), $filename);
-
-                $programs->image = 'uploads/programs/' . $filename;
+                $image = $request->file('image');
+                $imageName = time() . '_' . uniqid() . '.' . $image->getClientOriginalExtension();
+                $image->move(public_path('uploads/programs'), $imageName);
+                $imagePath = 'uploads/programs/' . $imageName;
             }
 
-            $programs->save();
+            // ✅ Update Program
+            $program->update([
+                'school_id' => $request->school_id,
+                'category_id' => $request->category_id,  // ✅ Added category_id
+                'slug' => Str::slug($request->name),
+                'name' => $request->name,
+                'duration' => $request->duration,
+                'eligibility' => $request->eligibility,
+                'short_description' => $request->short_description,
+                'content' => $request->content,
+                'meta_title' => $request->meta_title,
+                'meta_description' => $request->meta_description,
+                'image' => $imagePath,
+                'order' => $request->order ?? 0,
+                'program_course_name' => $request->program_course_name ? json_encode($request->program_course_name) : null,
+            ]);
 
             return response()->json([
                 'status' => 'success',
                 'message' => 'Program updated successfully',
-                'data' => $programs
+                'data' => $program
             ]);
         } catch (Exception $e) {
-
             return response()->json([
                 'status' => 0,
                 'message' => 'Something went wrong: ' . $e->getMessage()

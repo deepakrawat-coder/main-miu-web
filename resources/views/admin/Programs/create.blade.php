@@ -61,20 +61,28 @@
         </div>
 
         <!-- School Course Name (can add multiple dynamically) -->
-        
+
 
         <!-- Content -->
         <div class="mb-3">
             <label class="form-label">Content</label>
             <textarea name="content" id="content" class="form-control" rows="3"></textarea>
         </div>
-
+        <div class="mb-3">
+            <label class="form-label">School Course Name</label>
+            <input type="text" name="program_course_name[]" class="form-control">
+        </div>
         <!-- Image -->
         <div class="mb-3">
             <label class="form-label">Course Image</label>
             <input type="file" name="image" class="form-control">
         </div>
 
+        <div class="mb-3">
+            <label class="form-label">School Course Name</label>
+            <input type="number" name="order" class="form-control"
+                placeholder="Enter order number (lower = higher priority)">
+        </div>
         <div class="mb-3 text-end">
             <button type="submit" class="btn btn-primary">Save</button>
             <button type="button" class="btn btn-light" data-bs-dismiss="modal">Cancel</button>
@@ -87,7 +95,7 @@
 <script>
     let shortDescriptionEditor;
     let contentEditor;
-    
+
     $(document).ready(function() {
 
         // Initialize CKEditor for Short Description
@@ -99,7 +107,7 @@
             .catch(error => {
                 console.error(error);
             });
-            
+
         ClassicEditor
             .create(document.querySelector('#content'))
             .then(editor => {
@@ -114,31 +122,38 @@
             var schoolId = $(this).val();
             var categoryDiv = $('#category_div');
             var categorySelect = $('#category_id');
-            
+
             if (schoolId) {
                 // Show loading state
                 categoryDiv.show();
                 categorySelect.html('<option value="">Loading...</option>');
-                
+
                 $.ajax({
                     url: "{{ route('admin.programs.getCategoriesBySchool') }}",
                     type: "GET",
-                    data: { school_id: schoolId },
+                    data: {
+                        school_id: schoolId
+                    },
                     dataType: "json",
                     success: function(response) {
                         categorySelect.html('<option value="">Select Category</option>');
-                        
-                        if (response.status == 'success' && response.categories.length > 0) {
+
+                        if (response.status == 'success' && response.categories.length >
+                            0) {
                             $.each(response.categories, function(key, category) {
-                                categorySelect.append('<option value="' + category.id + '">' + category.name + '</option>');
+                                categorySelect.append('<option value="' + category
+                                    .id + '">' + category.name + '</option>');
                             });
                         } else {
-                            categorySelect.html('<option value="">No categories found for this school</option>');
+                            categorySelect.html(
+                                '<option value="">No categories found for this school</option>'
+                            );
                         }
                     },
                     error: function(xhr) {
                         console.error(xhr);
-                        categorySelect.html('<option value="">Error loading categories</option>');
+                        categorySelect.html(
+                            '<option value="">Error loading categories</option>');
                     }
                 });
             } else {
@@ -148,7 +163,7 @@
         });
 
         // ========== ADD MORE COURSE NAME FIELDS ==========
-    
+
 
         // ========== AJAX SUBMIT ==========
         $("#course-form").submit(function(e) {
@@ -176,7 +191,7 @@
                         toastr.success(res.message);
                         $(".modal").modal('hide');
                         $('#courses-table').DataTable().ajax.reload();
-                        
+
                         // Reset form
                         $('#course-form')[0].reset();
                         $('#category_div').hide();

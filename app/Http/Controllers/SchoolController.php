@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Course;
 use App\Models\Faq;
+use App\Models\Program;
 use App\Models\School;
 use App\Models\Testimonial;
 use Illuminate\Http\Request;
@@ -31,13 +32,12 @@ class SchoolController extends Controller
 
     public function details($slug)
     {
-        $school = School::with('courses')
-            ->where('slug', $slug)
+        $school = School::where('slug', $slug)
             ->where('status', 1)
             ->firstOrFail();
-        $course= $school->courses()->where('status',1)->get();
-//    dd($school,$course);
-        return view('web.pages.schools-departments-details', compact('school','course'));
+       $program= Program::where('school_id', $school->id)->where('status', 1)->get();
+//    dd($school,$program);
+        return view('web.pages.schools-departments-details', compact('school','program'));
     }
 
 

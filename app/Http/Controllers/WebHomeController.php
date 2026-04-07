@@ -42,6 +42,20 @@ class WebHomeController extends Controller
             $faq = [];
         }
         $specializations = Specialization::where('status', 1)->get(); // Added this line
-        return view('web.pages.index', compact('schools', 'Testimonials', 'events', 'blogs', 'faq', 'programs')); // Modified this line
+        $programs = Program::with(['category', 'school'])
+            ->where('status', 1)
+            ->orderBy('order', 'asc') // Order by 'order' column
+            ->get();
+
+        // Group programs by category name for tabs
+        $groupedPrograms = [];
+        foreach ($programs as $program) {
+            $categoryName = $program->category ? $program->category->name : 'Other';
+            $groupedPrograms[$categoryName][] = $program;
+        }
+
+        // Get unique categories for tabs
+        $categories = $programs->pluck('category')->filter()->unique('id')->values();
+        return view('web.pages.index', compact('schools', 'Testimonials', 'events', 'blogs', 'faq',     'groupedPrograms', 'categories', 'programs')); // Modified this line
     }
 }

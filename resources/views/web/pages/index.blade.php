@@ -227,13 +227,7 @@
         <div class="container">
             <div class="row justify-content-lg-between justify-content-center align-items-center">
                 <div class="col-lg-12 col-12">
-                    {{-- <div class="title-area text-center text-lg-start mb-75"><span
-                            class="sub-title text-anim">ACADEMICS</span>
-                        <h2 class="sec-title text-anim2">Schools & Faculties</h2>
-                        <p>Our Schools and Faculties bring together experienced academicians and subject experts dedicated
-                            to excellence in teaching and research. Each department is designed to foster specialized
-                            knowledge, critical thinking, and academic innovation.</p>
-                    </div> --}}
+
                     <div class="title-area text-center text-lg-start mb-75">
                         <span class="sub-title text-anim">AFFILIATIONS & ACCREDITATION</span>
                         <h2 class="sec-title text-anim2">Recognized by Leading Education Bodies</h2>
@@ -242,10 +236,7 @@
                             global university standards, ensuring your degree is valued worldwide.</p>
                     </div>
                 </div>
-                {{-- <div class="col-auto align-self-center">
-                    <div class="sec-btn wow fadeInUp" data-wow-delay=".3s"><a href="program.html"
-                            class="th-btn style-border1 th-icon">Explore All</a></div>
-                </div> --}}
+
             </div>
 
             <div class="row  justify-content-center">
@@ -261,31 +252,26 @@
                             alt="Accenture" class="img-fluid affliation_img">
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 col-6 mb-lg-0 mb-4">
+                {{-- <div class="col-lg-3 col-md-4 col-sm-6 col-6 mb-lg-0 mb-4">
                     <div class="recruiter-card">
                         <img src="{{ asset('/new-miu/affliation/national-assessment-and-accreditation-council-01.jpg') }}"
                             alt="Accenture" class="img-fluid affliation_img">
                     </div>
-                </div>
+                </div> --}}
                 <div class="col-lg-3 col-md-4 col-sm-6 col-6 mb-lg-0 mb-4">
                     <div class="recruiter-card">
-                        <img src="{{ asset('/new-miu/affliation/ugc.jpg') }}" alt="Accenture"
+                        <img src="{{ asset('/new-miu/affliation/UGC_India_Logo.png') }}" alt="Accenture"
                             class="img-fluid affliation_img">
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <section class="popular-course-area-1 space shape-mockup-wrap pt-0">
-        <div class="container ">
+    <section class="popular-course-area-1 space shape-mockup-wrap">
+        <div class="container">
             <div class="row justify-content-xl-between justify-content-center align-items-center">
                 <div class="col-xl-6 col-12">
                     <div class="title-wrap">
-                        {{-- <div class="title-area text-center text-xl-start">
-                            <span class="sub-title text-anim">POPULAR COURSES</span>
-                            <h2 class="sec-title text-anim2">Pick a course & <span class="d-block">get started your
-                                    career</span></h2>
-                        </div> --}}
                         <div class="title-area text-center text-xl-start">
                             <span class="sub-title text-anim">MIU PROGRAMS</span>
                             <h2 class="sec-title text-anim2">Choose Your Path <span class="d-block">at Manipur
@@ -296,165 +282,64 @@
                 <div class="col-auto align-self-end">
                     <div class="sec-btn">
                         <ul class="nav nav-tabs course-tabs popularcourse-tab" role="tablist">
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link active th-btn style-border1" id="diploma-tab"
-                                    data-bs-toggle="tab" data-bs-target="#diplomaTab" type="button" role="tab"
-                                    aria-selected="true">Diploma</button>
-                            </li>
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link th-btn style-border1" id="ug-tab" data-bs-toggle="tab"
-                                    data-bs-target="#ugTab" type="button" role="tab"
-                                    aria-selected="false">UG</button>
-                            </li>
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link th-btn style-border1" id="pg-tab" data-bs-toggle="tab"
-                                    data-bs-target="#pgTab" type="button" role="tab"
-                                    aria-selected="false">PG</button>
-                            </li>
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link th-btn style-border1" id="phd-tab" data-bs-toggle="tab"
-                                    data-bs-target="#phdTab" type="button" role="tab"
-                                    aria-selected="false">PhD</button>
-                            </li>
+                            @foreach ($categories as $index => $category)
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link th-btn style-border1 {{ $index == 0 ? 'active' : '' }}"
+                                        id="{{ Str::slug($category->name) }}-tab" data-bs-toggle="tab"
+                                        data-bs-target="#{{ Str::slug($category->name) }}Tab" type="button"
+                                        role="tab">
+                                        {{ $category->name }}
+                                    </button>
+                                </li>
+                            @endforeach
                         </ul>
                     </div>
                 </div>
             </div>
 
-
             <div class="tab-content">
-
-                {{-- Diploma --}}
-                <div class="tab-pane fade show active" id="diplomaTab">
-                    <div class="row g-4 row-cols-1 row-cols-md-2 row-cols-lg-3">
-                        @foreach ($programs['Diploma'] ?? [] as $program)
-                            @foreach ($program->specializations as $course)
+                @foreach ($categories as $index => $category)
+                    <div class="tab-pane fade {{ $index == 0 ? 'show active' : '' }}"
+                        id="{{ Str::slug($category->name) }}Tab">
+                        <div class="row g-4 row-cols-1 row-cols-md-2 row-cols-lg-3">
+                            @php
+                                $categoryPrograms = $groupedPrograms[$category->name] ?? [];
+                            @endphp
+                            @foreach ($categoryPrograms as $program)
                                 <div class="col">
                                     <div class="academic-card p-0"
                                         style="border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden; height: 100%;">
                                         <div class="academic-img mb-0">
                                             <a href="program-details.html"><img
-                                                    src="{{ asset($course->image ?? 'assets/img/academic/default.jpg') }}"
+                                                    src="{{ asset($program->image ?? 'assets/img/academic/default.jpg') }}"
                                                     alt="School of Engineering"></a>
                                         </div>
                                         <div class="academic-content border-0 pb-0 mb-0 px-3 py-3">
-                                            <h3 class="box-title"><a href="program-details.html">{{ $course->title }}</a>
+                                            <h3 class="box-title"><a href="program-details.html">{{ $program->name }}</a>
                                             </h3>
                                             <p class="box-text style2 my-2"
                                                 style="line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
-                                                {{ Str::limit($course->description ?? 'Course details available', 50) }}
+                                                {{ Str::limit($program->short_description ?? 'Program details available', 50) }}
                                             </p>
                                             <div class="d-flex justify-content-between mt-2 mb-2">
                                                 <a href="about.html" class="btn text-secondary custom_apply">Apply Now</a>
-                                                <a href="/program/{{ $course->slug }}"
+                                                <a href="/program/{{ $program->slug }}"
                                                     class="th-btn style-border1 th-icon">Read More</a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             @endforeach
-                        @endforeach
+                        </div>
                     </div>
-                </div>
-
-                {{-- UG --}}
-                <div class="tab-pane fade" id="ugTab">
-                    <div class="row g-4 row-cols-1 row-cols-md-2 row-cols-lg-3">
-                        @foreach ($programs['UG'] ?? [] as $program)
-                            @foreach ($program->specializations as $course)
-                                <div class="col">
-                                    <div class="academic-card p-0"
-                                        style="border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden; height: 100%;">
-                                        <div class="academic-img mb-0">
-                                            <a href="program-details.html"><img
-                                                    src="{{ asset($course->image ?? 'assets/img/academic/default.jpg') }}"
-                                                    alt="School of Engineering"></a>
-                                        </div>
-                                        <div class="academic-content border-0 pb-0 mb-0 px-3 py-3">
-                                            <h3 class="box-title"><a href="program-details.html">{{ $course->title }}</a>
-                                            </h3>
-                                            <p class="box-text style2 my-2"
-                                                style="line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
-                                                {{ Str::limit($course->description ?? 'Course details available', 50) }}
-                                            </p>
-                                            <div class="d-flex justify-content-between mt-2 mb-2">
-                                                <a href="/program/{{ $course->slug }}"
-                                                    class="th-btn style-border1 th-icon">Read More</a>
-                                                <a href="about.html" class="btn text-secondary custom_apply">Apply Now</a>
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            @endforeach
-                        @endforeach
-                    </div>
-                </div>
-
-                {{-- PG --}}
-                <div class="tab-pane fade" id="pgTab">
-                    <div class="row g-4 row-cols-1 row-cols-md-2 row-cols-lg-3">
-                        @foreach ($programs['PG'] ?? [] as $program)
-                            @foreach ($program->specializations as $course)
-                                <div class="col">
-                                    <div class="academic-card p-0"
-                                        style="border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden; height: 100%;">
-                                        <div class="academic-img mb-0">
-                                            <a href="program-details.html"><img
-                                                    src="{{ asset($course->image ?? 'assets/img/academic/default.jpg') }}"
-                                                    alt="School of Engineering"></a>
-                                        </div>
-                                        <div class="academic-content border-0 pb-0 mb-0 px-3 py-3">
-                                            <h3 class="box-title"><a href="program-details.html">{{ $course->title }}</a>
-                                            </h3>
-                                            <p class="box-text style2 my-2"
-                                                style="line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
-                                                {{ Str::limit($course->description ?? 'Course details available', 50) }}
-                                            </p>
-                                            <div class="d-flex justify-content-between mt-2 mb-2">
-                                                <a href="/program/{{ $course->slug }}"
-                                                    class="th-btn style-border1 th-icon">Read More</a>
-                                                <a href="about.html" class="btn text-secondary custom_apply">Apply Now</a>
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            @endforeach
-                        @endforeach
-                    </div>
-                </div>
-
-                {{-- PhD --}}
-                <div class="tab-pane fade" id="phdTab">
-                    <div class="row g-4 row-cols-1 row-cols-md-2 row-cols-lg-3">
-                        @foreach ($programs['PHD'] ?? [] as $program)
-                            @foreach ($program->specializations as $course)
-                                <div class="col-md-4">
-                                    <div class="academic-card p-0">
-                                        <div class="academic-img">
-                                            <img src="{{ asset($course->image ?? 'assets/img/academic/default.jpg') }}">
-                                        </div>
-
-                                        <div class="d-flex justify-content-between mt-2 mb-2">
-                                            <a href="/program/{{ $course->slug }}"
-                                                class="th-btn style-border1 th-icon">Read More</a>
-                                            <a href="about.html" class="btn text-secondary custom_apply">Apply Now</a>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            @endforeach
-                        @endforeach
-                    </div>
-                </div>
-
+                @endforeach
             </div>
             <div class="btn-wrap mt-50 text-center d-block">
                 <a class="th-btn th-icon" href="/program">Browse All Categories</a>
             </div>
         </div>
     </section>
+
     <div class="counter-area1 overflow-hidden">
         <div class="container th-container2">
             <div class="counter-wrap1">
@@ -1306,7 +1191,7 @@
             </div>
         </div>
     </section>
-    <section class="apply-stadum-area bg-title position-relative space overflow-hidden">
+    {{-- <section class="apply-stadum-area bg-title position-relative space overflow-hidden">
         <div class="container">
             <div class="row gy-4 align-items-center justify-content-between">
                 <div class="col-xl-6 order-1 order-xl-0">
@@ -1323,7 +1208,7 @@
                 </div>
             </div>
         </div><span class="apply-stadum-shape wow fadeInRight" data-wow-delay=".3s"></span>
-    </section>
+    </section> --}}
     <section class="faq-area-1 bg-white position-relative space overflow-hidden">
 
         <div class="container">
@@ -1756,7 +1641,7 @@
             });
         })();
     </script>
-    <script>
+    {{-- <script>
         (function() {
             const form = document.getElementById('enquiryForm');
             const successDiv = document.getElementById('formSuccessMessage');
@@ -1854,5 +1739,5 @@
                 }, 5000);
             @endif
         })();
-    </script>
+    </script> --}}
 @endsection

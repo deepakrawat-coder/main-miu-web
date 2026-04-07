@@ -122,6 +122,8 @@
                          @foreach ($schools as $school)
                              <li><a href="/school/{{ $school->slug }}">{{ $school->name }}</a></li>
                          @endforeach
+                         <li><a href="https://vocational.miu.edu.in/" target="_blank">School of Vocational Studies</a>
+                         </li>
                      </ul>
                  </li>
 
@@ -323,7 +325,8 @@
 
                                          </li>
 
-                                         <li><a href="/schools-departments-details">School of Science</a></li>
+                                         <li><a href="https://vocational.miu.edu.in/" target="_blank">School of
+                                                 Vocational Studies</a></li>
                                          {{-- <li><a href="program-details-sidebar.html">School of Pragmatism</a>
                                                  </li> --}}
                                      </ul>
