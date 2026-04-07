@@ -100,7 +100,7 @@
 
 
 
-    <div class="breadcumb-wrapper position-relative" data-bg-src="{{asset('/assets/img/shape/breadcrumb-shep.png')}})">
+    <div class="breadcumb-wrapper position-relative" data-bg-src="{{asset('/assets/img/shape/breadcrumb-shep.png')}}">
         <div class="breadcumb-banner"><img src="{{ asset('/new-miu/banner/banner4.png') }}" alt="bg-banner"></div>
         {{-- <div class="breadcumb-shape"><img src="{{ asset('/new-miu/banner/banner4.png') }}" alt="shape" class="jump"></div> --}}
         <div class="container th-container4">
@@ -120,7 +120,7 @@
 
     <div class="about1-area position-relative overflow-hidden space pb-0" id="about-sec">
         <div class="about-shep-2 shape-mockup d-none d-xxl-block" data-bottom="0%" data-right="0%"><img
-                src="{{asset('/assets/img/shape/feature-shep-2-home-1.png')}})" alt="shape"></div>
+                src="{{asset('/assets/img/shape/feature-shep-2-home-1.png')}}" alt="shape"></div>
 
         <div class="container th-container4">
             <div class="about-wrap1 position-relative z-index-2 mb-5">
@@ -177,7 +177,7 @@
                         <h3 class="text-center mb-5">Our Prestigious Recognitions </h3>
                         <div class="about-feature-wrapp row justify-content-center" style="max-width:100%">
                             <div class="about-feature wow fadeInUp col-12 col-sm-12 col-md-12 col-lg-4 col-xxl-4"
-                                data-wow-delay=".3s"><span class="box-icon"><img src="{{asset('/assets/img/icon/ab-users.svg')}})"
+                                data-wow-delay=".3s"><span class="box-icon"><img src="{{asset('/assets/img/icon/ab-users.svg')}}"
                                         alt="icon"></span>
                                 <div class="box-content">
                                     <h3 class="box-title">Academic Excellence Recognition</h3>
@@ -187,7 +187,7 @@
                                 </div>
                             </div>
                             <div class="about-feature wow fadeInUp col-12 col-sm-12 col-md-12 col-lg-4 col-xxl-4"
-                                data-wow-delay=".4s"><span class="box-icon"><img src="{{asset('/assets/img/icon/ab-message.svg')}})"
+                                data-wow-delay=".4s"><span class="box-icon"><img src="{{asset('/assets/img/icon/ab-message.svg')}}"
                                         alt="icon"></span>
                                 <div class="box-content">
                                     <h3 class="box-title">Cultural Heritage Leadership</h3>
@@ -198,7 +198,7 @@
                                 </div>
                             </div>
                             <div class="about-feature wow fadeInUp col-12 col-sm-12 col-md-12 col-lg-4 col-xxl-4"
-                                data-wow-delay=".4s"><span class="box-icon"><img src="{{asset('/assets/img/icon/library.svg')}})"
+                                data-wow-delay=".4s"><span class="box-icon"><img src="{{asset('/assets/img/icon/library.svg')}}"
                                         alt="icon"></span>
                                 <div class="box-content">
                                     <h3 class="box-title">Research & Regional Development</h3>
@@ -219,7 +219,7 @@
             <div class="container th-container2">
                 <div class="counter-wrap1">
                     <div class="counter-card wow fadeInUp" data-wow-delay=".2s">
-                        <div class="box-icon"><img src="{{asset('/assets/img/icon/counter-icon1-1.svg" alt="icon')}})"></div>
+                        <div class="box-icon"><img src="{{asset('/assets/img/icon/counter-icon1-1.svg')}}" alt="icon"></div>
                         <div class="media-body">
                             <h3 class="box-number"><span class="counter-number">500</span>+</h3>
                             <p class="box-text">Recruiters</p>
@@ -227,7 +227,7 @@
                     </div>
                     <div class="divider"></div>
                     <div class="counter-card wow fadeInUp" data-wow-delay=".4s">
-                        <div class="box-icon"><img src="{{asset('/assets/img/icon/counter-icon1-2.svg')}})" alt="icon"></div>
+                        <div class="box-icon"><img src="{{asset('/assets/img/icon/counter-icon1-2.svg')}}" alt="icon"></div>
                         <div class="media-body">
                             <h3 class="box-number"><span class="counter-number">1000</span>+</h3>
                             <p class="box-text">Year Established</p>
@@ -235,7 +235,7 @@
                     </div>
                     <div class="divider"></div>
                     <div class="counter-card wow fadeInUp" data-wow-delay=".6s">
-                        <div class="box-icon"><img src="{{asset('/assets/img/icon/counter-icon1-3.svg')}})"alt="icon"></div>
+                        <div class="box-icon"><img src="{{asset('/assets/img/icon/counter-icon1-3.svg')}}"alt="icon"></div>
                         <div class="media-body">
                             <h3 class="box-number"><span class="counter-number">95</span>%</h3>
                             <p class="box-text">Placements</p>
@@ -243,7 +243,7 @@
                     </div>
                     <div class="divider"></div>
                     <div class="counter-card wow fadeInUp" data-wow-delay=".7s">
-                        <div class="box-icon"><img src="{{asset('/assets/img/icon/counter-icon1-4.svg')}})" alt="icon"></div>
+                        <div class="box-icon"><img src="{{asset('/assets/img/icon/counter-icon1-4.svg')}}" alt="icon"></div>
                         <div class="media-body">
                             <h3 class="box-number"><span class="counter-number">50</span>+</h3>
                             <p class="box-text">Industry Tie-Ups</p>
@@ -515,7 +515,7 @@
                             </div>
                             <div class="community-wrap2">
                                 <div class="community-card2 wow fadeInUp" data-wow-delay=".2s">
-                                    <div class="community-icon"><img src="{{asset('/assets/img/icon/communiti-3-1.svg')}})"
+                                    <div class="community-icon"><img src="{{asset('/assets/img/icon/communiti-3-1.svg')}}"
                                             alt="Stadum">
                                     </div>
                                     <div class="card-content">
@@ -526,7 +526,7 @@
                                     </div>
                                 </div>
                                 <div class="community-card2 wow fadeInUp" data-wow-delay=".4s">
-                                    <div class="community-icon"><img src="{{asset('/assets/img/icon/communiti-3-2.svg')}})"
+                                    <div class="community-icon"><img src="{{asset('/assets/img/icon/communiti-3-2.svg')}}"
                                             alt="Stadum">
                                     </div>
                                     <div class="card-content">
