@@ -46,6 +46,7 @@ Route::view('/blog', 'web.pages.blog');
 Route::view('/blog-details', 'web.pages.blog-details');
 Route::view('/all-events', 'web.pages.events');
 Route::view('/event-details', 'web.pages.event-details');
+Route::view('/iqac', 'web.pages.iqac');
 
 // Route::get('/', [WebHomeController::class, 'index'])->name('home');
 // Route::view('/about-us', 'web.pages.about-us');

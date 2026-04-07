@@ -308,7 +308,7 @@
                                                          <li><a href="shop.html">Governing Body</a></li>
                                                          <li><a href="shop-details.html">Academmic Council</a>
                                                          </li>
-                                                         <li><a href="cart.html">IQAC</a></li>
+                                                         <li><a href="/iqac">IQAC</a></li>
 
                                                      </ul>
                                                  </li>
