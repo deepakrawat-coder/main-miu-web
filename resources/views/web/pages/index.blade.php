@@ -888,7 +888,7 @@
                         <!-- Slide 1 - Text changed to MIU Student -->
                         <div class="swiper-slide">
                             <div class="story-card">
-                                <div class="box-img"><img src="{{ asset('/assets/img/story/story-1-1.jpg') }}"
+                                <div class="box-img"><img src="{{ asset('/new-miu/student-img/12.jpg') }}"
                                         alt="img"></div>
                                 <div class="story-content">
                                     <h3 class="box-title"><a href="program.html">Aman Verma</a></h3>
@@ -907,7 +907,7 @@
                         <!-- Slide 2 - Text changed to MIU Student -->
                         <div class="swiper-slide">
                             <div class="story-card">
-                                <div class="box-img"><img src="{{ asset('/assets/img/story/story-1-2.jpg') }}"
+                                <div class="box-img"><img src="{{ asset('/new-miu/student-img/15.jpg') }}"
                                         alt="img"></div>
                                 <div class="story-content">
                                     <h3 class="box-title"><a href="program.html">Priya Sharma</a></h3>
@@ -926,7 +926,7 @@
                         <!-- Slide 3 - Text changed to MIU Student -->
                         <div class="swiper-slide">
                             <div class="story-card">
-                                <div class="box-img"><img src="{{ asset('/assets/img/story/story-1-3.jpg') }}"
+                                <div class="box-img"><img src="{{ asset('/new-miu/student-img/11.jpg') }}"
                                         alt="img"></div>
                                 <div class="story-content">
                                     <h3 class="box-title"><a href="program.html">Rahul Singh</a></h3>
@@ -944,7 +944,7 @@
                         <!-- Slide 4 - Text changed to MIU Student -->
                         <div class="swiper-slide">
                             <div class="story-card">
-                                <div class="box-img"><img src="{{ asset('/assets/img/story/story-1-4.jpg') }}"
+                                <div class="box-img"><img src="{{ asset('/new-miu/student-img/20.jpg') }}"
                                         alt="img"></div>
                                 <div class="story-content">
                                     <h3 class="box-title"><a href="program.html">Neha Gupta</a></h3>
@@ -962,7 +962,7 @@
                         <!-- Slide 5 - Text changed to MIU Student -->
                         <div class="swiper-slide">
                             <div class="story-card">
-                                <div class="box-img"><img src="{{ asset('/assets/img/story/story-1-5.jpg') }}"
+                                <div class="box-img"><img src="{{ asset('/new-miu/student-img/13.jpg') }}"
                                         alt="img"></div>
                                 <div class="story-content">
                                     <h3 class="box-title"><a href="program.html">Arjun Mehta</a></h3>
@@ -980,7 +980,7 @@
                         <!-- Slide 6 - Text changed to MIU Student -->
                         <div class="swiper-slide">
                             <div class="story-card">
-                                <div class="box-img"><img src="{{ asset('/assets/img/story/story-1-1.jpg') }}"
+                                <div class="box-img"><img src="{{ asset('/new-miu/student-img/18.jpg') }}"
                                         alt="img"></div>
                                 <div class="story-content">
                                     <h3 class="box-title"><a href="program.html">Sneha Kapoor</a></h3>
@@ -999,7 +999,7 @@
                         <!-- Slide 7 - Text changed to MIU Student -->
                         <div class="swiper-slide">
                             <div class="story-card">
-                                <div class="box-img"><img src="{{ asset('/assets/img/story/story-1-2.jpg') }}"
+                                <div class="box-img"><img src="{{ asset('/new-miu/student-img/14.jpg') }}"
                                         alt="img"></div>
                                 <div class="story-content">
                                     <h3 class="box-title"><a href="program.html">Vikas Yadav</a></h3>
@@ -1036,7 +1036,7 @@
                         <!-- Slide 9 - Text changed to MIU Student -->
                         <div class="swiper-slide">
                             <div class="story-card">
-                                <div class="box-img"><img src="{{ asset('/assets/img/story/story-1-4.jpg') }}"
+                                <div class="box-img"><img src="{{ asset('/new-miu/student-img/16.jpg') }}"
                                         alt="img"></div>
                                 <div class="story-content">
                                     <h3 class="box-title"><a href="program.html">Rohit Kumar</a></h3>
@@ -1071,7 +1071,7 @@
                         </div>
                         <div class="swiper-slide">
                             <div class="story-card">
-                                <div class="box-img"><img src="{{ asset('/assets/img/story/story-1-5.jpg') }}"
+                                <div class="box-img"><img src="{{ asset('/new-miu/student-img/17.jpg') }}"
                                         alt="img"></div>
                                 <div class="story-content">
                                     <h3 class="box-title"><a href="program.html">Karan Malhotra</a></h3>
