@@ -142,10 +142,10 @@
                                   </a>
 
                                   <!-- Phone 1 -->
-                                  <a href="tel:+919319727766">
+                                  {{-- <a href="tel:+919319727766">
                                       <span class="footer-info-icon"><i class="fa-solid fa-phone"></i></span>
                                       +91-9319727766
-                                  </a>
+                                  </a> --}}
 
                                   <!-- Phone 2 -->
                                   <a href="tel:+919319771500">
@@ -154,10 +154,10 @@
                                   </a>
 
                                   <!-- Email 1 -->
-                                  <a href="mailto:support@miu.edu.in">
+                                  {{-- <a href="mailto:support@miu.edu.in">
                                       <span class="footer-info-icon"><i class="fa-solid fa-envelope"></i></span>
                                       support@miu.edu.in
-                                  </a>
+                                  </a> --}}
 
                                   <!-- Email 2 -->
                                   <a href="mailto:enquiry@miu.edu.in">
