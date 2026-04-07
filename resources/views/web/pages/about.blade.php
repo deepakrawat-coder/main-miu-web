@@ -100,7 +100,7 @@
 
 
 
-    <div class="breadcumb-wrapper position-relative" data-bg-src="{{asset('/assets/img/shape/breadcrumb-shep.png')}}">
+    <div class="breadcumb-wrapper position-relative" data-bg-src="{{ asset('/assets/img/shape/breadcrumb-shep.png') }}">
         <div class="breadcumb-banner"><img src="{{ asset('/new-miu/banner/banner4.png') }}" alt="bg-banner"></div>
         {{-- <div class="breadcumb-shape"><img src="{{ asset('/new-miu/banner/banner4.png') }}" alt="shape" class="jump"></div> --}}
         <div class="container th-container4">
@@ -120,7 +120,7 @@
 
     <div class="about1-area position-relative overflow-hidden space pb-0" id="about-sec">
         <div class="about-shep-2 shape-mockup d-none d-xxl-block" data-bottom="0%" data-right="0%"><img
-                src="{{asset('/assets/img/shape/feature-shep-2-home-1.png')}}" alt="shape"></div>
+                src="{{ asset('/assets/img/shape/feature-shep-2-home-1.png') }}" alt="shape"></div>
 
         <div class="container th-container4">
             <div class="about-wrap1 position-relative z-index-2 mb-5">
@@ -177,8 +177,8 @@
                         <h3 class="text-center mb-5">Our Prestigious Recognitions </h3>
                         <div class="about-feature-wrapp row justify-content-center" style="max-width:100%">
                             <div class="about-feature wow fadeInUp col-12 col-sm-12 col-md-12 col-lg-4 col-xxl-4"
-                                data-wow-delay=".3s"><span class="box-icon"><img src="{{asset('/assets/img/icon/ab-users.svg')}}"
-                                        alt="icon"></span>
+                                data-wow-delay=".3s"><span class="box-icon"><img
+                                        src="{{ asset('/assets/img/icon/ab-users.svg') }}" alt="icon"></span>
                                 <div class="box-content">
                                     <h3 class="box-title">Academic Excellence Recognition</h3>
                                     <p class="box-text">As a NAAC accredited university in Manipur, MIU is awarded for
@@ -187,8 +187,8 @@
                                 </div>
                             </div>
                             <div class="about-feature wow fadeInUp col-12 col-sm-12 col-md-12 col-lg-4 col-xxl-4"
-                                data-wow-delay=".4s"><span class="box-icon"><img src="{{asset('/assets/img/icon/ab-message.svg')}}"
-                                        alt="icon"></span>
+                                data-wow-delay=".4s"><span class="box-icon"><img
+                                        src="{{ asset('/assets/img/icon/ab-message.svg') }}" alt="icon"></span>
                                 <div class="box-content">
                                     <h3 class="box-title">Cultural Heritage Leadership</h3>
                                     <p class="box-text">MIU's rankings and awards include national recognition for
@@ -198,8 +198,8 @@
                                 </div>
                             </div>
                             <div class="about-feature wow fadeInUp col-12 col-sm-12 col-md-12 col-lg-4 col-xxl-4"
-                                data-wow-delay=".4s"><span class="box-icon"><img src="{{asset('/assets/img/icon/library.svg')}}"
-                                        alt="icon"></span>
+                                data-wow-delay=".4s"><span class="box-icon"><img
+                                        src="{{ asset('/assets/img/icon/library.svg') }}" alt="icon"></span>
                                 <div class="box-content">
                                     <h3 class="box-title">Research & Regional Development</h3>
                                     <p class="box-text">Honored as a leading recognized university in Northeast India
@@ -219,7 +219,8 @@
             <div class="container th-container2">
                 <div class="counter-wrap1">
                     <div class="counter-card wow fadeInUp" data-wow-delay=".2s">
-                        <div class="box-icon"><img src="{{asset('/assets/img/icon/counter-icon1-1.svg')}}" alt="icon"></div>
+                        <div class="box-icon"><img src="{{ asset('/assets/img/icon/counter-icon1-1.svg') }}" alt="icon">
+                        </div>
                         <div class="media-body">
                             <h3 class="box-number"><span class="counter-number">500</span>+</h3>
                             <p class="box-text">Recruiters</p>
@@ -227,7 +228,8 @@
                     </div>
                     <div class="divider"></div>
                     <div class="counter-card wow fadeInUp" data-wow-delay=".4s">
-                        <div class="box-icon"><img src="{{asset('/assets/img/icon/counter-icon1-2.svg')}}" alt="icon"></div>
+                        <div class="box-icon"><img src="{{ asset('/assets/img/icon/counter-icon1-2.svg') }}" alt="icon">
+                        </div>
                         <div class="media-body">
                             <h3 class="box-number"><span class="counter-number">1000</span>+</h3>
                             <p class="box-text">Year Established</p>
@@ -235,7 +237,8 @@
                     </div>
                     <div class="divider"></div>
                     <div class="counter-card wow fadeInUp" data-wow-delay=".6s">
-                        <div class="box-icon"><img src="{{asset('/assets/img/icon/counter-icon1-3.svg')}}"alt="icon"></div>
+                        <div class="box-icon"><img src="{{ asset('/assets/img/icon/counter-icon1-3.svg') }}"alt="icon">
+                        </div>
                         <div class="media-body">
                             <h3 class="box-number"><span class="counter-number">95</span>%</h3>
                             <p class="box-text">Placements</p>
@@ -243,7 +246,8 @@
                     </div>
                     <div class="divider"></div>
                     <div class="counter-card wow fadeInUp" data-wow-delay=".7s">
-                        <div class="box-icon"><img src="{{asset('/assets/img/icon/counter-icon1-4.svg')}}" alt="icon"></div>
+                        <div class="box-icon"><img src="{{ asset('/assets/img/icon/counter-icon1-4.svg') }}"
+                                alt="icon"></div>
                         <div class="media-body">
                             <h3 class="box-number"><span class="counter-number">50</span>+</h3>
                             <p class="box-text">Industry Tie-Ups</p>
@@ -359,19 +363,20 @@
                             {{-- <span class="sub-title text-anim" data-cue="slideInLeft">PROGRAMS</span> --}}
                             <h2 class="sec-title text-anim2 mb-3" data-cue="slideInUp">The Sacred Symbolism of Our Logo
                             </h2>
-                            <p>The MIU logo meaning goes far deeper than visual design. Every element is drawn from the rich
-                                well of Meitei cultural heritage, reflecting the university's foundational values —
-                                knowledge, identity, and the sacred duty of education in Manipur. It is not a corporate
-                                mark. It is a declaration of who we are.</p>
-                            <p>At the heart of the Manipur university symbol rests the Eternal Wheel — representing the
-                                continuous cycle of learning and the pursuit of truth. Flanking it stand our Guardian
-                                Elephants, whose elephant symbolism in Manipur tradition speaks of wisdom, strength, and
-                                auspicious new beginnings. Together, they form the promise at the core of every MIU journey.
+                            <p>The logo of Manipur International University is a powerful representation of knowledge,
+                                ambition, and future success. It reflects our commitment to delivering quality education and
+                                shaping career-ready professionals. Every element is thoughtfully designed to inspire
+                                confidence, growth, and a strong academic foundation for students aiming to excel in today’s
+                                competitive world.</p>
+                            <p>The visual identity symbolizes strength, clarity, and continuous progress. It represents the
+                                journey of students—from learning to achievement—guided by expert faculty and
+                                industry-focused education. The logo stands as a mark of trust, excellence, and opportunity,
+                                reinforcing MIU’s position as a leading choice for higher education in India.
                             </p>
-                            <p>Woven through the MIU university emblem are linguistic and classical elements that root the
-                                institution in its cultural geography. The script, the symbols, and the composition speak of
-                                a university that carries Meitei cultural heritage forward — even as it prepares its
-                                students to go everywhere. Our logo is our identity, rendered visible.</p>
+                            <p>Blending tradition with modern education values, the logo highlights MIU’s vision of creating
+                                skilled, confident, and future-ready individuals. It reflects innovation, adaptability, and
+                                global career readiness, making it more than just a symbol—it represents a promise of
+                                success, growth, and lifelong learning.</p>
                         </div>
                     </div>
                 </div>
@@ -382,11 +387,10 @@
                         <div class="program-card">
                             <div class="program-content">
                                 <h3 class="box-title">Jnanam Anantam (ज्ञानम् अनन्तम्)</h3>
-                                <p class="box-text mb-0">A Sanskrit phrase written in Devanagari script meaning "Knowledge
-                                    is
-                                    Infinite." This profound statement reflects our belief that learning is a lifelong
-                                    journey
-                                    without boundaries, encouraging continuous exploration and discovery.</p>
+                                <p class="box-text mb-0">The linguistic foundation of MIU reflects clarity, purpose, and
+                                    the power of communication in education. It symbolizes how knowledge is shared,
+                                    understood, and applied, helping students build strong academic roots and succeed in
+                                    competitive career environments.</p>
                             </div>
                         </div>
                     </div>
@@ -395,11 +399,10 @@
                         <div class="program-card">
                             <div class="program-content">
                                 <h3 class="box-title">Fiat Lux</h3>
-                                <p class="box-text mb-0">A Latin phrase meaning "Let there be light." Found in both the
-                                    Rigveda
-                                    and the Book of Genesis, this divine expression symbolizes the illumination of knowledge
-                                    and
-                                    the dispelling of ignorance through education.</p>
+                                <p class="box-text mb-0">These elements represent the connection between tradition and
+                                    modern learning, highlighting the importance of values alongside professional growth.
+                                    MIU ensures students develop both intellectual strength and practical understanding for
+                                    real-world success.</p>
                             </div>
                         </div>
                     </div>
@@ -408,11 +411,9 @@
                         <div class="program-card">
                             <div class="program-content">
                                 <h3 class="box-title">Inveniam Viam</h3>
-                                <p class="box-text mb-0">Latin for "I shall find a way," derived from the ancient verse
-                                    "Aut
-                                    inveniam viam aut faciam" (I shall either find a way or make one). This embodies our
-                                    spirit
-                                    of determination and innovation in overcoming challenges.</p>
+                                <p class="box-text mb-0">Language at MIU is more than communication—it is a tool for
+                                    transformation. It empowers students to express ideas, innovate confidently, and engage
+                                    effectively in global academic and professional spaces.</p>
                             </div>
                         </div>
                     </div>
@@ -515,8 +516,8 @@
                             </div>
                             <div class="community-wrap2">
                                 <div class="community-card2 wow fadeInUp" data-wow-delay=".2s">
-                                    <div class="community-icon"><img src="{{asset('/assets/img/icon/communiti-3-1.svg')}}"
-                                            alt="Stadum">
+                                    <div class="community-icon"><img
+                                            src="{{ asset('/assets/img/icon/communiti-3-1.svg') }}" alt="Stadum">
                                     </div>
                                     <div class="card-content">
                                         <h3 class="box-title">Wisdom</h3>
@@ -526,8 +527,8 @@
                                     </div>
                                 </div>
                                 <div class="community-card2 wow fadeInUp" data-wow-delay=".4s">
-                                    <div class="community-icon"><img src="{{asset('/assets/img/icon/communiti-3-2.svg')}}"
-                                            alt="Stadum">
+                                    <div class="community-icon"><img
+                                            src="{{ asset('/assets/img/icon/communiti-3-2.svg') }}" alt="Stadum">
                                     </div>
                                     <div class="card-content">
                                         <h3 class="box-title">Strength</h3>

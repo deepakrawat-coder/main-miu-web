@@ -26,7 +26,7 @@
                                                 transformative learning experiences that shape global professionals.</p>
                                             <div class="btn-wrap" data-ani="slideinup" data-ani-delay="0.8s">
                                                 <a href="contact.html" class="th-btn white-hover th-icon">Admission Now</a>
-                                                <a href="program.html" class="th-btn style-border1 th-icon white-hover">View
+                                                <a href="/program" class="th-btn style-border1 th-icon white-hover">View
                                                     Program</a>
                                             </div>
                                         </div>
@@ -51,7 +51,7 @@
                                                 leadership, and career-ready competencies.</p>
                                             <div class="btn-wrap" data-ani="slideinup" data-ani-delay="0.8s">
                                                 <a href="contact.html" class="th-btn white-hover th-icon">Admission Now</a>
-                                                <a href="program.html" class="th-btn style-border1 th-icon white-hover">View
+                                                <a href="/program" class="th-btn style-border1 th-icon white-hover">View
                                                     Program</a>
                                             </div>
                                         </div>
@@ -76,7 +76,7 @@
                                                 faculty, and a culture of continuous advancement.</p>
                                             <div class="btn-wrap" data-ani="slideinup" data-ani-delay="0.8s">
                                                 <a href="contact.html" class="th-btn white-hover th-icon">Admission Now</a>
-                                                <a href="program.html" class="th-btn style-border1 th-icon white-hover">View
+                                                <a href="/program" class="th-btn style-border1 th-icon white-hover">View
                                                     Program</a>
                                             </div>
                                         </div>
@@ -1935,7 +1935,7 @@
             });
         })();
     </script>
-    {{-- <script>
+    <script>
         (function() {
             const form = document.getElementById('enquiryForm');
             const successDiv = document.getElementById('formSuccessMessage');
@@ -2033,5 +2033,5 @@
                 }, 5000);
             @endif
         })();
-    </script> --}}
+    </script>
 @endsection

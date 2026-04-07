@@ -1,6 +1,7 @@
   @php
       $schools = DB::select('SELECT name,slug FROM schools');
   @endphp
+  
   <!-- ============================================ -->
   <!-- WHATSAPP FLOATING BUTTON (Desktop + Tablet)   -->
   <!-- ============================================ -->
