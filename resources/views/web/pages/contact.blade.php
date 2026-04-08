@@ -93,7 +93,7 @@
                                 </div>
                                 <div class="form-btn col-12 mt-15"><button class="th-btn">Send Message</button></div>
                             </div>
-                            <p class="form-messages mb-0 mt-3"></p>
+                            {{-- <p class="form-messages mb-0 mt-3"></p> --}}
                         </form>
                     </div>
                 </div>
