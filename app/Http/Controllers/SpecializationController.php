@@ -75,6 +75,10 @@ class SpecializationController extends Controller
                 ->addColumn('action', function ($row) {
                     return '';
                 })
+                 ->addColumn('course_name', function ($row) {
+                    $names = json_decode($row->course_name, true);
+                    return is_array($names) ? implode(', ', $names) : '';
+                })
                 ->addColumn('short_description', function ($row) {
                     return \Illuminate\Support\Str::limit(strip_tags($row->short_description), 80);
                 })
@@ -92,11 +96,14 @@ class SpecializationController extends Controller
     }
     public function store(Request $request)
     {
+        // dd($request->all());
         // ✅ Validation
         $validator = Validator::make($request->all(), [
             'program_id' => 'required',
             'title'      => 'required|string|max:255',
             'image'      => 'required|image|mimes:jpg,jpeg,png,webp|max:2048',
+            'course_name' => 'nullable|array',
+            'course_name.*' => 'nullable|string',
         ]);
 
         if ($validator->fails()) {
@@ -123,7 +130,8 @@ class SpecializationController extends Controller
             $specialization->content           = $request->content;
             $specialization->meta_title        = $request->meta_title;
             $specialization->meta_description  = $request->meta_description;
-
+            // $specialization->course_name       = $request->course_name;
+            $specialization->course_name = $request->course_name ? json_encode($request->course_name) : null;
             // ✅ MAIN IMAGE Upload (Same as School)
             if ($request->hasFile('image')) {
 
@@ -240,7 +248,7 @@ class SpecializationController extends Controller
         return view('admin.specialization.edit', compact(
             'specialization',
             'programs'
-            
+
         ));
     }
     public function update(Request $request, $id)
@@ -250,27 +258,30 @@ class SpecializationController extends Controller
             'title'      => 'required|string|max:255',
             'slug'       => 'required|unique:specializations,slug,' . $id,
             'image'      => 'nullable|image|mimes:jpg,jpeg,png,webp|max:2048',
+            'course_name' => 'nullable|array',
+            'course_name.*' => 'nullable|string',
         ]);
 
         // DB::transaction(function () use ($request, $id) {
 
-            $specialization = Specialization::findOrFail($id);
+        $specialization = Specialization::findOrFail($id);
 
-            /*
+        /*
         |--------------------------------------------------------------------------
         | BASIC FIELDS
         |--------------------------------------------------------------------------
         */
 
-            $specialization->program_id = $request->program_id;
-            $specialization->title      = $request->title;
-            $specialization->slug       = Str::slug($request->slug);
-            $specialization->short_description = $request->short_description;
-            $specialization->description       = $request->description;
-            $specialization->content           = $request->content;
-            $specialization->meta_title        = $request->meta_title;
-            $specialization->meta_description  = $request->meta_description;
-            // $specialization->status            = $request->status ?? 1;
+        $specialization->program_id = $request->program_id;
+        $specialization->title      = $request->title;
+        $specialization->slug       = Str::slug($request->slug);
+        $specialization->short_description = $request->short_description;
+        $specialization->description       = $request->description;
+        $specialization->content           = $request->content;
+        $specialization->meta_title        = $request->meta_title;
+        $specialization->meta_description  = $request->meta_description;
+       $specialization->course_name = $request->course_name ? json_encode($request->course_name) : null;
+        // $specialization->status            = $request->status ?? 1;
 
         //     /*
         // |--------------------------------------------------------------------------
@@ -278,25 +289,25 @@ class SpecializationController extends Controller
         // |--------------------------------------------------------------------------
         // */
 
-            if ($request->hasFile('image')) {
+        if ($request->hasFile('image')) {
 
-                if (
-                    $specialization->image &&
-                    file_exists(public_path($specialization->image))
-                ) {
-                    unlink(public_path($specialization->image));
-                }
-
-                $file = $request->file('image');
-                $filename = time() . '_main_' . $file->getClientOriginalName();
-
-                $file->move(public_path('uploads/specializations'), $filename);
-
-                $specialization->image =
-                    'uploads/specializations/' . $filename;
+            if (
+                $specialization->image &&
+                file_exists(public_path($specialization->image))
+            ) {
+                unlink(public_path($specialization->image));
             }
 
-         $specialization->save();
+            $file = $request->file('image');
+            $filename = time() . '_main_' . $file->getClientOriginalName();
+
+            $file->move(public_path('uploads/specializations'), $filename);
+
+            $specialization->image =
+                'uploads/specializations/' . $filename;
+        }
+
+        $specialization->save();
 
         //     /*
         // |--------------------------------------------------------------------------
@@ -418,7 +429,7 @@ class SpecializationController extends Controller
         //         }
         //     }
 
-            /*
+        /*
         |--------------------------------------------------------------------------
         | FINAL FEATURE DATA
         |--------------------------------------------------------------------------

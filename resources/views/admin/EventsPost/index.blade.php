@@ -52,13 +52,13 @@ $(function() {
     const addButton = {
         text: 'Add Post',
         className: 'add-new btn btn-primary mb-3 mb-md-0',
-        attr: { 'onclick': "add('{{ route('posts.create') }}', 'modal-lg')" }
+        attr: { 'onclick': "add('{{ route('admin.posts.create') }}', 'modal-lg')" }
     };
 
     var table = $('#posts-table').DataTable({
         processing: true,
         serverSide: true,
-        ajax: "{{ route('posts.index') }}",
+        ajax: "{{ route('admin.posts.index') }}",
         columns: [
             { data: 'DT_RowIndex', name: 'DT_RowIndex', orderable: false, searchable: false },
             { data: 'category', name: 'category.name' },

@@ -38,7 +38,12 @@ class CourseController extends Controller
     }
 
 
-
+ public function details($slug)
+    {
+        $course = Course::where('slug', $slug)->firstOrFail();
+        // dd($courses);
+        return view('web.pages.course-details', compact('course'));
+    }
     /**
      * Show the form for creating a new resource.
      */
@@ -54,6 +59,7 @@ class CourseController extends Controller
         // ✅ Validation
         $validator = Validator::make($request->all(), [
             'school_id'        => 'required|exists:schools,id',
+            'content'           => 'nullable|string',
             'name'             => 'required|string|max:255',
             'short_description' => 'nullable|string',
             'duration'         => 'nullable|string|max:255',
@@ -62,7 +68,7 @@ class CourseController extends Controller
             'meta_description' => 'nullable|string',
             'image'            => 'nullable|image|mimes:jpg,jpeg,png,webp|max:2048',
             'program_course_name' => 'nullable|array',
-            'program_course_name.*' => 'nullable|string|max:255',
+            'program_course_name.*' => 'nullable|string',
         ]);
 
         if ($validator->fails()) {
@@ -78,11 +84,13 @@ class CourseController extends Controller
 
             $course->school_id        = $request->school_id;
             $course->name             = $request->name;
+            $course->slug             = Str::slug($request->name);
             $course->duration         = $request->duration;
             $course->eligibility      = $request->eligibility;
             $course->short_description = $request->short_description;
             $course->meta_title       = $request->meta_title;
             $course->meta_description = $request->meta_description;
+            $course->content= $request->content;
             // ✅ Image Upload
 
             $course->program_course_name = $request->program_course_name ? json_encode($request->program_course_name) : null;
@@ -158,7 +166,8 @@ class CourseController extends Controller
             'eligibility'      => 'nullable|string|max:255',
             'image'            => 'nullable|image|mimes:jpg,jpeg,png,webp|max:2048',
             'program_course_name' => 'nullable|array',
-            'program_course_name.*' => 'nullable|string|max:255',
+            'program_course_name.*' => 'nullable|string',
+            'content'           => 'nullable|string',
         ]);
 
         if ($validator->fails()) {
@@ -173,11 +182,13 @@ class CourseController extends Controller
             // ✅ Update Fields
             $course->school_id         = $request->school_id;
             $course->name              = $request->name;
+            $course->slug             = Str::slug($request->name);
             $course->duration          = $request->duration;
             $course->eligibility       = $request->eligibility;
             $course->short_description = $request->short_description;
             $course->meta_title        = $request->meta_title;
             $course->meta_description  = $request->meta_description;
+            $course->content           = $request->content;
             $course->program_course_name = $request->program_course_name ? json_encode($request->program_course_name) : null;
             // ✅ Image Update (Replace Old Image)
             if ($request->hasFile('image')) {

@@ -25,8 +25,8 @@ class Enquiry extends Model
         return $this->belongsTo(School::class);
     }
 
-    public function specialization()
+    public function program()
     {
-        return $this->belongsTo(Specialization::class);
+        return $this->belongsTo(Program::class);
     }
 }

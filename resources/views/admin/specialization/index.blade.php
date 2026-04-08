@@ -29,6 +29,7 @@
                                     <th>No.</th>
                                     <th>Program</th>
                                     <th>Name</th>
+                                    <th>School Course Name</th>
                                     <th>Short Description</th>
                                     <th>Status</th>
                                     <th>Action</th>
@@ -75,6 +76,21 @@
                     data: 'title',
                     name: 'title'
                 },
+                 {
+                        data: 'course_name',
+                        name: 'course_name',
+                        render: function(data) {
+                            if (!data) return '-';
+                            // Agar data comma seperated string hai like "Commerce, Engineering, Arts"
+                            var coursesName = data.split(',');
+                            var badges = '';
+                            for (var i = 0; i < coursesName.length; i++) {
+                                badges += '<span class="badge bg-primary me-1">' + coursesName[
+                                    i] + '</span>';
+                            }
+                            return badges;
+                        }
+                    },
                 {
                     data: 'short_description',
                     name: 'short_description'

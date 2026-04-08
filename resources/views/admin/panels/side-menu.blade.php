@@ -3,8 +3,10 @@
     <!-- START BRAND LOGO -->
     <div class="app-sidebar-logo px-6 justify-content-between align-items-center" style="column-gap:5px">
         <a href="index.html">
-            <img height="35" class="app-sidebar-logo-default" alt="Logo" src="{{ asset('/assets/images/web-image/web-log.png') }}">
-            <img height="40" class="app-sidebar-logo-minimize" alt="Logo" src="{{ asset('/assets/images/web-image/web-log.png') }}">
+            <img height="35" class="app-sidebar-logo-default" alt="Logo"
+                src="{{ asset('/assets/images/web-image/web-log.png') }}">
+            <img height="40" class="app-sidebar-logo-minimize" alt="Logo"
+                src="{{ asset('/assets/images/web-image/web-log.png') }}">
         </a>
         <p class="mb-0">Manipur International University (MIU) </p>
     </div>
@@ -67,27 +69,27 @@
                 </ul>
             </li> --}}
 
-            <li class="slide {{ Route::is('events.index') ? 'active' : '' }}">
-                <a href="{{ route('events.index') }}" class="side-menu__item">
+            <li class="slide {{ Route::is('admin.events.index') ? 'active' : '' }}">
+                <a href="{{ route('admin.events.index') }}" class="side-menu__item">
                     <span class="side_menu_icon"><i class="ri-calendar-event-line"></i></span>
                     <span class="side-menu__label">Events Category</span>
                 </a>
             </li>
 
-            <li class="slide {{ Route::is('posts.index') ? 'active' : '' }}">
-                <a href="{{ route('posts.index') }}" class="side-menu__item">
+            <li class="slide {{ Route::is('admin.posts.index') ? 'active' : '' }}">
+                <a href="{{ route('admin.posts.index') }}" class="side-menu__item">
                     <span class="side_menu_icon"><i class="ri-calendar-event-line"></i></span>
                     <span class="side-menu__label">Events Post</span>
                 </a>
             </li>
-            <li class="slide {{ Route::is('blogs.index') ? 'active' : '' }}">
-                <a href="{{ route('admin-blogs.index') }}" class="side-menu__item">
+            <li class="slide {{ Route::is('admin.blogs.index') ? 'active' : '' }}">
+                <a href="{{ route('admin.blogs.index') }}" class="side-menu__item">
                     <span class="side_menu_icon"><i class="ri-calendar-event-line"></i></span>
                     <span class="side-menu__label">Blogs</span>
                 </a>
             </li>
-            <li class="slide {{ Route::is('gallery.index') ? 'active' : '' }}">
-                <a href="{{ route('gallery.index') }}" class="side-menu__item">
+            <li class="slide {{ Route::is('admin.gallery.index') ? 'active' : '' }}">
+                <a href="{{ route('admin.gallery.index') }}" class="side-menu__item">
                     <span class="side_menu_icon"><i class="ri-calendar-event-line"></i></span>
                     <span class="side-menu__label">Gallery</span>
                 </a>
@@ -105,33 +107,39 @@
                     <i class="ri-arrow-down-s-line side-menu__angle"></i>
                 </a>
                 <ul class="slide-menu" role="menu">
-                    <li class="slide {{ Route::is('schools.index') ? 'active' : '' }}">
-                        <a href="{{ route('schools.index') }}" class="side-menu__item" role="menuitem">
+                    <li class="slide {{ Route::is('admin.schools.index') ? 'active' : '' }}">
+                        <a href="{{ route('admin.schools.index') }}" class="side-menu__item" role="menuitem">
                             School / Department
                         </a>
                     </li>
-                    <li class="slide {{ Route::is('courses.index') ? 'active' : '' }}">
-                        <a href="{{ route('courses.index') }}" class="side-menu__item" role="menuitem">
-                            Courses
+                    <li class="slide {{ Route::is('admin.category.index') ? 'active' : '' }}">
+                        <a href="{{ route('admin.category.index') }}" class="side-menu__item" role="menuitem">
+                            Category Type
                         </a>
                     </li>
-                    <li class="slide {{ Route::is('programs.index') ? 'active' : '' }}">
-                        <a href="{{ route('programs.index') }}" class="side-menu__item" role="menuitem">
+                    <li class="slide {{ Route::is('admin.programs.index') ? 'active' : '' }}">
+                        <a href="{{ route('admin.programs.index') }}" class="side-menu__item" role="menuitem">
                             Programs
                         </a>
                     </li>
-                    <li class="slide {{ Route::is('specialization.index') ? 'active' : '' }}">
-                        <a href="{{ route('specialization.index') }}" class="side-menu__item" role="menuitem">
-                            Specialization
+                    {{-- <li class="slide {{ Route::is('admin.courses.index') ? 'active' : '' }}">
+                        <a href="{{ route('admin.courses.index') }}" class="side-menu__item" role="menuitem">
+                            Courses
                         </a>
                     </li>
-                    <li class="slide {{ Route::is('testimonials.index') ? 'active' : '' }}">
-                        <a href="{{ route('testimonials.index') }}" class="side-menu__item" role="menuitem">
+
+                    <li class="slide {{ Route::is('admin.specialization.index') ? 'active' : '' }}">
+                        <a href="{{ route('admin.specialization.index') }}" class="side-menu__item" role="menuitem">
+                            Specialization
+                        </a>
+                    </li> --}}
+                    <li class="slide {{ Route::is('admin.testimonials.index') ? 'active' : '' }}">
+                        <a href="{{ route('admin.testimonials.index') }}" class="side-menu__item" role="menuitem">
                             Testimonials
                         </a>
                     </li>
-                    <li class="slide {{ Route::is('faqs.index') ? 'active' : '' }}">
-                        <a href="{{ route('faqs.index') }}" class="side-menu__item" role="menuitem">
+                    <li class="slide {{ Route::is('admin.faqs.index') ? 'active' : '' }}">
+                        <a href="{{ route('admin.faqs.index') }}" class="side-menu__item" role="menuitem">
                             Faqs
                         </a>
                     </li>

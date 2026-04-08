@@ -54,7 +54,10 @@
             <label>Meta Description</label>
             <textarea name="meta_description" class="form-control"></textarea>
         </div>
-
+        <div class="mb-3">
+            <label class="form-label">School Course Name</label>
+            <input name="course_name[]" class="form-control" rows="2" />
+        </div>
         <!-- Image -->
         <div class="mb-4">
             <label>Main Image</label>
@@ -110,7 +113,7 @@
     let successIndex = 0;
     let careerIndex = 0;
     let recruiterIndex = 0;
-    
+
     $(document).ready(function() {
         // Initialize CKEditors
         ClassicEditor.create(document.querySelector('#short_description'))

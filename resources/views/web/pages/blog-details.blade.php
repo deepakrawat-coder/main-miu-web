@@ -19,7 +19,7 @@
                         <h1 class="breadcumb-title">Blog Details</h1>
                         <ul class="breadcumb-menu">
                             <li><a href="/">Home</a></li>
-                            <li>blog details</li>
+                            <li>{{ $blog->title }}</li>
                         </ul>
                     </div>
                 </div>
@@ -35,23 +35,21 @@
                 <div class="col-xl-8 col-lg-7">
                     <div class="blog">
                         <div class="blog-img">
-                        <img src="{{ asset('/new-miu/about/11.jpg') }}" class="img-fluid w-100" alt="blog image">
+                        <img src="{{ asset($blog->image) }}" class="img-fluid w-100" alt="blog image">
                         </div>
                         <div class="blog-title my-3">
-                            <h3>Lorem ipsum dolor sit amet.</h3>
+                            <h3>{{ $blog->title }}</h3>
                         </div>
                         <div class="blog-desc">
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus unde, aliquid ipsum magni fuga ea sequi rerum repellat assumenda itaque incidunt non ut ratione sit eveniet dignissimos eos, quam amet natus laboriosam aspernatur alias cumque hic fugiat. Repellat accusantium earum nulla voluptates quisquam. Odit odio saepe ratione nam pariatur aspernatur!
-                            </p>
+                            <p>{!! $blog->content !!}  </p>
 
-                            <p>
+                            {{-- <p>
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis dolore neque officia ullam ex obcaecati delectus fugit tenetur error quibusdam.
                             </p>
 
                             <p>
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus, adipisci? Perspiciatis explicabo numquam deleniti eum, pariatur ea. Doloremque assumenda labore rerum magnam a earum dolorem eaque nesciunt deleniti? Repellendus debitis illo ab sapiente magnam earum assumenda consectetur animi ipsam, tempora accusamus cumque cupiditate mollitia, eaque recusandae iure hic, error magni vel autem consequuntur illum atque? Enim magni amet repellat repudiandae.
-                            </p>
+                            </p> --}}
                         </div>
                     </div>
                 </div>

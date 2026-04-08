@@ -61,7 +61,36 @@
             <label>Meta Description</label>
             <textarea name="meta_description" class="form-control">{{ $specialization->meta_description }}</textarea>
         </div>
+  @php
+            $decodedNames = json_decode($specialization->course_name, true);
 
+            if (is_array($decodedNames)) {
+                // agar array me ek hi string hai
+                if (count($decodedNames) == 1) {
+                    $courseNames = explode(',', $decodedNames[0]);
+                } else {
+                    $courseNames = $decodedNames;
+                }
+            } else {
+                $courseNames = explode(',', $course->course_name);
+            }
+
+            // clean data
+            $courseNames = array_filter(array_map('trim', $courseNames));
+
+            $courseNamesString = implode(', ', $courseNames);
+        @endphp
+
+        {{-- Input --}}
+        <div class="mb-3">
+            <label class="form-label">School Course Name</label>
+            <input type="text" name="course_name[]" class="form-control" value="{{ $courseNamesString }}">
+        </div>
+
+        {{-- Badges --}}
+        @foreach ($courseNames as $name)
+            <span class="badge bg-primary me-1 mb-1">{{ $name }}</span>
+        @endforeach
         <!-- Image -->
         <div class="mb-4">
             <label>Main Image</label>

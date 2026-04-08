@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Course;
 use App\Models\Faq;
+use App\Models\Program;
 use App\Models\School;
 use App\Models\Testimonial;
 use Illuminate\Http\Request;
@@ -24,46 +25,19 @@ class SchoolController extends Controller
         $schools = School::where('status', 1)
             ->orderBy('order', 'asc')
             ->get() ;          
-       
-        return view('web.pages.deparments-programs', compact('schools'));
+    //    dd($schools);
+        return view('web.pages.schools-and-departments', compact('schools'));
     }
 
 
     public function details($slug)
     {
-        $school = School::with('courses.programs.specializations')
-            ->where('slug', $slug)
+        $school = School::where('slug', $slug)
             ->where('status', 1)
             ->firstOrFail();
-        // Get all programs
-        $programs = $school->courses
-            ->flatMap->programs
-            ->unique('id')
-            ->values();
-
-
-        // Get all specializations
-        $specializations = $programs
-            ->pluck('specializations')
-            ->flatten()
-            ->unique('id')
-            ->values();
-        $coursesInfo = $school->courses()->where('status', 1)->get();
-        $testimonials = Testimonial::where('school_id', $school->id)->where('status', 1)->get();
-        $faqencode = Faq::where('school_id', $school->id)
-            ->where('status', 1)
-            ->first();
-        if (!empty($faqencode)) {
-            $faq = collect(json_decode(base64_decode($faqencode->faqs_json), true))
-                ->where('status', 1)
-                ->sortBy('order')
-                ->values()
-                ->toArray();
-        } else {
-            $faq = [];
-        }
-        // dd($school->courses);
-        return view('web.pages.school-details', compact('school', 'specializations', 'programs', 'coursesInfo', 'testimonials', 'faq'));
+       $program= Program::where('school_id', $school->id)->where('status', 1)->get();
+//    dd($school,$program);
+        return view('web.pages.schools-departments-details', compact('school','program'));
     }
 
 

@@ -16,7 +16,8 @@ class Specialization extends Model
         'content',
         'image',
         'title',
-        'status'
+        'status',
+        'course_name'
     ];
 
     public function program()

@@ -248,13 +248,14 @@ class BlogController extends Controller
     //     return view('web.pages.blog-detail', compact('blog'));
     // }
      public function blogListing(){
-        $blogs = Blog::where('status', 1)->orderBy('created_at', 'desc')->paginate(6);
+        $blogs = Blog::where('status', 1)->orderBy('created_at', 'desc')->get();
+        // dd($blogs);
         return view('web.pages.blog', compact('blogs'));
      }
      public function blogDetails($slug){
         $blog = Blog::where('slug', $slug)->where('status', 1)->firstOrFail();
         $otherBlogs = Blog::where('status', 1)->where('slug', '!=', $slug)->orderBy('created_at', 'desc')->limit(5)->get();
-        // dd($otherBlogs);
+        dd($blog);
         return view('web.pages.blog-details', compact('blog', 'otherBlogs'));
      }
 }

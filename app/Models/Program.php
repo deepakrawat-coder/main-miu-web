@@ -9,28 +9,26 @@ class Program extends Model
 {
     protected $fillable = [
         'school_id',
+        'category_id',
         'name',
-        'slug',
-        'degree_type',
         'duration',
-        'level',
-        'overview',
         'eligibility',
-        'curriculum_structure',
-        'highlights',
-        'featured_image',
-        'total_seats',
-        'fee_min',
-        'fee_max',
-        'order',
+        'short_description',
+        'content',
+        'meta_title',
+        'meta_description',
+        'image',
         'status',
+        'slug',
+        'order',
+        'program_course_name'
     ];
 
-    protected $casts = [
-        'eligibility' => 'array',
-        'curriculum_structure' => 'array',
-        'highlights' => 'array',
-    ];
+    // protected $casts = [
+    //     'eligibility' => 'array',
+    //     'curriculum_structure' => 'array',
+    //     'highlights' => 'array',
+    // ];
 
     // Relationship
     public function courses()
@@ -40,5 +38,16 @@ class Program extends Model
     public function specializations()
     {
         return $this->hasMany(Specialization::class);
+    }
+    public function school()
+    {
+        return $this->belongsTo(School::class);
+    }
+    public function category()
+    {
+        return $this->belongsTo(Category::class);
+    }
+    public function enquiry(){
+        return $this->belongsTo(Enquiry::class);
     }
 }

@@ -295,195 +295,27 @@
             </div> --}}
             <div class="row g-4 row-cols-1 row-cols-md-2 row-cols-lg-3">
                 <!-- Card 1 -->
+                @foreach($schools as $school)
                 <div class="col">
                     <div class="academic-card p-0"
                         style="border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden; height: 100%;">
                         <div class="academic-img mb-0">
-                            <a href="program-details.html"><img src="{{ asset('/assets/img/academic/pg1.jpg') }}"
+                            <a href="program-details.html"><img src="{{ asset($school->image) }}"
                                     alt="MBA"></a>
                         </div>
                         <div class="academic-content border-0 pb-0 mb-0 px-3 py-3">
-                            <h3 class="box-title"><a href="program-details.html">MBA (Master of Business
-                                    Admin)</a></h3>
+                            <h3 class="box-title"><a href="program-details.html">{{ $school->name }}</a></h3>
                             <p class="box-text style2 my-2"
                                 style="line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
-                                Specializations: Marketing, Finance, HR, Operations. Dual certification,
-                                leadership bootcamp.</p>
+                               {{ $school->short_description }}</p>
                             <div class="d-flex justify-content-between mt-2 mb-2">
-                                <a href="about.html" class="btn text-secondary custom_apply">Apply Now</a>
-                                <a href="about.html" class="th-btn style-border1 th-icon">Read More</a>
+                               <a href="javascript:void(0);" onclick="openEnquiryModal('school',  {{ $school->id }} )" class="btn text-secondary custom_apply">Apply Now</a>
+                                <a href="/school/{{ $school->slug }}" class="th-btn style-border1 th-icon">Read More</a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col">
-                    <div class="academic-card p-0"
-                        style="border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden; height: 100%;">
-                        <div class="academic-img mb-0">
-                            <a href="program-details.html"><img src="{{ asset('/assets/img/academic/pg1.jpg') }}"
-                                    alt="MBA"></a>
-                        </div>
-                        <div class="academic-content border-0 pb-0 mb-0 px-3 py-3">
-                            <h3 class="box-title"><a href="program-details.html">MBA (Master of Business
-                                    Admin)</a></h3>
-                            <p class="box-text style2 my-2"
-                                style="line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
-                                Specializations: Marketing, Finance, HR, Operations. Dual certification,
-                                leadership bootcamp.</p>
-                            <div class="d-flex justify-content-between mt-2 mb-2">
-                                <a href="about.html" class="btn text-secondary custom_apply">Apply Now</a>
-                                <a href="about.html" class="th-btn style-border1 th-icon">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="academic-card p-0"
-                        style="border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden; height: 100%;">
-                        <div class="academic-img mb-0">
-                            <a href="program-details.html"><img src="{{ asset('/assets/img/academic/pg1.jpg') }}"
-                                    alt="MBA"></a>
-                        </div>
-                        <div class="academic-content border-0 pb-0 mb-0 px-3 py-3">
-                            <h3 class="box-title"><a href="program-details.html">MBA (Master of Business
-                                    Admin)</a></h3>
-                            <p class="box-text style2 my-2"
-                                style="line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
-                                Specializations: Marketing, Finance, HR, Operations. Dual certification,
-                                leadership bootcamp.</p>
-                            <div class="d-flex justify-content-between mt-2 mb-2">
-                                <a href="about.html" class="btn text-secondary custom_apply">Apply Now</a>
-                                <a href="about.html" class="th-btn style-border1 th-icon">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="academic-card p-0"
-                        style="border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden; height: 100%;">
-                        <div class="academic-img mb-0">
-                            <a href="program-details.html"><img src="{{ asset('/assets/img/academic/pg1.jpg') }}"
-                                    alt="MBA"></a>
-                        </div>
-                        <div class="academic-content border-0 pb-0 mb-0 px-3 py-3">
-                            <h3 class="box-title"><a href="program-details.html">MBA (Master of Business
-                                    Admin)</a></h3>
-                            <p class="box-text style2 my-2"
-                                style="line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
-                                Specializations: Marketing, Finance, HR, Operations. Dual certification,
-                                leadership bootcamp.</p>
-                            <div class="d-flex justify-content-between mt-2 mb-2">
-                                <a href="about.html" class="btn text-secondary custom_apply">Apply Now</a>
-                                <a href="about.html" class="th-btn style-border1 th-icon">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="academic-card p-0"
-                        style="border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden; height: 100%;">
-                        <div class="academic-img mb-0">
-                            <a href="program-details.html"><img src="{{ asset('/assets/img/academic/pg1.jpg') }}"
-                                    alt="MBA"></a>
-                        </div>
-                        <div class="academic-content border-0 pb-0 mb-0 px-3 py-3">
-                            <h3 class="box-title"><a href="program-details.html">MBA (Master of Business
-                                    Admin)</a></h3>
-                            <p class="box-text style2 my-2"
-                                style="line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
-                                Specializations: Marketing, Finance, HR, Operations. Dual certification,
-                                leadership bootcamp.</p>
-                            <div class="d-flex justify-content-between mt-2 mb-2">
-                                <a href="about.html" class="btn text-secondary custom_apply">Apply Now</a>
-                                <a href="about.html" class="th-btn style-border1 th-icon">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="academic-card p-0"
-                        style="border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden; height: 100%;">
-                        <div class="academic-img mb-0">
-                            <a href="program-details.html"><img src="{{ asset('/assets/img/academic/pg1.jpg') }}"
-                                    alt="MBA"></a>
-                        </div>
-                        <div class="academic-content border-0 pb-0 mb-0 px-3 py-3">
-                            <h3 class="box-title"><a href="program-details.html">MBA (Master of Business
-                                    Admin)</a></h3>
-                            <p class="box-text style2 my-2"
-                                style="line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
-                                Specializations: Marketing, Finance, HR, Operations. Dual certification,
-                                leadership bootcamp.</p>
-                            <div class="d-flex justify-content-between mt-2 mb-2">
-                                <a href="about.html" class="btn text-secondary custom_apply">Apply Now</a>
-                                <a href="about.html" class="th-btn style-border1 th-icon">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="academic-card p-0"
-                        style="border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden; height: 100%;">
-                        <div class="academic-img mb-0">
-                            <a href="program-details.html"><img src="{{ asset('/assets/img/academic/pg1.jpg') }}"
-                                    alt="MBA"></a>
-                        </div>
-                        <div class="academic-content border-0 pb-0 mb-0 px-3 py-3">
-                            <h3 class="box-title"><a href="program-details.html">MBA (Master of Business
-                                    Admin)</a></h3>
-                            <p class="box-text style2 my-2"
-                                style="line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
-                                Specializations: Marketing, Finance, HR, Operations. Dual certification,
-                                leadership bootcamp.</p>
-                            <div class="d-flex justify-content-between mt-2 mb-2">
-                                <a href="about.html" class="btn text-secondary custom_apply">Apply Now</a>
-                                <a href="about.html" class="th-btn style-border1 th-icon">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="academic-card p-0"
-                        style="border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden; height: 100%;">
-                        <div class="academic-img mb-0">
-                            <a href="program-details.html"><img src="{{ asset('/assets/img/academic/pg1.jpg') }}"
-                                    alt="MBA"></a>
-                        </div>
-                        <div class="academic-content border-0 pb-0 mb-0 px-3 py-3">
-                            <h3 class="box-title"><a href="program-details.html">MBA (Master of Business
-                                    Admin)</a></h3>
-                            <p class="box-text style2 my-2"
-                                style="line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
-                                Specializations: Marketing, Finance, HR, Operations. Dual certification,
-                                leadership bootcamp.</p>
-                            <div class="d-flex justify-content-between mt-2 mb-2">
-                                <a href="about.html" class="btn text-secondary custom_apply">Apply Now</a>
-                                <a href="about.html" class="th-btn style-border1 th-icon">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="academic-card p-0"
-                        style="border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden; height: 100%;">
-                        <div class="academic-img mb-0">
-                            <a href="program-details.html"><img src="{{ asset('/assets/img/academic/pg1.jpg') }}"
-                                    alt="MBA"></a>
-                        </div>
-                        <div class="academic-content border-0 pb-0 mb-0 px-3 py-3">
-                            <h3 class="box-title"><a href="program-details.html">MBA (Master of Business
-                                    Admin)</a></h3>
-                            <p class="box-text style2 my-2"
-                                style="line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
-                                Specializations: Marketing, Finance, HR, Operations. Dual certification,
-                                leadership bootcamp.</p>
-                            <div class="d-flex justify-content-between mt-2 mb-2">
-                                <a href="about.html" class="btn text-secondary custom_apply">Apply Now</a>
-                                <a href="about.html" class="th-btn style-border1 th-icon">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                @endforeach              
             </div>
         </div>
     </section>

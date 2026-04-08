@@ -1835,7 +1835,7 @@ justify-content: center !important;
           font-family: 'Inter', sans-serif;
       }
 
-      .modal-content {
+      /* .modal-content {
           background: #ffffff61;
           width: 90%;
           max-width: 400px;
@@ -1845,7 +1845,7 @@ justify-content: center !important;
           animation: fadeInUp 0.35s cubic-bezier(0.2, 0.9, 0.4, 1.1);
           position: relative;
           box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.3);
-      }
+      } */
 
       @keyframes fadeInUp {
           from {
@@ -2052,3 +2052,8 @@ justify-content: center !important;
    
     height: 92% !important;}
 }
+
+#enquiryModal .modal-dialog {
+    max-width: 500px;
+}
+    

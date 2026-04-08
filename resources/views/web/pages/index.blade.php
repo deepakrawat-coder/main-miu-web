@@ -25,8 +25,8 @@
                                                 An institution committed to intellectual rigor, industry integration, and
                                                 transformative learning experiences that shape global professionals.</p>
                                             <div class="btn-wrap" data-ani="slideinup" data-ani-delay="0.8s">
-                                                <a href="contact.html" class="th-btn white-hover th-icon">Admission Now</a>
-                                                <a href="program.html" class="th-btn style-border1 th-icon white-hover">View
+                                                <a href="/contact" class="th-btn white-hover th-icon">Admission Now</a>
+                                                <a href="/program" class="th-btn style-border1 th-icon white-hover">View
                                                     Program</a>
                                             </div>
                                         </div>
@@ -50,8 +50,8 @@
                                                 Blending academic depth with experiential learning to cultivate innovation,
                                                 leadership, and career-ready competencies.</p>
                                             <div class="btn-wrap" data-ani="slideinup" data-ani-delay="0.8s">
-                                                <a href="contact.html" class="th-btn white-hover th-icon">Admission Now</a>
-                                                <a href="program.html" class="th-btn style-border1 th-icon white-hover">View
+                                                <a href="/contact" class="th-btn white-hover th-icon">Admission Now</a>
+                                                <a href="/program" class="th-btn style-border1 th-icon white-hover">View
                                                     Program</a>
                                             </div>
                                         </div>
@@ -75,8 +75,8 @@
                                                 Empowering ambitious minds through a progressive curriculum, distinguished
                                                 faculty, and a culture of continuous advancement.</p>
                                             <div class="btn-wrap" data-ani="slideinup" data-ani-delay="0.8s">
-                                                <a href="contact.html" class="th-btn white-hover th-icon">Admission Now</a>
-                                                <a href="program.html" class="th-btn style-border1 th-icon white-hover">View
+                                                <a href="/contact" class="th-btn white-hover th-icon">Admission Now</a>
+                                                <a href="/program" class="th-btn style-border1 th-icon white-hover">View
                                                     Program</a>
                                             </div>
                                         </div>
@@ -227,13 +227,7 @@
         <div class="container">
             <div class="row justify-content-lg-between justify-content-center align-items-center">
                 <div class="col-lg-12 col-12">
-                    {{-- <div class="title-area text-center text-lg-start mb-75"><span
-                            class="sub-title text-anim">ACADEMICS</span>
-                        <h2 class="sec-title text-anim2">Schools & Faculties</h2>
-                        <p>Our Schools and Faculties bring together experienced academicians and subject experts dedicated
-                            to excellence in teaching and research. Each department is designed to foster specialized
-                            knowledge, critical thinking, and academic innovation.</p>
-                    </div> --}}
+
                     <div class="title-area text-center text-lg-start mb-75">
                         <span class="sub-title text-anim">AFFILIATIONS & ACCREDITATION</span>
                         <h2 class="sec-title text-anim2">Recognized by Leading Education Bodies</h2>
@@ -242,10 +236,7 @@
                             global university standards, ensuring your degree is valued worldwide.</p>
                     </div>
                 </div>
-                {{-- <div class="col-auto align-self-center">
-                    <div class="sec-btn wow fadeInUp" data-wow-delay=".3s"><a href="program.html"
-                            class="th-btn style-border1 th-icon">Explore All</a></div>
-                </div> --}}
+
             </div>
 
             <div class="row  justify-content-center">
@@ -261,31 +252,26 @@
                             alt="Accenture" class="img-fluid affliation_img">
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 col-6 mb-lg-0 mb-4">
+                {{-- <div class="col-lg-3 col-md-4 col-sm-6 col-6 mb-lg-0 mb-4">
                     <div class="recruiter-card">
                         <img src="{{ asset('/new-miu/affliation/national-assessment-and-accreditation-council-01.jpg') }}"
                             alt="Accenture" class="img-fluid affliation_img">
                     </div>
-                </div>
+                </div> --}}
                 <div class="col-lg-3 col-md-4 col-sm-6 col-6 mb-lg-0 mb-4">
                     <div class="recruiter-card">
-                        <img src="{{ asset('/new-miu/affliation/ugc.jpg') }}" alt="Accenture"
+                        <img src="{{ asset('/new-miu/affliation/UGC_India_Logo.png') }}" alt="Accenture"
                             class="img-fluid affliation_img">
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <section class="popular-course-area-1 space shape-mockup-wrap pt-0">
-        <div class="container th-container4">
+    <section class="popular-course-area-1 space shape-mockup-wrap">
+        <div class="container">
             <div class="row justify-content-xl-between justify-content-center align-items-center">
                 <div class="col-xl-6 col-12">
                     <div class="title-wrap">
-                        {{-- <div class="title-area text-center text-xl-start">
-                            <span class="sub-title text-anim">POPULAR COURSES</span>
-                            <h2 class="sec-title text-anim2">Pick a course & <span class="d-block">get started your
-                                    career</span></h2>
-                        </div> --}}
                         <div class="title-area text-center text-xl-start">
                             <span class="sub-title text-anim">MIU PROGRAMS</span>
                             <h2 class="sec-title text-anim2">Choose Your Path <span class="d-block">at Manipur
@@ -296,643 +282,113 @@
                 <div class="col-auto align-self-end">
                     <div class="sec-btn">
                         <ul class="nav nav-tabs course-tabs popularcourse-tab" role="tablist">
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link active th-btn style-border1" id="diploma-tab"
-                                    data-bs-toggle="tab" data-bs-target="#diplomaTab" type="button" role="tab"
-                                    aria-selected="true">Diploma</button>
-                            </li>
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link th-btn style-border1" id="ug-tab" data-bs-toggle="tab"
-                                    data-bs-target="#ugTab" type="button" role="tab"
-                                    aria-selected="false">UG</button>
-                            </li>
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link th-btn style-border1" id="pg-tab" data-bs-toggle="tab"
-                                    data-bs-target="#pgTab" type="button" role="tab"
-                                    aria-selected="false">PG</button>
-                            </li>
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link th-btn style-border1" id="phd-tab" data-bs-toggle="tab"
-                                    data-bs-target="#phdTab" type="button" role="tab"
-                                    aria-selected="false">PhD</button>
-                            </li>
+                            @foreach ($categories as $index => $category)
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link th-btn style-border1 {{ $index == 0 ? 'active' : '' }}"
+                                        id="{{ Str::slug($category->name) }}-tab" data-bs-toggle="tab"
+                                        data-bs-target="#{{ Str::slug($category->name) }}Tab" type="button"
+                                        role="tab">
+                                        {{ $category->name }}
+                                    </button>
+                                </li>
+                            @endforeach
                         </ul>
                     </div>
                 </div>
             </div>
 
             <div class="tab-content">
-                <!-- ==================== DIPLOMA TAB (6 Cards) ==================== -->
-                <div class="tab-pane fade show active" id="diplomaTab" role="tabpanel" aria-labelledby="diploma-tab">
-                    <div class="popular-course-wrap1">
+                @foreach ($categories as $index => $category)
+                    <div class="tab-pane fade {{ $index == 0 ? 'show active' : '' }}"
+                        id="{{ Str::slug($category->name) }}Tab">
                         <div class="row g-4 row-cols-1 row-cols-md-2 row-cols-lg-3">
-                            <!-- Card 1 -->
-                            <div class="col">
-                                <div class="academic-card p-0"
-                                    style="border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden; height: 100%;">
-                                    <div class="academic-img mb-0">
-                                        <a href="program-details.html"><img
-                                                src="{{ asset('/assets/img/academic/academic1-1.jpg') }}"
-                                                alt="School of Commerce"></a>
-                                    </div>
-                                    <div class="academic-content border-0 pb-0 mb-0 px-3 py-3">
-                                        <h3 class="box-title"><a href="program-details.html">School of Commerce</a></h3>
-                                        <p class="box-text style2 my-2"
-                                            style="line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
-                                            MIU's Commerce school: Accounting, Finance, Marketing. Scholarships for all
-                                            undergrads, affordable excellence.</p>
-                                        <div class="d-flex justify-content-between mt-2 mb-2">
-                                            <a href="about.html" class="btn text-secondary custom_apply">Apply Now</a>
-                                            <a href="about.html" class="th-btn style-border1 th-icon">Read More</a>
+                            @php
+                                $categoryPrograms = $groupedPrograms[$category->name] ?? [];
+                            @endphp
+                            @foreach ($categoryPrograms as $program)
+                                <div class="col">
+                                    <div class="academic-card p-0"
+                                        style="border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden; height: 100%;">
+                                        <div class="academic-img mb-0">
+                                            <a href="program-details.html"><img
+                                                    src="{{ asset($program->image ?? 'assets/img/academic/default.jpg') }}"
+                                                    alt="School of Engineering"></a>
+                                        </div>
+                                        <div class="academic-content border-0 pb-0 mb-0 px-3 py-3">
+                                            <h3 class="box-title"><a href="program-details.html">{{ $program->name }}</a>
+                                            </h3>
+                                            <p class="box-text style2 my-2"
+                                                style="line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
+                                                {{ Str::limit($program->short_description ?? 'Program details available', 50) }}
+                                            </p>
+                                            <div class="d-flex justify-content-between mt-2 mb-2">
+                                                <a href="javascript:void(0);"
+                                                    onclick="openEnquiryModal('home',  {{ $program->id }} )"
+                                                    class="btn text-secondary custom_apply">Apply Now</a>
+                                                <a href="/program/{{ $program->slug }}"
+                                                    class="th-btn style-border1 th-icon">Read More</a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <!-- Card 2 -->
-                            <div class="col">
-                                <div class="academic-card p-0"
-                                    style="border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden; height: 100%;">
-                                    <div class="academic-img mb-0">
-                                        <a href="program-details.html"><img
-                                                src="{{ asset('/assets/img/academic/academic2.jpg') }}"
-                                                alt="School of Engineering"></a>
-                                    </div>
-                                    <div class="academic-content border-0 pb-0 mb-0 px-3 py-3">
-                                        <h3 class="box-title"><a href="program-details.html">School of Engineering</a>
-                                        </h3>
-                                        <p class="box-text style2 my-2"
-                                            style="line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
-                                            B.Tech in CS, AI, Robotics. Industry-focused curriculum, state-of-the-art labs,
-                                            100% placement assistance.</p>
-                                        <div class="d-flex justify-content-between mt-2 mb-2">
-                                            <a href="about.html" class="btn text-secondary custom_apply">Apply Now</a>
-                                            <a href="about.html" class="th-btn style-border1 th-icon">Read More</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Card 3 -->
-                            <div class="col">
-                                <div class="academic-card p-0"
-                                    style="border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden; height: 100%;">
-                                    <div class="academic-img mb-0">
-                                        <a href="program-details.html"><img
-                                                src="{{ asset('/assets/img/academic/academic3.jpg') }}"
-                                                alt="School of Design"></a>
-                                    </div>
-                                    <div class="academic-content border-0 pb-0 mb-0 px-3 py-3">
-                                        <h3 class="box-title"><a href="program-details.html">School of Design</a></h3>
-                                        <p class="box-text style2 my-2"
-                                            style="line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
-                                            Diploma in Fashion, Interior, Graphic Design. Creative portfolio development,
-                                            expert faculty mentorship.</p>
-                                        <div class="d-flex justify-content-between mt-2 mb-2">
-                                            <a href="about.html" class="btn text-secondary custom_apply">Apply Now</a>
-                                            <a href="about.html" class="th-btn style-border1 th-icon">Read More</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Card 4 -->
-                            <div class="col">
-                                <div class="academic-card p-0"
-                                    style="border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden; height: 100%;">
-                                    <div class="academic-img mb-0">
-                                        <a href="program-details.html"><img
-                                                src="{{ asset('/assets/img/academic/academic4.jpg') }}"
-                                                alt="School of Health Sciences"></a>
-                                    </div>
-                                    <div class="academic-content border-0 pb-0 mb-0 px-3 py-3">
-                                        <h3 class="box-title"><a href="program-details.html">School of Health Sciences</a>
-                                        </h3>
-                                        <p class="box-text style2 my-2"
-                                            style="line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
-                                            Diploma in Nursing, Medical Lab Tech, Radiology. Hands-on training, hospital
-                                            partnerships.</p>
-                                        <div class="d-flex justify-content-between mt-2 mb-2">
-                                            <a href="about.html" class="btn text-secondary custom_apply">Apply Now</a>
-                                            <a href="about.html" class="th-btn style-border1 th-icon">Read More</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Card 5 -->
-                            <div class="col">
-                                <div class="academic-card p-0"
-                                    style="border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden; height: 100%;">
-                                    <div class="academic-img mb-0">
-                                        <a href="program-details.html"><img
-                                                src="{{ asset('/assets/img/academic/academic5.jpg') }}"
-                                                alt="School of Hospitality"></a>
-                                    </div>
-                                    <div class="academic-content border-0 pb-0 mb-0 px-3 py-3">
-                                        <h3 class="box-title"><a href="program-details.html">School of Hospitality</a>
-                                        </h3>
-                                        <p class="box-text style2 my-2"
-                                            style="line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
-                                            Diploma in Hotel Management, Culinary Arts. Internships at 5-star hotels, global
-                                            career opportunities.</p>
-                                        <div class="d-flex justify-content-between mt-2 mb-2">
-                                            <a href="about.html" class="btn text-secondary custom_apply">Apply Now</a>
-                                            <a href="about.html" class="th-btn style-border1 th-icon">Read More</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Card 6 -->
-                            <div class="col">
-                                <div class="academic-card p-0"
-                                    style="border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden; height: 100%;">
-                                    <div class="academic-img mb-0">
-                                        <a href="program-details.html"><img
-                                                src="{{ asset('/assets/img/academic/academic6.jpg') }}"
-                                                alt="School of IT"></a>
-                                    </div>
-                                    <div class="academic-content border-0 pb-0 mb-0 px-3 py-3">
-                                        <h3 class="box-title"><a href="program-details.html">School of IT</a></h3>
-                                        <p class="box-text style2 my-2"
-                                            style="line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
-                                            Advanced Diploma in Cybersecurity, Cloud Computing, Data Science. Certification
-                                            pathways included.</p>
-                                        <div class="d-flex justify-content-between mt-2 mb-2">
-                                            <a href="about.html" class="btn text-secondary custom_apply">Apply Now</a>
-                                            <a href="about.html" class="th-btn style-border1 th-icon">Read More</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            @endforeach
                         </div>
                     </div>
-                </div>
-
-                <!-- ==================== UG TAB (6 Cards) ==================== -->
-                <div class="tab-pane fade" id="ugTab" role="tabpanel" aria-labelledby="ug-tab">
-                    <div class="popular-course-wrap1">
-                        <div class="row g-4 row-cols-1 row-cols-md-2 row-cols-lg-3">
-                            <!-- Card 1 -->
-                            <div class="col">
-                                <div class="academic-card p-0"
-                                    style="border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden; height: 100%;">
-                                    <div class="academic-img mb-0">
-                                        <a href="program-details.html"><img
-                                                src="{{ asset('/assets/img/academic/ug1.jpg') }}" alt="B.Com"></a>
-                                    </div>
-                                    <div class="academic-content border-0 pb-0 mb-0 px-3 py-3">
-                                        <h3 class="box-title"><a href="program-details.html">B.Com (Hons)</a></h3>
-                                        <p class="box-text style2 my-2"
-                                            style="line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
-                                            Specialization in Accounting, Taxation, Financial Analytics. Industry-aligned
-                                            curriculum with CA/CMA support.</p>
-                                        <div class="d-flex justify-content-between mt-2 mb-2">
-                                            <a href="about.html" class="btn text-secondary custom_apply">Apply Now</a>
-                                            <a href="about.html" class="th-btn style-border1 th-icon">Read More</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Card 2 -->
-                            <div class="col">
-                                <div class="academic-card p-0"
-                                    style="border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden; height: 100%;">
-                                    <div class="academic-img mb-0">
-                                        <a href="program-details.html"><img
-                                                src="{{ asset('/assets/img/academic/ug2.jpg') }}" alt="B.Tech CSE"></a>
-                                    </div>
-                                    <div class="academic-content border-0 pb-0 mb-0 px-3 py-3">
-                                        <h3 class="box-title"><a href="program-details.html">B.Tech Computer Science</a>
-                                        </h3>
-                                        <p class="box-text style2 my-2"
-                                            style="line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
-                                            Specializations in AI/ML, Full Stack, DevOps. 2 industry projects, hackathons,
-                                            internship guaranteed.</p>
-                                        <div class="d-flex justify-content-between mt-2 mb-2">
-                                            <a href="about.html" class="btn text-secondary custom_apply">Apply Now</a>
-                                            <a href="about.html" class="th-btn style-border1 th-icon">Read More</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Card 3 -->
-                            <div class="col">
-                                <div class="academic-card p-0"
-                                    style="border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden; height: 100%;">
-                                    <div class="academic-img mb-0">
-                                        <a href="program-details.html"><img
-                                                src="{{ asset('/assets/img/academic/ug3.jpg') }}" alt="BA Economics"></a>
-                                    </div>
-                                    <div class="academic-content border-0 pb-0 mb-0 px-3 py-3">
-                                        <h3 class="box-title"><a href="program-details.html">BA Economics (Honors)</a>
-                                        </h3>
-                                        <p class="box-text style2 my-2"
-                                            style="line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
-                                            Data-driven economics, public policy, econometrics. Research opportunities with
-                                            top think tanks.</p>
-                                        <div class="d-flex justify-content-between mt-2 mb-2">
-                                            <a href="about.html" class="btn text-secondary custom_apply">Apply Now</a>
-                                            <a href="about.html" class="th-btn style-border1 th-icon">Read More</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Card 4 -->
-                            <div class="col">
-                                <div class="academic-card p-0"
-                                    style="border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden; height: 100%;">
-                                    <div class="academic-img mb-0">
-                                        <a href="program-details.html"><img
-                                                src="{{ asset('/assets/img/academic/ug4.jpg') }}" alt="BBA"></a>
-                                    </div>
-                                    <div class="academic-content border-0 pb-0 mb-0 px-3 py-3">
-                                        <h3 class="box-title"><a href="program-details.html">BBA (Bachelor of Business
-                                                Admin)</a></h3>
-                                        <p class="box-text style2 my-2"
-                                            style="line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
-                                            Marketing, HR, Finance, Entrepreneurship. Live case studies, leadership series,
-                                            startup incubation.</p>
-                                        <div class="d-flex justify-content-between mt-2 mb-2">
-                                            <a href="about.html" class="btn text-secondary custom_apply">Apply Now</a>
-                                            <a href="about.html" class="th-btn style-border1 th-icon">Read More</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Card 5 -->
-                            <div class="col">
-                                <div class="academic-card p-0"
-                                    style="border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden; height: 100%;">
-                                    <div class="academic-img mb-0">
-                                        <a href="program-details.html"><img
-                                                src="{{ asset('/assets/img/academic/ug5.jpg') }}" alt="BSc Physics"></a>
-                                    </div>
-                                    <div class="academic-content border-0 pb-0 mb-0 px-3 py-3">
-                                        <h3 class="box-title"><a href="program-details.html">B.Sc Physics (Research)</a>
-                                        </h3>
-                                        <p class="box-text style2 my-2"
-                                            style="line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
-                                            Advanced lab training, quantum mechanics, astrophysics. Pathway to top MSc/PhD
-                                            programs globally.</p>
-                                        <div class="d-flex justify-content-between mt-2 mb-2">
-                                            <a href="about.html" class="btn text-secondary custom_apply">Apply Now</a>
-                                            <a href="about.html" class="th-btn style-border1 th-icon">Read More</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Card 6 -->
-                            <div class="col">
-                                <div class="academic-card p-0"
-                                    style="border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden; height: 100%;">
-                                    <div class="academic-img mb-0">
-                                        <a href="program-details.html"><img
-                                                src="{{ asset('/assets/img/academic/ug6.jpg') }}"
-                                                alt="BA Psychology"></a>
-                                    </div>
-                                    <div class="academic-content border-0 pb-0 mb-0 px-3 py-3">
-                                        <h3 class="box-title"><a href="program-details.html">BA Applied Psychology</a>
-                                        </h3>
-                                        <p class="box-text style2 my-2"
-                                            style="line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
-                                            Counseling, organizational behavior, child psychology. Internship at mental
-                                            health clinics.</p>
-                                        <div class="d-flex justify-content-between mt-2 mb-2">
-                                            <a href="about.html" class="btn text-secondary custom_apply">Apply Now</a>
-                                            <a href="about.html" class="th-btn style-border1 th-icon">Read More</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- ==================== PG TAB (6 Cards) ==================== -->
-                <div class="tab-pane fade" id="pgTab" role="tabpanel" aria-labelledby="pg-tab">
-                    <div class="popular-course-wrap1">
-                        <div class="row g-4 row-cols-1 row-cols-md-2 row-cols-lg-3">
-                            <!-- Card 1 -->
-                            <div class="col">
-                                <div class="academic-card p-0"
-                                    style="border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden; height: 100%;">
-                                    <div class="academic-img mb-0">
-                                        <a href="program-details.html"><img
-                                                src="{{ asset('/assets/img/academic/pg1.jpg') }}" alt="MBA"></a>
-                                    </div>
-                                    <div class="academic-content border-0 pb-0 mb-0 px-3 py-3">
-                                        <h3 class="box-title"><a href="program-details.html">MBA (Master of Business
-                                                Admin)</a></h3>
-                                        <p class="box-text style2 my-2"
-                                            style="line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
-                                            Specializations: Marketing, Finance, HR, Operations. Dual certification,
-                                            leadership bootcamp.</p>
-                                        <div class="d-flex justify-content-between mt-2 mb-2">
-                                            <a href="about.html" class="btn text-secondary custom_apply">Apply Now</a>
-                                            <a href="about.html" class="th-btn style-border1 th-icon">Read More</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Card 2 -->
-                            <div class="col">
-                                <div class="academic-card p-0"
-                                    style="border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden; height: 100%;">
-                                    <div class="academic-img mb-0">
-                                        <a href="program-details.html"><img
-                                                src="{{ asset('/assets/img/academic/pg2.jpg') }}" alt="M.Tech"></a>
-                                    </div>
-                                    <div class="academic-content border-0 pb-0 mb-0 px-3 py-3">
-                                        <h3 class="box-title"><a href="program-details.html">M.Tech Data Science & AI</a>
-                                        </h3>
-                                        <p class="box-text style2 my-2"
-                                            style="line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
-                                            Deep learning, NLP, big data analytics. Research thesis with industry partners.
-                                        </p>
-                                        <div class="d-flex justify-content-between mt-2 mb-2">
-                                            <a href="about.html" class="btn text-secondary custom_apply">Apply Now</a>
-                                            <a href="about.html" class="th-btn style-border1 th-icon">Read More</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Card 3 -->
-                            <div class="col">
-                                <div class="academic-card p-0"
-                                    style="border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden; height: 100%;">
-                                    <div class="academic-img mb-0">
-                                        <a href="program-details.html"><img
-                                                src="{{ asset('/assets/img/academic/pg3.jpg') }}" alt="MA English"></a>
-                                    </div>
-                                    <div class="academic-content border-0 pb-0 mb-0 px-3 py-3">
-                                        <h3 class="box-title"><a href="program-details.html">MA English Literature</a>
-                                        </h3>
-                                        <p class="box-text style2 my-2"
-                                            style="line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
-                                            Critical theory, world literature, creative writing. UGC-NET coaching included.
-                                        </p>
-                                        <div class="d-flex justify-content-between mt-2 mb-2">
-                                            <a href="about.html" class="btn text-secondary custom_apply">Apply Now</a>
-                                            <a href="about.html" class="th-btn style-border1 th-icon">Read More</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Card 4 -->
-                            <div class="col">
-                                <div class="academic-card p-0"
-                                    style="border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden; height: 100%;">
-                                    <div class="academic-img mb-0">
-                                        <a href="program-details.html"><img
-                                                src="{{ asset('/assets/img/academic/pg4.jpg') }}"
-                                                alt="M.Sc Chemistry"></a>
-                                    </div>
-                                    <div class="academic-content border-0 pb-0 mb-0 px-3 py-3">
-                                        <h3 class="box-title"><a href="program-details.html">M.Sc Organic Chemistry</a>
-                                        </h3>
-                                        <p class="box-text style2 my-2"
-                                            style="line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
-                                            Advanced synthesis, spectroscopy, research project. Collaboration with pharma
-                                            industries.</p>
-                                        <div class="d-flex justify-content-between mt-2 mb-2">
-                                            <a href="about.html" class="btn text-secondary custom_apply">Apply Now</a>
-                                            <a href="about.html" class="th-btn style-border1 th-icon">Read More</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Card 5 -->
-                            <div class="col">
-                                <div class="academic-card p-0"
-                                    style="border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden; height: 100%;">
-                                    <div class="academic-img mb-0">
-                                        <a href="program-details.html"><img
-                                                src="{{ asset('/assets/img/academic/pg5.jpg') }}" alt="M.Com"></a>
-                                    </div>
-                                    <div class="academic-content border-0 pb-0 mb-0 px-3 py-3">
-                                        <h3 class="box-title"><a href="program-details.html">M.Com International
-                                                Finance</a></h3>
-                                        <p class="box-text style2 my-2"
-                                            style="line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
-                                            Financial modeling, forex, investment banking. CFA aligned curriculum.</p>
-                                        <div class="d-flex justify-content-between mt-2 mb-2">
-                                            <a href="about.html" class="btn text-secondary custom_apply">Apply Now</a>
-                                            <a href="about.html" class="th-btn style-border1 th-icon">Read More</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Card 6 -->
-                            <div class="col">
-                                <div class="academic-card p-0"
-                                    style="border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden; height: 100%;">
-                                    <div class="academic-img mb-0">
-                                        <a href="program-details.html"><img
-                                                src="{{ asset('/assets/img/academic/pg6.jpg') }}" alt="MSW"></a>
-                                    </div>
-                                    <div class="academic-content border-0 pb-0 mb-0 px-3 py-3">
-                                        <h3 class="box-title"><a href="program-details.html">Master of Social Work
-                                                (MSW)</a></h3>
-                                        <p class="box-text style2 my-2"
-                                            style="line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
-                                            Community development, mental health, NGO management. Fieldwork immersion.</p>
-                                        <div class="d-flex justify-content-between mt-2 mb-2">
-                                            <a href="about.html" class="btn text-secondary custom_apply">Apply Now</a>
-                                            <a href="about.html" class="th-btn style-border1 th-icon">Read More</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- ==================== PhD TAB (6 Cards) ==================== -->
-                <div class="tab-pane fade" id="phdTab" role="tabpanel" aria-labelledby="phd-tab">
-                    <div class="popular-course-wrap1">
-                        <div class="row g-4 row-cols-1 row-cols-md-2 row-cols-lg-3">
-                            <!-- Card 1 -->
-                            <div class="col">
-                                <div class="academic-card p-0"
-                                    style="border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden; height: 100%;">
-                                    <div class="academic-img mb-0">
-                                        <a href="program-details.html"><img
-                                                src="{{ asset('/assets/img/academic/phd1.jpg') }}"
-                                                alt="PhD Commerce"></a>
-                                    </div>
-                                    <div class="academic-content border-0 pb-0 mb-0 px-3 py-3">
-                                        <h3 class="box-title"><a href="program-details.html">PhD in Commerce</a></h3>
-                                        <p class="box-text style2 my-2"
-                                            style="line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
-                                            Research in financial markets, accounting ethics, consumer behavior. UGC
-                                            fellowship support.</p>
-                                        <div class="d-flex justify-content-between mt-2 mb-2">
-                                            <a href="about.html" class="btn text-secondary custom_apply">Apply Now</a>
-                                            <a href="about.html" class="th-btn style-border1 th-icon">Read More</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Card 2 -->
-                            <div class="col">
-                                <div class="academic-card p-0"
-                                    style="border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden; height: 100%;">
-                                    <div class="academic-img mb-0">
-                                        <a href="program-details.html"><img
-                                                src="{{ asset('/assets/img/academic/phd2.jpg') }}"
-                                                alt="PhD Engineering"></a>
-                                    </div>
-                                    <div class="academic-content border-0 pb-0 mb-0 px-3 py-3">
-                                        <h3 class="box-title"><a href="program-details.html">PhD in Computer Science</a>
-                                        </h3>
-                                        <p class="box-text style2 my-2"
-                                            style="line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
-                                            Areas: Quantum computing, AI ethics, cryptography. International publications
-                                            encouraged.</p>
-                                        <div class="d-flex justify-content-between mt-2 mb-2">
-                                            <a href="about.html" class="btn text-secondary custom_apply">Apply Now</a>
-                                            <a href="about.html" class="th-btn style-border1 th-icon">Read More</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Card 3 -->
-                            <div class="col">
-                                <div class="academic-card p-0"
-                                    style="border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden; height: 100%;">
-                                    <div class="academic-img mb-0">
-                                        <a href="program-details.html"><img
-                                                src="{{ asset('/assets/img/academic/phd3.jpg') }}" alt="PhD Physics"></a>
-                                    </div>
-                                    <div class="academic-content border-0 pb-0 mb-0 px-3 py-3">
-                                        <h3 class="box-title"><a href="program-details.html">PhD in Physics</a></h3>
-                                        <p class="box-text style2 my-2"
-                                            style="line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
-                                            Condensed matter, photonics, computational physics. Collaborations with national
-                                            labs.</p>
-                                        <div class="d-flex justify-content-between mt-2 mb-2">
-                                            <a href="about.html" class="btn text-secondary custom_apply">Apply Now</a>
-                                            <a href="about.html" class="th-btn style-border1 th-icon">Read More</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Card 4 -->
-                            <div class="col">
-                                <div class="academic-card p-0"
-                                    style="border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden; height: 100%;">
-                                    <div class="academic-img mb-0">
-                                        <a href="program-details.html"><img
-                                                src="{{ asset('/assets/img/academic/phd4.jpg') }}"
-                                                alt="PhD Management"></a>
-                                    </div>
-                                    <div class="academic-content border-0 pb-0 mb-0 px-3 py-3">
-                                        <h3 class="box-title"><a href="program-details.html">PhD in Management Studies</a>
-                                        </h3>
-                                        <p class="box-text style2 my-2"
-                                            style="line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
-                                            Organizational behavior, strategic innovation, sustainable business. Industry
-                                            mentorship.</p>
-                                        <div class="d-flex justify-content-between mt-2 mb-2">
-                                            <a href="about.html" class="btn text-secondary custom_apply">Apply Now</a>
-                                            <a href="about.html" class="th-btn style-border1 th-icon">Read More</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Card 5 -->
-                            <div class="col">
-                                <div class="academic-card p-0"
-                                    style="border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden; height: 100%;">
-                                    <div class="academic-img mb-0">
-                                        <a href="program-details.html"><img
-                                                src="{{ asset('/assets/img/academic/phd5.jpg') }}"
-                                                alt="PhD Psychology"></a>
-                                    </div>
-                                    <div class="academic-content border-0 pb-0 mb-0 px-3 py-3">
-                                        <h3 class="box-title"><a href="program-details.html">PhD in Psychology</a></h3>
-                                        <p class="box-text style2 my-2"
-                                            style="line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
-                                            Clinical psychology, cognitive neuroscience, social behavior. APA-style research
-                                            training.</p>
-                                        <div class="d-flex justify-content-between mt-2 mb-2">
-                                            <a href="about.html" class="btn text-secondary custom_apply">Apply Now</a>
-                                            <a href="about.html" class="th-btn style-border1 th-icon">Read More</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Card 6 -->
-                            <div class="col">
-                                <div class="academic-card p-0"
-                                    style="border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden; height: 100%;">
-                                    <div class="academic-img mb-0">
-                                        <a href="program-details.html"><img
-                                                src="{{ asset('/assets/img/academic/phd6.jpg') }}"
-                                                alt="PhD Economics"></a>
-                                    </div>
-                                    <div class="academic-content border-0 pb-0 mb-0 px-3 py-3">
-                                        <h3 class="box-title"><a href="program-details.html">PhD in Economics</a></h3>
-                                        <p class="box-text style2 my-2"
-                                            style="line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
-                                            Development economics, public policy, econometric modeling. Fieldwork grants
-                                            available.</p>
-                                        <div class="d-flex justify-content-between mt-2 mb-2">
-                                            <a href="about.html" class="btn text-secondary custom_apply">Apply Now</a>
-                                            <a href="about.html" class="th-btn style-border1 th-icon">Read More</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
-
             <div class="btn-wrap mt-50 text-center d-block">
-                <a class="th-btn th-icon" href="/programs-listing">Browse All Categories</a>
+                <a class="th-btn th-icon" href="/program">Browse All Categories</a>
             </div>
         </div>
     </section>
-    <div class="counter-area1 overflow-hidden">
-        <div class="container th-container2">
-            <div class="counter-wrap1">
-                <div class="counter-card wow fadeInUp" data-wow-delay=".2s">
-                    <div class="box-icon"><img src="{{ asset('/assets/img/icon/counter-icon1-1.svg') }}" alt="icon">
+    <section>
+        <div class="counter-area1 overflow-hidden">
+            <div class="container th-container2">
+                <div class="counter-wrap1">
+                    <div class="counter-card wow fadeInUp" data-wow-delay=".2s">
+                        <div class="box-icon"><img src="{{ asset('/assets/img/icon/counter-icon1-1.svg') }}"
+                                alt="icon">
+                        </div>
+                        <div class="media-body">
+                            <h3 class="box-number"><span class="counter-number">2019</span></h3>
+                            <p class="box-text">Year of Establishment</p>
+                        </div>
                     </div>
-                    <div class="media-body">
-                        <h3 class="box-number"><span class="counter-number">2019</span></h3>
-                        <p class="box-text">Year of Establishment</p>
+                    <div class="divider"></div>
+                    <div class="counter-card wow fadeInUp" data-wow-delay=".4s">
+                        <div class="box-icon"><img src="{{ asset('/assets/img/icon/counter-icon1-2.svg') }}"
+                                alt="icon">
+                        </div>
+                        <div class="media-body">
+                            <h3 class="box-number"><span class="counter-number">50</span>+</h3>
+                            <p class="box-text">Academic Programs</p>
+                        </div>
                     </div>
+                    <div class="divider"></div>
+                    <div class="counter-card wow fadeInUp" data-wow-delay=".6s">
+                        <div class="box-icon"><img src="{{ asset('/assets/img/icon/counter-icon1-3.svg') }}"
+                                alt="icon">
+                        </div>
+                        <div class="media-body">
+                            <h3 class="box-number"><span class="counter-number">1000</span>+</h3>
+                            <p class="box-text">Students Enrolled</p>
+                        </div>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="counter-card wow fadeInUp" data-wow-delay=".7s">
+                        <div class="box-icon"><img src="{{ asset('/assets/img/icon/counter-icon1-4.svg') }}"
+                                alt="icon">
+                        </div>
+                        <div class="media-body">
+                            <h3 class="box-number"><span class="counter-number">20</span>+</h3>
+                            <p class="box-text">International Collaborations</p>
+                        </div>
+                    </div>
+                    <div class="divider"></div>
                 </div>
-                <div class="divider"></div>
-                <div class="counter-card wow fadeInUp" data-wow-delay=".4s">
-                    <div class="box-icon"><img src="{{ asset('/assets/img/icon/counter-icon1-2.svg') }}" alt="icon">
-                    </div>
-                    <div class="media-body">
-                        <h3 class="box-number"><span class="counter-number">50</span>+</h3>
-                        <p class="box-text">Academic Programs</p>
-                    </div>
-                </div>
-                <div class="divider"></div>
-                <div class="counter-card wow fadeInUp" data-wow-delay=".6s">
-                    <div class="box-icon"><img src="{{ asset('/assets/img/icon/counter-icon1-3.svg') }}" alt="icon">
-                    </div>
-                    <div class="media-body">
-                        <h3 class="box-number"><span class="counter-number">1000</span>+</h3>
-                        <p class="box-text">Students Enrolled</p>
-                    </div>
-                </div>
-                <div class="divider"></div>
-                <div class="counter-card wow fadeInUp" data-wow-delay=".7s">
-                    <div class="box-icon"><img src="{{ asset('/assets/img/icon/counter-icon1-4.svg') }}" alt="icon">
-                    </div>
-                    <div class="media-body">
-                        <h3 class="box-number"><span class="counter-number">20</span>+</h3>
-                        <p class="box-text">International Collaborations</p>
-                    </div>
-                </div>
-                <div class="divider"></div>
             </div>
         </div>
-    </div>
+    </section>
     <section class="academic1-area space overflow-hidden" id="program-sec">
         <div class="container">
             <div class="row justify-content-lg-between justify-content-center align-items-center">
@@ -946,7 +402,7 @@
                     </div>
                 </div>
                 <div class="col-auto align-self-center">
-                    <div class="sec-btn wow fadeInUp" data-wow-delay=".3s"><a href="/schools-and-departments"
+                    <div class="sec-btn wow fadeInUp" data-wow-delay=".3s"><a href="/school"
                             class="th-btn style-border1 th-icon">Explore All</a></div>
                 </div>
             </div>
@@ -955,102 +411,32 @@
                 <div class="slider-area">
                     <!-- 移除swiper，使用Bootstrap 5 grid system：一行4列，响应式 -->
                     <div class="row g-4 row-cols-1 row-cols-md-2 row-cols-lg-3">
-
-                        <!-- Card 1: School of Commerce -->
-                        <div class="col">
-                            <div class="academic-card p-0"
-                                style="border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden; height: 100%;">
-                                <div class="academic-img mb-0">
-                                    <a href="program-details.html"><img
-                                            src="{{ asset('/assets/img/academic/academic1-1.jpg') }}"
-                                            alt="School of Commerce"></a>
-                                </div>
-                                <div class="academic-content border-0 pb-0 mb-0 px-3 py-3">
-
-                                    <h3 class="box-title"><a href="program-details.html">School of Commerce</a></h3>
-                                    <!-- 短描述仅2行 -->
-                                    <p class="box-text style2 my-2"
-                                        style="line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
-                                        MIU's Commerce school: Accounting, Finance, Marketing. Scholarships for all
-                                        undergrads, affordable excellence.</p>
-                                    <div class="d-flex justify-content-between mt-2 mb-2">
-                                        <a href="about.html" class="btn text-secondary custom_apply">Apply Now</a>
-                                        <a href="about.html" class="th-btn style-border1 th-icon">Read More</a>
+                        @foreach ($schools as $school)
+                            <div class="col">
+                                <div class="academic-card p-0"
+                                    style="border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden; height: 100%;">
+                                    <div class="academic-img mb-0">
+                                        <a href="program-details.html"><img src="{{ asset($school->image) }}"
+                                                alt="MBA"></a>
+                                    </div>
+                                    <div class="academic-content border-0 pb-0 mb-0 px-3 py-3">
+                                        <h3 class="box-title"><a href="program-details.html">{{ $school->name }}</a></h3>
+                                        <p class="box-text style2 my-2"
+                                            style="line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
+                                            {{ $school->short_description }}</p>
+                                        <div class="d-flex justify-content-between mt-2 mb-2">
+                                            <a href="/school/{{ $school->slug }}"
+                                                class="th-btn style-border1 th-icon">Read More</a>
+                                            <a href="javascript:void(0);"
+                                                onclick="openEnquiryModal('home',  {{ $school->id }} )"
+                                                class="btn text-secondary custom_apply">
+                                                Apply Now
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-
-                        <!-- Card 2: School of Computer Application -->
-                        <div class="col">
-                            <div class="academic-card p-0"
-                                style="border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden; height: 100%;">
-                                <div class="academic-img mb-0">
-                                    <a href="program-details.html"><img
-                                            src="{{ asset('/assets/img/academic/academic1-1.jpg') }}"
-                                            alt="School of Computer Application"></a>
-                                </div>
-                                <div class="academic-content border-0 pb-0 mb-0 px-3 py-3">
-                                    <h3 class="box-title"><a href="program-details.html">School of Computer
-                                            Application</a></h3>
-                                    <p class="box-text style2 my-2"
-                                        style="line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
-                                        BCA, MCA, Data Science, AI programs. Every student gets scholarships, modern labs
-                                        and expert faculty.</p>
-                                    <div class="d-flex justify-content-between mt-2 mb-2">
-                                        <a href="about.html" class="btn text-secondary custom_apply">Apply Now</a>
-                                        <a href="about.html" class="th-btn style-border1 th-icon">Read More</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Card 3: School of Engineering -->
-                        <div class="col">
-                            <div class="academic-card p-0"
-                                style="border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden; height: 100%;">
-                                <div class="academic-img mb-0">
-                                    <a href="program-details.html"><img
-                                            src="{{ asset('/assets/img/academic/academic1-1.jpg') }}"
-                                            alt="School of Engineering"></a>
-                                </div>
-                                <div class="academic-content border-0 pb-0 mb-0 px-3 py-3">
-                                    <h3 class="box-title"><a href="program-details.html">School of Engineering</a></h3>
-                                    <p class="box-text style2 my-2"
-                                        style="line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
-                                        B.Tech, M.Tech in Civil, Mechanical, CSE. Hands-on training, 100% scholarship
-                                        support for eligible students.</p>
-                                    <div class="d-flex justify-content-between mt-2 mb-2">
-                                        <a href="about.html" class="btn text-secondary custom_apply">Apply Now</a>
-                                        <a href="about.html" class="th-btn style-border1 th-icon">Read More</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Card 4: School of Law -->
-                        <div class="col">
-                            <div class="academic-card p-0"
-                                style="border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden; height: 100%;">
-                                <div class="academic-img mb-0">
-                                    <a href="program-details.html"><img
-                                            src="{{ asset('/assets/img/academic/academic1-1.jpg') }}"
-                                            alt="School of Engineering"></a>
-                                </div>
-                                <div class="academic-content border-0 pb-0 mb-0 px-3 py-3">
-                                    <h3 class="box-title"><a href="program-details.html">School of Engineering</a></h3>
-                                    <p class="box-text style2 my-2"
-                                        style="line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
-                                        B.Tech, M.Tech programs in CSE, AI & ML, Civil, Mechanical. State-of-the-art labs,
-                                        industry training, and assured scholarships for deserving candidates.
-                                    </p>
-                                    <div class="d-flex justify-content-between mt-2 mb-2">
-                                        <a href="about.html" class="btn text-secondary custom_apply">Apply Now</a>
-                                        <a href="about.html" class="th-btn style-border1 th-icon">Read More</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        @endforeach
                     </div>
                 </div>
             </div>
@@ -1072,8 +458,30 @@
                 <div class="stack-container">
                     <div class="cards-stack">
 
+                        @foreach ($events as $event)
+                            <div class="stack-card active" data-index="{{ $loop->index }}">
+                                <div class="card-inner">
+                                    <div class="card-left">
+                                        <div>
+                                            <span class="card-badge">{{ $event->badge_name }}</span>
+                                            <h2 class="card-title">{{ $event->title }}</h2>
+                                            <p class="card-text">{{ $event->short_description }}</p>
+                                            @if (!empty($event->publish_date))
+                                                <p class="card-text">{{ date('d M Y', strtotime($event->publish_date)) }}
+                                                </p>
+                                            @endif
+                                            <span class="card-counter">{{ $loop->iteration }} /
+                                                {{ $loop->count }}</span>
+                                        </div>
+                                    </div>
+                                    <div class="card-right">
+                                        <img src="{{ asset($event->image) }}" alt="Cultural Fest">
+                                    </div>
+                                </div>
+                            </div>
+                        @endforeach
                         <!-- Event Card 1 -->
-                        <div class="stack-card active" data-index="0">
+                        {{-- <div class="stack-card active" data-index="0">
                             <div class="card-inner">
                                 <div class="card-left">
                                     <div>
@@ -1168,7 +576,7 @@
                                     <img src="{{ asset('/new-miu/events/5.jpg') }}" alt="Career Fair">
                                 </div>
                             </div>
-                        </div>
+                        </div> --}}
 
                     </div>
 
@@ -1513,7 +921,7 @@
                         <!-- Slide 1 - Text changed to MIU Student -->
                         <div class="swiper-slide">
                             <div class="story-card">
-                                <div class="box-img"><img src="{{ asset('/assets/img/story/story-1-1.jpg') }}"
+                                <div class="box-img"><img src="{{ asset('/new-miu/student-img/12.jpg') }}"
                                         alt="img"></div>
                                 <div class="story-content">
                                     <h3 class="box-title"><a href="program.html">Aman Verma</a></h3>
@@ -1532,7 +940,7 @@
                         <!-- Slide 2 - Text changed to MIU Student -->
                         <div class="swiper-slide">
                             <div class="story-card">
-                                <div class="box-img"><img src="{{ asset('/assets/img/story/story-1-2.jpg') }}"
+                                <div class="box-img"><img src="{{ asset('/new-miu/student-img/15.jpg') }}"
                                         alt="img"></div>
                                 <div class="story-content">
                                     <h3 class="box-title"><a href="program.html">Priya Sharma</a></h3>
@@ -1551,7 +959,7 @@
                         <!-- Slide 3 - Text changed to MIU Student -->
                         <div class="swiper-slide">
                             <div class="story-card">
-                                <div class="box-img"><img src="{{ asset('/assets/img/story/story-1-3.jpg') }}"
+                                <div class="box-img"><img src="{{ asset('/new-miu/student-img/11.jpg') }}"
                                         alt="img"></div>
                                 <div class="story-content">
                                     <h3 class="box-title"><a href="program.html">Rahul Singh</a></h3>
@@ -1569,7 +977,7 @@
                         <!-- Slide 4 - Text changed to MIU Student -->
                         <div class="swiper-slide">
                             <div class="story-card">
-                                <div class="box-img"><img src="{{ asset('/assets/img/story/story-1-4.jpg') }}"
+                                <div class="box-img"><img src="{{ asset('/new-miu/student-img/20.jpg') }}"
                                         alt="img"></div>
                                 <div class="story-content">
                                     <h3 class="box-title"><a href="program.html">Neha Gupta</a></h3>
@@ -1587,7 +995,7 @@
                         <!-- Slide 5 - Text changed to MIU Student -->
                         <div class="swiper-slide">
                             <div class="story-card">
-                                <div class="box-img"><img src="{{ asset('/assets/img/story/story-1-5.jpg') }}"
+                                <div class="box-img"><img src="{{ asset('/new-miu/student-img/13.jpg') }}"
                                         alt="img"></div>
                                 <div class="story-content">
                                     <h3 class="box-title"><a href="program.html">Arjun Mehta</a></h3>
@@ -1605,7 +1013,7 @@
                         <!-- Slide 6 - Text changed to MIU Student -->
                         <div class="swiper-slide">
                             <div class="story-card">
-                                <div class="box-img"><img src="{{ asset('/assets/img/story/story-1-1.jpg') }}"
+                                <div class="box-img"><img src="{{ asset('/new-miu/student-img/18.jpg') }}"
                                         alt="img"></div>
                                 <div class="story-content">
                                     <h3 class="box-title"><a href="program.html">Sneha Kapoor</a></h3>
@@ -1624,7 +1032,7 @@
                         <!-- Slide 7 - Text changed to MIU Student -->
                         <div class="swiper-slide">
                             <div class="story-card">
-                                <div class="box-img"><img src="{{ asset('/assets/img/story/story-1-2.jpg') }}"
+                                <div class="box-img"><img src="{{ asset('/new-miu/student-img/14.jpg') }}"
                                         alt="img"></div>
                                 <div class="story-content">
                                     <h3 class="box-title"><a href="program.html">Vikas Yadav</a></h3>
@@ -1643,7 +1051,7 @@
                         <!-- Slide 8 - Text changed to MIU Student -->
                         <div class="swiper-slide">
                             <div class="story-card">
-                                <div class="box-img"><img src="{{ asset('/assets/img/story/story-1-3.jpg') }}"
+                                <div class="box-img"><img src="{{ asset('/new-miu/student-img/22.jpg') }}"
                                         alt="img"></div>
                                 <div class="story-content">
                                     <h3 class="box-title"><a href="program.html">Pooja Singh</a></h3>
@@ -1661,7 +1069,7 @@
                         <!-- Slide 9 - Text changed to MIU Student -->
                         <div class="swiper-slide">
                             <div class="story-card">
-                                <div class="box-img"><img src="{{ asset('/assets/img/story/story-1-4.jpg') }}"
+                                <div class="box-img"><img src="{{ asset('/new-miu/student-img/16.jpg') }}"
                                         alt="img"></div>
                                 <div class="story-content">
                                     <h3 class="box-title"><a href="program.html">Rohit Kumar</a></h3>
@@ -1679,7 +1087,7 @@
                         <!-- Slide 10 - Text changed to MIU Student -->
                         <div class="swiper-slide">
                             <div class="story-card">
-                                <div class="box-img"><img src="{{ asset('/assets/img/story/story-1-5.jpg') }}"
+                                <div class="box-img"><img src="{{ asset('/new-miu/student-img/21.jpg') }}"
                                         alt="img"></div>
                                 <div class="story-content">
                                     <h3 class="box-title"><a href="program.html">Anjali Verma</a></h3>
@@ -1696,7 +1104,7 @@
                         </div>
                         <div class="swiper-slide">
                             <div class="story-card">
-                                <div class="box-img"><img src="{{ asset('/assets/img/story/story-1-5.jpg') }}"
+                                <div class="box-img"><img src="{{ asset('/new-miu/student-img/17.jpg') }}"
                                         alt="img"></div>
                                 <div class="story-content">
                                     <h3 class="box-title"><a href="program.html">Karan Malhotra</a></h3>
@@ -1730,7 +1138,7 @@
                     </div>
                 </div>
                 <div class="col-auto align-self-end">
-                    <div class="sec-btn wow fadeInUp" data-wow-delay=".3s"><a href="event.html"
+                    <div class="sec-btn wow fadeInUp" data-wow-delay=".3s"><a href="/blogs"
                             class="th-btn style-border1 th-icon">Our Blogs</a></div>
                 </div>
             </div>
@@ -1739,7 +1147,32 @@
 
                 <div class="row">
                     <!-- Card 1 - Blog 1 -->
-                    <div class="col-lg-4 col-md-6">
+                    @foreach ($blogs as $blog)
+                        <div class="col-lg-4 col-md-6">
+                            <div class="blog-card wow fadeInUp border-0"
+                                style="visibility: visible; animation-name: fadeInUp;">
+                                <div class="blog-img position-relative p-3 pb-0">
+                                    <a href="/blog/{{ $blog->slug }}">
+                                        <div class="blog-img-box position-relative overflow-hidden">
+                                            <img src="{{ asset($blog->image) }}" alt="blog image">
+                                            <img src="{{ asset($blog->image) }}" alt="blog image">
+                                        </div>
+                                    </a>
+                                    <div class="blog-date">
+                                        <h5 class="blog-date-title">
+                                            {{ \Carbon\Carbon::parse($blog->published_date)->format('d') }}</h5>
+                                        <p class="blog-date-text">
+                                            {{ \Carbon\Carbon::parse($blog->published_date)->format('M, Y') }}</p>
+                                    </div>
+                                </div>
+                                <div class="blog-content pt-0 px-3">
+                                    <h3 class="box-title"><a href="/blog/{{ $blog->slug }}">{{ $blog->title }}</a></h3>
+                                    <p class="box-text">{{ $blog->short_description }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    @endforeach
+                    {{-- <div class="col-lg-4 col-md-6">
                         <div class="blog-card wow fadeInUp border-0"
                             style="visibility: visible; animation-name: fadeInUp;">
                             <div class="blog-img position-relative p-3 pb-0">
@@ -1761,10 +1194,10 @@
                                     academic frameworks and enhancing employability outcomes across industries.</p>
                             </div>
                         </div>
-                    </div>
+                    </div> --}}
 
                     <!-- Card 2 - Blog 2 -->
-                    <div class="col-lg-4 col-md-6">
+                    {{-- <div class="col-lg-4 col-md-6">
                         <div class="blog-card wow fadeInUp border-0"
                             style="visibility: visible; animation-name: fadeInUp;">
                             <div class="blog-img position-relative p-3 pb-0">
@@ -1786,10 +1219,10 @@
                                     relevant curriculum and preparing students for real-world challenges.</p>
                             </div>
                         </div>
-                    </div>
+                    </div> --}}
 
                     <!-- Card 3 - Blog 3 -->
-                    <div class="col-lg-4 col-md-6">
+                    {{-- <div class="col-lg-4 col-md-6">
                         <div class="blog-card wow fadeInUp border-0"
                             style="visibility: visible; animation-name: fadeInUp;">
                             <div class="blog-img position-relative p-3 pb-0">
@@ -1811,12 +1244,12 @@
                                     students can adopt to remain competitive in evolving job markets.</p>
                             </div>
                         </div>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
         </div>
     </section>
-    <section class="apply-stadum-area bg-title position-relative space overflow-hidden">
+    {{-- <section class="apply-stadum-area bg-title position-relative space overflow-hidden">
         <div class="container">
             <div class="row gy-4 align-items-center justify-content-between">
                 <div class="col-xl-6 order-1 order-xl-0">
@@ -1833,7 +1266,7 @@
                 </div>
             </div>
         </div><span class="apply-stadum-shape wow fadeInRight" data-wow-delay=".3s"></span>
-    </section>
+    </section> --}}
     <section class="faq-area-1 bg-white position-relative space overflow-hidden">
 
         <div class="container">
@@ -1974,6 +1407,297 @@
 @section('scripts')
 
     <script>
+        // (function() {
+        //     document.addEventListener('DOMContentLoaded', function() {
+
+        //         const cards = document.querySelectorAll('.stack-card');
+        //         const totalCards = cards.length;
+        //         const progressFill = document.querySelector('.progress-fill');
+        //         const currentNumSpan = document.getElementById('current-num');
+        //         const sliderSection = document.getElementById('stackSlider');
+        //         const completionMsg = document.getElementById('completionMessage');
+
+        //         if (totalCards === 0 || !sliderSection) return;
+
+        //         let currentIndex = 0;
+        //         let isAnimating = false;
+        //         let isSliderActive = false;
+        //         let scrollInSlider = false;
+
+        //         // Set total number
+        //         const totalNumSpan = document.getElementById('total-num');
+        //         if (totalNumSpan) {
+        //             totalNumSpan.textContent = totalCards.toString().padStart(2, '0');
+        //         }
+
+        //         // NO body scroll locking - just prevent default on wheel/touch
+        //         function isSliderVisible() {
+        //             const rect = sliderSection.getBoundingClientRect();
+        //             const windowHeight = window.innerHeight;
+
+        //             const visibleTop = Math.max(0, rect.top);
+        //             const visibleBottom = Math.min(windowHeight, rect.bottom);
+        //             const visibleHeight = Math.max(0, visibleBottom - visibleTop);
+        //             const totalHeight = rect.height;
+        //             const visibilityPercentage = (visibleHeight / totalHeight) * 100;
+
+        //             return visibilityPercentage >= 80;
+        //         }
+
+        //         // Update progress and counter
+        //         function updateProgress() {
+        //             if (progressFill) {
+        //                 const progress = (currentIndex / (totalCards - 1)) * 100;
+        //                 progressFill.style.width = progress + '%';
+        //             }
+        //             if (currentNumSpan) {
+        //                 currentNumSpan.textContent = (currentIndex + 1).toString().padStart(2, '0');
+        //             }
+        //         }
+
+        //         // Update scroll hint text
+        //         function updateScrollHint() {
+        //             const scrollHintSpan = document.querySelector('.scroll-hint span');
+        //             if (scrollHintSpan) {
+        //                 if (currentIndex === 0) {
+        //                     scrollHintSpan.innerHTML = '⬆️ Scroll UP to exit slider ⬆️';
+        //                     scrollHintSpan.style.color = '#f37021';
+        //                 } else if (currentIndex === totalCards - 1) {
+        //                     scrollHintSpan.innerHTML = '⬇️ Scroll DOWN to exit slider ⬇️';
+        //                     scrollHintSpan.style.color = '#10b981';
+        //                 } else {
+        //                     scrollHintSpan.innerHTML = '↕️ Scroll to navigate slides ↕️';
+        //                     scrollHintSpan.style.color = '#94a3b8';
+        //                 }
+        //             }
+        //         }
+
+        //         // Update cards position with smooth transitions
+        //         function updateCards() {
+        //             cards.forEach((card, idx) => {
+        //                 card.classList.remove('active', 'prev', 'next', 'hidden');
+
+        //                 if (idx === currentIndex) {
+        //                     card.classList.add('active');
+        //                 } else if (idx === currentIndex - 1) {
+        //                     card.classList.add('prev');
+        //                 } else if (idx === currentIndex + 1) {
+        //                     card.classList.add('next');
+        //                 } else {
+        //                     card.classList.add('hidden');
+        //                 }
+        //             });
+        //             updateProgress();
+        //             updateScrollHint();
+        //         }
+
+        //         // Go to specific card
+        //         function goToCard(index) {
+        //             if (isAnimating) return false;
+        //             if (index < 0 || index >= totalCards) return false;
+
+        //             isAnimating = true;
+        //             currentIndex = index;
+        //             updateCards();
+
+        //             // Show completion message on last slide
+        //             if (currentIndex === totalCards - 1 && completionMsg) {
+        //                 completionMsg.classList.add('show');
+        //                 setTimeout(() => {
+        //                     completionMsg.classList.remove('show');
+        //                 }, 3000);
+        //             }
+
+        //             // Animation lock duration
+        //             setTimeout(() => {
+        //                 isAnimating = false;
+        //             }, 350);
+
+        //             return true;
+        //         }
+
+        //         // Next card
+        //         function nextCard() {
+        //             return currentIndex < totalCards - 1 ? goToCard(currentIndex + 1) : false;
+        //         }
+
+        //         // Previous card
+        //         function prevCard() {
+        //             return currentIndex > 0 ? goToCard(currentIndex - 1) : false;
+        //         }
+
+        //         // Wheel handler - preventDefault when slider is active
+        //         let lastWheelTime = 0;
+        //         const WHEEL_THROTTLE = 300;
+
+        //         function handleWheel(e) {
+        //             if (!isSliderVisible()) {
+        //                 return; // Allow normal scrolling outside slider
+        //             }
+
+        //             isSliderActive = true;
+        //             scrollInSlider = true;
+
+        //             const now = Date.now();
+
+        //             // Throttle
+        //             if (now - lastWheelTime < WHEEL_THROTTLE) {
+        //                 e.preventDefault();
+        //                 return;
+        //             }
+
+        //             if (isAnimating) {
+        //                 e.preventDefault();
+        //                 return;
+        //             }
+
+        //             const delta = e.deltaY;
+
+        //             // SCROLL DOWN
+        //             if (delta > 0) {
+        //                 if (currentIndex === totalCards - 1) {
+        //                     // Last slide - allow exit
+        //                     console.log('⬇️ Exiting slider - last slide');
+        //                     isSliderActive = false;
+        //                     return;
+        //                 } else {
+        //                     // Next card
+        //                     if (nextCard()) {
+        //                         e.preventDefault();
+        //                         lastWheelTime = now;
+        //                     }
+        //                 }
+        //             }
+        //             // SCROLL UP
+        //             else if (delta < 0) {
+        //                 if (currentIndex === 0) {
+        //                     // First slide - allow exit
+        //                     console.log('⬆️ Exiting slider - first slide');
+        //                     isSliderActive = false;
+        //                     return;
+        //                 } else {
+        //                     // Previous card
+        //                     if (prevCard()) {
+        //                         e.preventDefault();
+        //                         lastWheelTime = now;
+        //                     }
+        //                 }
+        //             }
+        //         }
+
+        //         // Touch support for mobile
+        //         let touchStartY = 0;
+        //         let touchStartTime = 0;
+        //         let lastTouchTime = 0;
+        //         const TOUCH_THROTTLE = 300;
+
+        //         function handleTouchStart(e) {
+        //             if (!isSliderVisible() || isAnimating) return;
+
+        //             touchStartY = e.touches[0].clientY;
+        //             touchStartTime = Date.now();
+        //             isSliderActive = true;
+        //         }
+
+        //         function handleTouchMove(e) {
+        //             if (!isSliderVisible() || isAnimating || !isSliderActive) {
+        //                 return;
+        //             }
+
+        //             const touchEndY = e.touches[0].clientY;
+        //             const diff = touchStartY - touchEndY;
+        //             const swipeTime = Date.now() - touchStartTime;
+        //             const now = Date.now();
+
+        //             // Check throttle
+        //             if (now - lastTouchTime < TOUCH_THROTTLE) {
+        //                 return;
+        //             }
+
+        //             // Require minimum swipe distance and time
+        //             if (Math.abs(diff) > 50 && swipeTime < 600) {
+        //                 if (diff > 0) {
+        //                     // Swipe UP - next card or exit
+        //                     if (currentIndex === totalCards - 1) {
+        //                         isSliderActive = false;
+        //                         return;
+        //                     } else {
+        //                         if (nextCard()) {
+        //                             e.preventDefault();
+        //                             lastTouchTime = now;
+        //                         }
+        //                     }
+        //                 } else {
+        //                     // Swipe DOWN - previous card or exit
+        //                     if (currentIndex === 0) {
+        //                         isSliderActive = false;
+        //                         return;
+        //                     } else {
+        //                         if (prevCard()) {
+        //                             e.preventDefault();
+        //                             lastTouchTime = now;
+        //                         }
+        //                     }
+        //                 }
+        //                 touchStartY = touchEndY;
+        //                 touchStartTime = Date.now();
+        //             }
+        //         }
+
+        //         function handleTouchEnd(e) {
+        //             if (!isSliderVisible()) {
+        //                 isSliderActive = false;
+        //             }
+        //         }
+
+        //         // Mouse wheel outside slider should unlock
+        //         document.addEventListener('wheel', function(e) {
+        //             if (!isSliderVisible() && isSliderActive) {
+        //                 isSliderActive = false;
+        //             }
+        //         }, {
+        //             passive: true
+        //         });
+
+        //         // Add event listeners
+        //         window.addEventListener('wheel', handleWheel, {
+        //             passive: false
+        //         });
+
+        //         // Touch events for mobile
+        //         sliderSection.addEventListener('touchstart', handleTouchStart, {
+        //             passive: true
+        //         });
+        //         sliderSection.addEventListener('touchmove', handleTouchMove, {
+        //             passive: false
+        //         });
+        //         sliderSection.addEventListener('touchend', handleTouchEnd, {
+        //             passive: true
+        //         });
+
+        //         // Initialize
+        //         function init() {
+        //             updateCards();
+        //             if (isSliderVisible()) {
+        //                 isSliderActive = true;
+        //             }
+        //         }
+
+        //         init();
+
+        //         // Cleanup
+        //         window.addEventListener('beforeunload', () => {
+        //             isSliderActive = false;
+        //         });
+
+        //         document.addEventListener('visibilitychange', () => {
+        //             if (document.hidden) {
+        //                 isSliderActive = false;
+        //             }
+        //         });
+
+        //     });
+        // })();
         (function() {
             document.addEventListener('DOMContentLoaded', function() {
 
@@ -2075,10 +1799,10 @@
                         }, 3000);
                     }
 
-                    // Animation lock duration
+                    // Animation lock duration - INCREASED FROM 350ms TO 600ms FOR SLOWER EFFECT
                     setTimeout(() => {
                         isAnimating = false;
-                    }, 350);
+                    }, 600);
 
                     return true;
                 }
@@ -2095,7 +1819,7 @@
 
                 // Wheel handler - preventDefault when slider is active
                 let lastWheelTime = 0;
-                const WHEEL_THROTTLE = 300;
+                const WHEEL_THROTTLE = 2000; // INCREASED FROM 300ms TO 600ms FOR SLOWER SCROLLING
 
                 function handleWheel(e) {
                     if (!isSliderVisible()) {
@@ -2152,14 +1876,16 @@
                     }
                 }
 
-                // Touch support for mobile
+                // Touch support for mobile - COMPLETELY REWRITTEN FOR BETTER DETECTION
                 let touchStartY = 0;
                 let touchStartTime = 0;
                 let lastTouchTime = 0;
-                const TOUCH_THROTTLE = 300;
+                const TOUCH_THROTTLE = 600; // INCREASED FROM 300ms TO 600ms FOR SLOWER MOBILE SLIDING
+                const TOUCH_THRESHOLD = 30; // REDUCED FROM 50px FOR BETTER SENSITIVITY
 
                 function handleTouchStart(e) {
-                    if (!isSliderVisible() || isAnimating) return;
+                    // Allow touch even if not perfectly visible - just check if slider exists
+                    if (!sliderSection || isAnimating) return;
 
                     touchStartY = e.touches[0].clientY;
                     touchStartTime = Date.now();
@@ -2167,24 +1893,23 @@
                 }
 
                 function handleTouchMove(e) {
-                    if (!isSliderVisible() || isAnimating || !isSliderActive) {
+                    if (!isSliderActive || isAnimating || !touchStartY) {
                         return;
                     }
 
-                    const touchEndY = e.touches[0].clientY;
-                    const diff = touchStartY - touchEndY;
-                    const swipeTime = Date.now() - touchStartTime;
+                    const touchCurrentY = e.touches[0].clientY;
+                    const diff = touchStartY - touchCurrentY;
                     const now = Date.now();
 
-                    // Check throttle
+                    // Check throttle to prevent multiple slides
                     if (now - lastTouchTime < TOUCH_THROTTLE) {
                         return;
                     }
 
-                    // Require minimum swipe distance and time
-                    if (Math.abs(diff) > 50 && swipeTime < 600) {
+                    // Only trigger slide if threshold is met
+                    if (Math.abs(diff) > TOUCH_THRESHOLD) {
                         if (diff > 0) {
-                            // Swipe UP - next card or exit
+                            // Swipe UP (moving finger up) - next card or exit
                             if (currentIndex === totalCards - 1) {
                                 isSliderActive = false;
                                 return;
@@ -2192,10 +1917,12 @@
                                 if (nextCard()) {
                                     e.preventDefault();
                                     lastTouchTime = now;
+                                    touchStartY = touchCurrentY; // Reset for continuous swiping
+                                    touchStartTime = now;
                                 }
                             }
-                        } else {
-                            // Swipe DOWN - previous card or exit
+                        } else if (diff < 0) {
+                            // Swipe DOWN (moving finger down) - previous card or exit
                             if (currentIndex === 0) {
                                 isSliderActive = false;
                                 return;
@@ -2203,18 +1930,18 @@
                                 if (prevCard()) {
                                     e.preventDefault();
                                     lastTouchTime = now;
+                                    touchStartY = touchCurrentY; // Reset for continuous swiping
+                                    touchStartTime = now;
                                 }
                             }
                         }
-                        touchStartY = touchEndY;
-                        touchStartTime = Date.now();
                     }
                 }
 
                 function handleTouchEnd(e) {
-                    if (!isSliderVisible()) {
-                        isSliderActive = false;
-                    }
+                    touchStartY = 0;
+                    touchStartTime = 0;
+                    // Keep isSliderActive true unless we've exited
                 }
 
                 // Mouse wheel outside slider should unlock
@@ -2231,7 +1958,7 @@
                     passive: false
                 });
 
-                // Touch events for mobile
+                // Touch events for mobile - FIXED FOR BETTER COMPATIBILITY
                 sliderSection.addEventListener('touchstart', handleTouchStart, {
                     passive: true
                 });
@@ -2267,102 +1994,102 @@
         })();
     </script>
     <script>
-        (function() {
-            const form = document.getElementById('enquiryForm');
-            const successDiv = document.getElementById('formSuccessMessage');
-            const errorDiv = document.getElementById('formErrorMessage');
+        // (function() {
+        //     const form = document.getElementById('enquiryForm');
+        //     const successDiv = document.getElementById('formSuccessMessage');
+        //     const errorDiv = document.getElementById('formErrorMessage');
 
-            // real-time phone formatting (nice UX)
-            const phoneInput = document.getElementById('phone');
-            if (phoneInput) {
-                phoneInput.addEventListener('input', function(e) {
-                    let val = e.target.value.replace(/\D/g, '');
-                    if (val.length > 10) val = val.slice(0, 10);
-                    if (val.length >= 4 && val.length <= 7) {
-                        e.target.value = val.slice(0, 4) + ' ' + val.slice(4);
-                    } else if (val.length > 7) {
-                        e.target.value = val.slice(0, 4) + ' ' + val.slice(4, 7) + ' ' + val.slice(7, 10);
-                    } else {
-                        e.target.value = val;
-                    }
-                });
-            }
+        //     // real-time phone formatting (nice UX)
+        //     const phoneInput = document.getElementById('phone');
+        //     if (phoneInput) {
+        //         phoneInput.addEventListener('input', function(e) {
+        //             let val = e.target.value.replace(/\D/g, '');
+        //             if (val.length > 10) val = val.slice(0, 10);
+        //             if (val.length >= 4 && val.length <= 7) {
+        //                 e.target.value = val.slice(0, 4) + ' ' + val.slice(4);
+        //             } else if (val.length > 7) {
+        //                 e.target.value = val.slice(0, 4) + ' ' + val.slice(4, 7) + ' ' + val.slice(7, 10);
+        //             } else {
+        //                 e.target.value = val;
+        //             }
+        //         });
+        //     }
 
-            // client side validation for better experience (still server side works)
-            form.addEventListener('submit', function(e) {
-                let isValid = true;
-                let errorText = '';
+        //     // client side validation for better experience (still server side works)
+        //     form.addEventListener('submit', function(e) {
+        //         let isValid = true;
+        //         let errorText = '';
 
-                const name = document.getElementById('name')?.value.trim();
-                const email = document.getElementById('email')?.value.trim();
-                const phone = document.getElementById('phone')?.value.trim();
-                const city = document.getElementById('city')?.value.trim();
-                const state = document.getElementById('state')?.value.trim();
+        //         const name = document.getElementById('name')?.value.trim();
+        //         const email = document.getElementById('email')?.value.trim();
+        //         const phone = document.getElementById('phone')?.value.trim();
+        //         const city = document.getElementById('city')?.value.trim();
+        //         const state = document.getElementById('state')?.value.trim();
 
-                if (!name) {
-                    isValid = false;
-                    errorText = 'Please enter your full name.';
-                } else if (!email || !/^[^\s@]+@([^\s@.,]+\.)+[^\s@.,]{2,}$/.test(email)) {
-                    isValid = false;
-                    errorText = 'Valid email is required.';
-                } else if (!phone) {
-                    isValid = false;
-                    errorText = 'Phone number is required.';
-                } else {
-                    const digits = phone.replace(/\D/g, '');
-                    if (digits.length < 10 || digits.length > 13) {
-                        isValid = false;
-                        errorText = 'Enter a valid phone number (10 digits).';
-                    } else if (digits.length === 10 && !['6', '7', '8', '9'].includes(digits[0])) {
-                        isValid = false;
-                        errorText = 'Mobile must start with 6,7,8,9.';
-                    }
-                }
-                if (isValid && !city) {
-                    isValid = false;
-                    errorText = 'City is required.';
-                }
-                if (isValid && !state) {
-                    isValid = false;
-                    errorText = 'State is required.';
-                }
+        //         if (!name) {
+        //             isValid = false;
+        //             errorText = 'Please enter your full name.';
+        //         } else if (!email || !/^[^\s@]+@([^\s@.,]+\.)+[^\s@.,]{2,}$/.test(email)) {
+        //             isValid = false;
+        //             errorText = 'Valid email is required.';
+        //         } else if (!phone) {
+        //             isValid = false;
+        //             errorText = 'Phone number is required.';
+        //         } else {
+        //             const digits = phone.replace(/\D/g, '');
+        //             if (digits.length < 10 || digits.length > 13) {
+        //                 isValid = false;
+        //                 errorText = 'Enter a valid phone number (10 digits).';
+        //             } else if (digits.length === 10 && !['6', '7', '8', '9'].includes(digits[0])) {
+        //                 isValid = false;
+        //                 errorText = 'Mobile must start with 6,7,8,9.';
+        //             }
+        //         }
+        //         if (isValid && !city) {
+        //             isValid = false;
+        //             errorText = 'City is required.';
+        //         }
+        //         if (isValid && !state) {
+        //             isValid = false;
+        //             errorText = 'State is required.';
+        //         }
 
-                if (!isValid) {
-                    e.preventDefault();
-                    errorDiv.style.display = 'block';
-                    errorDiv.innerHTML = `<i class="fas fa-exclamation-triangle"></i> ${errorText}`;
-                    successDiv.style.display = 'none';
-                    setTimeout(() => {
-                        errorDiv.style.display = 'none';
-                    }, 4000);
-                    return false;
-                }
+        //         if (!isValid) {
+        //             e.preventDefault();
+        //             errorDiv.style.display = 'block';
+        //             errorDiv.innerHTML = `<i class="fas fa-exclamation-triangle"></i> ${errorText}`;
+        //             successDiv.style.display = 'none';
+        //             setTimeout(() => {
+        //                 errorDiv.style.display = 'none';
+        //             }, 4000);
+        //             return false;
+        //         }
 
-                // If valid, we allow laravel submission, but also we can show loading
-                const btn = form.querySelector('.btn-submit');
-                btn.innerHTML = '<i class="fas fa-spinner fa-pulse"></i> Submitting...';
-                btn.disabled = true;
-                // success will be shown after redirect or stay, but we don't prevent default
-                // Note: the default action sends to laravel route.
-                return true;
-            });
+        //         // If valid, we allow laravel submission, but also we can show loading
+        //         const btn = form.querySelector('.btn-submit');
+        //         btn.innerHTML = '<i class="fas fa-spinner fa-pulse"></i> Submitting...';
+        //         btn.disabled = true;
+        //         // success will be shown after redirect or stay, but we don't prevent default
+        //         // Note: the default action sends to laravel route.
+        //         return true;
+        //     });
 
-            // If there are old Laravel errors, show them in error div
-            @if ($errors->any())
-                errorDiv.style.display = 'block';
-                errorDiv.innerHTML = '<i class="fas fa-exclamation-triangle"></i> Please check the form and try again.';
-                setTimeout(() => {
-                    errorDiv.style.display = 'none';
-                }, 5000);
-            @endif
+        //     // If there are old Laravel errors, show them in error div
+        //     @if ($errors->any())
+        //         errorDiv.style.display = 'block';
+        //         errorDiv.innerHTML = '<i class="fas fa-exclamation-triangle"></i> Please check the form and try again.';
+        //         setTimeout(() => {
+        //             errorDiv.style.display = 'none';
+        //         }, 5000);
+        //     @endif
 
-            // If success flash message from session (optional)
-            @if (session('success'))
-                successDiv.style.display = 'block';
-                setTimeout(() => {
-                    successDiv.style.display = 'none';
-                }, 5000);
-            @endif
-        })();
+        //     // If success flash message from session (optional)
+        //     @if (session('success'))
+        //         successDiv.style.display = 'block';
+        //         setTimeout(() => {
+        //             successDiv.style.display = 'none';
+        //         }, 5000);
+        //     @endif
+        // })();
     </script>
 @endsection

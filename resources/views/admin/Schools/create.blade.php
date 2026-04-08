@@ -5,7 +5,7 @@
         <small class="text-muted">Fill in details and optional features/highlights</small>
     </div>
 
-    <form id="school-form" action="{{ route('schools.store') }}" method="POST" enctype="multipart/form-data">
+    <form id="school-form" action="{{ route('admin.schools.store') }}" method="POST" enctype="multipart/form-data">
         @csrf
 
         <div class="mb-3">

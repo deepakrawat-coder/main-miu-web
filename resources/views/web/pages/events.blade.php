@@ -33,34 +33,36 @@
         <div class="container th-container4">
 
             <div class="event-card-wrap">
-
-                <div class="event-card style2 wow fadeInUp" data-wow-delay=".2s">
-                    <div class="event-card-img global-img"><img src="{{ asset('new-miu/about/event.jpg') }}" alt="event">
-                        <p class="event-card-tag"><span class="tag-number">12</span>Jan</p>
-                    </div>
-                    <div class="event-content">
-                        <div class="event-wrapp">
-                            <h3 class="box-title text-anim2">
-                                <a href="/event-details">Programming Languages For A
-                                    Better World</a></h3>
-                            <p class="box-text wow fadeInUp" data-wow-delay=".2s">Come for a quick session on how this
-                                question has crucially helped humanity with achieving one of its most impressive feats
-                                yet: orchestrating electric currents. Private Kansas colleges don’t have to exceed your
-                                budget.</p>
-                            <p class="box-text">Every traditional undergraduate student receives scholarships. Rest
-                                assured—you can afford us, too.</p>
-                            <div class="blog-meta wow fadeInUp" data-wow-delay=".3s"><a class="location" href="#"><i
-                                        class="fa-solid fa-location-dot"></i> 25 Circular Road, New York City </a><a
-                                    class="date" href="#"><i class="fa-regular fa-calendar-days"></i> 25.02.2025
-                                </a><a class="time" href="#"><i class="fa-solid fa-clock"></i> 09:00am - 12:00pm</a>
-                            </div>
+                @foreach ($events as $event)
+                    <div class="event-card style2 wow fadeInUp" data-wow-delay=".2s">
+                        <div class="event-card-img global-img"><img src="{{ asset($event->image) }}"
+                                alt="event">
+                            <p class="event-card-tag"><span class="tag-number"> {{ \Carbon\Carbon::parse($event->published_date)->format('d') }}</span>{{ \Carbon\Carbon::parse($event->published_date)->format('M') }}</p>
                         </div>
-                        <div class="btn-wrap wow fadeInUp" data-wow-delay=".4s"><a class="th-btn style-border1 th-icon"
-                                href="/event-details">Details</a></div>
+                        <div class="event-content">
+                            <div class="event-wrapp">
+                                <h3 class="box-title text-anim2">
+                                    <a href="/event/{{ $event->slug }}">{{ $event->title }}</a>
+                                </h3>
+                                <p class="box-text wow fadeInUp" data-wow-delay=".2s">{{$event->short_description}}</p>
+                              
+                                <div class="blog-meta wow fadeInUp" data-wow-delay=".3s">
+                                    {{-- <a class="location"
+                                        href="#"><i class="fa-solid fa-location-dot"></i> 25 Circular Road, New York
+                                        City </a> --}}
+                                    <a class="date" href="/event/{{ $event->slug }}"><i
+                                            class="fa-regular fa-calendar-days"></i> {{ date('d M Y', strtotime($event->publish_date)) }}
+                                    </a>
+                                    {{-- <a class="time" href="#"><i class="fa-solid fa-clock"></i> 09:00am -
+                                        12:00pm</a> --}}
+                                </div>
+                            </div>
+                            <div class="btn-wrap wow fadeInUp" data-wow-delay=".4s"><a class="th-btn style-border1 th-icon"
+                                    href="/event/{{ $event->slug }}">Details</a></div>
+                        </div>
                     </div>
-                </div>
-
-                <div class="event-card style2 wow fadeInUp" data-wow-delay=".4s">
+                @endforeach
+                {{-- <div class="event-card style2 wow fadeInUp" data-wow-delay=".4s">
                     <div class="event-card-img global-img"><img src="{{ asset('new-miu/about/event.jpg') }}" alt="event">
                         <p class="event-card-tag"><span class="tag-number">07</span>Feb</p>
                     </div>
@@ -158,7 +160,7 @@
                         <div class="btn-wrap wow fadeInUp" data-wow-delay=".4s"><a class="th-btn style-border1 th-icon"
                                 href="/event-details">Details</a></div>
                     </div>
-                </div>
+                </div> --}}
             </div>
         </div>
     </section>

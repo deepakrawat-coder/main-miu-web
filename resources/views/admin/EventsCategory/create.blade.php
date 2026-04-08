@@ -5,7 +5,7 @@
         <small class="text-muted">Fill in category and optional SEO details</small>
     </div>
 
-    <form id="events-category-form" action="{{ route('events.store') }}" method="POST" class="row g-3">
+    <form id="events-category-form" action="{{ route('admin.events.store') }}" method="POST" class="row g-3">
         @csrf
 
         <!-- Category Name -->

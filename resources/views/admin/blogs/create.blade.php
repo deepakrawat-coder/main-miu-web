@@ -5,7 +5,7 @@
         <small class="text-muted">Fill in blog details and optional SEO settings</small>
     </div>
 
-    <form id="blog-form" action="{{ route('admin-blogs.store') }}" method="POST" enctype="multipart/form-data" class="row g-3">
+    <form id="blog-form" action="{{ route('admin.blogs.store') }}" method="POST" enctype="multipart/form-data" class="row g-3">
         @csrf
 
         <!-- Title -->

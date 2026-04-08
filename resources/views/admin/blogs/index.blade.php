@@ -51,14 +51,14 @@
             text: 'Add Blog',
             className: 'add-new btn btn-primary mb-3 mb-md-0',
             attr: {
-                'onclick': "add('{{ route('admin-blogs.create') }}', 'modal-lg')"
+                'onclick': "add('{{ route('admin.blogs.create') }}', 'modal-lg')"
             }
         };
 
         var table = $('#blogs-table').DataTable({
             processing: true,
             serverSide: true,
-            ajax: "{{ route('admin-blogs.index') }}",
+            ajax: "{{ route('admin.blogs.index') }}",
             columns: [{
                     data: 'DT_RowIndex',
                     name: 'DT_RowIndex',
@@ -91,11 +91,11 @@
                 render: function(data, type, full) {
                     return `<div class="hstack gap-2">
                                 <button class="btn btn-sm btn-light-primary"
-                                    onclick="edit('admin-blogs/edit/${full.id}', 'modal-lg')">
+                                    onclick="edit('blogs/edit/${full.id}', 'modal-lg')">
                                     <i class="ri-pencil-line"></i>
                                 </button>
                                 <button class="btn btn-sm btn-light-danger"
-                                    onclick="destroy('admin-blogs/delete/${full.id}', 'blogs-table')">
+                                    onclick="destroy('blogs/delete/${full.id}', 'blogs-table')">
                                     <i class="ri-delete-bin-line"></i>
                                 </button>
                             </div>`;
@@ -118,7 +118,7 @@
         $(document).on('change', '.change-status', function() {
             let id = $(this).data('id');
             $.ajax({
-                url: `{{ url('admin-blogs/status') }}/${id}`,
+                url: `{{ url('admin.blogs/status') }}/${id}`,
                 type: 'GET',
                 success: function(response) {
                     if (response.status === 'success') {

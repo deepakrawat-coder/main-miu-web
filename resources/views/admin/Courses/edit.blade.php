@@ -5,7 +5,7 @@
         <small class="text-muted">Update course details carefully</small>
     </div>
 
-    <form id="course-edit-form" action="{{ route('courses.update', $course->id) }}" method="POST"
+    <form id="course-edit-form" action="{{ route('admin.courses.update', $course->id) }}" method="POST"
         enctype="multipart/form-data">
         @csrf
         <!-- @method('PUT') -->
@@ -56,29 +56,38 @@
         @php
             $decodedNames = json_decode($course->program_course_name, true);
 
-            // agar JSON hai → array ko string me convert karo
             if (is_array($decodedNames)) {
-                $courseNames = $decodedNames;
-                $courseNamesString = implode(', ', $decodedNames);
+                // agar array me ek hi string hai
+                if (count($decodedNames) == 1) {
+                    $courseNames = explode(',', $decodedNames[0]);
+                } else {
+                    $courseNames = $decodedNames;
+                }
             } else {
-                // agar already string hai
                 $courseNames = explode(',', $course->program_course_name);
-                $courseNamesString = $course->program_course_name;
             }
+
+            // clean data
+            $courseNames = array_filter(array_map('trim', $courseNames));
+
+            $courseNamesString = implode(', ', $courseNames);
         @endphp
 
+        {{-- Input --}}
         <div class="mb-3">
             <label class="form-label">School Course Name</label>
-            <input type="text" name="program_course_name[]" class="form-control"
-                placeholder="e.g. Commerce, Engineering, Arts" value="{{ $courseNamesString }}">
+            <input type="text" name="program_course_name[]" class="form-control" value="{{ $courseNamesString }}">
         </div>
 
-        {{-- Display as badges --}}
-        @if (!empty($courseNames))
-            @foreach ($courseNames as $name)
-                <span class="badge bg-primary me-1">{{ trim($name) }}</span>
-            @endforeach
-        @endif
+        {{-- Badges --}}
+        @foreach ($courseNames as $name)
+            <span class="badge bg-primary me-1 mb-1">{{ $name }}</span>
+        @endforeach
+
+        <div class="mb-3">
+            <label class="form-label">Content</label>
+            <textarea name="content" id="edit_content" class="form-control" rows="4">{{ strip_tags($course->content) }}</textarea>
+        </div>
         <!-- Image -->
         <div class="mb-3">
             <label class="form-label">Course Image</label>
@@ -103,7 +112,7 @@
 <script src="https://cdn.ckeditor.com/ckeditor5/39.0.1/classic/ckeditor.js"></script>
 <script>
     let editShortEditor;
-
+    let contentEditor;
     $(document).on('shown.bs.modal', '.modal', function() {
 
         if (document.querySelector('#edit_short_description') && !editShortEditor) {
@@ -112,6 +121,17 @@
                 .create(document.querySelector('#edit_short_description'))
                 .then(editor => {
                     editShortEditor = editor;
+                })
+                .catch(error => {
+                    console.error(error);
+                });
+        }
+        if (document.querySelector('#edit_content') && !contentEditor) {
+
+            ClassicEditor
+                .create(document.querySelector('#edit_content'))
+                .then(editor => {
+                    contentEditor = editor;
                 })
                 .catch(error => {
                     console.error(error);

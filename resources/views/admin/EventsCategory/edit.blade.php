@@ -6,7 +6,7 @@
     </div>
 
     <form id="events-category-edit-form"
-          action="{{ route('events.update', $category->id) }}"
+          action="{{ route('admin.events.update', $category->id) }}"
           method="POST"
           class="row g-3">
 

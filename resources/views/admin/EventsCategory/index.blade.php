@@ -48,13 +48,13 @@
     const addButton = {
         text: 'Add Event',
         className: 'add-new btn btn-primary mb-3 mb-md-0',
-        attr: { 'onclick': "add('{{ route('events.create') }}', 'modal-lg')" }
+        attr: { 'onclick': "add('{{ route('admin.events.create') }}', 'modal-lg')" }
     };
 
     var table = $('#events-table').DataTable({
         processing: true,
         serverSide: true,
-        ajax: "{{ route('events.index') }}",
+        ajax: "{{ route('admin.events.index') }}",
         columns: [
             { data: 'DT_RowIndex', name: 'DT_RowIndex', orderable: false, searchable: false },
             { data: 'name', name: 'name' },

@@ -5,7 +5,7 @@
         <small class="text-muted">Fill in post details and optional SEO settings</small>
     </div>
 
-    <form id="post-form" action="{{ route('posts.store') }}" method="POST" enctype="multipart/form-data" class="row g-3">
+    <form id="post-form" action="{{ route('admin.posts.store') }}" method="POST" enctype="multipart/form-data" class="row g-3">
         @csrf
 
         <!-- Category -->
@@ -33,6 +33,12 @@
                 Title <span class="text-danger">*</span>
             </label>
             <input type="text" name="title" id="title" class="form-control" required>
+        </div>
+        <div class="col-md-12">
+            <label class="form-label fw-semibold">
+                badge <span class="text-danger">*</span>
+            </label>
+            <input type="text" name="badge_name" id="badge_name" class="form-control" required>
         </div>
 
         <!-- Short Description -->

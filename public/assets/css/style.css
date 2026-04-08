@@ -17843,7 +17843,7 @@ span.select2-selection.select2-selection--single:focus {
     max-width: 100%;
 }
 .modal-dialog .modal-content {
-    background: transparent;
+    background: white;
     border: 0;
 }
 .modal-dialog .modal-content .modal-header {

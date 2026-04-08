@@ -9,7 +9,7 @@ use App\Models\EventsCategory;
 use Illuminate\Support\Facades\Validator;
 use Exception;
 use Illuminate\Support\Str;
-
+use Symfony\Contracts\EventDispatcher\Event;
 
 class EventsPostController extends Controller
 {
@@ -55,6 +55,7 @@ class EventsPostController extends Controller
         $validator = Validator::make($request->all(), [
             'category_id' => 'required|exists:events_categories,id',
             'title' => 'required|string|max:255|unique:events_posts,title',
+            'badge_name' => 'nullable|string',
             'short_description' => 'nullable|string',
             'description' => 'nullable|string',
             'image' => 'nullable|image|mimes:jpg,jpeg,png,webp|max:2048',
@@ -77,6 +78,7 @@ class EventsPostController extends Controller
 
             $post->category_id = $request->category_id;
             $post->title = $request->title;
+            $post->badge_name = $request->badge_name;
 
             // ✅ Slug using your helper
             $post->slug = generateSlug(EventsPost::class, $request->title);
@@ -130,9 +132,16 @@ class EventsPostController extends Controller
      */
     public function show(EventsPost $eventsPost)
     {
-        //
+        $events = EventsPost::with('category')->where('category_id', 1)->where('status', 1)->orderBy('created_at', 'desc')->get();
+        return view('web.pages.events', compact('events'));
     }
+    public function details($slug)
+    {
+        $event = EventsPost::where('slug', $slug)->where('status', 1)->firstOrFail();
+        $otherevents = EventsPost::where('status', 1)->where('slug', '!=', $slug)->orderBy('created_at', 'desc')->limit(5)->get();
 
+        return view('web.pages.event-details', compact('event', 'otherevents'));
+    }
     /**
      * Show the form for editing the specified resource.
      */
@@ -154,6 +163,7 @@ class EventsPostController extends Controller
             'category_id' => 'required|exists:events_categories,id',
             'title' => 'required|string|max:255|unique:events_posts,title,' . $eventsPost->id,
             'short_description' => 'nullable|string',
+            'badge_name' => 'nullable|string',
             'description' => 'nullable|string',
             'image' => 'nullable|image|mimes:jpg,jpeg,png,webp|max:2048',
             'publish_date' => 'nullable|date',
@@ -175,6 +185,7 @@ class EventsPostController extends Controller
 
             $eventsPost->category_id = $request->category_id;
             $eventsPost->title = $request->title;
+            $eventsPost->badge_name = $request->badge_name;
 
             // ✅ Regenerate slug only if title changed
             if ($oldTitle !== $request->title) {
