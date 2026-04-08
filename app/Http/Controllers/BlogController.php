@@ -255,7 +255,7 @@ class BlogController extends Controller
      public function blogDetails($slug){
         $blog = Blog::where('slug', $slug)->where('status', 1)->firstOrFail();
         $otherBlogs = Blog::where('status', 1)->where('slug', '!=', $slug)->orderBy('created_at', 'desc')->limit(5)->get();
-        dd($blog);
+        // dd($blog);
         return view('web.pages.blog-details', compact('blog', 'otherBlogs'));
      }
 }

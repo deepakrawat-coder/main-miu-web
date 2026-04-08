@@ -35,13 +35,13 @@
                 <div class="col-xl-8 col-lg-7">
                     <div class="blog">
                         <div class="blog-img">
-                        <img src="{{ asset($blog->image) }}" class="img-fluid w-100" alt="blog image">
+                            <img src="{{ asset($blog->image) }}" class="img-fluid w-100" alt="blog image">
                         </div>
                         <div class="blog-title my-3">
                             <h3>{{ $blog->title }}</h3>
                         </div>
                         <div class="blog-desc">
-                            <p>{!! $blog->content !!}  </p>
+                            <p>{!! $blog->content !!} </p>
 
                             {{-- <p>
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis dolore neque officia ullam ex obcaecati delectus fugit tenetur error quibusdam.
@@ -60,17 +60,18 @@
                         <div class="widget">
                             <h3 class="widget_title">Recent Posts</h3>
                             <div class="recent-post-wrap">
-                                <div class="recent-post">
-                                    <div class="media-img"><a href="/blog-details"><img
-                                                src="{{ asset('/new-miu/about/11.jpg') }}" alt="Blog Image"></a></div>
-                                    <div class="media-body">
-                                        <h4 class="post-title"><a class="text-inherit" href="/blog-details">Trailblazers
-                                                in Faculty Perspectives</a></h4>
-                                        <div class="recent-post-meta"><a href="/blog-details"><i
-                                                    class="far fa-calendar"></i>26/6/2025</a></div>
+                                @foreach ($otherBlogs as $other)
+                                    <div class="recent-post">
+                                        <div class="media-img"><a href="/blog/{{ $other->slug }}"><img
+                                                    src="{{ asset($other->image) }}" alt="Blog Image"></a></div>
+                                        <div class="media-body">
+                                            <h4 class="post-title"><a class="text-inherit" href="/blog/{{ $other->slug }}">{{ substr($other->title,0,30) }}</a></h4>
+                                            <div class="recent-post-meta"><a href="/blog/{{ $other->sluge }}"><i
+                                                        class="far fa-calendar"></i>{{ date('d-M-Y', strtotime($other->publish_date)) }}</a></div>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="recent-post">
+                                @endforeach
+                                {{-- <div class="recent-post">
                                     <div class="media-img"><a href="/blog-details"><img
                                                 src="{{ asset('/new-miu/about/11.jpg') }}" alt="Blog Image"></a></div>
                                     <div class="media-body">
@@ -89,7 +90,7 @@
                                         <div class="recent-post-meta"><a href="/blog-details"><i
                                                     class="far fa-calendar"></i>24/6/2025</a></div>
                                     </div>
-                                </div>
+                                </div> --}}
                             </div>
                         </div>
 

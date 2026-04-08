@@ -25,9 +25,6 @@
             </div>
         </div>
     </div>
-
-
-
     <section class="th-blog-wrapper space-top space-extra2-bottom">
         <div class="container th-container2">
             <div class="row gx-60">
@@ -66,6 +63,7 @@
                                                     src="{{ asset($other->image) }}" alt="Blog Image"></a></div>
                                         <div class="media-body">
                                             <h4 class="post-title"><a class="text-inherit" href="/event/{{ $other->slug }}">{{ substr($other->title, 0, 30) }}</a></h4>
+                                            {{-- <p>{{ substr($other->short_description, 0, 50) }}</p> --}}
                                             <div class="recent-post-meta"><a href="/event/{{ $other->slug }}"><i
                                                         class="far fa-calendar"></i>{{ date('d M Y', strtotime($other->publish_date)) }}</a></div>
                                         </div>

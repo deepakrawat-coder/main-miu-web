@@ -888,7 +888,7 @@
                 <div class="col-xl-4">
                     <div class="why-video">
                         <div class="why-video-bg overflow-hidden gsap-parallax"><img
-                                src="{{ asset('/assets/img/why/why-video1-1.jpg') }}" alt="image">
+                                src="{{ asset('/new-miu/Academic and excellence section 8401256.jpg') }}" alt="image">
                             {{-- <div class="why-video-btn"><a href="https://www.youtube.com/watch?v=_sI_Ps7JSEk"
                                     class="play-btn popup-video"><i class="fa-sharp fa-solid fa-play"></i></a></div> --}}
                         </div>
@@ -1273,10 +1273,10 @@
             <div class="row gy-30 gx-30 align-items-center justify-content-center">
                 <div class="col-xxl-4 d-none d-sm-block">
                     <div class="faq-imgbox wow fadeInLeft" data-wow-delay=".3s">
-                        <div class="img1"><img src="{{ asset('/assets/img/faq/faq-1-2.jpg') }}" alt="image">
-                            <img src="{{ asset('/assets/img/faq/faq-1-1.jpg') }}" alt="image">
+                        <div class="img1"><img src="{{ asset('/new-miu/faq/2.jpg') }}" alt="image">
+                            <img src="{{ asset('/new-miu/faq/1.jpg') }}" alt="image">
                         </div>
-                        <div class="img2"><img src="{{ asset('/assets/img/faq/faq-1-3.jpg') }}" alt="image">
+                        <div class="img2"><img src="{{ asset('/new-miu/faq/3.jpg') }}" alt="image">
                         </div>
                     </div>
                 </div>
