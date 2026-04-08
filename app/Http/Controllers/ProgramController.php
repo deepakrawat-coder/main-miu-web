@@ -143,7 +143,7 @@ class ProgramController extends Controller
                 ->make(true);
         }
 
-        return view('admin.programs.index');
+        return view('admin.Programs.index');
     }
 
     public function create()
@@ -151,7 +151,7 @@ class ProgramController extends Controller
         $schools = School::where('status', 1)->get();
         // Don't load categories here - will load via AJAX
 
-        return view('admin.programs.create', compact('schools'));
+        return view('admin.Programs.create', compact('schools'));
     }
 
     // Add this method to get categories by school
@@ -301,7 +301,7 @@ class ProgramController extends Controller
             })
             ->get();
 
-        return view('admin.programs.edit', compact('programs', 'schools', 'categories'));
+        return view('admin.Programs.edit', compact('programs', 'schools', 'categories'));
     }
     // public function update(Request $request, $courseID)
     // {

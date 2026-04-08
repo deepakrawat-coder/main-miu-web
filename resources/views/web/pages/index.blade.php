@@ -319,7 +319,7 @@
                                             </h3>
                                             <p class="box-text style2 my-2"
                                                 style="line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
-                                                {{ Str::limit($program->short_description ?? 'Program details available', 50) }}
+                                                {!! Str::limit($program->short_description ?? 'Program details available', 50) !!}
                                             </p>
                                             <div class="d-flex justify-content-between mt-2 mb-2">
                                                 <a href="javascript:void(0);"
