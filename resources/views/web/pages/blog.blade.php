@@ -48,36 +48,31 @@
 
 
             <div class="row">
-                <div class="col-12 col-md-4">
-                    <div class="blog-card blog-card2 mb-4">
-                        <div class="blog-img2 position-relative"><a href="/blog-details">
-                                <div class="blog-img-box2 position-relative">
-                                    <img src="{{ asset('/new-miu/about/11.jpg') }}"
-                                        alt="blog image"></div>
-                            </a>
-                            <div class="blog-date">
-                                <h5 class="blog-date-title">24</h5>
-                                <p class="blog-date-text">june, 25</p>
-                            </div>
-                        </div>
-                        <div class="blog-content">
-                            <div class="blog-meta">
-                                <a class="author" href="/blog-details"> - By Admin
+                @foreach ($blogs as $blog)
+                    <div class="col-lg-4 col-md-6">
+                        <div class="blog-card wow fadeInUp border-0" style="visibility: visible; animation-name: fadeInUp;">
+                            <div class="blog-img position-relative p-3 pb-0">
+                                <a href="/blog/{{ $blog->slug }}">
+                                    <div class="blog-img-box position-relative overflow-hidden">
+                                        <img src="{{ asset($blog->image) }}" alt="blog image">
+                                        <img src="{{ asset($blog->image) }}" alt="blog image">
+                                    </div>
                                 </a>
+                                <div class="blog-date">
+                                    <h5 class="blog-date-title">
+                                        {{ \Carbon\Carbon::parse($blog->published_date)->format('d') }}</h5>
+                                    <p class="blog-date-text">
+                                        {{ \Carbon\Carbon::parse($blog->published_date)->format('M, Y') }}</p>
+                                </div>
                             </div>
-                            <h3 class="box-title">
-                                <a href="/blog-details">How Motivated When Learning Something New</a>
-                            </h3>
-                            <p class="box-text">
-                                At Stadum University we are committed to providing a high-quality education...</p>
-                            <div class="btn-wrap">
-                                <a href="/blog-details" class="th-btn th-icon style-border1">Read More</a>
+                            <div class="blog-content pt-0 px-3">
+                                <h3 class="box-title"><a href="/blog/{{ $blog->slug }}">{{ $blog->title }}</a></h3>
+                                <p class="box-text">{{ $blog->short_description }}</p>
                             </div>
                         </div>
                     </div>
-                </div>
-
-                <div class="col-12 col-md-4">
+                @endforeach
+                {{-- <div class="col-12 col-md-4">
                     <div class="blog-card blog-card2 mb-4">
                         <div class="blog-img2 position-relative"><a href="/blog-details">
                                 <div class="blog-img-box2 position-relative"><img src="{{ asset('/new-miu/about/11.jpg') }}"
@@ -186,7 +181,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> --}}
             </div>
 
 

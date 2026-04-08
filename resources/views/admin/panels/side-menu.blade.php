@@ -69,8 +69,8 @@
                 </ul>
             </li> --}}
 
-            <li class="slide {{ Route::is('admin.posts.index') ? 'active' : '' }}">
-                <a href="{{ route('admin.posts.index') }}" class="side-menu__item">
+            <li class="slide {{ Route::is('admin.events.index') ? 'active' : '' }}">
+                <a href="{{ route('admin.events.index') }}" class="side-menu__item">
                     <span class="side_menu_icon"><i class="ri-calendar-event-line"></i></span>
                     <span class="side-menu__label">Events Category</span>
                 </a>
@@ -94,12 +94,12 @@
                     <span class="side-menu__label">Gallery</span>
                 </a>
             </li>
-            {{-- <li class="slide {{ Route::is('admin.enquiries.index') ? 'active' : '' }}">
-                <a href="{{ route('admin.enquiries.index') }}" class="side-menu__item">
+            <li class="slide {{ Route::is('enquiries.index') ? 'active' : '' }}">
+                <a href="{{ route('enquiries.index') }}" class="side-menu__item">
                     <span class="side_menu_icon"><i class="ri-mail-line"></i></span>
                     <span class="side-menu__label">Enquiries</span>
                 </a>
-            </li> --}}
+            </li>
             <li class="slide">
                 <a href="#!" class="side-menu__item" role="menuitem">
                     <span class="side_menu_icon"><i class="ri-building-line"></i></span>

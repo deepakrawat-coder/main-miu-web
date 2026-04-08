@@ -91,11 +91,11 @@
                 render: function(data, type, full) {
                     return `<div class="hstack gap-2">
                                 <button class="btn btn-sm btn-light-primary"
-                                    onclick="edit('admin.blogs.edit/${full.id}', 'modal-lg')">
+                                    onclick="edit('blogs/edit/${full.id}', 'modal-lg')">
                                     <i class="ri-pencil-line"></i>
                                 </button>
                                 <button class="btn btn-sm btn-light-danger"
-                                    onclick="destroy('admin.blogs.delete/${full.id}', 'blogs-table')">
+                                    onclick="destroy('blogs/delete/${full.id}', 'blogs-table')">
                                     <i class="ri-delete-bin-line"></i>
                                 </button>
                             </div>`;

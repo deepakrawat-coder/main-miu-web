@@ -1,11 +1,14 @@
-  <form id="enquiryForm"  >
+  <form id="enquiryForm">
       @csrf
-
+      <input type="hidden" id="enquiry_page" name="page">
+      <input type="hidden" id="enquiry_id" name="id">
+      {{-- <input type="hidden" id="enquiry_id" name="id"> --}}
       <!-- Full Name -->
       <div class="form-group">
-          <label class="mb-0 pb-0"><i class="fas fa-user-graduate"></i> Full Name <span class="required-star">*</span></label>
-          <input type="text" name="name" id="name" placeholder="e.g. Rohan Sharma" value="{{ old('name') }}"
-              required>
+          <label class="mb-0 pb-0"><i class="fas fa-user-graduate"></i> Full Name <span
+                  class="required-star">*</span></label>
+          <input type="text" name="name" id="name" placeholder="e.g. Rohan Sharma"
+              value="{{ old('name') }}" required>
           @error('name')
               <small style="color:#e53e3e; font-size:0.7rem;">{{ $message }}</small>
           @enderror
@@ -13,7 +16,8 @@
 
       <!-- Email -->
       <div class="form-group">
-          <label class="mb-0 pb-0"><i class="fas fa-envelope"></i> Email Address <span class="required-star">*</span></label>
+          <label class="mb-0 pb-0"><i class="fas fa-envelope"></i> Email Address <span
+                  class="required-star">*</span></label>
           <input type="email" name="email" id="email" placeholder="rohan@example.com"
               value="{{ old('email') }}" required>
           @error('email')
@@ -23,7 +27,8 @@
 
       <!-- Phone -->
       <div class="form-group">
-          <label class="mb-0 pb-0"><i class="fa-solid fa-phone"></i> Phone Number <span class="required-star">*</span></label>
+          <label class="mb-0 pb-0"><i class="fa-solid fa-phone"></i> Phone Number <span
+                  class="required-star">*</span></label>
           <input type="tel" name="phone" id="phone" placeholder="+91 98765 43210" value="{{ old('phone') }}"
               required>
           @error('phone')
@@ -42,7 +47,8 @@
               @enderror
           </div>
           <div class="form-group">
-              <label class="mb-0 pb-0"><i class="fas fa-map-marker-alt"></i> State <span class="required-star">*</span></label>
+              <label class="mb-0 pb-0"><i class="fas fa-map-marker-alt"></i> State <span
+                      class="required-star">*</span></label>
               <input type="text" name="state" id="state" placeholder="e.g. Maharashtra"
                   value="{{ old('state') }}" required>
               @error('state')
@@ -52,7 +58,7 @@
       </div>
 
       <button type="submit" class="btn-submit">
-          <i class="fas fa-paper-plane"></i>  Enquire Now
+          <i class="fas fa-paper-plane"></i> Enquire Now
       </button>
 
       <div id="formSuccessMessage" class="success-message">

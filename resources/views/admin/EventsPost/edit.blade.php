@@ -5,10 +5,7 @@
         <small class="text-muted">Update post details and SEO settings</small>
     </div>
 
-    <form id="post-form"
-        action="{{ route('posts.update', $post->id) }}"
-        method="POST"
-        enctype="multipart/form-data"
+    <form id="post-form" action="{{ route('admin.posts.update', $post->id) }}" method="POST" enctype="multipart/form-data"
         class="row g-3">
 
         @csrf
@@ -21,9 +18,8 @@
             </label>
             <select name="category_id" class="form-select" required>
                 <option value="">Select Category</option>
-                @foreach($categories as $category)
-                    <option value="{{ $category->id }}"
-                        {{ $post->category_id == $category->id ? 'selected' : '' }}>
+                @foreach ($categories as $category)
+                    <option value="{{ $category->id }}" {{ $post->category_id == $category->id ? 'selected' : '' }}>
                         {{ $category->name }}
                     </option>
                 @endforeach
@@ -33,10 +29,8 @@
         <!-- Publish Date -->
         <div class="col-md-6">
             <label class="form-label">Publish Date</label>
-            <input type="date"
-                   name="publish_date"
-                   value="{{ $post->publish_date?->format('Y-m-d') }}"
-                   class="form-control">
+            <input type="date" name="publish_date" value="{{ $post->publish_date?->format('Y-m-d') }}"
+                class="form-control">
         </div>
 
         <!-- Title -->
@@ -44,28 +38,26 @@
             <label class="form-label fw-semibold">
                 Title <span class="text-danger">*</span>
             </label>
-            <input type="text"
-                   name="title"
-                   value="{{ $post->title }}"
-                   id="title"
-                   class="form-control"
-                   required>
+            <input type="text" name="title" value="{{ $post->title }}" id="title" class="form-control"
+                required>
+        </div>
+        <div class="col-md-12">
+            <label class="form-label fw-semibold">
+                badge <span class="text-danger">*</span>
+            </label>
+            <input type="text" name="badge_name" id="badge_name" class="form-control" value="{{ $post->badge_name }}">
         </div>
 
         <!-- Short Description -->
         <div class="col-md-12">
             <label class="form-label">Short Description</label>
-            <textarea name="short_description"
-                      rows="2"
-                      class="form-control">{{ $post->short_description }}</textarea>
+            <textarea name="short_description" rows="2" class="form-control">{{ $post->short_description }}</textarea>
         </div>
 
         <!-- Description -->
         <div class="col-md-12">
             <label class="form-label">Description</label>
-            <textarea name="description" id="description"
-                      rows="5"
-                      class="form-control">{!! $post->description !!}</textarea>
+            <textarea name="description" id="description" rows="5" class="form-control">{!! $post->description !!}</textarea>
         </div>
 
         <!-- Image -->
@@ -73,11 +65,9 @@
             <label class="form-label">Post Image</label>
             <input type="file" name="image" class="form-control">
 
-            @if($post->image)
+            @if ($post->image)
                 <div class="mt-2">
-                    <img src="{{ asset($post->image) }}"
-                         width="120"
-                         class="rounded shadow-sm">
+                    <img src="{{ asset($post->image) }}" width="120" class="rounded shadow-sm">
                 </div>
             @endif
         </div>
@@ -85,22 +75,16 @@
         <!-- Toggles -->
         <div class="col-md-6">
             <div class="form-check form-switch mt-3">
-                <input class="form-check-input"
-                       type="checkbox"
-                       name="is_featured"
-                       value="1"
-                       {{ $post->is_featured ? 'checked' : '' }}>
+                <input class="form-check-input" type="checkbox" name="is_featured" value="1"
+                    {{ $post->is_featured ? 'checked' : '' }}>
                 <label class="form-check-label">Featured Post</label>
             </div>
         </div>
 
         <div class="col-md-6">
             <div class="form-check form-switch mt-3">
-                <input class="form-check-input"
-                       type="checkbox"
-                       name="is_new"
-                       value="1"
-                       {{ $post->is_new ? 'checked' : '' }}>
+                <input class="form-check-input" type="checkbox" name="is_new" value="1"
+                    {{ $post->is_new ? 'checked' : '' }}>
                 <label class="form-check-label">Mark as New</label>
             </div>
         </div>
@@ -118,12 +102,8 @@
 
                         <div class="col-md-6">
                             <label class="form-label">Meta Title</label>
-                            <input type="text"
-                                   name="meta_title"
-                                   id="meta_title"
-                                   maxlength="60"
-                                   value="{{ $post->meta_title }}"
-                                   class="form-control">
+                            <input type="text" name="meta_title" id="meta_title" maxlength="60"
+                                value="{{ $post->meta_title }}" class="form-control">
                             <small class="text-muted">
                                 <span id="titleCount">
                                     {{ strlen($post->meta_title ?? '') }}
@@ -133,19 +113,13 @@
 
                         <div class="col-md-6">
                             <label class="form-label">Meta Keywords</label>
-                            <input type="text"
-                                   name="meta_keywords"
-                                   value="{{ $post->meta_keywords }}"
-                                   class="form-control">
+                            <input type="text" name="meta_keywords" value="{{ $post->meta_keywords }}"
+                                class="form-control">
                         </div>
 
                         <div class="col-md-12">
                             <label class="form-label">Meta Description</label>
-                            <textarea name="meta_description"
-                                      id="meta_description"
-                                      maxlength="160"
-                                      rows="3"
-                                      class="form-control">{{ $post->meta_description }}</textarea>
+                            <textarea name="meta_description" id="meta_description" maxlength="160" rows="3" class="form-control">{{ $post->meta_description }}</textarea>
                             <small class="text-muted">
                                 <span id="descCount">
                                     {{ strlen($post->meta_description ?? '') }}
@@ -248,7 +222,7 @@ $(function () {
 <script>
     let editDescriptionEditor;
 
-    $(document).ready(function () {
+    $(document).ready(function() {
 
         // Initialize CKEditor for Edit
         ClassicEditor
@@ -261,17 +235,17 @@ $(function () {
             });
 
         // Meta title counter
-        $('#meta_title').on('input', function () {
+        $('#meta_title').on('input', function() {
             $('#titleCount').text($(this).val().length);
         });
 
         // Meta description counter
-        $('#meta_description').on('input', function () {
+        $('#meta_description').on('input', function() {
             $('#descCount').text($(this).val().length);
         });
 
         // Edit Form Submit
-        $("#post-form").on('submit', function (e) {
+        $("#post-form").on('submit', function(e) {
 
             e.preventDefault();
 
@@ -297,7 +271,7 @@ $(function () {
                 contentType: false,
                 dataType: 'json',
 
-                success: function (response) {
+                success: function(response) {
 
                     submitBtn.prop('disabled', false);
 
@@ -314,13 +288,13 @@ $(function () {
                     }
                 },
 
-                error: function (xhr) {
+                error: function(xhr) {
 
                     submitBtn.prop('disabled', false);
 
                     if (xhr.status === 422) {
 
-                        $.each(xhr.responseJSON.errors, function (key, value) {
+                        $.each(xhr.responseJSON.errors, function(key, value) {
                             toastr.error(value[0]);
                         });
 

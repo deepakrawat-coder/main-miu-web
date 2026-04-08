@@ -28,7 +28,8 @@ class WebHomeController extends Controller
         $Testimonials = Testimonial::where('status', 1)->where('page_type', 'home')->get();
         // dd($Testimonials);
 
-        $events = EventsPost::with('category')->where('category_id', 1)->where('status', 1)->orderBy('created_at', 'desc')->limit(3)->get();
+        $events = EventsPost::with('category')->where('category_id', 1)->where('status', 1)->orderBy('created_at', 'desc')->get();
+        // dd($events);
         $blogs = Blog::where('status', 1)->orderBy('created_at', 'asc')->limit(3)->get();
         // dd($blogs);
         $faqencode = Faq::where('page_type', 'home')->where('status', 1)->first();

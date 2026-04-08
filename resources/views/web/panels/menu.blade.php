@@ -210,7 +210,7 @@
                      <div class="header-links">
                          <ul class="header-left-wrap">
                              <li><a href="contact.html">Career</a></li>
-                             <li><a href="alumni.html">News/Events</a></li>
+                             <li><a href="/events">News/Events</a></li>
                              {{-- <li><a href="faculty.html">Faculty</a></li>
                              <li><a href="contact.html">Community</a></li> --}}
                          </ul>

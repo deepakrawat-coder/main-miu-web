@@ -309,7 +309,7 @@
                                 style="line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
                                {{ $school->short_description }}</p>
                             <div class="d-flex justify-content-between mt-2 mb-2">
-                                <a href="about.html" class="btn text-secondary custom_apply">Apply Now</a>
+                               <a href="javascript:void(0);" onclick="openEnquiryModal('school',  {{ $school->id }} )" class="btn text-secondary custom_apply">Apply Now</a>
                                 <a href="/school/{{ $school->slug }}" class="th-btn style-border1 th-icon">Read More</a>
                             </div>
                         </div>

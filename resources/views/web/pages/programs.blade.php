@@ -74,7 +74,7 @@
                                                 {{ Str::limit($program->short_description ?? 'Program details available', 50) }}
                                             </p>
                                             <div class="d-flex justify-content-between mt-2 mb-2">
-                                                <a href="about.html" class="btn text-secondary custom_apply">Apply Now</a>
+                                                <a href="javascript:void(0);" onclick="openEnquiryModal('program',  {{ $program->id }} )"  class="btn text-secondary custom_apply">Apply Now</a>
                                                 <a href="/program/{{ $program->slug }}"
                                                     class="th-btn style-border1 th-icon">Read More</a>
                                             </div>

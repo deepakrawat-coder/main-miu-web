@@ -42,10 +42,14 @@ Route::get('/school/{slug}', [SchoolController::class, 'details'])->name('school
 Route::get('/course/{slug}', [CourseController::class, 'details'])->name('course.details');
 // Route::view('/programs-listing', 'web.pages.programs');
 Route::view('/schools-departments-details', 'web.pages.schools-departments-details');
-Route::view('/blog', 'web.pages.blog');
-Route::view('/blog-details', 'web.pages.blog-details');
-Route::view('/all-events', 'web.pages.events');
-Route::view('/event-details', 'web.pages.event-details');
+// Route::view('/blog', 'web.pages.blog');
+// Route::view('/blog-details', 'web.pages.blog-details');
+Route::get('/blogs', [BlogController::class, 'blogListing'])->name('blogs.listing');
+Route::get('/blog/{slug}', [BlogController::class, 'blogDetails'])->name('blogs.details');
+// Route::view('/all-events', 'web.pages.events');
+Route::get('/events', [EventsPostController::class, 'show'])->name('events');
+Route::get('/event/{slug}', [EventsPostController::class, 'details'])->name('events-details');
+// Route::view('/event-details', 'web.pages.event-details');
 Route::view('/iqac', 'web.pages.iqac');
 
 // Route::get('/', [WebHomeController::class, 'index'])->name('home');
@@ -101,13 +105,13 @@ Route::get('/dashboard', function () {
 })->middleware(['auth', 'verified'])->name('dashboard'); // route for frontend
 // Route::get('/schools-and-departments', [SchoolController::class, 'show'])->name('schools.show');
 Route::prefix('admin/events')->group(function () {
-    Route::get('/', [EventsCategoryController::class, 'index'])->name('events.index');
-    Route::get('/create', [EventsCategoryController::class, 'create'])->name('events.create');
-    Route::post('/store', [EventsCategoryController::class, 'store'])->name('events.store');
-    Route::get('/edit/{id}', [EventsCategoryController::class, 'edit'])->name('events.edit');
-    Route::post('/update/{id}', [EventsCategoryController::class, 'update'])->name('events.update');
-    Route::delete('/delete/{id}', [EventsCategoryController::class, 'destroy'])->name('events.delete');
-    Route::get('/status/{id}', [EventsCategoryController::class, 'status'])->name('events.status');
+    Route::get('/', [EventsCategoryController::class, 'index'])->name('admin.events.index');
+    Route::get('/create', [EventsCategoryController::class, 'create'])->name('admin.events.create');
+    Route::post('/store', [EventsCategoryController::class, 'store'])->name('admin.events.store');
+    Route::get('/edit/{id}', [EventsCategoryController::class, 'edit'])->name('admin.events.edit');
+    Route::post('/update/{id}', [EventsCategoryController::class, 'update'])->name('admin.events.update');
+    Route::delete('/delete/{id}', [EventsCategoryController::class, 'destroy'])->name('admin.events.delete');
+    Route::get('/status/{id}', [EventsCategoryController::class, 'status'])->name('admin.events.status');
 });
 // Route::get('/notice-and-events', [EventsCategoryController::class, 'noticeAndEvents'])->name('notice.events');
 // Route::get('/notice-and-events/{slug}', [EventsCategoryController::class, 'showPost'])->name('post.details');
@@ -131,7 +135,7 @@ Route::prefix('admin/schools')->group(function () {
 });
 Route::prefix('admin/programs')->group(function () {
     Route::get('/', [ProgramController::class, 'index'])->name('admin.programs.index');
-     Route::get('/get-categories-by-school', [ProgramController::class, 'getCategoriesBySchool'])->name('admin.programs.getCategoriesBySchool');
+    Route::get('/get-categories-by-school', [ProgramController::class, 'getCategoriesBySchool'])->name('admin.programs.getCategoriesBySchool');
     Route::get('/create', [ProgramController::class, 'create'])->name('admin.programs.create');
     Route::post('/store', [ProgramController::class, 'store'])->name('admin.programs.store');
     Route::get('/edit/{id}', [ProgramController::class, 'edit'])->name('admin.programs.edit');
@@ -142,7 +146,7 @@ Route::prefix('admin/programs')->group(function () {
 Route::prefix('admin/courses')->group(function () {
     Route::get('/', [CourseController::class, 'index'])->name('admin.courses.index');
     Route::get('/create', [CourseController::class, 'create'])->name('admin.courses.create');
-   
+
     Route::post('/store', [CourseController::class, 'store'])->name('admin.courses.store');
     Route::get('/edit/{id}', [CourseController::class, 'edit'])->name('admin.courses.edit');
     Route::post('/update/{id}', [CourseController::class, 'update'])->name('admin.courses.update');
@@ -215,11 +219,11 @@ Route::prefix('admin/gallery')->group(function () {
 // Route::get('/schools/{slug}', [SchoolController::class, 'details'])
 //     ->name('schools.{slug}');
 // Route::get('/{course}/{program}/{specialization}', [SpecializationController::class, 'show'])->name('specialization.show');
-// Route::middleware(['auth', 'verified'])->prefix('admin')->group(function () {
+Route::middleware(['auth', 'verified'])->prefix('admin')->group(function () {
     // Route::prefix('admin/')->group(function () {
-    //     Route::resource('enquiries', EnquiryController::class);
-    //     Route::post('enquiries/toggle-status/{id}', [EnquiryController::class, 'toggleStatus'])->name('enquiries.toggle-status');
+    Route::resource('enquiries', EnquiryController::class);
+    Route::post('enquiries/toggle-status/{id}', [EnquiryController::class, 'toggleStatus'])->name('enquiries.toggle-status');
     // });
-// });
+});
 
 require __DIR__ . '/settings.php';

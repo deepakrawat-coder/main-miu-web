@@ -1,7 +1,8 @@
   @php
       $schools = DB::select('SELECT name,slug FROM schools');
   @endphp
-  
+  <!-- Enquiry Modal -->
+
   <!-- ============================================ -->
   <!-- WHATSAPP FLOATING BUTTON (Desktop + Tablet)   -->
   <!-- ============================================ -->
@@ -44,29 +45,27 @@
   </div>
 
   <!-- Modal for Contact Info (Email & More) -->
-  <div id="contactModal" class="contact-modal">
-      <div class="modal-content">
-          {{-- <h3><i class="fas fa-address-card"></i> Get in Touch</h3>
-           <p>Our support team is ready to assist you</p>
-           <div class="contact-details">
-               <div class="contact-row">
-                   <i class="fas fa-envelope"></i>
-                   <a href="mailto:admissions@miu.edu">admissions@miu.edu</a>
-               </div>
-               <div class="contact-row">
-                   <i class="fas fa-phone-alt"></i>
-                   <a href="tel:+919319771500">+91 93197 71500</a>
-               </div>
-               <div class="contact-row">
-                   <i class="fas fa-globe"></i>
-                   <a href="#" target="_blank">www.miu.edu</a>
-               </div>
-           </div> --}}
-          @include('web.parts.enquery-form')
-          {{-- <button class="close-modal" id="closeModalBtn">Close</button> --}}
+  <div class="modal fade" id="enquiryModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+
+              <div class="modal-body position-relative">
+
+                  <!-- ❌ Close Button (Top Right) -->
+                  <button type="button"
+                      class="btn-close position-absolute top-0 end-0 m-3 text-white d-flex justify-content-center align-items-center"
+                      data-bs-dismiss="modal" aria-label="Close"> ×
+                  </button>
+                  <!-- Hidden Fields -->
+
+
+                  @include('web.parts.enquery-form')
+
+              </div>
+
+          </div>
       </div>
   </div>
-
   <footer class="footer-wrapper footer-default footer-overlay"
       data-bg-src="{{ asset('/assets/img/bg/footer-bg-1.jpg') }}" style="background-color: black;">
       {{-- <div class="footer-top">
@@ -283,6 +282,19 @@
               style="transition: stroke-dashoffset 10ms linear 0s; stroke-dasharray: 307.919, 307.919; stroke-dashoffset: 307.919;">
           </path>
       </svg></div> --}}
+
+  {{-- <script>
+      function openEnquiryModal(page, id) {
+
+          // 🔹 set values
+          document.getElementById('enquiry_page').value = page;
+          document.getElementById('enquiry_id').value = id;
+
+          // 🔹 open modal (Bootstrap 5 way)
+          var myModal = new bootstrap.Modal(document.getElementById('enquiryModal'));
+          myModal.show();
+      }
+  </script> --}}
   <div id="login-form" class="popup-login-register mfp-hide">
       <ul class="nav" id="pills-tab" role="tablist">
           <li class="nav-item" role="presentation"><button class="nav-menu" id="pills-home-tab"
@@ -366,51 +378,154 @@
   <script src="{{ asset('assets/js/SplitText.min.js') }}"></script>
   <script src="{{ asset('assets/js/lenis.min.js') }}"></script>
   <script src="{{ asset('assets/js/main.js') }}"></script>
+
   <script>
-      // Modal handling for Contact tab (mobile only, but works everywhere for consistency)
-      const modal = document.getElementById('contactModal');
-      const showModalBtn = document.getElementById('showContactModal');
-      const closeModalBtn = document.getElementById('closeModalBtn');
+      (function() {
 
-      // Function to open modal
-      function openModal() {
-          modal.style.display = 'flex';
-          document.body.style.overflow = 'hidden'; // prevent background scroll
-      }
+          let enquiryModalInstance = null;
 
-      // Function to close modal
-      function closeModal() {
-          modal.style.display = 'none';
-          document.body.style.overflow = '';
-      }
+          // 🔥 OPEN MODAL FUNCTION (GLOBAL)
+          window.openEnquiryModal = function(page, id) {
 
-      // Event listeners for opening modal (only when clicking the Contact tab)
-      if (showModalBtn) {
-          showModalBtn.addEventListener('click', function(e) {
+              document.getElementById('enquiry_page').value = page;
+              document.getElementById('enquiry_id').value = id;
+
+              const modalEl = document.getElementById('enquiryModal');
+
+              // reuse modal instance (performance)
+              if (!enquiryModalInstance) {
+                  enquiryModalInstance = new bootstrap.Modal(modalEl);
+              }
+
+              enquiryModalInstance.show();
+          };
+
+          // 🔹 FORM ELEMENTS
+          const form = document.getElementById('enquiryForm');
+          if (!form) return;
+
+          const successDiv = document.getElementById('formSuccessMessage');
+          const errorDiv = document.getElementById('formErrorMessage');
+          const submitBtn = form.querySelector('.btn-submit');
+
+          // 🔥 PHONE FORMATTER
+          const phoneInput = document.getElementById('phone');
+          if (phoneInput) {
+              phoneInput.addEventListener('input', function(e) {
+                  let val = e.target.value.replace(/\D/g, '').slice(0, 10);
+
+                  if (val.length > 7) {
+                      e.target.value = val.slice(0, 4) + ' ' + val.slice(4, 7) + ' ' + val.slice(7);
+                  } else if (val.length > 4) {
+                      e.target.value = val.slice(0, 4) + ' ' + val.slice(4);
+                  } else {
+                      e.target.value = val;
+                  }
+              });
+          }
+
+          // 🔥 VALIDATION FUNCTION
+          function validateForm() {
+
+              const name = form.name.value.trim();
+              const email = form.email.value.trim();
+              const phone = form.phone.value.trim();
+              const city = form.city.value.trim();
+              const state = form.state.value.trim();
+
+              if (!name) return 'Please enter your full name.';
+              if (!email || !/^[^\s@]+@([^\s@.,]+\.)+[^\s@.,]{2,}$/.test(email)) return 'Valid email is required.';
+              if (!phone) return 'Phone number is required.';
+
+              const digits = phone.replace(/\D/g, '');
+              if (digits.length !== 10) return 'Enter valid 10 digit number.';
+              if (!['6', '7', '8', '9'].includes(digits[0])) return 'Mobile must start with 6,7,8,9.';
+
+              if (!city) return 'City is required.';
+              if (!state) return 'State is required.';
+
+              return null;
+          }
+
+          // 🔥 FORM SUBMIT (AJAX)
+          form.addEventListener('submit', function(e) {
               e.preventDefault();
-              openModal();
+
+              const errorText = validateForm();
+
+              if (errorText) {
+                  showError(errorText);
+                  return;
+              }
+              const phoneInput = document.getElementById('phone');
+              if (phoneInput) {
+                  phoneInput.value = phoneInput.value.replace(/\s+/g, '');
+              }
+
+              // 🔹 UI loading
+              submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Submitting...';
+              submitBtn.disabled = true;
+
+              // 🔹 AJAX CALL
+              fetch("{{ route('enquiries.store') }}", {
+                      method: "POST",
+                      body: new FormData(form),
+                      headers: {
+                          'X-CSRF-TOKEN': document.querySelector('input[name="_token"]').value
+                      }
+                  })
+                  .then(res => res.json())
+                  .then(data => {
+
+                      if (data.status) {
+                          showSuccess('Thank you! Our team will contact you soon.');
+
+                          form.reset();
+
+                          // 🔥 auto close modal
+                          setTimeout(() => {
+                              enquiryModalInstance.hide();
+                          }, 2000);
+
+                      } else {
+                          showError('Something went wrong. Try again.');
+                      }
+
+                  })
+                  .catch(() => {
+                      showError('Server error. Please try later.');
+                  })
+                  .finally(() => {
+                      submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Enquire Now';
+                      submitBtn.disabled = false;
+                  });
           });
-      }
 
-      if (closeModalBtn) {
-          closeModalBtn.addEventListener('click', closeModal);
-      }
+          // 🔥 HELPERS
+          function showError(msg) {
+              errorDiv.style.display = 'block';
+              errorDiv.innerHTML = `<i class="fas fa-exclamation-triangle"></i> ${msg}`;
+              successDiv.style.display = 'none';
 
-      // Close modal if user clicks outside modal content
-      modal.addEventListener('click', function(e) {
-          if (e.target === modal) {
-              closeModal();
+              setTimeout(() => errorDiv.style.display = 'none', 4000);
           }
-      });
 
-      // Handle Escape key
-      document.addEventListener('keydown', function(e) {
-          if (e.key === 'Escape' && modal.style.display === 'flex') {
-              closeModal();
+          function showSuccess(msg) {
+              successDiv.style.display = 'block';
+              successDiv.innerHTML = `<i class="fas fa-check-circle"></i> ${msg}`;
+              errorDiv.style.display = 'none';
+
+              setTimeout(() => successDiv.style.display = 'none', 4000);
           }
-      });
 
-      // Optional: On very small tablets like iPad Mini (portrait) if you still want floating button hidden, 
-      // the media query handles it. But you can also force for screens <= 900px if needed.
-      // No extra changes required.
+          // 🔥 Laravel Errors Handling
+          @if ($errors->any())
+              showError('Please check the form and try again.');
+          @endif
+
+          @if (session('success'))
+              showSuccess('Enquiry submitted successfully!');
+          @endif
+
+      })();
   </script>

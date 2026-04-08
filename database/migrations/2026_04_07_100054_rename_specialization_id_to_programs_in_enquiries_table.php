@@ -6,23 +6,23 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    /**
-     * Run the migrations.
-     */
     public function up(): void
     {
         Schema::table('enquiries', function (Blueprint $table) {
-              $table->renameColumn('specialization_id', 'programs');
+            // Only add if column doesn't exist
+            if (!Schema::hasColumn('enquiries', 'program_id')) {
+                $table->foreignId('program_id')->nullable()->constrained('programs')->onDelete('cascade');
+            }
         });
     }
 
-    /**
-     * Reverse the migrations.
-     */
     public function down(): void
     {
         Schema::table('enquiries', function (Blueprint $table) {
-            $table->renameColumn('programs', 'specialization_id');
+            if (Schema::hasColumn('enquiries', 'program_id')) {
+                $table->dropForeign(['program_id']);
+                $table->dropColumn('program_id');
+            }
         });
     }
 };

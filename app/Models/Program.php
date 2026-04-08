@@ -47,4 +47,7 @@ class Program extends Model
     {
         return $this->belongsTo(Category::class);
     }
+    public function enquiry(){
+        return $this->belongsTo(Enquiry::class);
+    }
 }

@@ -25,7 +25,7 @@
                                                 An institution committed to intellectual rigor, industry integration, and
                                                 transformative learning experiences that shape global professionals.</p>
                                             <div class="btn-wrap" data-ani="slideinup" data-ani-delay="0.8s">
-                                                <a href="contact.html" class="th-btn white-hover th-icon">Admission Now</a>
+                                                <a href="/contact" class="th-btn white-hover th-icon">Admission Now</a>
                                                 <a href="/program" class="th-btn style-border1 th-icon white-hover">View
                                                     Program</a>
                                             </div>
@@ -50,7 +50,7 @@
                                                 Blending academic depth with experiential learning to cultivate innovation,
                                                 leadership, and career-ready competencies.</p>
                                             <div class="btn-wrap" data-ani="slideinup" data-ani-delay="0.8s">
-                                                <a href="contact.html" class="th-btn white-hover th-icon">Admission Now</a>
+                                                <a href="/contact" class="th-btn white-hover th-icon">Admission Now</a>
                                                 <a href="/program" class="th-btn style-border1 th-icon white-hover">View
                                                     Program</a>
                                             </div>
@@ -75,7 +75,7 @@
                                                 Empowering ambitious minds through a progressive curriculum, distinguished
                                                 faculty, and a culture of continuous advancement.</p>
                                             <div class="btn-wrap" data-ani="slideinup" data-ani-delay="0.8s">
-                                                <a href="contact.html" class="th-btn white-hover th-icon">Admission Now</a>
+                                                <a href="/contact" class="th-btn white-hover th-icon">Admission Now</a>
                                                 <a href="/program" class="th-btn style-border1 th-icon white-hover">View
                                                     Program</a>
                                             </div>
@@ -322,7 +322,9 @@
                                                 {{ Str::limit($program->short_description ?? 'Program details available', 50) }}
                                             </p>
                                             <div class="d-flex justify-content-between mt-2 mb-2">
-                                                <a href="about.html" class="btn text-secondary custom_apply">Apply Now</a>
+                                                <a href="javascript:void(0);"
+                                                    onclick="openEnquiryModal('home',  {{ $program->id }} )"
+                                                    class="btn text-secondary custom_apply">Apply Now</a>
                                                 <a href="/program/{{ $program->slug }}"
                                                     class="th-btn style-border1 th-icon">Read More</a>
                                             </div>
@@ -339,49 +341,54 @@
             </div>
         </div>
     </section>
-
-    <div class="counter-area1 overflow-hidden">
-        <div class="container th-container2">
-            <div class="counter-wrap1">
-                <div class="counter-card wow fadeInUp" data-wow-delay=".2s">
-                    <div class="box-icon"><img src="{{ asset('/assets/img/icon/counter-icon1-1.svg') }}" alt="icon">
+    <section>
+        <div class="counter-area1 overflow-hidden">
+            <div class="container th-container2">
+                <div class="counter-wrap1">
+                    <div class="counter-card wow fadeInUp" data-wow-delay=".2s">
+                        <div class="box-icon"><img src="{{ asset('/assets/img/icon/counter-icon1-1.svg') }}"
+                                alt="icon">
+                        </div>
+                        <div class="media-body">
+                            <h3 class="box-number"><span class="counter-number">2019</span></h3>
+                            <p class="box-text">Year of Establishment</p>
+                        </div>
                     </div>
-                    <div class="media-body">
-                        <h3 class="box-number"><span class="counter-number">2019</span></h3>
-                        <p class="box-text">Year of Establishment</p>
+                    <div class="divider"></div>
+                    <div class="counter-card wow fadeInUp" data-wow-delay=".4s">
+                        <div class="box-icon"><img src="{{ asset('/assets/img/icon/counter-icon1-2.svg') }}"
+                                alt="icon">
+                        </div>
+                        <div class="media-body">
+                            <h3 class="box-number"><span class="counter-number">50</span>+</h3>
+                            <p class="box-text">Academic Programs</p>
+                        </div>
                     </div>
+                    <div class="divider"></div>
+                    <div class="counter-card wow fadeInUp" data-wow-delay=".6s">
+                        <div class="box-icon"><img src="{{ asset('/assets/img/icon/counter-icon1-3.svg') }}"
+                                alt="icon">
+                        </div>
+                        <div class="media-body">
+                            <h3 class="box-number"><span class="counter-number">1000</span>+</h3>
+                            <p class="box-text">Students Enrolled</p>
+                        </div>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="counter-card wow fadeInUp" data-wow-delay=".7s">
+                        <div class="box-icon"><img src="{{ asset('/assets/img/icon/counter-icon1-4.svg') }}"
+                                alt="icon">
+                        </div>
+                        <div class="media-body">
+                            <h3 class="box-number"><span class="counter-number">20</span>+</h3>
+                            <p class="box-text">International Collaborations</p>
+                        </div>
+                    </div>
+                    <div class="divider"></div>
                 </div>
-                <div class="divider"></div>
-                <div class="counter-card wow fadeInUp" data-wow-delay=".4s">
-                    <div class="box-icon"><img src="{{ asset('/assets/img/icon/counter-icon1-2.svg') }}" alt="icon">
-                    </div>
-                    <div class="media-body">
-                        <h3 class="box-number"><span class="counter-number">50</span>+</h3>
-                        <p class="box-text">Academic Programs</p>
-                    </div>
-                </div>
-                <div class="divider"></div>
-                <div class="counter-card wow fadeInUp" data-wow-delay=".6s">
-                    <div class="box-icon"><img src="{{ asset('/assets/img/icon/counter-icon1-3.svg') }}" alt="icon">
-                    </div>
-                    <div class="media-body">
-                        <h3 class="box-number"><span class="counter-number">1000</span>+</h3>
-                        <p class="box-text">Students Enrolled</p>
-                    </div>
-                </div>
-                <div class="divider"></div>
-                <div class="counter-card wow fadeInUp" data-wow-delay=".7s">
-                    <div class="box-icon"><img src="{{ asset('/assets/img/icon/counter-icon1-4.svg') }}" alt="icon">
-                    </div>
-                    <div class="media-body">
-                        <h3 class="box-number"><span class="counter-number">20</span>+</h3>
-                        <p class="box-text">International Collaborations</p>
-                    </div>
-                </div>
-                <div class="divider"></div>
             </div>
         </div>
-    </div>
+    </section>
     <section class="academic1-area space overflow-hidden" id="program-sec">
         <div class="container">
             <div class="row justify-content-lg-between justify-content-center align-items-center">
@@ -420,7 +427,11 @@
                                         <div class="d-flex justify-content-between mt-2 mb-2">
                                             <a href="/school/{{ $school->slug }}"
                                                 class="th-btn style-border1 th-icon">Read More</a>
-                                            <a href="about.html" class="btn text-secondary custom_apply">Apply Now</a>
+                                            <a href="javascript:void(0);"
+                                                onclick="openEnquiryModal('home',  {{ $school->id }} )"
+                                                class="btn text-secondary custom_apply">
+                                                Apply Now
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
@@ -447,8 +458,30 @@
                 <div class="stack-container">
                     <div class="cards-stack">
 
+                        @foreach ($events as $event)
+                            <div class="stack-card active" data-index="{{ $loop->index }}">
+                                <div class="card-inner">
+                                    <div class="card-left">
+                                        <div>
+                                            <span class="card-badge">{{ $event->badge_name }}</span>
+                                            <h2 class="card-title">{{ $event->title }}</h2>
+                                            <p class="card-text">{{ $event->short_description }}</p>
+                                            @if (!empty($event->publish_date))
+                                                <p class="card-text">{{ date('d M Y', strtotime($event->publish_date)) }}
+                                                </p>
+                                            @endif
+                                            <span class="card-counter">{{ $loop->iteration }} /
+                                                {{ $loop->count }}</span>
+                                        </div>
+                                    </div>
+                                    <div class="card-right">
+                                        <img src="{{ asset($event->image) }}" alt="Cultural Fest">
+                                    </div>
+                                </div>
+                            </div>
+                        @endforeach
                         <!-- Event Card 1 -->
-                        <div class="stack-card active" data-index="0">
+                        {{-- <div class="stack-card active" data-index="0">
                             <div class="card-inner">
                                 <div class="card-left">
                                     <div>
@@ -543,7 +576,7 @@
                                     <img src="{{ asset('/new-miu/events/5.jpg') }}" alt="Career Fair">
                                 </div>
                             </div>
-                        </div>
+                        </div> --}}
 
                     </div>
 
@@ -1105,7 +1138,7 @@
                     </div>
                 </div>
                 <div class="col-auto align-self-end">
-                    <div class="sec-btn wow fadeInUp" data-wow-delay=".3s"><a href="event.html"
+                    <div class="sec-btn wow fadeInUp" data-wow-delay=".3s"><a href="/blogs"
                             class="th-btn style-border1 th-icon">Our Blogs</a></div>
                 </div>
             </div>
@@ -1114,7 +1147,32 @@
 
                 <div class="row">
                     <!-- Card 1 - Blog 1 -->
-                    <div class="col-lg-4 col-md-6">
+                    @foreach ($blogs as $blog)
+                        <div class="col-lg-4 col-md-6">
+                            <div class="blog-card wow fadeInUp border-0"
+                                style="visibility: visible; animation-name: fadeInUp;">
+                                <div class="blog-img position-relative p-3 pb-0">
+                                    <a href="/blog/{{ $blog->slug }}">
+                                        <div class="blog-img-box position-relative overflow-hidden">
+                                            <img src="{{ asset($blog->image) }}" alt="blog image">
+                                            <img src="{{ asset($blog->image) }}" alt="blog image">
+                                        </div>
+                                    </a>
+                                    <div class="blog-date">
+                                        <h5 class="blog-date-title">
+                                            {{ \Carbon\Carbon::parse($blog->published_date)->format('d') }}</h5>
+                                        <p class="blog-date-text">
+                                            {{ \Carbon\Carbon::parse($blog->published_date)->format('M, Y') }}</p>
+                                    </div>
+                                </div>
+                                <div class="blog-content pt-0 px-3">
+                                    <h3 class="box-title"><a href="/blog/{{ $blog->slug }}">{{ $blog->title }}</a></h3>
+                                    <p class="box-text">{{ $blog->short_description }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    @endforeach
+                    {{-- <div class="col-lg-4 col-md-6">
                         <div class="blog-card wow fadeInUp border-0"
                             style="visibility: visible; animation-name: fadeInUp;">
                             <div class="blog-img position-relative p-3 pb-0">
@@ -1136,10 +1194,10 @@
                                     academic frameworks and enhancing employability outcomes across industries.</p>
                             </div>
                         </div>
-                    </div>
+                    </div> --}}
 
                     <!-- Card 2 - Blog 2 -->
-                    <div class="col-lg-4 col-md-6">
+                    {{-- <div class="col-lg-4 col-md-6">
                         <div class="blog-card wow fadeInUp border-0"
                             style="visibility: visible; animation-name: fadeInUp;">
                             <div class="blog-img position-relative p-3 pb-0">
@@ -1161,10 +1219,10 @@
                                     relevant curriculum and preparing students for real-world challenges.</p>
                             </div>
                         </div>
-                    </div>
+                    </div> --}}
 
                     <!-- Card 3 - Blog 3 -->
-                    <div class="col-lg-4 col-md-6">
+                    {{-- <div class="col-lg-4 col-md-6">
                         <div class="blog-card wow fadeInUp border-0"
                             style="visibility: visible; animation-name: fadeInUp;">
                             <div class="blog-img position-relative p-3 pb-0">
@@ -1186,7 +1244,7 @@
                                     students can adopt to remain competitive in evolving job markets.</p>
                             </div>
                         </div>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
         </div>
@@ -1936,102 +1994,102 @@
         })();
     </script>
     <script>
-        (function() {
-            const form = document.getElementById('enquiryForm');
-            const successDiv = document.getElementById('formSuccessMessage');
-            const errorDiv = document.getElementById('formErrorMessage');
+        // (function() {
+        //     const form = document.getElementById('enquiryForm');
+        //     const successDiv = document.getElementById('formSuccessMessage');
+        //     const errorDiv = document.getElementById('formErrorMessage');
 
-            // real-time phone formatting (nice UX)
-            const phoneInput = document.getElementById('phone');
-            if (phoneInput) {
-                phoneInput.addEventListener('input', function(e) {
-                    let val = e.target.value.replace(/\D/g, '');
-                    if (val.length > 10) val = val.slice(0, 10);
-                    if (val.length >= 4 && val.length <= 7) {
-                        e.target.value = val.slice(0, 4) + ' ' + val.slice(4);
-                    } else if (val.length > 7) {
-                        e.target.value = val.slice(0, 4) + ' ' + val.slice(4, 7) + ' ' + val.slice(7, 10);
-                    } else {
-                        e.target.value = val;
-                    }
-                });
-            }
+        //     // real-time phone formatting (nice UX)
+        //     const phoneInput = document.getElementById('phone');
+        //     if (phoneInput) {
+        //         phoneInput.addEventListener('input', function(e) {
+        //             let val = e.target.value.replace(/\D/g, '');
+        //             if (val.length > 10) val = val.slice(0, 10);
+        //             if (val.length >= 4 && val.length <= 7) {
+        //                 e.target.value = val.slice(0, 4) + ' ' + val.slice(4);
+        //             } else if (val.length > 7) {
+        //                 e.target.value = val.slice(0, 4) + ' ' + val.slice(4, 7) + ' ' + val.slice(7, 10);
+        //             } else {
+        //                 e.target.value = val;
+        //             }
+        //         });
+        //     }
 
-            // client side validation for better experience (still server side works)
-            form.addEventListener('submit', function(e) {
-                let isValid = true;
-                let errorText = '';
+        //     // client side validation for better experience (still server side works)
+        //     form.addEventListener('submit', function(e) {
+        //         let isValid = true;
+        //         let errorText = '';
 
-                const name = document.getElementById('name')?.value.trim();
-                const email = document.getElementById('email')?.value.trim();
-                const phone = document.getElementById('phone')?.value.trim();
-                const city = document.getElementById('city')?.value.trim();
-                const state = document.getElementById('state')?.value.trim();
+        //         const name = document.getElementById('name')?.value.trim();
+        //         const email = document.getElementById('email')?.value.trim();
+        //         const phone = document.getElementById('phone')?.value.trim();
+        //         const city = document.getElementById('city')?.value.trim();
+        //         const state = document.getElementById('state')?.value.trim();
 
-                if (!name) {
-                    isValid = false;
-                    errorText = 'Please enter your full name.';
-                } else if (!email || !/^[^\s@]+@([^\s@.,]+\.)+[^\s@.,]{2,}$/.test(email)) {
-                    isValid = false;
-                    errorText = 'Valid email is required.';
-                } else if (!phone) {
-                    isValid = false;
-                    errorText = 'Phone number is required.';
-                } else {
-                    const digits = phone.replace(/\D/g, '');
-                    if (digits.length < 10 || digits.length > 13) {
-                        isValid = false;
-                        errorText = 'Enter a valid phone number (10 digits).';
-                    } else if (digits.length === 10 && !['6', '7', '8', '9'].includes(digits[0])) {
-                        isValid = false;
-                        errorText = 'Mobile must start with 6,7,8,9.';
-                    }
-                }
-                if (isValid && !city) {
-                    isValid = false;
-                    errorText = 'City is required.';
-                }
-                if (isValid && !state) {
-                    isValid = false;
-                    errorText = 'State is required.';
-                }
+        //         if (!name) {
+        //             isValid = false;
+        //             errorText = 'Please enter your full name.';
+        //         } else if (!email || !/^[^\s@]+@([^\s@.,]+\.)+[^\s@.,]{2,}$/.test(email)) {
+        //             isValid = false;
+        //             errorText = 'Valid email is required.';
+        //         } else if (!phone) {
+        //             isValid = false;
+        //             errorText = 'Phone number is required.';
+        //         } else {
+        //             const digits = phone.replace(/\D/g, '');
+        //             if (digits.length < 10 || digits.length > 13) {
+        //                 isValid = false;
+        //                 errorText = 'Enter a valid phone number (10 digits).';
+        //             } else if (digits.length === 10 && !['6', '7', '8', '9'].includes(digits[0])) {
+        //                 isValid = false;
+        //                 errorText = 'Mobile must start with 6,7,8,9.';
+        //             }
+        //         }
+        //         if (isValid && !city) {
+        //             isValid = false;
+        //             errorText = 'City is required.';
+        //         }
+        //         if (isValid && !state) {
+        //             isValid = false;
+        //             errorText = 'State is required.';
+        //         }
 
-                if (!isValid) {
-                    e.preventDefault();
-                    errorDiv.style.display = 'block';
-                    errorDiv.innerHTML = `<i class="fas fa-exclamation-triangle"></i> ${errorText}`;
-                    successDiv.style.display = 'none';
-                    setTimeout(() => {
-                        errorDiv.style.display = 'none';
-                    }, 4000);
-                    return false;
-                }
+        //         if (!isValid) {
+        //             e.preventDefault();
+        //             errorDiv.style.display = 'block';
+        //             errorDiv.innerHTML = `<i class="fas fa-exclamation-triangle"></i> ${errorText}`;
+        //             successDiv.style.display = 'none';
+        //             setTimeout(() => {
+        //                 errorDiv.style.display = 'none';
+        //             }, 4000);
+        //             return false;
+        //         }
 
-                // If valid, we allow laravel submission, but also we can show loading
-                const btn = form.querySelector('.btn-submit');
-                btn.innerHTML = '<i class="fas fa-spinner fa-pulse"></i> Submitting...';
-                btn.disabled = true;
-                // success will be shown after redirect or stay, but we don't prevent default
-                // Note: the default action sends to laravel route.
-                return true;
-            });
+        //         // If valid, we allow laravel submission, but also we can show loading
+        //         const btn = form.querySelector('.btn-submit');
+        //         btn.innerHTML = '<i class="fas fa-spinner fa-pulse"></i> Submitting...';
+        //         btn.disabled = true;
+        //         // success will be shown after redirect or stay, but we don't prevent default
+        //         // Note: the default action sends to laravel route.
+        //         return true;
+        //     });
 
-            // If there are old Laravel errors, show them in error div
-            @if ($errors->any())
-                errorDiv.style.display = 'block';
-                errorDiv.innerHTML = '<i class="fas fa-exclamation-triangle"></i> Please check the form and try again.';
-                setTimeout(() => {
-                    errorDiv.style.display = 'none';
-                }, 5000);
-            @endif
+        //     // If there are old Laravel errors, show them in error div
+        //     @if ($errors->any())
+        //         errorDiv.style.display = 'block';
+        //         errorDiv.innerHTML = '<i class="fas fa-exclamation-triangle"></i> Please check the form and try again.';
+        //         setTimeout(() => {
+        //             errorDiv.style.display = 'none';
+        //         }, 5000);
+        //     @endif
 
-            // If success flash message from session (optional)
-            @if (session('success'))
-                successDiv.style.display = 'block';
-                setTimeout(() => {
-                    successDiv.style.display = 'none';
-                }, 5000);
-            @endif
-        })();
+        //     // If success flash message from session (optional)
+        //     @if (session('success'))
+        //         successDiv.style.display = 'block';
+        //         setTimeout(() => {
+        //             successDiv.style.display = 'none';
+        //         }, 5000);
+        //     @endif
+        // })();
     </script>
 @endsection
