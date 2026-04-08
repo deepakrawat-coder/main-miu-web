@@ -1018,7 +1018,7 @@
                         <!-- Slide 8 - Text changed to MIU Student -->
                         <div class="swiper-slide">
                             <div class="story-card">
-                                <div class="box-img"><img src="{{ asset('/assets/img/story/story-1-3.jpg') }}"
+                                <div class="box-img"><img src="{{ asset('/new-miu/student-img/22.jpg') }}"
                                         alt="img"></div>
                                 <div class="story-content">
                                     <h3 class="box-title"><a href="program.html">Pooja Singh</a></h3>
@@ -1054,7 +1054,7 @@
                         <!-- Slide 10 - Text changed to MIU Student -->
                         <div class="swiper-slide">
                             <div class="story-card">
-                                <div class="box-img"><img src="{{ asset('/assets/img/story/story-1-5.jpg') }}"
+                                <div class="box-img"><img src="{{ asset('/new-miu/student-img/21.jpg') }}"
                                         alt="img"></div>
                                 <div class="story-content">
                                     <h3 class="box-title"><a href="program.html">Anjali Verma</a></h3>
