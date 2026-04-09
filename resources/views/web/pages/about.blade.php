@@ -124,7 +124,7 @@
 
         <div class="container th-container4">
             <div class="about-wrap1 position-relative z-index-2 mb-5">
-                <div class="row gy-60 align-items-center justify-content-center">
+                <div class="row gy-60 justify-content-center">
                     <div class="col-xl-6">
                         <div class="about-content ms-xxl-4 pe-xxl-2 me-xl-2">
                             <div class="title-area mb-3"><span class="sub-title text-anim">About Us</span>
@@ -146,14 +146,7 @@
                                     practical training, workshops, and industry exposure. The university provides a
                                     supportive environment where students can learn, grow, and explore their interests.
                                 </p>
-                                <p class="sec-text mt-25 mb-0 wow fadeInUp" data-wow-delay=".2s">
-                                    With experienced faculty and modern facilities, MIU focuses on overall student
-                                    development. The university also supports students with career guidance and placement
-                                    assistance to help them start their professional journey.
-                                    MIU continues to work towards becoming one of the best private universities in India by
-                                    helping students achieve their goals and build successful careers.
-
-                                </p>
+                                
                             </div>
 
 
@@ -173,6 +166,20 @@
 
                         </div>
                     </div>
+
+                    <div class="col-12">
+                        <div class="about-content ms-xxl-4 pe-xxl-2 me-xl-2">
+                            <p class="sec-text mb-0 wow fadeInUp" data-wow-delay=".2s">
+                                    With experienced faculty and modern facilities, MIU focuses on overall student
+                                    development. The university also supports students with career guidance and placement
+                                    assistance to help them start their professional journey.
+                                    MIU continues to work towards becoming one of the best private universities in India by
+                                    helping students achieve their goals and build successful careers.
+
+                                </p>
+                        </div>
+                     </div>
+
                     <div class="col-xl-12">
                         <h3 class="text-center mb-5">Our Prestigious Recognitions </h3>
                         <div class="about-feature-wrapp row justify-content-center" style="max-width:100%">
@@ -261,7 +268,7 @@
 
 
         {{-- our founding journey starts --}}
-        <section class="space-top overflow-hidden position-relative" style="      background: #f5f7fa;">
+        <section class="space-top overflow-hidden position-relative" style="background: #f5f7fa;">
             <div class="container th-container4">
 
                 <div class="row justify-content-center">

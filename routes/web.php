@@ -51,6 +51,9 @@ Route::get('/events', [EventsPostController::class, 'show'])->name('events');
 Route::get('/event/{slug}', [EventsPostController::class, 'details'])->name('events-details');
 // Route::view('/event-details', 'web.pages.event-details');
 Route::view('/iqac', 'web.pages.iqac');
+Route::view('/academic-council', 'web.pages.academic-council');
+Route::view('/incubation-center', 'web.pages.incubation-center');
+Route::view('/cpio', 'web.pages.cpio');
 
 // Route::get('/', [WebHomeController::class, 'index'])->name('home');
 // Route::view('/about-us', 'web.pages.about-us');

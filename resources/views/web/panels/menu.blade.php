@@ -305,8 +305,8 @@
                                                  </li>
                                                  <li class="menu-item-has-children"><a href="#">Governance</a>
                                                      <ul class="sub-menu">
-                                                         <li><a href="shop.html">Governing Body</a></li>
-                                                         <li><a href="shop-details.html">Academmic Council</a>
+                                                         <li><a href="#">Governing Body</a></li>
+                                                         <li><a href="/academic-council">Academic Council</a>
                                                          </li>
                                                          <li><a href="/iqac">IQAC</a></li>
 
