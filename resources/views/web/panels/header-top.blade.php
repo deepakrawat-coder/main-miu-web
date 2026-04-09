@@ -58,12 +58,12 @@
     <link
         href="../../css2-1?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="{{ asset('/assets/css/bootstrap.min.css?=1.2') }}">
-    <link rel="stylesheet" href="{{ asset('/assets/css/fontawesome.min.css?=1.2') }}">
-    <link rel="stylesheet" href="{{ asset('/assets/css/magnific-popup.min.css?=1.2') }}">
-    <link rel="stylesheet" href="{{ asset('/assets/css/swiper-bundle.min.css?=1.2') }}">
-    <link rel="stylesheet" href="{{ asset('/assets/css/style.css?=1.2') }}">
-    <link rel="stylesheet" href="{{ asset('/assets/css/custom-css.css?=1.2') }}">
+    <link rel="stylesheet" href="{{ asset('/assets/css/bootstrap.min.css?=1.3') }}">
+    <link rel="stylesheet" href="{{ asset('/assets/css/fontawesome.min.css?=1.3') }}">
+    <link rel="stylesheet" href="{{ asset('/assets/css/magnific-popup.min.css?=1.3') }}">
+    <link rel="stylesheet" href="{{ asset('/assets/css/swiper-bundle.min.css?=1.3') }}">
+    <link rel="stylesheet" href="{{ asset('/assets/css/style.css?=1.3') }}">
+    <link rel="stylesheet" href="{{ asset('/assets/css/custom-css.css?=1.3') }}">
     @php
         use Illuminate\Support\Facades\DB;
     @endphp

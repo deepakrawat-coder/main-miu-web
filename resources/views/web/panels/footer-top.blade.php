@@ -350,34 +350,34 @@
           </div>
       </div>
   </div>
-  {{-- <script src="{{asset('/assets/js/vendor/jquery-3.7.1.min.js')}}"></script>
-   <script src="{{asset('/assets/js/swiper-bundle.min.js')}}"></script>
-   <script src="{{asset('/assets/js/bootstrap.min.js')}}"></script>
-   <script src="{{asset('/assets/js/jquery.magnific-popup.min.js')}}"></script>
-   <script src="{{asset('/assets/js/jquery.counterup.min.js')}}"></script>
-   <script src="{{asset('/assets/js/jquery-ui.min.js')}}"></script>
-   <script src="{{asset('/assets/js/imagesloaded.pkgd.min.js')}}"></script>
-   <script src="{{asset('/assets/js/isotope.pkgd.min.js')}}"></script>
-   <script src="{{asset('/assets/js/wow.min.js')}}"></script>
-   <script src="{{asset('/assets/js/gsap.min.js')}}"></script>
-   <script src="{{asset('/assets/js/ScrollTrigger.min.js')}}"></script>
-   <script src="{{asset('/assets/js/SplitText.min.js')}}"></script>
-   <script src="{{asset('/assets/js/lenis.min.js')}}"></script>
-   <script src="{{asset('/assets/js/main.js')}}"></script> --}}
-  <script src="{{ asset('assets/js/jquery.min.js') }}"></script>
-  <script src="{{ asset('assets/js/swiper-bundle.min.js') }}"></script>
-  <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
-  <script src="{{ asset('assets/js/jquery.magnific-popup.min.js') }}"></script>
-  <script src="{{ asset('assets/js/jquery.counterup.min.js') }}"></script>
-  <script src="{{ asset('assets/js/jquery-ui.min.js') }}"></script>
-  <script src="{{ asset('assets/js/imagesloaded.pkgd.min.js') }}"></script>
-  <script src="{{ asset('assets/js/isotope.pkgd.min.js') }}"></script>
-  <script src="{{ asset('assets/js/wow.min.js') }}"></script>
-  <script src="{{ asset('assets/js/gsap.min.js') }}"></script>
-  <script src="{{ asset('assets/js/ScrollTrigger.min.js') }}"></script>
-  <script src="{{ asset('assets/js/SplitText.min.js') }}"></script>
-  <script src="{{ asset('assets/js/lenis.min.js') }}"></script>
-  <script src="{{ asset('assets/js/main.js') }}"></script>
+  {{-- <script src="{{asset('/assets/js/vendor/jquery-3.7.1.min.js?=1.1')}}"></script>
+   <script src="{{asset('/assets/js/swiper-bundle.min.js?=1.1')}}"></script>
+   <script src="{{asset('/assets/js/bootstrap.min.js?=1.1')}}"></script>
+   <script src="{{asset('/assets/js/jquery.magnific-popup.min.js?=1.1')}}"></script>
+   <script src="{{asset('/assets/js/jquery.counterup.min.js?=1.1')}}"></script>
+   <script src="{{asset('/assets/js/jquery-ui.min.js?=1.1')}}"></script>
+   <script src="{{asset('/assets/js/imagesloaded.pkgd.min.js?=1.1')}}"></script>
+   <script src="{{asset('/assets/js/isotope.pkgd.min.js?=1.1')}}"></script>
+   <script src="{{asset('/assets/js/wow.min.js?=1.1')}}"></script>
+   <script src="{{asset('/assets/js/gsap.min.js?=1.1')}}"></script>
+   <script src="{{asset('/assets/js/ScrollTrigger.min.js?=1.1')}}"></script>
+   <script src="{{asset('/assets/js/SplitText.min.js?=1.1')}}"></script>
+   <script src="{{asset('/assets/js/lenis.min.js?=1.1')}}"></script>
+   <script src="{{asset('/assets/js/main.js?=1.1')}}"></script> --}}
+  <script src="{{ asset('assets/js/jquery.min.js?=1.1') }}"></script>
+  <script src="{{ asset('assets/js/swiper-bundle.min.js?=1.1') }}"></script>
+  <script src="{{ asset('assets/js/bootstrap.min.js?=1.1') }}"></script>
+  <script src="{{ asset('assets/js/jquery.magnific-popup.min.js?=1.1') }}"></script>
+  <script src="{{ asset('assets/js/jquery.counterup.min.js?=1.1') }}"></script>
+  <script src="{{ asset('assets/js/jquery-ui.min.js?=1.1') }}"></script>
+  <script src="{{ asset('assets/js/imagesloaded.pkgd.min.js?=1.1') }}"></script>
+  <script src="{{ asset('assets/js/isotope.pkgd.min.js?=1.1') }}"></script>
+  <script src="{{ asset('assets/js/wow.min.js?=1.1') }}"></script>
+  <script src="{{ asset('assets/js/gsap.min.js?=1.1') }}"></script>
+  <script src="{{ asset('assets/js/ScrollTrigger.min.js?=1.1') }}"></script>
+  <script src="{{ asset('assets/js/SplitText.min.js?=1.1') }}"></script>
+  <script src="{{ asset('assets/js/lenis.min.js?=1.1') }}"></script>
+  <script src="{{ asset('assets/js/main.js?=1.1') }}"></script>
 
   <script>
       (function() {
