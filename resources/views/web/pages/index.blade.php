@@ -215,7 +215,7 @@
                                 </div>
                             </div>
                             <div class="btn-wrap wow fadeInUp" data-wow-delay=".5s">
-                                <a href="about.html" class="th-btn th-icon">Learn More</a>
+                                <a href="/about" class="th-btn th-icon">Learn More</a>
                             </div>
                         </div>
                     </div>
@@ -310,12 +310,12 @@
                                     <div class="academic-card p-0"
                                         style="border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden; height: 100%;">
                                         <div class="academic-img mb-0">
-                                            <a href="program-details.html"><img
+                                            <a href="/program/{{ $program->slug }}"><img
                                                     src="{{ asset($program->image ?? 'assets/img/academic/default.jpg') }}"
                                                     alt="School of Engineering"></a>
                                         </div>
                                         <div class="academic-content border-0 pb-0 mb-0 px-3 py-3">
-                                            <h3 class="box-title"><a href="program-details.html">{{ $program->name }}</a>
+                                            <h3 class="box-title"><a href="/program/{{ $program->slug }}">{{ $program->name }}</a>
                                             </h3>
                                             <p class="box-text style2 my-2"
                                                 style="line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
@@ -416,11 +416,11 @@
                                 <div class="academic-card p-0"
                                     style="border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden; height: 100%;">
                                     <div class="academic-img mb-0">
-                                        <a href="program-details.html"><img src="{{ asset($school->image) }}"
+                                        <a href="/school/{{ $school->slug }}"><img src="{{ asset($school->image) }}"
                                                 alt="MBA"></a>
                                     </div>
                                     <div class="academic-content border-0 pb-0 mb-0 px-3 py-3">
-                                        <h3 class="box-title"><a href="program-details.html">{{ $school->name }}</a></h3>
+                                        <h3 class="box-title"><a href="/school/{{ $school->slug }}">{{ $school->name }}</a></h3>
                                         <p class="box-text style2 my-2"
                                             style="line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
                                             {{ $school->short_description }}</p>
@@ -775,7 +775,7 @@
             <!-- CTA Button -->
             <div class="row">
                 <div class="col-12 text-center">
-                    <a href="#" class="th-btn th-icon">Placement Drive 2025-26</a>
+                    <a href="javascript:void(0);" class="th-btn th-icon">Placement Drive 2025-26</a>
                 </div>
             </div>
         </div>
@@ -795,7 +795,7 @@
                                 <div class="why-content">
                                     <div class="why-titlebox">
                                         <span class="why-number position-relative">1</span>
-                                        <h3 class="box-title"><a href="about.html">Strategic Industry Alignment</a></h3>
+                                        <h3 class="box-title"><a href="javascript:void(0);">Strategic Industry Alignment</a></h3>
                                     </div>
                                     <div class="box-text-wrap">
                                         <p class="box-text">Academic programs co-developed with industry insights to
@@ -803,7 +803,7 @@
                                             immediate relevance and long-term career sustainability. </p>
                                     </div>
                                 </div>
-                                <a href="about.html" class="th-btn style-border1 th-icon mt-40">Explore More</a>
+                                <a href="javascript:void(0);" class="th-btn style-border1 th-icon mt-40">Explore More</a>
                             </div>
                         </div>
                         <div class="col-lg-6 col-md-6">
@@ -811,7 +811,7 @@
                                 <div class="why-content">
                                     <div class="why-titlebox">
                                         <span class="why-number position-relative">2</span>
-                                        <h3 class="box-title"><a href="about.html">World-Class Infrastructure</a></h3>
+                                        <h3 class="box-title"><a href="javascript:void(0);">World-Class Infrastructure</a></h3>
                                     </div>
                                     <div class="box-text-wrap">
                                         <p class="box-text">Advanced facilities designed to foster innovation, research,
@@ -819,7 +819,7 @@
                                         </p>
                                     </div>
                                 </div>
-                                <a href="about.html" class="th-btn style-border1 th-icon mt-40">Explore More</a>
+                                <a href="javascript:void(0);" class="th-btn style-border1 th-icon mt-40">Explore More</a>
                             </div>
                         </div>
                         <div class="col-lg-6 col-md-6">
@@ -827,14 +827,14 @@
                                 <div class="why-content">
                                     <div class="why-titlebox">
                                         <span class="why-number position-relative">3</span>
-                                        <h3 class="box-title"><a href="about.html">Faculty of Distinction</a></h3>
+                                        <h3 class="box-title"><a href="javascript:void(0);">Faculty of Distinction</a></h3>
                                     </div>
                                     <div class="box-text-wrap">
                                         <p class="box-text">Academicians and practitioners delivering intellectually
                                             enriching and application-oriented education.</p>
                                     </div>
                                 </div>
-                                <a href="about.html" class="th-btn style-border1 th-icon mt-40">Explore More</a>
+                                <a href="javascript:void(0);" class="th-btn style-border1 th-icon mt-40">Explore More</a>
                             </div>
                         </div>
                         <div class="col-lg-6 col-md-6">
@@ -842,14 +842,14 @@
                                 <div class="why-content">
                                     <div class="why-titlebox">
                                         <span class="why-number position-relative">4</span>
-                                        <h3 class="box-title"><a href="about.html">Career-Centric Ecosystem</a></h3>
+                                        <h3 class="box-title"><a href="javascript:void(0);">Career-Centric Ecosystem</a></h3>
                                     </div>
                                     <div class="box-text-wrap">
                                         <p class="box-text">Integrated placement architecture with training, internships,
                                             and corporate engagement. </p>
                                     </div>
                                 </div>
-                                <a href="about.html" class="th-btn style-border1 th-icon mt-40">Explore More</a>
+                                <a href="javascript:void(0);" class="th-btn style-border1 th-icon mt-40">Explore More</a>
                             </div>
                         </div>
                         <div class="col-lg-6 col-md-6">
@@ -857,7 +857,7 @@
                                 <div class="why-content">
                                     <div class="why-titlebox">
                                         <span class="why-number position-relative">5</span>
-                                        <h3 class="box-title"><a href="about.html">Skill & Leadership Development</a>
+                                        <h3 class="box-title"><a href="javascript:void(0);">Skill & Leadership Development</a>
                                         </h3>
                                     </div>
                                     <div class="box-text-wrap">
@@ -865,7 +865,7 @@
                                             professionals. </p>
                                     </div>
                                 </div>
-                                <a href="about.html" class="th-btn style-border1 th-icon mt-40">Explore More</a>
+                                <a href="javascript:void(0);" class="th-btn style-border1 th-icon mt-40">Explore More</a>
                             </div>
                         </div>
                         <div class="col-lg-6 col-md-6">
@@ -873,14 +873,14 @@
                                 <div class="why-content">
                                     <div class="why-titlebox">
                                         <span class="why-number position-relative">6</span>
-                                        <h3 class="box-title"><a href="about.html">Global Academic Outlook</a></h3>
+                                        <h3 class="box-title"><a href="javascript:void(0);">Global Academic Outlook</a></h3>
                                     </div>
                                     <div class="box-text-wrap">
                                         <p class="box-text">Exposure to international standards, practices, and
                                             cross-cultural learning environments.</p>
                                     </div>
                                 </div>
-                                <a href="about.html" class="th-btn style-border1 th-icon mt-40">Explore More</a>
+                                <a href="javascript:void(0);" class="th-btn style-border1 th-icon mt-40">Explore More</a>
                             </div>
                         </div>
                     </div>
@@ -924,7 +924,7 @@
                                 <div class="box-img"><img src="{{ asset('/new-miu/student-img/12.jpg') }}"
                                         alt="img"></div>
                                 <div class="story-content">
-                                    <h3 class="box-title"><a href="program.html">Aman Verma</a></h3>
+                                    <h3 class="box-title"><a href="javascript:void(0);">Aman Verma</a></h3>
                                 </div>
                                 <div class="story-content hover-style">
                                     <div class="quote-icon"><img src="{{ asset('/assets/img/icon/quote.svg') }}"
@@ -933,7 +933,7 @@
                                         by practical exposure. The structured training and faculty mentorship played a
                                         pivotal role in helping me secure a rewarding position in a leading organization."
                                     </p>
-                                    <h3 class="box-title"><a href="program.html">Aman Verma</a></h3>
+                                    <h3 class="box-title"><a href="javascript:void(0);">Aman Verma</a></h3>
                                 </div>
                             </div>
                         </div>
@@ -943,7 +943,7 @@
                                 <div class="box-img"><img src="{{ asset('/new-miu/student-img/15.jpg') }}"
                                         alt="img"></div>
                                 <div class="story-content">
-                                    <h3 class="box-title"><a href="program.html">Priya Sharma</a></h3>
+                                    <h3 class="box-title"><a href="javascript:void(0);">Priya Sharma</a></h3>
                                 </div>
                                 <div class="story-content hover-style">
                                     <div class="quote-icon"><img src="{{ asset('/assets/img/icon/quote.svg') }}"
@@ -952,7 +952,7 @@
                                         competence. Industry-oriented curriculum and continuous skill development
                                         initiatives helped me transition seamlessly from academics to a professional career"
                                     </p>
-                                    <h3 class="box-title"><a href="program.html">Priya Sharma</a></h3>
+                                    <h3 class="box-title"><a href="javascript:void(0);">Priya Sharma</a></h3>
                                 </div>
                             </div>
                         </div>
@@ -962,7 +962,7 @@
                                 <div class="box-img"><img src="{{ asset('/new-miu/student-img/11.jpg') }}"
                                         alt="img"></div>
                                 <div class="story-content">
-                                    <h3 class="box-title"><a href="program.html">Rahul Singh</a></h3>
+                                    <h3 class="box-title"><a href="javascript:void(0);">Rahul Singh</a></h3>
                                 </div>
                                 <div class="story-content hover-style">
                                     <div class="quote-icon"><img src="{{ asset('/assets/img/icon/quote.svg') }}"
@@ -970,7 +970,7 @@
                                     <p class="box-text">"MIU’s emphasis on experiential learning and placement preparation
                                         significantly enhanced my career readiness. The guidance from faculty and training
                                         sessions ensured I performed confidently during recruitment processes."</p>
-                                    <h3 class="box-title"><a href="program.html">Rahul Singh</a></h3>
+                                    <h3 class="box-title"><a href="javascript:void(0);">Rahul Singh</a></h3>
                                 </div>
                             </div>
                         </div>
@@ -980,7 +980,7 @@
                                 <div class="box-img"><img src="{{ asset('/new-miu/student-img/20.jpg') }}"
                                         alt="img"></div>
                                 <div class="story-content">
-                                    <h3 class="box-title"><a href="program.html">Neha Gupta</a></h3>
+                                    <h3 class="box-title"><a href="javascript:void(0);">Neha Gupta</a></h3>
                                 </div>
                                 <div class="story-content hover-style">
                                     <div class="quote-icon"><img src="{{ asset('/assets/img/icon/quote.svg') }}"
@@ -988,7 +988,7 @@
                                     <p class="box-text">"The university’s holistic approach towards education helped me
                                         develop both technical and interpersonal skills. The placement support system
                                         provided excellent opportunities to begin my professional journey successfully"</p>
-                                    <h3 class="box-title"><a href="program.html">Neha Gupta</a></h3>
+                                    <h3 class="box-title"><a href="javascript:void(0);">Neha Gupta</a></h3>
                                 </div>
                             </div>
                         </div>
@@ -998,7 +998,7 @@
                                 <div class="box-img"><img src="{{ asset('/new-miu/student-img/13.jpg') }}"
                                         alt="img"></div>
                                 <div class="story-content">
-                                    <h3 class="box-title"><a href="program.html">Arjun Mehta</a></h3>
+                                    <h3 class="box-title"><a href="javascript:void(0);">Arjun Mehta</a></h3>
                                 </div>
                                 <div class="story-content hover-style">
                                     <div class="quote-icon"><img src="{{ asset('/assets/img/icon/quote.svg') }}"
@@ -1006,7 +1006,7 @@
                                     <p class="box-text">"With a focus on real-world applications and continuous learning,
                                         MIU prepared me for industry challenges. The exposure to practical training and
                                         mentorship proved invaluable for my career growth."</p>
-                                    <h3 class="box-title"><a href="program.html">Arjun Mehta</a></h3>
+                                    <h3 class="box-title"><a href="javascript:void(0);">Arjun Mehta</a></h3>
                                 </div>
                             </div>
                         </div>
@@ -1016,7 +1016,7 @@
                                 <div class="box-img"><img src="{{ asset('/new-miu/student-img/18.jpg') }}"
                                         alt="img"></div>
                                 <div class="story-content">
-                                    <h3 class="box-title"><a href="program.html">Sneha Kapoor</a></h3>
+                                    <h3 class="box-title"><a href="javascript:void(0);">Sneha Kapoor</a></h3>
                                 </div>
                                 <div class="story-content hover-style">
                                     <div class="quote-icon"><img src="{{ asset('/assets/img/icon/quote.svg') }}"
@@ -1025,7 +1025,7 @@
                                         skill development. The structured placement programs and faculty support helped me
                                         secure a position aligned with my career aspirations."
                                     </p>
-                                    <h3 class="box-title"><a href="program.html">Sneha Kapoor</a></h3>
+                                    <h3 class="box-title"><a href="javascript:void(0);">Sneha Kapoor</a></h3>
                                 </div>
                             </div>
                         </div>
@@ -1035,7 +1035,7 @@
                                 <div class="box-img"><img src="{{ asset('/new-miu/student-img/14.jpg') }}"
                                         alt="img"></div>
                                 <div class="story-content">
-                                    <h3 class="box-title"><a href="program.html">Vikas Yadav</a></h3>
+                                    <h3 class="box-title"><a href="javascript:void(0);">Vikas Yadav</a></h3>
                                 </div>
                                 <div class="story-content hover-style">
                                     <div class="quote-icon"><img src="{{ asset('/assets/img/icon/quote.svg') }}"
@@ -1044,7 +1044,7 @@
                                         me a competitive edge. MIU’s placement training and expert guidance were
                                         instrumental in shaping my professional success."
                                     </p>
-                                    <h3 class="box-title"><a href="program.html">Vikas Yadav</a></h3>
+                                    <h3 class="box-title"><a href="javascript:void(0);">Vikas Yadav</a></h3>
                                 </div>
                             </div>
                         </div>
@@ -1054,7 +1054,7 @@
                                 <div class="box-img"><img src="{{ asset('/new-miu/student-img/22.jpg') }}"
                                         alt="img"></div>
                                 <div class="story-content">
-                                    <h3 class="box-title"><a href="program.html">Pooja Singh</a></h3>
+                                    <h3 class="box-title"><a href="javascript:void(0);">Pooja Singh</a></h3>
                                 </div>
                                 <div class="story-content hover-style">
                                     <div class="quote-icon"><img src="{{ asset('/assets/img/icon/quote.svg') }}"
@@ -1062,7 +1062,7 @@
                                     <p class="box-text">"From classroom learning to corporate readiness, MIU ensured a
                                         comprehensive development journey. The faculty mentorship and placement initiatives
                                         played a key role in my successful career transition"</p>
-                                    <h3 class="box-title"><a href="program.html">Pooja Singh</a></h3>
+                                    <h3 class="box-title"><a href="javascript:void(0);">Pooja Singh</a></h3>
                                 </div>
                             </div>
                         </div>
@@ -1072,7 +1072,7 @@
                                 <div class="box-img"><img src="{{ asset('/new-miu/student-img/16.jpg') }}"
                                         alt="img"></div>
                                 <div class="story-content">
-                                    <h3 class="box-title"><a href="program.html">Rohit Kumar</a></h3>
+                                    <h3 class="box-title"><a href="javascript:void(0);">Rohit Kumar</a></h3>
                                 </div>
                                 <div class="story-content hover-style">
                                     <div class="quote-icon"><img src="{{ asset('/assets/img/icon/quote.svg') }}"
@@ -1080,7 +1080,7 @@
                                     <p class="box-text">"MIU’s focus on skill enhancement and industry exposure helped me
                                         build confidence and expertise. The structured training programs prepared me
                                         effectively for real-world job opportunities."</p>
-                                    <h3 class="box-title"><a href="program.html">Rohit Kumar</a></h3>
+                                    <h3 class="box-title"><a href="javascript:void(0);">Rohit Kumar</a></h3>
                                 </div>
                             </div>
                         </div>
@@ -1090,7 +1090,7 @@
                                 <div class="box-img"><img src="{{ asset('/new-miu/student-img/21.jpg') }}"
                                         alt="img"></div>
                                 <div class="story-content">
-                                    <h3 class="box-title"><a href="program.html">Anjali Verma</a></h3>
+                                    <h3 class="box-title"><a href="javascript:void(0);">Anjali Verma</a></h3>
                                 </div>
                                 <div class="story-content hover-style">
                                     <div class="quote-icon"><img src="{{ asset('/assets/img/icon/quote.svg') }}"
@@ -1098,7 +1098,7 @@
                                     <p class="box-text">"The academic environment at MIU encouraged continuous learning
                                         and growth. The practical exposure and career-focused training helped me secure a
                                         position in a reputed organization."</p>
-                                    <h3 class="box-title"><a href="program.html">Anjali Verma</a></h3>
+                                    <h3 class="box-title"><a href="javascript:void(0);">Anjali Verma</a></h3>
                                 </div>
                             </div>
                         </div>
@@ -1107,7 +1107,7 @@
                                 <div class="box-img"><img src="{{ asset('/new-miu/student-img/17.jpg') }}"
                                         alt="img"></div>
                                 <div class="story-content">
-                                    <h3 class="box-title"><a href="program.html">Karan Malhotra</a></h3>
+                                    <h3 class="box-title"><a href="javascript:void(0);">Karan Malhotra</a></h3>
                                 </div>
                                 <div class="story-content hover-style">
                                     <div class="quote-icon"><img src="{{ asset('/assets/img/icon/quote.svg') }}"
@@ -1115,7 +1115,7 @@
                                     <p class="box-text">"MIU University provided me with the right platform to develop my
                                         skills and achieve my goals. The placement support and industry exposure were
                                         crucial in shaping my career path."</p>
-                                    <h3 class="box-title"><a href="program.html">Karan Malhotra</a></h3>
+                                    <h3 class="box-title"><a href="javascript:void(0);">Karan Malhotra</a></h3>
                                 </div>
                             </div>
                         </div>
