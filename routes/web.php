@@ -34,6 +34,7 @@ Route::view('/vice-chancellor', 'web.pages.vice-chancellor');
 Route::view('/registrar', 'web.pages.registrar');
 Route::view('/director', 'web.pages.director');
 Route::view('/coe', 'web.pages.coe');
+Route::view('/academic-calender', 'web.pages.academic-calender');
 // Route::view('/schools-and-departments', 'web.pages.schools-and-departments');
 Route::get('/school', [SchoolController::class, 'show'])->name('schools.show');
 Route::get('/program', [ProgramController::class, 'show'])->name('programs');
